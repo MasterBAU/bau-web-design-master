@@ -45,23 +45,29 @@ body {
  * FIXED HEADER
  *********************************************/
 .topheader {
-  position: fixed;
   background: #222;
+  padding: .5rem;
+  position: fixed;
   width: 100%;
   z-index: 10;
 }
 
 .topheader img {
   float: left;
-  padding: 1em;
+  height: 3rem;
 }
 
 .topheader h2 {
-  font-family: "Open sans", sans-serif;
   color: white;
+  font-family: "Open sans", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  margin: 0 200px;
+  padding: .75rem 0;
   text-align: center;
-  margin: 1.5em 277px 0;
-  padding: 0;
+}
+.reveal.center {
+  padding-top: 4rem;
 }
 
 
