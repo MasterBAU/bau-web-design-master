@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Máster en Diseño Web | Módulo III Prácticas servidor FTP</title>
+
+		<meta name="description" content="Máster en Diseño Web | Módulo III">
+		<meta name="author" content="David García">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="../css/reveal.min.css">
+		<link rel="stylesheet" href="../css/theme/dave.css" id="theme">
+		<link rel="stylesheet" href="../css/theme/nahuel.css">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="../lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="topheader">
+			<a href="../index.html"><img src="../img/logo-bau-es.svg"></a>
+			<h2>Máster en Diseño Web | Módulo III | Prácticas servidor FTP</h2>
+		</div>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section>
+                <section>
+                    <h2>Los lenguajes de la web</h2>
+                </section>
+
+                <section>
+                    <h3>Los pilares de la web</h3>
+                    <p style="text-align: left;">Hay 3 lenguajes que pueden considerarse los pilares sobre los que se sotiene cualquier sitio web:</p>
+                    <ul style="text-align: left;">
+                        <li><strong>HTML</strong> (Hypertext Markup Language)</li>
+                        <li><strong>CSS</strong> (Cascading Style Sheets)</li>
+                        <li><strong>Javascript</strong></li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>HTML</h2>
+                    <h3>(Hypertext Markup Language)</h3>
+                    <p>Es el lenguaje que se utiliza para crear un documento web.</p>
+                    <p>Se trata de un <strong>lenguaje de marcado</strong>, es decir un sistema para <i>identificar</i> y <i>describir</i> los diferentes elementos de una página</p>
+
+                    <pre><code data-trim contenteditable><!--
+--><h1 style="font-size: 2.8em;">Esto es un titular de nivel 1</h1>
+<h2>Este es de nivel 2</h2>
+<p>Esto es un párrafo con un <strong>texto destacado</strong>.</p><!--
+					--></code></pre>
+                </section>
+
+                <section>
+                    <h2>CSS</h2>
+                    <h3 class="subtitulo">(Cascading Style Sheets)</h3>
+                    <p>Es un lenguaje creado para controlar la <i>presentación</i> (el estilo) de un documento HTML.</p>
+
+                    <pre><code data-trim contenteditable>
+.subtitulo {
+    color: yellow;
+    font-family: 'Comic Sans MS';
+    font-size: xx-large;
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2>Javascript</h2>
+                    <p>Es un lenguaje de programación que se utiliza para agregar interactividad y comportamientos dinámicos a nuestras páginas.</p>
+                    <pre><code data-trim contenteditable>
+(function(){
+    var hi_button    = document.getElementById('hi-button'),
+        hi_container = document.getElementById('hi-container');
+
+    hi_button.onclick = function() {
+        hi_container.innerHTML = '&#60;h2 class="hi"&#62;Hola&#60;/h2&#62;';
+    }
+})();
+                    </code></pre>
+
+                    <p id="hi-container" style="text-align: center;"><button id="hi-button">Saludar</button></p>
+                    <script>
+                        (function(){
+                            var hi_button    = document.getElementById('hi-button'),
+                                hi_container = document.getElementById('hi-container');
+
+                            hi_button.onclick = function() {
+                                hi_container.innerHTML = '<h2 class="hi">Hola</h2>';
+                            }
+                        })();
+                    </script>
+                </section>
+
+                <section>
+                    <h2>Lenguajes server-side</h2>
+                    <p>Son lenguajes que se ejecutan en el servidor. Se utilizan para crear sitios web con contenidos dinámicos y aplicaciones.</p>
+                    <p>Algunos de estos lenguajes son:</p>
+                    <ul>
+                        <li>PHP</li>
+                        <li>Python</li>
+                        <li>Ruby</li>
+                        <li>.NET</li>
+                        <li>Java</li>
+                        <li>Javascript (Node.js, Rhino, SpiderMonkey)</li>
+                    </ul>
+                </section>
+            </section>
+
+			</div>
+
+		</div>
+
+		<script src="../lib/js/head.min.js"></script>
+		<script src="../js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+
+			});
+
+		</script>
+
+	</body>
+</html>
