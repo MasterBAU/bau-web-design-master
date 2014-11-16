@@ -8,8 +8,12 @@
 .reveal a:not(.image) {
     text-decoration: underline;
 }
+.reveal ul {
+    display: block;
+    padding-left: 3rem;
+}
 .reveal li {
-    margin-bottom: .25em
+    margin-bottom: .25em;
 }
 .reveal hr {
     border-style: dashed;
