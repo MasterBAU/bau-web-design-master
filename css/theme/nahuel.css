@@ -91,7 +91,7 @@
     font-size: .65em;
 }
 .reveal .font-list li {
-    border-bottom: 1px dashed rgba(0,0,0, .2);
+    border-bottom: 1px dashed rgba(255,255,255, .2);
     margin-bottom: .15em;
     padding-bottom: .15em;
 }
