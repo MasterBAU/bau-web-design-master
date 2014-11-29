@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+	<!-- Encabezado del documento HTML -->
+	<head>
+		<meta charset="UTF-8">
+		<title>Centered layout</title>
+
+		<!-- Estilos CSS -->
+		<style>
+
+			body {
+				background-color: #cccccc;
+
+				margin: 0;
+				padding: 0;
+			}
+
+			article {
+				padding-bottom: 20px;
+			}
+
+			header {
+				padding: 20px 20px 0 20px;
+			}
+
+			section {
+				background-color: #c0ffee;
+
+
+				float: left;
+				width: 60%;
+			}
+
+			aside {
+				background-color: #3CAA8D;
+
+				padding: 2.5%;
+				height: 100%;
+
+				float: left;
+				width: 35%;
+			}
+
+			aside h2 {
+				color: white;
+				text-align: center;
+			}
+
+			footer {
+				background-color: #444444;
+				color: #ffffff;
+
+				text-align: center;
+
+				float: left;
+				width: 100%;
+			}
+
+			h1,
+			h2,
+			h3,
+			h4 {
+				margin: 0;
+			}
+
+			p {
+				padding: 0 20px;
+			}
+
+			.container {
+				margin: 20px auto;
+				padding: 0;
+
+				background-color: #aaaaaa;
+				width: 100%;
+			}
+
+			.page-header {
+				background-image: url('img/bg_header.jpg');
+				background-position: right;
+				background-repeat: no-repeat;
+				background-color: #ffffff;
+
+				padding: 150px 50px;
+				text-align: center;
+			}
+
+
+		</style>
+
+	</head>
+
+	<!-- Contenido visible de la página -->
+	<body>
+
+		<!-- Contenedor del layout de la página -->
+		<div class="container">
+
+			<!-- El header contiene la información que define el contenido del nodo que lo contiene -->
+			<header class="page-header">
+				<h1>Ellen Feis</h1>
+
+				<!-- Navegación de la página
+				<nav>
+					<ul>
+						<li>Inicio</li>
+						<li>Sobre mi</li>
+						<li>Contacto</li>
+					</ul>
+				</nav> -->
+
+			</header>
+
+			<section>
+				<article>
+					<!-- Este header describe el primer nodo Article -->
+					<header>
+						<h2>An Apple Switcher history</h2>
+					</header>
+					<p>Ellen Feiss (born circa 1987) is an American who became an Internet phenomenon after her 2002 Errol Morris-directed television commercial for Apple Computer's Switch campaign grew into a cult hit.</p>
+
+					<p>In the commercial, the then-14-year-old high school student complained that while using a Windows PC to author a paper, the computer experienced a glitch causing half of the paper to become unexpectedly deleted. Subsequently, she was forced to retype the deleted portions.</p>
+				</article>
+
+			</section>
+
+			<!-- El Aside contiene información complementaria a la página -->
+			<aside>
+				<h2>More about Ellen</h2>
+				<p>Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+			</aside>
+
+			<!-- En el footer colocamos la información menos relevante de nuestra página-->
+			<footer>
+				<p>© Copyright BAUED 2014</p>
+			</footer>
+
+		</div>
+
+	</body>
+
+</html>
