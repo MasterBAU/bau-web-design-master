@@ -88,7 +88,7 @@
                     </section>
 
                     <section>
-                        <p>Por defecto <strong>el navegador añade los paddings y los bordes a las dimensiones del elemento</strong>
+                        <p>Por defecto <strong>el navegador añade los paddings y los bordes a las dimensiones del elemento</strong></p>
                         <div class="box-model" style="display: inline-block; margin: 1rem 0;">
                             <span style="height: 50px" contenteditable>contenido</span>
                         </div>
@@ -192,7 +192,7 @@
 
                     <section>
                         <h3>Display: inline-block</h3>
-                        <p>El valor <em><code>inline-block</code></em> es una combinación de los dos anteriores.<p>
+                        <p>El valor <em><code>inline-block</code></em> es una combinación de los dos anteriores.</p>
                         <p>Los elementos <code>inline-block</code> mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></p>
 
                         <div style="margin: 4rem auto 0; width: 80%;">
@@ -205,30 +205,36 @@
                         <p>El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
                         <p>Un lector de voz ignorará nuestro contenido con <code>display: none</code>, lo cual tenemos que tener en cuenta si no queremos afectar la accesibilidad a la hora de ocultar algo.</p>
                     </section>
+                </section>
 
-                    <!--
+                <section>
+                    <section>
+                        <h2>Overflow</h2>
+                    </section>
+
+                    <section>
+                        <p>Cuando forzamos las dimensiones del elemento con <em><code>width</code></em> y <em><code>height</code></em> pueden darse dos casos:</p>
+                        <ul>
+                            <li>Si el contenido ocupa menos que las dimensiones del elemento, el resto de espacio quedará vacio.</li>
+                            <li>Si el contenido no cabe dentro de las dimensiones asignadas, se saldrá del elemento. Podemos controlar exactamente de que manera con la propiedad <em><code>overflow</code></em>.</li>
+                        </ul>
+                    </section>
+
                     <section>
                         <pre><code data-trim contenteditable>
-                            p { height: 220px; }
+p { height: 220px; }
                         </code></pre>
                         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
                             <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 220px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
                         </div>
                         <hr>
                         <pre><code data-trim contenteditable>
-                            p { height: 80px; }
+p { height: 80px; }
                         </code></pre>
                         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
 
                             <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 80px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
                         </div>
-                    </section>
-                </section>
-                -->
-
-                <section>
-                    <section>
-                        <h2>Overflow</h2>
                     </section>
 
                     <section>
@@ -244,10 +250,10 @@
                     <section>
                         <h3>Overflow: visible</h3>
                         <pre><code data-trim contenteditable>
-                            p {
-                                height: 80px;
-                                overflow: visible;
-                            }
+p {
+    height: 80px;
+    overflow: visible;
+}
                         </code></pre>
                         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
 
@@ -258,10 +264,10 @@
                     <section>
                         <h3>Overflow: hidden</h3>
                         <pre><code data-trim contenteditable>
-                            p {
-                                height: 80px;
-                                overflow: hidden;
-                            }
+p {
+    height: 80px;
+    overflow: hidden;
+}
                         </code></pre>
                         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
 
@@ -272,10 +278,10 @@
                     <section>
                         <h3>Overflow: scroll</h3>
                         <pre><code data-trim contenteditable>
-                            p {
-                                height: 150px;
-                                overflow: scroll;
-                            }
+p {
+    height: 150px;
+    overflow: scroll;
+}
                         </code></pre>
                         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 60%;">
 
@@ -286,10 +292,10 @@
                     <section>
                         <h3>Overflow: auto</h3>
                         <pre><code data-trim contenteditable>
-                            p {
-                                height: 150px;
-                                overflow: auto;
-                            }
+p {
+    height: 150px;
+    overflow: auto;
+}
                         </code></pre>
                         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto 1em; width: 60%;">
 
@@ -336,17 +342,17 @@
                             <li style="font-size: 1.8rem;"><code>margin-top</code> | <code>margin-right</code> | <code>margin-bottom</code> | <code>margin-left</code></li>
                         </ul>
                         <pre><code data-trim contenteditable>
-                            .box {
-                                padding-top: 10px;
-                                padding-bottom: 30px;
-                                padding-left: 10%;
-                                padding-right: 4em;
-                                margin-top: 30px;
-                                margin-bottom: 30px;
-                                margin-left: 20px;
-                                margin-right: 20px;
+.box {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 10%;
+    padding-right: 4em;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
 
-                            }
+}
                         </code></pre>
                     </section>
 
@@ -354,37 +360,107 @@
                         <p style="font-size: 1.8rem">También pueden declararse <em>todos los lados en una sola propiedad</em> (<code>padding</code> y <code>margin</code> respectivamente) separando los valores con un espacio y siguiendo el <strong>sentido de las agujas del reloj</strong>.</p>
                         <p style="font-size: 1.8rem">Si utilizamos esta abreviación, cuando el valor derecho es igual al izquierdo podemos omitir este último. Si además el valor superior e inferior también son iguales podemos omitir el inferior.</p>
                         <pre><code data-trim contenteditable>
-                            .box {
-                                padding-top:    10px;
-                                padding-right:  20px;
-                                padding-bottom: 10px;
-                                padding-left:   20px;
+.box {
+    padding-top:    10px;
+    padding-right:  20px;
+    padding-bottom: 10px;
+    padding-left:   20px;
 
-                                /* es igual a: */
-                                padding: 10px 20px 10px 20px;
+    /* es igual a: */
+    padding: 10px 20px 10px 20px;
 
-                                /* e igual a: */
-                                padding: 10px 20px 10px;
+    /* e igual a: */
+    padding: 10px 20px 10px;
 
-                                /* e igual a: */
-                                padding: 10px 20px;
-                            }
+    /* e igual a: */
+    padding: 10px 20px;
+}
                         </code></pre>
                     </section>
                 </section>
 
                 <section>
+                <section>
+                    <h2>Borders</h2>
+                </section>
+
+                <section>
+                    <p style="font-size: 1.8rem"><code>border</code> es la propiedad usada para controlar el borde que delimita un elemento y requiere tres valores: <code>width</code>, <code>style</code> y <code>color</code> separados por un espacio.</p>
+                    <pre style="float:left; width: 70%;"><code data-trim contenteditable>
+.box {
+    border: 1px solid red;
+}
+                    </code></pre>
+                    <div style="border: 1px solid red; float:right; margin: 40px 10% 0 0; width: 80px; height: 80px;"></div>
+                    <p style="clear: both; font-size: 1.8rem">Si queremos afectar estos valores de manera individual utilizaremos las propiedades: <em><code>border-width</code></em>, <em><code>border-style</code></em> y <em><code>border-color</code></em>, que pueden a su vez contener 4 valores, uno por lado, al igual que el padding o el margin.</p>
+                    <pre style="float:left; width: 70%;"><code data-trim contenteditable>
+.box {
+    border-width: 1px 8px 6px 4px;
+    border-style: solid;
+    border-color: red blue;
+}
+                    </code></pre>
+                    <div style="border-width: 1px 8px 6px 4px; border-style: solid; border-color: red blue; float:right; margin: 60px 10% 0 0; width: 80px; height: 80px;"></div>
+                </section>
+
+                <section>
+                    <p>Tambien podemos combinar las propiedades anteriores con los diferentes valores <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> para cambios muy precisos.</p>
+                    <pre><code data-trim contenteditable>
+.box {
+    border-right-style: solid;
+    border-top-width: 4px;
+    border-bottom-color: red;
+}
+                    </code></pre>
+                </section>
+
+                <section>
+                    <p>Los posibles estilos de borde que nos ofrece CSS para la propiedad <em><code>border-style</code></em> son:</p>
+                    <p style="font-size: .7em;">
+                        <code>none</code> | <code>hidden</code> | <code>dotted</code> | <code>dashed</code> |<code>solid</code> |<code>double</code> | <code>groove</code> | <code>ridge</code> | <code>inset</code> | <code>outset</code>
+                    </p>
+                    <hr>
+                    <div class="borders-example">
+                        <code class="border-solid">2px <br> solid</code>
+                        <code class="border-double">6px <br> double</code>
+                        <code class="border-dashed">8px <br> dashed</code>
+                        <code class="border-dotted">4px <br> dotted</code>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>border-radius</h3>
+                    <p>La propiedad <em><code>border-radius</code></em> nos permite redondear las esquinas de nuestras cajas.</p>
+                    <p>En su forma más simple funciona similar al propiedad a otras propiedades, aceptando 4 valores separados por espacio que indicarán el <strong>radio de la circunferencia</strong> que aplicaremos a las esquinas, empezando el primer valor en la esquina superior izquierda y desplazandose en sentido horario.</p>
+                    <pre><code data-trim contenteditable>
+.box { border-radius: 10px 40px 40px 10px}
+                    </code></pre>
+                    <div style="background: #eaeaed; border: 4px solid #666; border-radius: 10px 40px 40px 10px; margin: 1em auto 0; width: 100px; height: 100px;">
+                    </div>
+                </section>
+            </section>
+
+                <section>
                     <h2>Links relacionados</h2>
                     <ul>
                         <li style="margin-bottom: .8em;">
-                            <strong>The CSS Box Model</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
+                            <strong>Box Model</strong> <i style="color: #999;"> &mdash; Guy Routledge</i>
                             <br>
-                            <a href="http://css-tricks.com/the-css-box-model/" style="font-size: .8em;">http://css-tricks.com/the-css-box-model/</a>
+                            <a href="http://www.atozcss.com/the-css-box-model/" style="font-size: .8em;">http://www.atozcss.com/the-css-box-model/</a>
                         </li>
                         <li style="margin-bottom: .8em;">
                             <strong>* { Box-sizing: Border-box } FTW</strong> <i style="color: #999;"> &mdash; Paul Irish</i>
                             <br>
                             <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/" style="font-size: .8em;">http://www.paulirish.com/2012/box-sizing-border-box-ftw/</a>
+                        </li>
+                        <li style="margin-bottom: .8em;">
+                            <strong>Single-direction margin declarations</strong> <i style="color: #999;"> &mdash; Harry Roberts</i>
+                            <br>
+                            <a href="http://csswizardry.com/2012/06/single-direction-margin-declarations/" style="font-size: .8em;">http://csswizardry.com/2012/06/single-direction-margin-declarations/</a>
+                        </li>
+                        <li style="margin-bottom: .8em;">
+                            <strong>The Shapes of CSS</strong> <i style="color: #999;"> &mdash; CSS Tricks</i><br>
+                            <a href="http://css-tricks.com/examples/ShapesOfCSS/" style="font-size: .8em;">http://css-tricks.com/examples/ShapesOfCSS/</a>
                         </li>
                     </ul>
                 </section>
