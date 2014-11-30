@@ -158,30 +158,55 @@
                             <p style="background: hsla(200, 70%, 60%, .3); font-size: .7em; margin: 0; line-height: 30px;">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
                         </div>
                     </section>
+                </section>
 
+                <section>
                     <section>
-                        <p>Podemos, con las propiedades <code>width</code> y <code>height</code>, asignar las dimensiones que queramos a los elementos. Pero como se apliquen también dependera de si son elementos <code>inline</code> o <code>block</code>.</p>
-
-
-                        <!--
-                        <p>Si el contenido ocupa menos que las dimensiones del elemento, el resto de espacio quedará vacio.</p>
-                        <p>Si el contenido no cabe dentro de las dimensiones asignadas, se saldrá del elemento. Podemos controlar exactamente de que manera con la propiedad <em><code>overflow</code></em>.</p>
-                        -->
+                        <h2>Display</h2>
                     </section>
 
                     <section>
-                        <p>Los elementos <code>inline</code>:</p>
+                        <p>La propiedad <em><code>display</code></em> es la encargada de controlar si un elemento se comportará como un elemento <code>block</code> o uno <code>inline</code> (entre otras opciones).</p>
+                    </section>
+
+                    <section>
+                        <h3>Display: block</h3>
+                        <p>Los elementos <em><code>block</code></em> ocupan el 100% de su contenedor desplazando al siguiente elemento a una nueva línea.</p>
+                        <p>Aplican las propiedades del box-model de manera normal.</p>
+                    </section>
+
+                    <section>
+                        <h3>Display: inline</h3>
+                        <p>Los elementos <em><code>inline</code></em> mantienen el flow normal de texto.</p>
+                        <p>Tienen algunas particularidades a la hora de interpretar el box-model.</p>
                         <ul>
                             <li>Ignoran el <code>width</code> y el <code>height</code></li>
                             <li>Si se le aplican <code>paddings</code> verticales no afectaran la posición de los elementos que les rodean.</li>
-                            <li>El background no cubrirá la altura total del alto de línea.</li>
+                            <li>El background no cubrirá la altura total del alto de línea, sino que se ajustará al contenido.</li>
                         </ul>
 
                         <div style="margin: 4rem auto 0; width: 80%;">
-                            <p class="box-model__inline" style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3); /*display: inline-block;*/">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong style="background: hsla(100, 70%, 60%, .3);" >libero iure expedita</strong> minima labore magnam.</p>
+                            <p class="box-model__inline" style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3);">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong style="background: hsla(100, 70%, 60%, .3);">libero iure expedita</strong> minima labore magnam.</p>
                         </div>
                     </section>
 
+                    <section>
+                        <h3>Display: inline-block</h3>
+                        <p>El valor <em><code>inline-block</code></em> es una combinación de los dos anteriores.<p>
+                        <p>Los elementos <code>inline-block</code> mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></p>
+
+                        <div style="margin: 4rem auto 0; width: 80%;">
+                            <p class="box-model__inline" style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3); display: inline-block;">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong style="background: hsla(100, 70%, 60%, .3);" >libero iure expedita</strong> minima labore magnam.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h3>Display: none</h3>
+                        <p>El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
+                        <p>Un lector de voz ignorará nuestro contenido con <code>display: none</code>, lo cual tenemos que tener en cuenta si no queremos afectar la accesibilidad a la hora de ocultar algo.</p>
+                    </section>
+
+                    <!--
                     <section>
                         <pre><code data-trim contenteditable>
                             p { height: 220px; }
@@ -199,6 +224,7 @@
                         </div>
                     </section>
                 </section>
+                -->
 
                 <section>
                     <section>
