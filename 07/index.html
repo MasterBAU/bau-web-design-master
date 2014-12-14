@@ -56,26 +56,27 @@
                 </section>
 
                 <section>
-                    <p>La propiedad <code>float</code> nos permitie remover a un elemento de su posición natural en el flow de la página y <strong>posicionarlo contra uno de los lados de su elemento contenedor</strong>. Los elementos que están a continuación suyo se limitarán a rodearlo.</p>
+                    <p>La propiedad <code>float</code> modifica el flujo natural del elemento y lo "flota" situándolo a la izquierda o derecha de su contenedor permitiendo al resto de elementos <span class="marker">inline</span> ocupar el espacio colindante.</p>
                 </section>
 
                 <section>
-                    <p>En su origen <code>float</code> se creo para posicionar imágenes dentro de un bloque de texto pero con el tiempo acabo por ser una de las herramientas CSS más usadas para generar layout en nuestras paginas (por falta de otras herramientas mejores).</p>
+                    <p>Inicialmente se creó para posicionar imágenes dentro de un bloque de texto pero con el tiempo acabo por ser una de las herramientas CSS más usadas para generar layouts.</p>
                     <hr>
-                    <div style="font-size: 1.5rem; width: 70%; margin: 0 auto;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="https://4.bp.blogspot.com/-B70oaS-ZUiU/UXu4f5gG-xI/AAAAAAAALeM/JDAWfEAm1Hw/s1600/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
-                    </div>
+                    <span><a href="exercise01.html">exercise01.html</a></span>
                 </section>
 
                 <section>
-                    <p><code>float</code> acepta tres posibles valores: <em><code>none</code></em>, <em><code>left</code></em> y <em><code>right</code></em>.</p>
-                    <p>Si flotamos más de un elemento seguidos estos se ubicarán uno al lado del otro siempre y cuando sus dimensiones les permitan acomodarse dentro del contenedor. Cuando ya no quepan saltarán a la línea siguiente.</p>
-                    <p>Dependiendo la dirección en que se floten los elementos se <strong>ordenara hacia uno o el otro lado</strong>. Hay que tener en cuenta que si usamos <code>float: right</code>, el primer elemento en el documento HTML será el de más a la derecha.</p>
+                    <h2>Valores de la propiedad Float</h2>
+                    <ul>
+                        <li class="marker">None</li>
+                        <li class="marker">Left</li>
+                        <li class="marker">Right</li>
+                    </ul>
+                    </p>
                 </section>
 
                 <section class="float-example">
+                <h2>Float NONE</h2>
                     <pre><code data-trim contenteditable>
 div { float: none; }
                     </code></pre>
@@ -84,6 +85,10 @@ div { float: none; }
                         <div class="float-box">2</div>
                         <div class="float-box">3</div>
                     </div>
+
+                </section>
+                <section>
+                <h2>Float LEFT</h2>
                     <pre><code data-trim contenteditable>
 div { float: left; }
                     </code></pre>
@@ -95,6 +100,9 @@ div { float: left; }
                         <div class="float-box float-left">5</div>
                         <div class="float-box float-left">6</div>
                     </div>
+                </section>
+                <section>
+                <h2>Float Right</h2>
                     <pre><code data-trim contenteditable>
 div { float: right; }
                     </code></pre>
@@ -106,9 +114,9 @@ div { float: right; }
                 </section>
 
                 <section>
-                    <h3>clear</h3>
-                    <p>Si en algun momento queremos que un determinado elemento ignore una propiedad float de un elemento anterior, deberemos recurrir a la propiedad <em><code>clear</code></em>.</p>
-                    <p><code>clear</code> soporta 4 valores:</p>
+                    <h2>La propiedad clear</h2>
+                    <p>Omite el <span class="marker">float</span> del elemento anterior.</p>
+                    <p><code class="marker">clear</code> soporta 4 valores:</p>
                     <ul>
                         <li><em><code>none</code></em>: el elemento se verá afectado normalmente por un float.</li>
                         <li><em><code>left</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: left</code>.</li>
@@ -119,9 +127,9 @@ div { float: right; }
 
                 <section>
                     <div style="font-size: 1.5rem; width: 70%; margin: 0 auto; border: 1px dotted #666; padding: 1em;">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="https://4.bp.blogspot.com/-B70oaS-ZUiU/UXu4f5gG-xI/AAAAAAAALeM/JDAWfEAm1Hw/s1600/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="http://placehold.it/250x150/" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta.</p>
-                        <p style="clear: both; background: hsla(200, 60%, 50%, .3)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio</p>
+                        <p style="clear: both; background: hsla(18, 97%, 49%, 0.8)">cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
                     </div>
                 </section>
@@ -133,7 +141,7 @@ div { float: right; }
                 </section>
 
                 <section class="float-example-02">
-                    <p style="font-size: 1.8rem;">Un problema que suele presentarse cuando utilizamos <code>float</code> para crear layouts es que al remover todos los elementos en un contenedor del flow natural el contenedor se queda vacío y su altura pasa a ser 0.</p>
+                    <p style="font-size: 1.8rem;">Cuando los elementos block de la página no utilizan <code>float</code> para crear layouts se visualizan así:</p>
                     <hr>
                     <pre><code data-trim contenteditable>
 div { float: none; }
@@ -143,6 +151,10 @@ div { float: none; }
                         <div class="float-box">2</div>
                         <div class="float-box">3</div>
                     </div>
+                </section>
+                <section>
+                <p>Pero si usamos <code>float</code> en todos los elementos de un mismo contenedor <br>su altura <span class="marker">se colapsa.</span></p>
+                <p>Para evitar que suceda usamos la técnica <span class="marker">Clearfix</span></p>
                     <pre><code data-trim contenteditable>
 div { float: left; }
                     </code></pre>
@@ -151,10 +163,11 @@ div { float: left; }
                         <div class="float-box float-left">2</div>
                         <div class="float-box float-left">3</div>
                     </div>
+                    <small>Contenedor con Clearfix</small>
                 </section>
 
                 <section class="float-example-03">
-                    <p style="font-size: 2rem;">Este problema puede pasar desapercibido si el contenedor no tiene <code>background</code> ni <code>border</code>, pero puede afectar a los elementos que estén ubicados a continuación.</p>
+                    <p style="font-size: 3rem; text-align: center">En este ejemplo el primer contenedor tiene todos sus elementos con <span class="marker">float</span> y no se ha utilizado clearfix de modo que su altura pasa a ser 0.</p>
                     <hr>
                     <div class="float-wrap">
                         <div class="float-box float-left">1</div>
@@ -166,13 +179,9 @@ div { float: left; }
                     </div>
                 </section>
 
-                <section>
-                    <p>Hay varios técnicas para solucionar este problema. Este conjunto de técnicas se suelen conocer con el nombre de <em>clearfix</em>, y aunque todas se agrupen bajo el mismo nombre sulen diferir mucho unas de otras.</p>
-                    <p>Hay que tener en cuenta que la propiedad <code>float</code> nunca fue diseñada para ser usada como una herramienta de layout por lo que tanto el echo de utilizarla para componer páginas,  como las distintas técnicas para solucionar los problemas asociados, no dejan de ser hacks y cada uno acarrea un serie de ventajas e inconvenientes que hay que considerar a la hora de utilizarlos.</p>
-                </section>
-
                 <section class="float-example-02">
-                    <p>Una técnica sencilla para solucionar el problema es colocar dentro del contenedor, a continuación de los elementos flotados, un elemento con la propiedad <code>clear: both</code></p>
+                <h3>Clear: both;</h3>
+                    <p>Una técnica sencilla para solucionar el problema es colocar dentro del contenedor, a continuación de los elementos flotados, un elemento con la propiedad <br><code class="marker">clear: both</code></p>
                     <hr>
                     <div class="float-wrap">
                         <div class="float-box float-left">1</div>
@@ -183,7 +192,8 @@ div { float: left; }
                 </section>
 
                 <section class="float-example-02">
-                    <p>Otra posible solución, es recurrir a la propiedad <code>overflow</code>. Cualquier valor diferente a <code>visible</code> nos corregirá el problema </p>
+                <h3>Overflow: auto;</h3>
+                    <p>Otra posible solución, es recurrir a la propiedad <code>overflow</code>. <br>Cualquier valor diferente a <code>visible</code> nos corregirá el problema </p>
                     <hr>
                     <pre><code data-trim contenteditable>
 div { overflow: auto; }
@@ -196,8 +206,8 @@ div { overflow: auto; }
                 </section>
 
                 <section>
-                    <p>Hay otras técnicas más avanzadas y estables de clearfix que combinan varias propiedades. Es una buena idea contar en el css con una class <code>.clearfix</code> de ayuda para poder utilizar cuando tengamos que lidiar con el problema.</p>
-                    <p>Una de las técnicas más populares es la siguiente:</p>
+                <h3>Clase .Clearfix</h3>
+                    <p>Una buena práctica es aplicar la clase <span class="marker">.clearfix</span> al contenedor con elementos flotados:</p>
                     <pre><code data-trim contenteditable>
 .clearfix:before,
 .clearfix:after {
@@ -211,9 +221,11 @@ div { overflow: auto; }
     *zoom: 1;
 }
                     </code></pre>
+                    <small><a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">Micro Clearfix</a> de Nicolas Gallaguer</small>
                 </section>
 
                 <section  class="float-example-02">
+                <h3>Contenedor con clase .clearfix</h3>
                     <div class="float-wrap float-cleared">
                         <div class="float-box float-left">1</div>
                         <div class="float-box float-left">2</div>
@@ -237,6 +249,17 @@ div { overflow: auto; }
                             <br>
                             <a href="http://css-tricks.com/all-about-floats/">All about Floats</a>
                         </li>
+                        <li style="margin-bottom: .8em;">
+                            <strong>MDN Float</strong> <i style="color: #999;"> &mdash; Mozilla Developer Network</i>
+                            <br>
+                            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float/">CSS Reference</a>
+                        </li>
+                        <li style="margin-bottom: .8em;">
+                            <strong>Micro Clearfix</strong> <i style="color: #999;"> &mdash; Nicolas Gallagher</i>
+                            <br>
+                            <a href="http://nicolasgallagher.com/micro-clearfix-hack/">.clearfix</a>
+                        </li>
+
                     </ul>
                 </section>
 

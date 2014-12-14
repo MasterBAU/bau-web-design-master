@@ -245,11 +245,11 @@
 /* DAY 05 */
 
 .reveal .float-wrap {
-    border: 1px dotted #666;
-    background: rgba(0,0,0, .1);
+    border: 1px dotted #FFF;
+    background: rgba(255, 255, 255, .1);
     margin: 0 auto 1em;
     overflow: auto;
-    width: 250px;
+    width: 352px;
 }
 .reveal .float-box {
     background: gold;
@@ -257,8 +257,9 @@
     margin: .25em;
     font-size: 1.5rem;
     font-weight: bold;
-    width: 45px;
-    height: 45px;
+    width: 100px;
+    color: black;
+    padding: 20px 0;
 }
 .reveal .float-left { float: left; }
 .reveal .float-right { float: right; }
@@ -273,7 +274,7 @@
 }
 .reveal .float-example-03 .float-wrap {
     background: transparent;
-    border-color:rgba(0,0,0, .2);
+    border-color:rgba(255, 255, 255, .4);
     padding: .25em;
 }
 .reveal .float-example-03 p {
