@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>Máster en Diseño Web | Módulo III | Fundamentos CSS</title>
+
+        <meta name="description" content="Máster en Diseño Web | Módulo III">
+        <meta name="author" content="David García">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+        <link rel="stylesheet" href="../css/reveal.min.css">
+        <link rel="stylesheet" href="../css/theme/dave.css" id="theme">
+        <link rel="stylesheet" href="../css/theme/nahuel.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="../lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+        <script>
+            if( window.location.search.match( /print-pdf/gi ) ) {
+                var link = document.createElement( 'link' );
+                link.rel = 'stylesheet';
+                link.type = 'text/css';
+                link.href = 'css/print/pdf.css';
+                document.getElementsByTagName( 'head' )[0].appendChild( link );
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+
+        <div class="topheader">
+            <a href="../index.html"><img src="../img/logo-bau-es.svg"></a>
+            <h2>Máster en Diseño Web | Módulo III | Fundamentos CSS</h2>
+        </div>
+
+        <div class="reveal">
+            <div class="slides">
+                <section>
+                    <h3>Módulo III <br /><span class="marker">Programación Frontend</span></h3>
+                    <h3><strong>Fundamentos CSS</strong></h3>
+                </section>
+
+                 <section>
+                <section>
+                    <h2>Posicionamiento mediante <br><span class="marker">float</span></h2>
+                </section>
+
+                <section>
+                    <p>La propiedad <code>float</code> nos permitie remover a un elemento de su posición natural en el flow de la página y <strong>posicionarlo contra uno de los lados de su elemento contenedor</strong>. Los elementos que están a continuación suyo se limitarán a rodearlo.</p>
+                </section>
+
+                <section>
+                    <p>En su origen <code>float</code> se creo para posicionar imágenes dentro de un bloque de texto pero con el tiempo acabo por ser una de las herramientas CSS más usadas para generar layout en nuestras paginas (por falta de otras herramientas mejores).</p>
+                    <hr>
+                    <div style="font-size: 1.5rem; width: 70%; margin: 0 auto;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="https://4.bp.blogspot.com/-B70oaS-ZUiU/UXu4f5gG-xI/AAAAAAAALeM/JDAWfEAm1Hw/s1600/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
+                    </div>
+                </section>
+
+                <section>
+                    <p><code>float</code> acepta tres posibles valores: <em><code>none</code></em>, <em><code>left</code></em> y <em><code>right</code></em>.</p>
+                    <p>Si flotamos más de un elemento seguidos estos se ubicarán uno al lado del otro siempre y cuando sus dimensiones les permitan acomodarse dentro del contenedor. Cuando ya no quepan saltarán a la línea siguiente.</p>
+                    <p>Dependiendo la dirección en que se floten los elementos se <strong>ordenara hacia uno o el otro lado</strong>. Hay que tener en cuenta que si usamos <code>float: right</code>, el primer elemento en el documento HTML será el de más a la derecha.</p>
+                </section>
+
+                <section class="float-example">
+                    <pre><code data-trim contenteditable>
+div { float: none; }
+                    </code></pre>
+                    <div class="float-wrap">
+                        <div class="float-box">1</div>
+                        <div class="float-box">2</div>
+                        <div class="float-box">3</div>
+                    </div>
+                    <pre><code data-trim contenteditable>
+div { float: left; }
+                    </code></pre>
+                    <div class="float-wrap">
+                        <div class="float-box float-left">1</div>
+                        <div class="float-box float-left">2</div>
+                        <div class="float-box float-left">3</div>
+                        <div class="float-box float-left">4</div>
+                        <div class="float-box float-left">5</div>
+                        <div class="float-box float-left">6</div>
+                    </div>
+                    <pre><code data-trim contenteditable>
+div { float: right; }
+                    </code></pre>
+                    <div class="float-wrap">
+                        <div class="float-box float-right">1</div>
+                        <div class="float-box float-right">2</div>
+                        <div class="float-box float-right">3</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3>clear</h3>
+                    <p>Si en algun momento queremos que un determinado elemento ignore una propiedad float de un elemento anterior, deberemos recurrir a la propiedad <em><code>clear</code></em>.</p>
+                    <p><code>clear</code> soporta 4 valores:</p>
+                    <ul>
+                        <li><em><code>none</code></em>: el elemento se verá afectado normalmente por un float.</li>
+                        <li><em><code>left</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: left</code>.</li>
+                        <li><em><code>right</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: right</code>.</li>
+                        <li><em><code>both</code></em>: el elemento se desplazará abajo ante cualquier <code>float</code>.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <div style="font-size: 1.5rem; width: 70%; margin: 0 auto; border: 1px dotted #666; padding: 1em;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="https://4.bp.blogspot.com/-B70oaS-ZUiU/UXu4f5gG-xI/AAAAAAAALeM/JDAWfEAm1Hw/s1600/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta.</p>
+                        <p style="clear: both; background: hsla(200, 60%, 50%, .3)">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
+                    </div>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h2>clearfix</h2>
+                </section>
+
+                <section class="float-example-02">
+                    <p style="font-size: 1.8rem;">Un problema que suele presentarse cuando utilizamos <code>float</code> para crear layouts es que al remover todos los elementos en un contenedor del flow natural el contenedor se queda vacío y su altura pasa a ser 0.</p>
+                    <hr>
+                    <pre><code data-trim contenteditable>
+div { float: none; }
+                    </code></pre>
+                    <div class="float-wrap">
+                        <div class="float-box">1</div>
+                        <div class="float-box">2</div>
+                        <div class="float-box">3</div>
+                    </div>
+                    <pre><code data-trim contenteditable>
+div { float: left; }
+                    </code></pre>
+                    <div class="float-wrap">
+                        <div class="float-box float-left">1</div>
+                        <div class="float-box float-left">2</div>
+                        <div class="float-box float-left">3</div>
+                    </div>
+                </section>
+
+                <section class="float-example-03">
+                    <p style="font-size: 2rem;">Este problema puede pasar desapercibido si el contenedor no tiene <code>background</code> ni <code>border</code>, pero puede afectar a los elementos que estén ubicados a continuación.</p>
+                    <hr>
+                    <div class="float-wrap">
+                        <div class="float-box float-left">1</div>
+                        <div class="float-box float-left">2</div>
+                        <div class="float-box float-left">3</div>
+                    </div>
+                    <div class="float-wrap">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis repudiandae odio, expedita itaque earum pariatur tempore, placeat eaque minus illum inventore quas tenetur praesentium laudantium unde modi atque tempora voluptates.</p>
+                    </div>
+                </section>
+
+                <section>
+                    <p>Hay varios técnicas para solucionar este problema. Este conjunto de técnicas se suelen conocer con el nombre de <em>clearfix</em>, y aunque todas se agrupen bajo el mismo nombre sulen diferir mucho unas de otras.</p>
+                    <p>Hay que tener en cuenta que la propiedad <code>float</code> nunca fue diseñada para ser usada como una herramienta de layout por lo que tanto el echo de utilizarla para componer páginas,  como las distintas técnicas para solucionar los problemas asociados, no dejan de ser hacks y cada uno acarrea un serie de ventajas e inconvenientes que hay que considerar a la hora de utilizarlos.</p>
+                </section>
+
+                <section class="float-example-02">
+                    <p>Una técnica sencilla para solucionar el problema es colocar dentro del contenedor, a continuación de los elementos flotados, un elemento con la propiedad <code>clear: both</code></p>
+                    <hr>
+                    <div class="float-wrap">
+                        <div class="float-box float-left">1</div>
+                        <div class="float-box float-left">2</div>
+                        <div class="float-box float-left">3</div>
+                        <div class="float-clear">clear: both;</div>
+                    </div>
+                </section>
+
+                <section class="float-example-02">
+                    <p>Otra posible solución, es recurrir a la propiedad <code>overflow</code>. Cualquier valor diferente a <code>visible</code> nos corregirá el problema </p>
+                    <hr>
+                    <pre><code data-trim contenteditable>
+div { overflow: auto; }
+                    </code></pre>
+                    <div class="float-wrap float-cleared">
+                        <div class="float-box float-left">1</div>
+                        <div class="float-box float-left">2</div>
+                        <div class="float-box float-left">3</div>
+                    </div>
+                </section>
+
+                <section>
+                    <p>Hay otras técnicas más avanzadas y estables de clearfix que combinan varias propiedades. Es una buena idea contar en el css con una class <code>.clearfix</code> de ayuda para poder utilizar cuando tengamos que lidiar con el problema.</p>
+                    <p>Una de las técnicas más populares es la siguiente:</p>
+                    <pre><code data-trim contenteditable>
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+                    </code></pre>
+                </section>
+
+                <section  class="float-example-02">
+                    <div class="float-wrap float-cleared">
+                        <div class="float-box float-left">1</div>
+                        <div class="float-box float-left">2</div>
+                        <div class="float-box float-left">3</div>
+                    </div>
+                    <pre><code data-trim contenteditable>
+&#60;div class="clearfix"&#62;
+    &#60;div class="float-box"&#62;1&#60;/div&#62;
+    &#60;div class="float-box"&#62;2&#60;/div&#62;
+    &#60;div class="float-box"&#62;3&#60;/div&#62;
+&#60;/div&#62;
+                    </code></pre>
+                </section>
+            </section>
+
+                <section>
+                    <h3>Links relacionados</h3>
+                    <ul>
+                        <li style="margin-bottom: .8em;">
+                            <strong>CSS Tricks</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
+                            <br>
+                            <a href="http://css-tricks.com/all-about-floats/">All about Floats</a>
+                        </li>
+                    </ul>
+                </section>
+
+            </div>
+        </div>
+
+        <script src="../lib/js/head.min.js"></script>
+        <script src="../js/reveal.min.js"></script>
+
+        <script>
+
+            // Full list of configuration options available here:
+            // https://github.com/hakimel/reveal.js#configuration
+            Reveal.initialize({
+                controls: true,
+                progress: true,
+                history: true,
+                center: true,
+
+                theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+                transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+                // Parallax scrolling
+                // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+                // parallaxBackgroundSize: '2100px 900px',
+
+            });
+
+        </script>
+
+    </body>
+</html>
