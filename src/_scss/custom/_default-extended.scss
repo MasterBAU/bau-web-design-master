@@ -1,0 +1,49 @@
+// GLOBAL STYLES
+// ------------------------------------------------------
+.reveal {
+    font-family: "Open sans", sans-serif;
+}
+
+
+// HEADERS
+// ------------------------------------------------------
+.reveal {
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Open sans", Impact, sans-serif;
+        line-height: 1.2em;
+        text-shadow: 2px 2px 2px #000;
+    }
+}
+
+
+// OTHER
+// ------------------------------------------------------
+.reveal small {
+    display: block;
+}
+.reveal .marker {
+    color: #D5C70F;
+}
+
+
+// LINKS
+// ------------------------------------------------------
+.reveal a:not(.image) {
+    color: #13daec;
+    text-decoration: none;
+    transition: color .15s ease;
+
+    &:hover {
+        border: none;
+        color: #71e9f4;
+        text-shadow: none;
+    }
+}
+
+
+// IMAGES
+// ------------------------------------------------------
+.reveal section img {
+  display: inline-block;
+  text-align: center;
+}

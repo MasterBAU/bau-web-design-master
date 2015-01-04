@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+
+    {% include topheader.html %}
+
+    <div class="reveal">
+        <div class="slides">
+            {{ content }}
+        </div>
+    </div>
+
+    {% include scripts-footer.html %}
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "bau_master",
+  "version": "0.0.1",
+  "description": "Clases para la asignatura de front-end en el master de Diseño Web de BAU",
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org:davecarter/bau.git"
+  },
+  "author": "Dave Carter, Mike San Roman & Nahuel Sotelo",
+  "devDependencies": {
+    "gulp": "~3.8.10",
+    "gulp-sass": "~1.2.4",
+    "browser-sync": "~1.8.3",
+    "gulp-plumber": "~0.6.6",
+    "beepbeep": "~1.2.0",
+    "colors": "~1.0.3",
+    "run-sequence": "~1.0.2",
+    "del": "~1.1.1",
+    "gulp-concat": "~2.4.3",
+    "gulp-jekyll": "0.0.0"
+  }
+}
