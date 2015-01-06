@@ -4,11 +4,11 @@ var gulp        = require('gulp'),
     colors      = require('colors'),
     plumber     = require('gulp-plumber'),
     sass        = require('gulp-sass'),
-    jekyll      = require('gulp-jekyll'),
     concat      = require('gulp-concat'),
     merge       = require('merge-stream'),
     del         = require('del'),
     changed     = require('gulp-changed'),
+    cp          = require('child_process'),
     runSequence = require('run-sequence');
 
 
@@ -36,17 +36,18 @@ gulp.task('clean', function(callback) {
 
 
 // HTML ==================================================
-gulp.task('jekyll', function() {
-    return gulp.src('src/**/*.html')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(jekyll({
-            source: 'src',
-            destination: '.tmp/jekyll',
-            config: '_config.yml',
-            bundleExec: true
-        }));
+gulp.task('jekyll', function(done) {
+    return cp.spawn('bundle',
+        [
+            'exec',
+            'jekyll',
+            'build',
+            '-q',
+            '--source=src',
+            '--destination=.tmp/jekyll',
+            '--config=_config.yml'
+        ], { stdio: 'inherit' })
+  .on('close', done);
 });
 gulp.task('copy-html', ['jekyll'], function() {
     return gulp.src('.tmp/jekyll/**/**.*')

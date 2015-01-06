@@ -17,7 +17,6 @@
     "run-sequence": "~1.0.2",
     "del": "~1.1.1",
     "gulp-concat": "~2.4.3",
-    "gulp-jekyll": "0.0.0",
     "gulp-changed": "~1.1.0",
     "merge-stream": "~0.1.6"
   }
