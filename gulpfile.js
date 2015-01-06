@@ -116,7 +116,7 @@ gulp.task('svg', function() {
 
 
 // BROWSER SYNC =========================================
-gulp.task('browsersync', ['build'], function() {
+gulp.task('browsersync', function() {
     browsersync({
         server: { baseDir: path.dist },
         port: 8000,
@@ -136,19 +136,23 @@ gulp.task('watch', ['browsersync'], function() {
 
 
 // BUILD ================================================
-gulp.task('build', [
-    'html',
-    'images',
-    'svg',
-    'css',
-    'fonts',
-    'js'
-]);
+gulp.task('build', function(callback) {
+    runSequence(
+        'clean',
+        [
+            'html',
+            'images',
+            'svg',
+            'css',
+            'fonts',
+            'js'
+        ],
+    callback);
+});
 
 gulp.task('default', function(callback) {
     runSequence(
-        'clean',
-        ['build'],
-        'watch',
+        'build',
+        ['watch'],
     callback);
 });

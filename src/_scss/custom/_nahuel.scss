@@ -321,23 +321,24 @@
     height: 300px;
 }
 .reveal .position {
-    border: 2px solid rgba(0,0,0, .2);
+    border: 2px solid rgba(150,255,255, .5);
     font-size: 1.5rem;
     margin: 0 auto;
     position: relative;
     width: 300px;
 }
 .reveal .position:after {
-    background: #fff;
+    background: #222;
+    padding: .25rem .5rem;
     position: absolute;
         top: 0px;
-        left: -130px;
+        left: -120px;
 }
 .reveal .container-1:after { content: '.container-1'; }
 .reveal .container-2:after {
     content: '.container-2';
         top: 60px;
-        left: -90px;
+        left: -80px;
 }
 .reveal .position .box {
     color: #fff;
@@ -361,7 +362,7 @@
     /*width: 340px;*/
 }
 .reveal .container-2 {
-    border: 2px solid rgba(120,0,0, .2);
+    border: 2px solid rgba(255,150,150, .7);
 }
 
 
