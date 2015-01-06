@@ -1,0 +1,107 @@
+{% assign img_path = '../img/slides/css-selectors01' %}
+<section>
+    <section>
+        <h3><strong>Tipos de selectores</strong></h3>
+        <h3><span class="marker">Etiqueta / Elemento</span></h3>
+    </section>
+
+    <section>
+        <h2>Etiqueta / Elemento</h2>
+        <p>Es el más genérico. <br />Aplicamos estilo a todos los elementos de la página.</p>
+        <img src="{{ img_path }}/css-selectores07.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Clase</h2>
+        <ul>
+            <li>Atributo HTML aplicable a cualquier elemento</li>
+            <li>Pueden tener cualquier <a href="https://developer.mozilla.org/es/docs/Web/CSS/Escribir_CSS_eficiente" target="_blank">nombre</a></li>
+            <li>Se pueden aplicar a múltiples elementos en una misma página</li>
+            <li>Son sensibles a las mayúsculas</li>
+        </ul>
+        <img src="{{ img_path }}/css-selectores08.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Identificador</h2>
+        <ul>
+            <li>Atributo HTML aplicable a cualquier elemento</li>
+            <li>Pueden tener cualquier nombre</li>
+            <li>Los ID han de ser únicos en una misma página</li>
+            <li>Son sensibles a las mayúsculas</li>
+            <li>Recuerda: Clases > estilos | IDs > <a href="http://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_doc_getelementbyid" target="_blank">Javascript</a></li>
+        </ul>
+        <img src="{{ img_path }}/css-selectores09.jpg" alt="">
+    </section>
+</section>
+
+<section>
+    <section>
+        <h3><strong>Combinaciones de selectores</strong></h3>
+        <h3>Aumentamos<span class="marker"> la especificidad</span></h3>
+    </section>
+
+    <section>
+        <h2>Selector Elemento-Específico</h2>
+        <p>La combinación Elemento-específico aplica una clase o un ID exclusivamente al elemento que le precede.</p>
+        <img src="{{ img_path }}/css-selectores10.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Selector Descendente</h2>
+        <ul>
+            <li>Especifican un elemento basándose en su jerarquía</li>
+            <li>Ofrece altos niveles de especificidad pero es poco versátil</li>
+            <li>Se colocan las etiquetas una a continuación de la otra separadas por un espacio</li>
+        </ul>
+        <img src="{{ img_path }}/css-selectores11.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Agrupar selectores</h2>
+        <p>Aplicamos los mismos estilos situándolos uno a continuación del otro<br /> separados por coma (,)</p>
+        <img src="{{ img_path }}/css-selectores12.jpg" alt="">
+    </section>
+</section>
+
+<section>
+    <section>
+        <h3><strong>Selector contextual</strong></h3>
+    </section>
+
+    <section>
+        <h2>Selector universal</h2>
+        <p>Aplica la declaración a todos los elementos de la página sin excepción</p>
+        <img src="{{ img_path }}/css-selectores13.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Selector atributo</h2>
+        <p>El selector de atributo aplicará la declaración sólo cuando el elemento disponga de un atributo que coincida exactamente con el contenido entre paréntesis [ ]</p>
+        <img src="{{ img_path }}/css-selectores14.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Selector atributo + valor</h2>
+        <p>El selector de atributo aplicará la declaración sólo cuando el elemento disponga de un atributo y un valor que coincida exactamente con el contenido entre paréntesis [ ]</p>
+        <img src="{{ img_path }}/css-selectores15.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Selector de hijos</h2>
+        <p>Selecciona a un elemento que se encuentra anidado.</p>
+        <img src="{{ img_path }}/css-selectores16.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Selector de hermanos adyacentes</h2>
+        <p>Selecciona al elemento indicado que se encuentre a su mismo nivel en la jerarquía y a continuación.</p>
+        <img src="{{ img_path }}/css-selectores17.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Selector de hermanos NO adyacentes</h2>
+        <p>Selecciona al elemento indicado que se encuentre a su mismo nivel independientemente de la jerarquía.</p>
+        <img src="{{ img_path }}/css-selectores18.jpg" alt="">
+    </section>
+</section>

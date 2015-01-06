@@ -1,0 +1,50 @@
+<section class="text-left">
+    <section>
+        <h2>Sintáxis HTML</h2>
+    </section>
+
+    <section>
+        <p>Los elementos son la estructura básica de HTML.</p>
+        <p>Para marcar un elemento solo necesitamos dos <em>etiquetas</em> o <i>tags</i> (escritas entre corchetes angulares: <,>), una de apertura y una de cierre, que se diferencia por llevar una &ldquo; / &rdquo; tras el primer corchete.</p>
+        <p></p>
+        <hr>
+        <p style="text-align: center;"><code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">&#60;elemento&#62;</code>Contenido.<code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">&#60;&#47elemento&#62;</code></p>
+    </section>
+
+    <section>
+        <p>Extisten también <em>elementos vacíos</em>, o sea, que no llevan contenido por lo que tampoco utilizan etiqueta de cierre</p>
+        <p><code>&#60;img&#62;</code>, <code>&#60;br&#62;</code> o <code>&#60;hr&#62;</code> son algunos ejemplos.</p>
+    </section>
+
+    <section>
+        <p>Los elementos pueden <em>anidarse unos dentro de otros</em> (con ciertas restricciones).</p>
+        <p>En ese caso debe cerrarse siempre primero el elemento hijo antes de cerrar el padre</p>
+            <pre>
+                <code data-trim contenteditable>
+                &#60;body&#62;
+                    &#60;h1&#62;Titular del contenido&#60;/h1&#62;
+                    &#60;p&#62;Contenido de la página&#60;/p&#62;
+                &#60;/body&#62;
+                </code>
+            </pre>
+    </section>
+
+    <section>
+        <p>Los elementos pueden contener <em>atributos</em>. Los atributos son instrucciones que modifican la forma en que se comporta el elemento.</p>
+        <p>Los atributos se componen de un <span style="color: rgb(39, 174, 96);">nombre</span> y un <span style="color: rgb(174, 39, 82);">valor</span>, escritos con la siguiente sintáxis:</p>
+        <hr>
+        <p style="text-align: center;"><code>&#60;a <span style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">href</span>=<span style="background: rgba(174, 39, 82, .7); color: #fff; display: inline-block; padding: .2em .3em;">"http://www.google.com"</span>&#62;Google&#60;/a&#62;</code></p>
+    </section>
+
+    <section>
+        <p>Podemos insertar comentarios en nuestro código para hacer anotaciones que consideremos necesarias para entenderlo mejor.</p>
+        <p>Todo lo que se escriba dentro de un comentario no será leido por el navegador.</p>
+        <pre><code data-trim contenteditable>
+        &#60;!--
+        Esto texto no se verá en el navegador
+        porque es un comentario
+        --&#62;
+        &#60;p&#62;Esto texto si se mostrará&#60;/p&#62;
+        </code></pre>
+    </section>
+</section>

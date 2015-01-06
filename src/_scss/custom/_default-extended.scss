@@ -18,13 +18,43 @@
 
 // OTHER
 // ------------------------------------------------------
+// .reveal p {
+//     text-align: left;
+// }
+.reveal em {
+    color: #1b91ff;
+    font-style: normal;
+}
+.reveal a:not(.image) {
+    text-decoration: underline;
+}
+.reveal ul {
+    display: block;
+    padding-left: 3rem;
+}
+.reveal li {
+    margin-bottom: .25em;
+}
+.reveal hr {
+    border-style: dashed;
+    color: rgba(0,0,0, .2);
+    margin: 1em auto;
+}
+.reveal pre {
+    margin-top: 2em;
+}
+.reveal pre code {
+    padding: 10px;
+}
 .reveal small {
     display: block;
 }
 .reveal .marker {
     color: #D5C70F;
 }
-
+.reveal .text-left p {
+    text-align: left;
+}
 
 // LINKS
 // ------------------------------------------------------

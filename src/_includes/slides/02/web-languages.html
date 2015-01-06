@@ -1,0 +1,82 @@
+<section class="text-left">
+    <section>
+        <h2>Los lenguajes de la web</h2>
+    </section>
+
+    <section>
+        <h3 style="margin-bottom: 3rem; text-align: left; text-transform: none;">Hay 3 lenguajes encargados de crear un sitio web:</h3>
+        <ul style="font-size: 3rem;">
+            <li><strong><span class="marker">HTML</span></strong> (Hypertext Markup Language) - Estructura</li>
+            <li><strong><span class="marker">CSS</span></strong> (Cascading Style Sheets) - Presentación</li>
+            <li><strong><span class="marker">Javascript</span></strong> - Comportamiento</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>HTML</h2>
+        <h3>(Hypertext Markup Language)</h3>
+        <p>Es el lenguaje que se utiliza para crear la estructura y el contenido de un documento web.</p>
+        <p>Se trata de un <strong>lenguaje de marcado</strong>, es decir un sistema para <i>identificar</i> y <i>describir</i> los diferentes elementos de una página</p>
+
+        <pre><code data-trim contenteditable>
+            &#60;h1&#62;h1 - Titular de nivel 1 &#60;/h1&#62;
+            &#60;h2&#62;h2 - Titular de nivel 2 &#60;/h2&#62;
+            &#60;p&#62;Esto es un párrafo con un &#60;strong&#62;texto destacado&#60;/strong&#62;.&#60;/p&#62;
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>CSS</h2>
+        <h3 class="subtitulo">(Cascading Style Sheets)</h3>
+        <p>Es un lenguaje creado para controlar la <i>presentación</i> (el estilo) de un documento HTML.</p>
+
+        <pre><code data-trim contenteditable>
+            .subtitulo {
+                color: yellow;
+                font-family: 'Comic Sans MS';
+                font-size: xx-large;
+            }
+        </code></pre>
+    </section>
+
+    <section>
+        <h2>Javascript</h2>
+        <p>Es un lenguaje de programación que se utiliza para agregar interactividad y comportamientos dinámicos a nuestras páginas.</p>
+        <pre><code data-trim contenteditable>
+            (function(){
+                var hi_button    = document.getElementById('hi-button'),
+                hi_container = document.getElementById('hi-container');
+
+                hi_button.onclick = function() {
+                hi_container.innerHTML = '&#60;h2 class="hi"&#62;Hola&#60;/h2&#62;';
+                }
+            })();
+        </code></pre>
+
+        <p id="hi-container" style="text-align: center;"><button id="hi-button">Saludar</button></p>
+        <script>
+            (function(){
+                var hi_button    = document.getElementById('hi-button'),
+                    hi_container = document.getElementById('hi-container');
+
+                hi_button.onclick = function() {
+                    hi_container.innerHTML = '<h2 class="hi">Hola</h2>';
+                }
+            })();
+        </script>
+    </section>
+
+    <section>
+        <h2>Lenguajes server-side</h2>
+        <p>Son lenguajes que se ejecutan en el servidor. Se utilizan para crear sitios web con contenidos dinámicos y aplicaciones.</p>
+        <p>Algunos de estos lenguajes son:</p>
+            <ul style="font-size: 3rem;">
+                <li>PHP</li>
+                <li>Python</li>
+                <li>Ruby</li>
+                <li>.NET</li>
+                <li>Java</li>
+                <li>Javascript (Node.js, Rhino, SpiderMonkey)</li>
+            </ul>
+    </section>
+</section>

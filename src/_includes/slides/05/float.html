@@ -1,0 +1,82 @@
+{% assign img_path = '../img/slides/css-float' %}
+<section class="text-left">
+    <section>
+        <h2>Posicionamiento mediante<br/>
+            <span class="marker">float</span>
+        </h2>
+    </section>
+
+    <section>
+        <p>La propiedad <code>float</code> modifica el flujo natural del elemento y lo "flota" situándolo a la izquierda o derecha de su contenedor permitiendo al resto de elementos <span class="marker">inline</span> ocupar el espacio colindante.</p>
+    </section>
+
+    <section>
+        <p>Inicialmente se creó para posicionar imágenes dentro de un bloque de texto pero con el tiempo acabo por ser una de las herramientas CSS más usadas para generar layouts.</p>
+        <hr>
+        <span><a href="exercise01.html">exercise01.html</a></span>
+    </section>
+
+    <section>
+        <h2>Valores de la propiedad Float</h2>
+        <ul>
+            <li class="marker">None</li>
+            <li class="marker">Left</li>
+            <li class="marker">Right</li>
+        </ul>
+        </p>
+    </section>
+
+    <section class="float-example">
+        <h2>Float NONE</h2>
+        <pre><code data-trim contenteditable>div { float: none; }</code></pre>
+        <div class="float-wrap">
+            <div class="float-box">1</div>
+            <div class="float-box">2</div>
+            <div class="float-box">3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Float LEFT</h2>
+        <pre><code data-trim contenteditable>div { float: left; }</code></pre>
+        <div class="float-wrap">
+            <div class="float-box float-left">1</div>
+            <div class="float-box float-left">2</div>
+            <div class="float-box float-left">3</div>
+            <div class="float-box float-left">4</div>
+            <div class="float-box float-left">5</div>
+            <div class="float-box float-left">6</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Float Right</h2>
+        <pre><code data-trim contenteditable>div { float: right; }</code></pre>
+        <div class="float-wrap">
+            <div class="float-box float-right">1</div>
+            <div class="float-box float-right">2</div>
+            <div class="float-box float-right">3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>La propiedad clear</h2>
+        <p>Omite el <span class="marker">float</span> del elemento anterior.</p>
+        <p><code class="marker">clear</code> soporta 4 valores:</p>
+        <ul>
+            <li><em><code>none</code></em>: el elemento se verá afectado normalmente por un float.</li>
+            <li><em><code>left</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: left</code>.</li>
+            <li><em><code>right</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: right</code>.</li>
+            <li><em><code>both</code></em>: el elemento se desplazará abajo ante cualquier <code>float</code>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <div style="font-size: 1.5rem; width: 70%; margin: 0 auto; border: 1px dotted #666; padding: 1em;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="{{ img_path }}/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta.</p>
+            <p style="clear: both; background: hsla(18, 97%, 49%, 0.8)">cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
+        </div>
+    </section>
+</section>
