@@ -21,39 +21,52 @@
 // .reveal p {
 //     text-align: left;
 // }
-.reveal em {
-    color: #1b91ff;
-    font-style: normal;
-}
-.reveal a:not(.image) {
-    text-decoration: underline;
-}
-.reveal ul {
-    display: block;
-    padding-left: 3rem;
-}
-.reveal li {
-    margin-bottom: .25em;
-}
-.reveal hr {
-    border-style: dashed;
-    color: rgba(0,0,0, .2);
-    margin: 1em auto;
-}
-.reveal pre {
-    margin-top: 2em;
-}
-.reveal pre code {
-    padding: 10px;
-}
-.reveal small {
-    display: block;
-}
-.reveal .marker {
-    color: #D5C70F;
-}
-.reveal .text-left p {
-    text-align: left;
+.reveal {
+    em {
+        color: #1b91ff;
+        font-style: normal;
+    }
+    a:not(.image) {
+        text-decoration: underline;
+    }
+    p code {
+        font-size: 0.85em;
+        display: inline-block;
+        padding: 0 0.25em;
+
+        &:first-child {
+            padding-left: 0;
+        }
+    }
+    ul {
+        display: block;
+        padding-left: 3rem;
+    }
+    li {
+        margin-bottom: .25em;
+    }
+    hr {
+        border-style: dashed;
+        color: rgba(0,0,0, .2);
+        margin: 1em auto;
+    }
+    pre {
+        margin-top: 2em;
+
+        code {
+            padding: 10px;
+
+        }
+    }
+    small {
+        display: block;
+    }
+    .marker {
+        color: #D5C70F;
+    }
+    .text-left p {
+        text-align: left;
+    }
 }
 
 // LINKS
