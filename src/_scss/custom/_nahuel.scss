@@ -361,25 +361,31 @@
                 top: -10px;
             }
         }
+        &.no--tooltip {
+            &:before,
+            &:after {
+                display: none;
+            }
+        }
     }
     .pos__container-1 {
-        padding: 40px;
 
         &:after {
             content: '.container-1';
-        }
-    }
-    .pos__container-2 {
-        border: 2px solid rgba(255,150,150, .7);
-
-        &:after {
-            content: '.container-2';
                 top: 80px;
                 left: -80px;
         }
         &:before {
             top: 120px;
             left: 20px;
+        }
+    }
+    .pos__container-2 {
+        border: 2px solid rgba(255,150,150, .7);
+        padding: 40px;
+
+        &:after {
+            content: '.container-2';
         }
     }
     .pos__box {

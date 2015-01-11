@@ -48,7 +48,41 @@
                 <h3><strong>Position</strong></h3>
             </section>
 
-            <!-- {#% include slides/06/sublime-tip-multiple-cursor.html %#} -->
+            
+
+<section class="text-left">
+    <section>
+        <h2>Sublime Text Tip</h2>
+    </section>
+
+    <section>
+        <h3>Multi select</h3>
+        <table style="font-size: 1.8rem;">
+            <tr>
+                <td><code>Cmd + Click</code></td>
+                <td>Crea un nuevo cursor.</td>
+            </tr>
+            <tr>
+                <td><code>Cmd + D</code></td>
+                <td>Selecciona la siguiente aparición del texto seleccionado.</td>
+            </tr>
+            <tr>
+                <td><code>Cmd + Ctrl + G</code></td>
+                <td>Selecciona todas las aparicines en el documento del texto seleccionado.</td>
+            </tr>
+        </table>
+        <hr />
+        <img src="../img/slides/sublime-tip-selection/multi-line-selection.gif" alt="">
+    </section>
+
+    <section>
+        <p>Luego de ejecutado el código, reiniciaremos Sublime Text y ya podremos acceder al Package Control.</p>
+        <p>Para instalar un nuevo plugin, lo haremos a través de la Paleta de Comandos, donde escribiremos "Install Package" y luego el nombre del plugin a instalar.
+        <p>Accederemos a la paleta con:</p>
+        <p style="text-align: center;"><em><code>Cmd + Shift + P</code></em></p>
+    </section>
+</section>
+
 
 
 
@@ -78,7 +112,7 @@
     position: static;
 }
         </code></pre>
-        <div class="pos__container">
+        <div class="pos__container no--tooltip">
             <div class="pos__box pos__box-1">.box-1</div>
             <div class="pos__box pos__box-2">.box-2</div>
             <div class="pos__box pos__box-3">.box-3</div>
@@ -100,7 +134,7 @@
         left: 40px;
 }
         </code></pre>
-        <div class="pos__container">
+        <div class="pos__container no--tooltip">
             <div class="pos__box pos__box-1">.box-1</div>
             <div class="pos__box pos__box-2" style="position: relative; top: 20px; left: 40px;">.box-2</div>
             <div class="pos__box pos__box-3">.box-3</div>
@@ -117,7 +151,7 @@
         left: -40px; /* = right: 40px */
 }
         </code></pre>
-        <div class="pos__container">
+        <div class="pos__container no--tooltip">
             <div class="pos__box pos__box-1">.box-1</div>
             <div class="pos__box pos__box-2" style="position: relative; top: -20px; left: -40px;">.box-2</div>
             <div class="pos__box pos__box-3">.box-3</div>
@@ -148,8 +182,8 @@
     </section>
 
     <section>
-        <p>Si el elemento padre tuviera una posición <code>static</code>, buscará como referencia el siguiente elemento contenedor que tenga declarado otro valor en <code>position</code>. Sino seguirá subiendo hasta llegar al <code>body</code>.</p>
-
+        <h3>Position absolute</h3>
+        <p>Si el valor de <code>position</code> del elemento padre fuera <code>static</code>, tomará como referencia el siguiente elemento contenedor, y asi sucesivamente hasta encontrar un elemento apropiado o toparse con el <code>body</code>.</p>
     </section>
 
     <section>
@@ -163,8 +197,8 @@
         right: 0;
 }
         </code></pre>
-        <div class="pos__container pos__container-1">
-            <div class="pos__container pos__container-2" style="position: static;">
+        <div class="pos__container pos__container-2">
+            <div class="pos__container pos__container-1" style="position: static;">
                 <div class="pos__box pos__box-1">.box-1</div>
                 <div class="pos__box pos__box-2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
                 <div class="pos__box pos__box-3">.box-3</div>
