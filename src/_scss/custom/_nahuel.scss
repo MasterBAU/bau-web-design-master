@@ -284,32 +284,7 @@
 }
 
 
-/* DAY 06 */
-.reveal .bg-image pre code {
-    font-size: 1.5rem;
-    padding: .75em 1em;
-}
-.reveal .image-wrap {
-    background-color: rgba(0,0,0, .2);
-    border: 2px solid rgba(0,0,0, .5);
-    color: #000;
-    font-size: 1.4rem;
-    margin: 1.5rem auto;
-    padding: 1em;
-    width: 60%;
-}
-.reveal .is--dalek { background-image: url(../slides/day-06/dalek.png); }
-.reveal .is--megaman { background-image: url(../slides/day-06/megaman.png); }
-.reveal .is--tripi {
-    background-image: url(http://31.media.tumblr.com/tumblr_m8r8u6QyZD1qzw1qyo1_500.gif);
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 20px solid rgba(0,0,0, .4);
-    color: #fff;
-    padding: 50px;
-    width: 350px;
-    height: 350px;
-}
+
 
 
 
@@ -399,6 +374,34 @@
     .pos__box-1 { background: #27ae60; }
     .pos__box-2 { background: #8e44ad; }
     .pos__box-3 { background: #d35400; }
+
+    // css-background-*.html
+    // ------------------------------------------------------
+    .bg-image pre code {
+        font-size: 1.5rem;
+        padding: .75em 1em;
+    }
+    .image-wrap {
+        background-color: rgba(255,255,255, .6);
+        border: 2px solid rgba(0,0,0, .5);
+        color: #000;
+        font-size: 1.4rem;
+        margin: 1.5rem auto;
+        padding: 1em;
+        width: 60%;
+    }
+    .is--dalek { background-image: url(../img/slides/css-background/dalek.png); }
+    .is--megaman { background-image: url(../img/slides/css-background/megaman.png); }
+    .is--tripi {
+        background-image: url(../img/slides/css-background/background-clip2.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 20px solid rgba(0,0,0, .4);
+        color: #fff;
+        padding: 50px;
+        width: 350px;
+        height: 350px;
+    }
 }
 
 

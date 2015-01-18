@@ -114,6 +114,12 @@ gulp.task('svg', function() {
         .pipe(gulp.dest( path.dist + '/img/' ));
 });
 
+gulp.task('files', function() {
+    return gulp.src( path.src + '/files/**/*.*' )
+        .pipe(changed( path.dist + '/files' ))
+        .pipe(gulp.dest( path.dist + '/files' ));
+});
+
 
 // BROWSER SYNC =========================================
 gulp.task('browsersync', function() {
@@ -127,7 +133,7 @@ gulp.task('browsersync', function() {
 
 // WATCH ================================================
 gulp.task('watch', ['browsersync'], function() {
-    gulp.watch( path.src + '/**/*.html',             ['html'] );
+    gulp.watch( path.src + '/**/*.html',             ['html', 'files'] );
     gulp.watch( path.src + '/_scss/**/*.scss',       ['css'] );
     gulp.watch( path.src + '/_js/**/*.js',           ['js'] );
     gulp.watch( path.src + '/_img/**/*.+(png|jpg)',  ['images'] );
@@ -142,6 +148,7 @@ gulp.task('build', function(callback) {
         [
             'html',
             'images',
+            'files',
             'svg',
             'css',
             'fonts',

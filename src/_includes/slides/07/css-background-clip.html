@@ -1,0 +1,34 @@
+{% assign img_path = './img/slides/css-background' %}
+
+<section class="text-left">
+    <section data-background="{{ img_path }}/background-clip.gif" data-background-repeat="no-repeat">
+        <h3 style="color: #fff; text-shadow: 2px 2px 1px rgba(0,0,0,1);">background-clip</h3>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-clip: border-box; }
+        </code></pre>
+        <div class="image-wrap is--tripi" style="background-clip: border-box;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-clip: padding-box; }
+        </code></pre>
+        <div class="image-wrap is--tripi" style="background-clip: padding-box;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-clip: content-box; }
+        </code></pre>
+        <div class="image-wrap is--tripi" style="background-clip: content-box;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+        </div>
+    </section>
+</section>
