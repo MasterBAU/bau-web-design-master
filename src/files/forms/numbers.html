@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form numbers</title>
+
+	<style>
+		input, output {
+			font-size: 2em;
+			width: 370px;
+		}
+
+		body {
+			font-size: 2em;
+		}
+
+		.container {
+			width: 800px;
+			margin: 0 auto;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="container">
+	<h1>Operaciones aritméticas con elementos de formulario</h1>
+
+	<h2>Multiplicación</h2>
+
+	<form name="division" onsubmit="return false" oninput="cociente.value = parseInt(multiplicador.value) * parseInt(factor.value)">
+		<input id="multiplicador" type="number" step="any" value="142857"> X
+		<input id="factor" type="number" step="any" value=""> = 
+		<output name="cociente" for="multiplicador factor">introduce multiplicador</output>
+	</form>
+
+	<h2>División</h2>
+
+	<form name="division" onsubmit="return false" oninput="cociente.value = parseInt(dividendo.value) / parseInt(divisor.value)">
+		<input id="dividendo" type="number" step="any"> :
+		<input id="divisor" type="number" step="any"> = 
+		<output name="cociente" for="dividendo divisor">0</output>
+	</form>
+	</div>
+	
+</body>
+</html>

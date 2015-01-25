@@ -306,42 +306,131 @@
                 <h3>Nuevos elementos incluidos en</h3> 
                 <h2><span class="marker">HTML5</span></h2>
             </section>
+
+            <section>
+                <h4>&lt;input type="color"&gt;</h4>
+                <p>Permite especificar un color.</p>
+<pre><code data-trim contenteditable>
+<form>
+    <p><input type="color" value="#c0ffee"></p>  
+</form>
+</code></pre>
+                <p>Selecciona un color: <input id="background-color" type="color" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px;" onchange="javascript:document.getElementById('color-elegido').value = document.getElementById('background-color').value;"></p>
+                <p>El color seleccionado es: <input id="color-elegido" type="text" readonly="" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px; display:inline-block;"></p>                            
+            </section>
+
+            <section>
+                <h4>&lt;input type="date"&gt;</h4>
+                <p> Permite especificar una fecha con un calendario desplegable.<br />
+                    Además podemos restringir valores máximos y mínimos para una fecha concreta.</p>
+<pre><code data-trim contenteditable>
+<form>
+    <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26"></p>
+</form>
+</code></pre>
+                <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26" style="transform: scale(1.5);"></p>                           
+            </section>
+
+
+            <section>
+                <h4>&lt;input type="email"&gt;</h4>
+                <p> Validación automática de formato e-mail.<br />
+                    En dispositivos móviles el teclado muestra la @.</p>
+<pre><code data-trim contenteditable>
+<form>
+    <p><input type="email" name="userEmail"></p>
+</form>
+</code></pre>
+                <form action="#">
+                    <p><input type="email" name="userEmail" style="transform: scale(1.5);"></p>
+                    <p><input type="submit" value="enviar" style="transform: scale(1.5);"></p>
+                </form>
+            </section>
+
+            <section>
+                <h4>&lt;input type="number"&gt;</h4>
+                <p> Especificamos campos para introducir exclusivamente valores numéricos.<br />
+                    Podemos realizar operaciones aritméticas.</p>
+<pre><code data-trim contenteditable>
+<form>
+    <p><input type="number" name="dividendo"></p>
+</form>
+</code></pre>
+                <p><a href="files/forms/numbers.html" target="_blank">Ejemplo de operaciones aritméticas con "number"</a></p>
+            </section>
+
+            <section>
+                <h4>&lt;input type="range"&gt;</h4>
+                <p> Permite al usuario seleccionar un valor numérico deslizando un control.<br />
+                    Podemos definir un valor mínimo, otro máximo y el valor de cada incremento.</p>
+<pre><code data-trim contenteditable>
+<form>
+    <p><input id="slider" type="range" min="100" max="500" step="10" /></p>
+</form>
+</code></pre>
+                <input id="slider1" type="range" min="100" max="500" step="10" style="transform: scale(2)">
+
+            </section>
             
         </section>
 
         <section>
-            
-            <section>
-                <h3>&lt;select&gt;</h3>
-                <p> Especificamos el valor inicial del elemento.<br />
-                    Normalmente asignamos un valor con este atributo para elementos que no son editables por el usuario:</p>
+            <h3>&lt;select&gt;</h3>
+            <p> Especificamos el valor inicial del elemento.<br />
+                Normalmente asignamos un valor con este atributo para elementos que no son editables por el usuario:</p>
 
 <pre><code data-trim contenteditable>
 <form>
-    <select name="text">
-        <option value="MacOSX">Sistema opetarivo Mac</option>
-        <option value="Linux">Sistema opetarivo Linux</option>
-        <option value="Windows">Sistema opetarivo Windows</option>
-    </select>
+<select name="text">
+    <option value="MacOSX">Sistema opetarivo Mac</option>
+    <option value="Linux">Sistema opetarivo Linux</option>
+    <option value="Windows">Sistema opetarivo Windows</option>
+</select>
 </form>
 </code></pre>
-                <p>    
-                    <select name="text" style="transform: scale(1.5)">
-                        <option value="MacOSX">Sistema opetarivo Mac</option>
-                        <option value="Linux">Sistema opetarivo Linux</option>
-                        <option value="Windows">Sistema opetarivo Windows</option>
-                    </select>
-                </p>
-            </section>
+            <p>    
+                <select name="text" style="transform: scale(1.5)">
+                    <option value="MacOSX">Sistema opetarivo Mac</option>
+                    <option value="Linux">Sistema opetarivo Linux</option>
+                    <option value="Windows">Sistema opetarivo Windows</option>
+                </select>
+            </p>
         
         </section>
 
         <section>
-            <h3>Ejercicios</h3>
-            <ul>
-                <li><a href="http://lea.verou.me/css-workshop/#slide7">Ejercicio 01</a></li>
-                <li><a href="http://lea.verou.me/css-workshop/#slide8">Ejercicio 02</a></li>
-            </ul>
+                <h3>&lt;textarea&gt;</h3>
+                <p> Definimos un area con una anchura y altura determinada para que el usuario pueda introducir sus comentarios.</p>
+
+<pre><code data-trim contenteditable>
+    <textarea name="message" rows="10" cols="30">
+    ...para que me invitan si ya saben como me pongo
+    </textarea>
+</code></pre>
+
+            <p>Introduce tu comentario:</p>
+            <textarea name="message" rows="3" cols="50" style="font-size:.7em;">
+...para que me invitan si ya saben como me pongo
+            </textarea>
+        </section>
+
+        <section>
+                <h3>&lt;textarea&gt;</h3>
+                <p> Definimos un area con una anchura y altura determinada para que el usuario pueda introducir sus comentarios.</p>
+
+<pre><code data-trim contenteditable>
+    <button type="button"> No lo hagas..</button>
+</code></pre>
+
+            <p>No clicar!!!</p>
+            <button type="button" onclick="window.location.href ='http://www.nyan.cat/'">No lo hagas..</button>
+        </section>
+
+        <section>
+            <h3>Ejercicio</h3>
+            <p>Añade un formulario de suscripción al newsletter en la landing page DecoMAG</p>
+
+            <img src="img/slides/html-structural-elements/forms-exercise01.jpg" alt="">
         </section>
 
 
@@ -349,20 +438,20 @@
             <h2>Links relacionados</h2>
             <ul style="font-size: 1.8rem">
                 <li style="margin-bottom: .4em;">
-                    <strong>CSS Gradients</strong> <i style="color: #999;"> &mdash; Chris Coyier</i><br>
-                    <a href="http://css-tricks.com/css3-gradients/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://css-tricks.com/css3-gradients/</a>
+                    <strong>Style placeholder text</strong> <i style="color: #999;"> &mdash; Chris Coyier</i><br>
+                    <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://css-tricks.com/snippets/css/style-placeholder-text/</a>
                 </li>
                 <li style="margin-bottom: .4em;">
-                    <strong>Ultimate CSS Gradient Generator</strong><br>
-                    <a href="http://www.colorzilla.com/gradient-editor/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://www.colorzilla.com/gradient-editor/</a>
+                    <strong>Styling HTML forms</strong> <i style="color: #999;"> &mdash; MDN</i><br>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms" style="font-size: .8em; margin-top: -.5rem; display:block;">https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/Styling_HTML_forms/</a>
                 </li>
                 <li style="margin-bottom: .4em;">
-                    <strong>What are the Vendor Prefixes?</strong> <i style="color: #999;"> &mdash; David Walsh</i><br>
-                    <a href="http://davidwalsh.name/vendor-prefixes" style="font-size: .8em; margin-top: -.5rem; display:block;">http://davidwalsh.name/vendor-prefixes</a>
+                    <strong>Style Web Forms Using CSS</strong> <i style="color: #999;"> &mdash; Sitepoint</i><br>
+                    <a href="http://www.sitepoint.com/style-web-forms-css/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://www.sitepoint.com/style-web-forms-css/</a>
                 </li>
                 <li style="margin-bottom: .4em;">
-                    <strong>How To Deal With Vendor Prefixes</strong> <i style="color: #999;"> &mdash; Chris Coyier</i><br>
-                    <a href="http://css-tricks.com/how-to-deal-with-vendor-prefixes/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://css-tricks.com/how-to-deal-with-vendor-prefixes/</a>
+                    <strong>A form of madness</strong> <i style="color: #999;"> &mdash; Mark Pilgrim</i><br>
+                    <a href="http://diveintohtml5.info/forms.html" style="font-size: .8em; margin-top: -.5rem; display:block;">http://diveintohtml5.info/forms.html</a>
                 </li>
             </ul>
         </section>
