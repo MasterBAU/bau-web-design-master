@@ -1,0 +1,72 @@
+{% assign img_path = './img/slides/css-pseudoclasses' %}
+
+<section class="text-left">
+    <section>
+        <h2>Pseudoclasses CSS</h2>
+    </section>
+
+    <section>
+        <h4 style="text-transform: none">Llamamos <span class="marker">pseudo clase</span> a un tipo de selector que aplica estilos a un estado concreto de los elementos del DOM en lugar de aplicarlos a los propios elementos en sí.</h4><br />
+
+        <h4 style="text-transform: none">Su sintaxis es el nombre precedido por <span class="marker">:</span></h4>
+
+        <h3 style="text-transform: none; color:#FF7F03">elemento<span class="marker">:pseudoclase</span></h3>
+    </section>
+
+    <section>
+        <h3>Pseudoclases <span class="marker">:link</span> y <span class="marker">:visited</span></h3>
+        <p style="text-align: center">
+            Hacen referencia a un estado concreto de un enlace.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Estado enlace no visitado */
+a:link { 
+    color: #c0ffee;
+}
+
+/* Estado enlace visitado */
+a:visited {
+    color: #decaff;
+}
+        </code></pre>
+        <small>TIP - <span class="marker">:link</span> ha de aplicarse ANTES de <span class="marker">:visited</span> para que funcionen correctamente.</small>
+
+    </section>
+
+    <section>
+        <h3>Pseudoclases <span class="marker">:hover</span> y <span class="marker">:active</span></h3>
+        <p style="text-align: center">
+            Hacen referencia a un estado concreto de un enlace.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Estado sobre un enlace */
+a:hover { 
+    color: #bada55;
+}
+
+/* Estado enlace activo */
+a:active {
+    color: #1ad1e5;
+}
+        </code></pre>
+        <small>TIP - <span class="marker">:hover</span> ha de aplicarse ANTES de <span class="marker">:active</span> para que funcionen correctamente.</small>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:first-child</span></h3>
+        <p style="text-align: center">
+            Selecciona el primer hijo de un elemento.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Seleccionamos el primer elemento li de cualquier ul del DOM */
+li:first-child { 
+    color: #fe0;
+}
+
+/* Seleccionamos el primer elemento li contenido en nav */
+nav li:first-child {
+    color: #1ad1e5;
+}
+        </code></pre>
+    </section>
+</section>

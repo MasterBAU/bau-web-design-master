@@ -1,0 +1,22 @@
+
+// Slides day-09.html
+    .firstline::first-line {
+        color: #D5C70F;
+        font-weight: bold;
+        font-size: 1.2em;
+		line-height: 1.2;
+		text-shadow: 2px 2px 2px #000;
+    }
+
+    .catwatching{
+    	padding-left: 20px;
+    
+    	&:before {
+			content: "";
+	    	background-image: url(../img/slides/css-pseudoclasses/cat-watching.gif);
+			float: left;
+			margin: 0 30px 0 50px;
+			height: 250px;
+	    	width: 400px;
+    	} 
+    }

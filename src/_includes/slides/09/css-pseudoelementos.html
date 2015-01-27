@@ -1,0 +1,54 @@
+{% assign img_path = './img/slides/css-pseudoclasses' %}
+
+<section class="text-left">
+    <section>
+        <h2>Pseudoelementos CSS</h2>
+    </section>
+
+    <section>
+        <h4 style="text-transform: none">Llamamos <span class="marker">pseudo elemento</span> a una abstracción de un elemento en sí que puede no existir en el propio DOM.<br />
+        También pueden referirse a una parte específica del elemento.</h4><br />
+
+        <h4 style="text-transform: none">Su sintaxis es el nombre precedido por <span class="marker">::</span></h4>
+
+        <h3 style="text-transform: none; color:#FF7F03">elemento<span class="marker">::pseudoelemento</span></h3>
+    </section>
+
+    <section>
+        <h3>Pseudoelemento <span class="marker">::before</span></h3>
+        <p style="text-align: center">
+            Insertamos contenido <span class="marker">antes</span> de un elemento dado.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Insertamos un gato antes del párrafo */
+p::before {
+    content: "";
+    background-image: url(cat-watching.gif);
+    float: left; margin: 0 30px 0 50px; height: 250px; width: 400px;
+}
+
+        </code></pre>
+        <p class="catwatching">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, accusantium aspernatur reprehenderit in, doloribus nobis nisi quae tempora magni perspiciatis beatae!</p>
+
+    </section>
+
+    <section>
+        <h3>Pseudoelemento <span class="marker">::first-line</span></h3>
+        <p style="text-align: center">
+            Seleccionan únicamente la primera línea de un elemento &lt;p&gt;.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Destacamos sólo la primera línea */
+p:first-line {
+    color: #D5C70F;
+    font-size: 1.2em;
+    line-height: 1.2;
+    text-shadow: 2px 2px 2px #000;
+}
+
+        </code></pre>
+        <p class="firstline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, accusantium aspernatur reprehenderit in, doloribus nobis nisi quae tempora magni perspiciatis beatae!</p>
+
+    </section>
+
+</section>
