@@ -33,13 +33,53 @@ p::before {
     </section>
 
     <section>
+        <h3>Pseudoelemento <span class="marker">::after</span></h3>
+        <p style="text-align: center">
+            Del mismo modo, podemos añadir contenido <span class="marker">después</span> de un elemento.
+        </p>
+        <pre class="whitecat-pre"><code data-trim contenteditable>
+/* Insertamos otro gato después del párrafo */
+p::after {
+    content: "";
+    background-image: url(whitecat.gif);
+    position: absolute;
+        top: -222px;
+        right: -250px;
+}
+
+        </code></pre>
+        <p class="whitecat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, accusantium aspernatur reprehenderit in, doloribus nobis nisi quae tempora magni perspiciatis beatae!</p>
+
+    </section>
+
+    <section>
+        <h3>Pseudoelemento <span class="marker">::first-letter</span></h3>
+        <p style="text-align: center">
+            Seleccionan únicamente la primera letra de la primera línea de un bloque.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Destacamos sólo la primera letra */
+p::first-letter {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #D5C70F;
+    display: inline-block;
+    float: left;
+    text-shadow: 2px 2px 2px #000;
+}
+
+        </code></pre>
+        <p class="firstletter">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, accusantium aspernatur reprehenderit in, doloribus nobis nisi quae tempora magni perspiciatis beatae!</p>
+
+    </section>
+
+    <section>
         <h3>Pseudoelemento <span class="marker">::first-line</span></h3>
         <p style="text-align: center">
-            Seleccionan únicamente la primera línea de un elemento &lt;p&gt;.
+            Seleccionan únicamente la primera línea de un elemento de bloque que contenga texto. Sólo tiene efecto en elementos con su propiedad "display" en: block, inline-block, table-cell o table-caption.
         </p>
         <pre><code data-trim contenteditable>
 /* Destacamos sólo la primera línea */
-p:first-line {
+p::first-line {
     color: #D5C70F;
     font-size: 1.2em;
     line-height: 1.2;
@@ -48,6 +88,24 @@ p:first-line {
 
         </code></pre>
         <p class="firstline">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, accusantium aspernatur reprehenderit in, doloribus nobis nisi quae tempora magni perspiciatis beatae!</p>
+
+    </section>
+
+    <section>
+        <h3>Pseudoelemento <span class="marker">::selection</span></h3>
+        <p style="text-align: center">
+            Se aplica únicamente a la parte de texto que ha sido seleccionada por el usuario con el mouse mediante pulsar y arrastrar.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Texto destacado */
+p::selection {
+    color: #D5C70F;
+    background: transparent;
+    text-shadow: 2px 2px 2px #000;
+}
+
+        </code></pre>
+        <p class="selection">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, accusantium aspernatur reprehenderit in, doloribus nobis nisi quae tempora magni perspiciatis beatae!</p>
 
     </section>
 
