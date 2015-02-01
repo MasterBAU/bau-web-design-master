@@ -48,10 +48,7 @@
                 <h3><strong>Formularios web</strong></h3>
             </section>
 
-
-
             <section class="text-left">
-
                 <section>
                     <h2>Sublime Text Tip</h2>
                 </section>
@@ -71,12 +68,11 @@
                 </section>
             </section>
 
-
             <section class="text-left">
                 <section>
                     <h3>Formularios</h3>
                     <p>Los formularios nos permiten obtener información del usuario. <br />El resultado puede ser una búsqueda en una base de datos o el envío del contenido por e-mail.</p>
-                    <img src="img/slides/html-structural-elements/forms-example01.jpg" alt="">
+                    <img src="img/slides/html-forms/forms-example01.jpg" alt="">
                 </section>
 
                 <section>
@@ -118,7 +114,7 @@
     <input type="text" value="nombre"/>
 </form>
 </code></pre>
-    
+
             <br />
             <p>
                 <input type="text" style="width: 550px; font-size: 1em; margin:0 30px; display: inline-block"/>
@@ -135,9 +131,9 @@
     <input type="text" placeholder="Introduce tu nombre"/>
 </form>
 </code></pre>
-                
+
                 <br />
-                
+
                 <p><small>Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</small></p>
                 <p><input type="text" name="nombre" placeholder="Introduce tu nombre" style="font-size: 1em;" /></p>
                 <style>
@@ -150,7 +146,7 @@
                     :-moz-placeholder { /* Firefox 18- */
                         color: grey;
                        text-align: center;
-                       font-size: .8em;  
+                       font-size: .8em;
                     }
 
                     ::-moz-placeholder {  /* Firefox 19+ */
@@ -159,7 +155,7 @@
                        font-size: .8em;
                     }
 
-                    :-ms-input-placeholder {  
+                    :-ms-input-placeholder {
                         color: grey;
                        text-align: center;
                        font-size: .8em;
@@ -177,7 +173,7 @@
 </form>
 </code></pre>
                 <br />
-                
+
                  <p><small><a href="http://diveintohtml5.info/examples/input-autofocus-with-fallback.html" target="_blank">Ejemplo</a> de autofocus con jQuery fallBack.</small></p>
                 <p><input type="text" name="nombre" style="font-size: 1em;"/></p>
 
@@ -192,7 +188,7 @@
 </form>
 </code></pre>
                 <br />
-                
+
                 <form action="#">
                      <p><small>Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</small></p>
                     <p><input type="text" required name="nombre" placeholder="* campo obligatorio" style="font-size: 1em;"/></p>
@@ -210,7 +206,7 @@
     </form>
     </code></pre>
                     <br />
-                    
+
                     <p>Introduce password: <input type="password" style="width: 550px; font-size: 1em; margin:0 30px; display: inline-block"/></p>
 
             </section>
@@ -220,10 +216,10 @@
                 <p>Permite especificar un tipo de archivo concreto para adjuntar en el envío del formulario.</p>
 <pre><code data-trim contenteditable>
 <form>
-    <p><input type="file" name="imagen" accept="image/*"></p>  
+    <p><input type="file" name="imagen" accept="image/*"></p>
 </form>
 </code></pre>
-                <p><input type="file" name="imagen" accept="image/*" style="transform: scale(1.5);"></p>                                
+                <p><input type="file" name="imagen" accept="image/*" style="transform: scale(1.5);"></p>
             </section>
 
             <section>
@@ -234,7 +230,7 @@
     <input type="submit" value="enviar">
 </form>
 </code></pre>
-                <p><input type="submit" value="enviar" style="transform: scale(1.5);" /></p>                                
+                <p><input type="submit" value="enviar" style="transform: scale(1.5);" /></p>
 
             </section>
 
@@ -248,7 +244,7 @@
 </form>
 </code></pre>
                 <br />
-                
+
                 <p style="font-size: .8em;"><input type="checkbox" style="font-size: 110%; display: inline;"/>Opción 1</p>
                 <p style="font-size: .8em;"><input type="checkbox" style="font-size: 110%; display: inline;"/>Opción 2</p>
 
@@ -279,7 +275,7 @@
 </form>
 </code></pre>
                 <br />
-                
+
                 <div style="width: 20%; margin:0 auto 30px;">
                 <p style="font-size:.8em; text-align:left;"><input style="margin-right:10px;" type="radio" name="sistemaOperativo" value="macosx"/>MacOSX</p>
                 <p style="font-size:.8em; text-align:left;"><input style="margin-right:10px;" type="radio" name="sistemaOperativo" value="linux"/>GNU/Linux</p>
@@ -303,7 +299,7 @@
             </section>
 
             <section>
-                <h3>Nuevos elementos incluidos en</h3> 
+                <h3>Nuevos elementos incluidos en</h3>
                 <h2><span class="marker">HTML5</span></h2>
             </section>
 
@@ -312,11 +308,11 @@
                 <p>Permite especificar un color.</p>
 <pre><code data-trim contenteditable>
 <form>
-    <p><input type="color" value="#c0ffee"></p>  
+    <p><input type="color" value="#c0ffee"></p>
 </form>
 </code></pre>
                 <p>Selecciona un color: <input id="background-color" type="color" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px;" onchange="javascript:document.getElementById('color-elegido').value = document.getElementById('background-color').value;"></p>
-                <p>El color seleccionado es: <input id="color-elegido" type="text" readonly="" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px; display:inline-block;"></p>                            
+                <p>El color seleccionado es: <input id="color-elegido" type="text" readonly="" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px; display:inline-block;"></p>
             </section>
 
             <section>
@@ -328,7 +324,7 @@
     <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26"></p>
 </form>
 </code></pre>
-                <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26" style="transform: scale(1.5);"></p>                           
+                <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26" style="transform: scale(1.5);"></p>
             </section>
 
 
@@ -371,7 +367,7 @@
                 <input id="slider1" type="range" min="100" max="500" step="10" style="transform: scale(2)">
 
             </section>
-            
+
         </section>
 
         <section>
@@ -388,14 +384,14 @@
 </select>
 </form>
 </code></pre>
-            <p>    
+            <p>
                 <select name="text" style="transform: scale(1.5)">
                     <option value="MacOSX">Sistema opetarivo Mac</option>
                     <option value="Linux">Sistema opetarivo Linux</option>
                     <option value="Windows">Sistema opetarivo Windows</option>
                 </select>
             </p>
-        
+
         </section>
 
         <section>
@@ -431,7 +427,7 @@
             <h3>Ejercicio</h3>
             <p>Añade un formulario de suscripción al newsletter en la landing page DecoMAG</p>
 
-            <a href="files/excersices/home_deco_form.psd.zip"><img src="img/slides/html-structural-elements/forms-exercise01.jpg" alt=""></a>
+            <a href="files/excersices/home_deco_form.psd.zip"><img src="img/slides/html-forms/forms-exercise01.jpg" alt=""></a>
         </section>
 
 
