@@ -126,8 +126,34 @@ section:exoplanet {
     </section>
 
     <section>
-        · checked
-        · focus
+        <h3>Pseudoclase <span class="marker">:checked</span></h3>
+        <p style="text-align: center">
+            Selecciona el checkbox cuyo estado es 'checked'.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos color a la etiqueta cuando el estado es checked */
+input[type=checkbox]:checked + label {
+  color: #fe0;
+  font-style: normal;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:focus</span></h3>
+        <p style="text-align: center">
+            Definimos el estilo del estado 'hover' para <span class="marker">enlaces</span> y elementos <span class="marker">input</span> cuando se navega con el teclado.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo a un input text cuando su estado es focus */
+input[type=text]:focus {
+  color: black;
+  background: yellow;
+}
+        </code></pre>
+    </section>
+
+    <section>
         · optional
         · required
         · valid
