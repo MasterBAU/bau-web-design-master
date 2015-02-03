@@ -111,4 +111,36 @@ p::selection {
 
     </section>
 
+    <section>
+        <h3>Pseudoelemento <span class="marker">::backdrop</span></h3>
+        <p style="text-align: center">
+            Se aplica únicamente cuando utilizamos la vista de navegador a pantalla completa.<br />
+            Este pseudoelemento se usa junto a la pseudoclase :fullscreen.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Backdrop con un contenido fullscreen */
+*:fullscreen::backdrop {
+  position:fixed;
+  top:0; right:0; bottom:0; left:0;
+  background:black;
+}
+iframe:fullscreen {
+  /* Añadimos los estilos del contenido que queremos ver a pantalla completa */
+}
+
+        </code></pre>
+        
+        <p style="text-align: center"><a href="https://developer.mozilla.org/samples/domref/fullscreen.html" target="_blank">ver ejemplo</a></p>
+
+    </section>
+
+    <section>
+        <h3>Index of standard pseudo-elements</h3>
+        <p style="text-align: center">
+            En Mozilla Developer Network podemos consultar el listado completo de pseudoelementos soportados actualmente. <br />
+            Es necesario consultar la compatibilidad de cada uno en los diferentes navegadores web.
+        </p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank"><img src="{{ img_path }}/indexOfPseudoelements.png" alt=""></a>
+    </section>
+
 </section>

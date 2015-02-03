@@ -75,6 +75,7 @@
 
 
 
+
 <section class="text-left">
     <section>
         <h2>Pseudoclasses CSS</h2>
@@ -197,7 +198,7 @@ section:exoplanet {
     background-color: #fe0;
 }
         </code></pre>
-        <p style="text-align: center"><a href="files/css-pseudo/target.html" target="_blank">ver ejemplo</a></p>
+        <p style="text-align: center"><a href="./files/css-pseudo/target.html" target="_blank">ver ejemplo</a></p>
     </section>
 
     <section>
@@ -229,10 +230,70 @@ input[type=text]:focus {
     </section>
 
     <section>
-        · optional
-        · required
-        · valid
-        · invalid
+        <h3>Pseudoclase <span class="marker">:required</span></h3>
+        <p style="text-align: center">
+            Definimos el estilo de todos los elementos INPUT que dispongan del atributo <span class="marker">required</span>.<br />
+            De esta forma podemos identificar de forma diferente los campos obligatorios de un formulario.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo a un input obligatorio de un form */
+input[type=text]:required {
+  color: black;
+  background: red;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:optional</span></h3>
+        <p style="text-align: center">
+            Representa todos los elementos INPUT que no tengan el atributo <span class="marker">required</span>.<br />
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo a un input obligatorio de un form */
+input[type=text]:optional {
+  color: black;
+  background: lightgrey;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:valid</span></h3>
+        <p style="text-align: center">
+            Representa todos los elementos INPUT con contenido validado según hayamos especificado en su tipo.<br />
+            De esta forma podemos aplicar un estilo diferente cuando el usuario ha introducido un valor que no se corresponde al esperado.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo para mostrar un input con contenido válido */
+input[type=text]:valid {
+  color: black;
+  background: lightgreen;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:invalid</span></h3>
+        <p style="text-align: center">
+            Representa todos los elementos INPUT con contenido inválido según hayamos especificado en su tipo.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo para mostrar un input con contenido no válido */
+input[type=text]:invalid {
+  color: black;
+  background: red;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Index of standard pseudo-classes</h3>
+        <p style="text-align: center">
+            A día de hoy disponemos de las siguientes pseudoclases. <br />
+            Es necesario consultar la compatibilidad de cada una en los diferentes navegadores web.
+        </p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank"><img src="./img/slides/css-pseudoclasses/indexOfPseudoclasses.png" alt=""></a>
     </section>
 </section>
 
@@ -354,6 +415,38 @@ p::selection {
 
     </section>
 
+    <section>
+        <h3>Pseudoelemento <span class="marker">::backdrop</span></h3>
+        <p style="text-align: center">
+            Se aplica únicamente cuando utilizamos la vista de navegador a pantalla completa.<br />
+            Este pseudoelemento se usa junto a la pseudoclase :fullscreen.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Backdrop con un contenido fullscreen */
+*:fullscreen::backdrop {
+  position:fixed;
+  top:0; right:0; bottom:0; left:0;
+  background:black;
+}
+iframe:fullscreen {
+  /* Añadimos los estilos del contenido que queremos ver a pantalla completa */
+}
+
+        </code></pre>
+        
+        <p style="text-align: center"><a href="https://developer.mozilla.org/samples/domref/fullscreen.html" target="_blank">ver ejemplo</a></p>
+
+    </section>
+
+    <section>
+        <h3>Index of standard pseudo-elements</h3>
+        <p style="text-align: center">
+            En Mozilla Developer Network podemos consultar el listado completo de pseudoelementos soportados actualmente. <br />
+            Es necesario consultar la compatibilidad de cada uno en los diferentes navegadores web.
+        </p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" target="_blank"><img src="./img/slides/css-pseudoclasses/indexOfPseudoelements.png" alt=""></a>
+    </section>
+
 </section>
 
 
@@ -385,6 +478,11 @@ p::selection {
             <li style="margin-bottom: .4em;">
                 <strong>:nth recipes</strong> <i style="color: #999;"> &mdash; CSS Tricks</i><br>
                 <a href="http://css-tricks.com/useful-nth-child-recipies/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://css-tricks.com/useful-nth-child-recipies/</a>
+            </li>
+
+            <li style="margin-bottom: .4em;">
+                <strong>CSS Level 4 Selectors to Watch Out For</strong> <i style="color: #999;"> &mdash; Jonathan Cutrell</i><br>
+                <a href="http://webdesign.tutsplus.com/articles/css-level-4-selectors-to-watch-out-for--cms-23117" style="font-size: .8em; margin-top: -.5rem; display:block;">http://webdesign.tutsplus.com/articles/css-level-4-selectors-to-watch-out-for--cms-23117</a>
             </li>
             
            
