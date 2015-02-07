@@ -1,5 +1,15 @@
 
 // Slides day-09.html
+    .symple-before {
+        text-transform: lowercase !important;
+
+        &:before {
+            content: "(⊙_◎)";
+            color: yellow;
+            font-size: 0.7em;
+            padding-right: 20px;
+        }
+    }
 
     .catwatching {
         padding-left: 20px;
