@@ -1,4 +1,5 @@
 {% assign img_path = './img/slides/css-pseudoclasses' %}
+{% assign files_path = './files/css-pseudo' %}
 
 <section class="text-left">
     <section>
@@ -6,7 +7,7 @@
     </section>
 
     <section>
-        <h4 style="text-transform: none">Llamamos <span class="marker">pseudo clase</span> a un tipo de selector que aplica estilos a un estado concreto de los elementos del DOM en lugar de aplicarlos a los propios elementos en sí.</h4><br />
+        <h4 style="text-transform: none">Llamamos <span class="marker">pseudo clase</span> a un tipo de pseudo-selector que aplica estilos a un estado concreto de los elementos del DOM en lugar de aplicarlos a los propios elementos en sí.</h4><br />
 
         <h4 style="text-transform: none">Su sintaxis es el nombre precedido por <span class="marker">:</span></h4>
 
@@ -69,4 +70,158 @@ nav li:first-child {
 }
         </code></pre>
     </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:last-child</span></h3>
+        <p style="text-align: center">
+            Selecciona el último hijo de un elemento.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Seleccionamos el último elemento li de cualquier ul del DOM */
+li:last-child { 
+    color: #fe0;
+}
+
+/* Seleccionamos el último elemento li contenido en nav */
+nav li:last-child {
+    color: #c55;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:nth-child()</span></h3>
+        <p style="text-align: center">
+            Selecciona el elemento dado en la expresión.<br />
+            Mediante <span class="marker">even</span> y <span class="marker">odd</span> podemos seleccionar pares/i
+        </p>
+        <pre><code data-trim contenteditable>
+/* Seleccionamos sólo los LI pares */
+li:nth-child(even) { 
+    color: #fafafa;
+}
+
+/* Seleccionamos un LI de cada 3 */
+li:nth-child(3n) { 
+    color: #fafafa;
+}
+
+        </code></pre>
+
+        <p>Además podemos usar <span class="marker">nth-last-child(2)</span> para seleccionar el segundo elemento empezando por el final.</p>
+
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:target</span></h3>
+        <p style="text-align: center">
+            Selecciona el elemento cuyo ID coincide con la URL del site.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos color cuando la URL sea: http://mysite.com/#exoplanet */
+section:exoplanet { 
+    background-color: #fe0;
+}
+        </code></pre>
+        <p style="text-align: center"><a href="{{ files_path }}/target.html" target="_blank">ver ejemplo</a></p>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:checked</span></h3>
+        <p style="text-align: center">
+            Selecciona el checkbox cuyo estado es 'checked'.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos color a la etiqueta cuando el estado es checked */
+input[type=checkbox]:checked + label {
+  color: #fe0;
+  font-style: normal;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:focus</span></h3>
+        <p style="text-align: center">
+            Definimos el estilo del estado 'hover' para <span class="marker">enlaces</span> y elementos <span class="marker">input</span> cuando se navega con el teclado.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo a un input text cuando su estado es focus */
+input[type=text]:focus {
+  color: black;
+  background: yellow;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:required</span></h3>
+        <p style="text-align: center">
+            Definimos el estilo de todos los elementos INPUT que dispongan del atributo <span class="marker">required</span>.<br />
+            De esta forma podemos identificar de forma diferente los campos obligatorios de un formulario.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo a un input obligatorio de un form */
+input[type=text]:required {
+  color: black;
+  background: red;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:optional</span></h3>
+        <p style="text-align: center">
+            Representa todos los elementos INPUT que no tengan el atributo <span class="marker">required</span>.<br />
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo a un input obligatorio de un form */
+input[type=text]:optional {
+  color: black;
+  background: lightgrey;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:valid</span></h3>
+        <p style="text-align: center">
+            Representa todos los elementos INPUT con contenido validado según hayamos especificado en su tipo.<br />
+            De esta forma podemos aplicar un estilo diferente cuando el usuario ha introducido un valor que no se corresponde al esperado.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo para mostrar un input con contenido válido */
+input[type=text]:valid {
+  color: black;
+  background: lightgreen;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pseudoclase <span class="marker">:invalid</span></h3>
+        <p style="text-align: center">
+            Representa todos los elementos INPUT con contenido inválido según hayamos especificado en su tipo.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Aplicamos estilo para mostrar un input con contenido no válido */
+input[type=text]:invalid {
+  color: black;
+  background: red;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Index of standard pseudo-classes</h3>
+        <p style="text-align: center">
+            A día de hoy disponemos de las siguientes pseudoclases. <br />
+            Es necesario consultar la compatibilidad de cada una en los diferentes navegadores web.
+        </p>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" target="_blank"><img src="{{ img_path }}/indexOfPseudoclasses.png" alt=""></a>
+    </section>
 </section>
+
+
+
+
