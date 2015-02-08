@@ -12,6 +12,7 @@
 }
 
 body{
+    /* Falta la coma para separar las fuentes ( font-family: 'Open Sans', sans-serif; )*/
     font-family: 'Open Sans' sans-serif;
     margin: 0;
 }

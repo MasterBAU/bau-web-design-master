@@ -1,0 +1,495 @@
+
+
+body {
+	margin: 0 auto;
+	padding-top: 70px;
+
+	/*
+	 *	No te olvides de usar prefijos especificos para los diferentes navegadores.
+	 *  Ya aprenderemos a hacerlo de manera automatica pero de momento hay que ponerlos a mano.
+	 *
+	 *  -webkit-box-sizing: border-box;
+	 *     -moz-box-sizing: border-box;
+	 *          box-sizing: border-box;
+	 */
+	box-sizing: border-box;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+	header {
+		position: fixed;
+			top: 0;
+
+		/*
+	     *  Antes que fijar un valor es mejor dejar que sea el contenido el que determine
+	     *  el alto de los elementos.
+	     */
+		height: 70px;
+		width: 100%;
+
+		background-color: #004f70;
+		z-index: 999;
+	}
+
+	.hcontent {
+		height: 70px;
+		width: 1024px;
+
+		margin: auto;
+	}
+
+	.logo {
+		padding: 25px 0px 10px;
+		float: left;
+	}
+
+	.logo img {
+		height: 35px;
+		width: 200px;
+	}
+
+	.hcontent nav {
+		padding: 25px 0px 10px;
+		height: 74px;
+		width: 600px;
+		float: right;
+	}
+
+	.hcontent ul {
+		width: 600px;
+		float: right;
+
+		list-style: none;
+	}
+
+	/*
+     *  Este selector tiene demasiados niveles de especificidad. Hubiera alcanzado con algo como:
+     *
+     *	.hcontent a { ... }
+	 *
+	 *  o si quisieras que el logo tuviese un link:
+	 *
+	 *  .hcontent li a { ... }
+     */
+	.hcontent nav ul li a {
+		height: 20px;
+		width: 150px;
+		float: left;
+
+		font-weight: 700;
+		text-decoration: none;
+		text-align: center;
+
+	}
+
+	.hcontent li a:link, .hcontent li a:visited {
+		color: #6ca7c0;
+	}
+
+	.hcontent li a:active {
+		color: white;
+	}
+
+	.content1 {
+		/*
+	     *  En estos casos es mejor utilizar min-height. De esta manera si el contenido crece no se
+	     *  saldrá de la caja.
+	     */
+		height: 420px;
+
+		width: 100%;
+
+		background-image: url('../img/fondo1.jpg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: 100%;
+	}
+
+	.margcont1 {
+		height: 420px;
+		width: 1024px;
+		margin: 0 auto;
+	}
+
+	.contizquierdo{
+		width: 476px;
+		float: left;
+	}
+
+	.revista {
+		height: 180px;
+		width: 476px;
+		margin-top: 63px;
+		padding: 20px;
+
+		background-color: rgba(180,168,166,0.5);
+		text-shadow: 1px 1px white;
+	}
+
+	.revista p {
+		font-size: 25px;
+	}
+
+	.formulario {
+		height: 315px;
+		width: 395px;
+		float: right;
+		margin-top: 48px;
+
+		background-color: rgba(94,94,94,0.7);
+		border: solid 5px #0088c1;
+	}
+
+	.formulario h4 {
+		text-align: center;
+
+		color: white;
+		font-size: 20px;
+		line-height: 0em;
+	}
+
+	input {
+		height: 33px;
+		width: 232px;
+		margin-left: 46px;
+		margin-top: 9px;
+
+		font-size: 16px;
+		font-family: 'Open Sans Condensed', sans-serif;
+		color: #696969;
+		border-radius: 10px;
+		border: solid 1px black;
+		background-repeat: no-repeat;
+		background-position: 15px 4px;
+	}
+
+	.name input, .email input, .password input {
+		padding-left: 60px;
+	}
+
+	.name input {
+		background-image: url("../img/name.png");
+	}
+
+	.email input {
+		background-image: url("../img/email.png");
+
+	}
+
+	.password input {
+		background-image: url("../img/password.png");
+
+	}
+
+	.check input {
+		height: 20px;
+		width: 25px;
+		margin: 20px 15px 0px 60px;
+	}
+
+	.check, .check a {
+		color: white;
+		font-size: 16px;
+		letter-spacing: 0.06em;
+		font-weight: lighter;
+	}
+
+	.check a:hover {
+		text-decoration: underline;
+	}
+
+	.send {
+		height: 40px;
+		width: 240px;
+		margin: 0px auto;
+		margin-top: 20px;
+
+		background-color: #0088c1;
+		text-align: center;
+		border-radius: 10px;
+	}
+
+	.send a {
+		color: white;
+		font-size: 20px;
+		line-height: 2.2em;
+	}
+
+
+	.quiero {
+		height: 45px;
+		width: 200px;
+		margin-top: 30px;
+
+		background-color: #009bdb;
+	}
+
+	.quiero p {
+		margin: 10px;
+
+		color: white;
+		font-size: 20px;
+		text-align: center;
+		text-decoration: none;
+	}
+
+	.contizquierdo a:hover, .contizquierdo a:visited {
+		text-decoration: none;
+
+	}
+
+	.content2 {
+		height: 632px;
+		width: 100%;
+		margin-top: 20px;
+	}
+
+	.content2 h2 {
+		color: white;
+	}
+
+	.content2 p {
+		color: white;
+	}
+
+	.margcont2 {
+		height: 632px;
+		width: 1024px;
+		margin: auto;
+
+		background-color: white;
+	}
+
+	.ideas {
+		height: 190px;
+		width: 300px;
+		float: left;
+
+		background-image: url('../img/luz.png');
+		background-size: 40px 40px;
+		background-position: 15% 23px;
+		background-repeat: no-repeat;
+		background-color: #009bdb;
+	}
+
+	.ideas h2{
+		margin: 30px 127px;
+
+		font-weight: 300;
+	}
+
+	.ideas p {
+		margin: 45px 45px;
+
+		text-align: center;
+		font-size: 20px;
+	}
+
+	/*
+     *  Los estilos de esta clase son casi iguales a los de .ideas.
+     *  Se podrian haber agrupado de manera mas eficiente.
+     */
+	.promociones {
+		height: 190px;
+		width: 680px;
+		float: right;
+
+		background-image: url('../img/sol.png');
+		background-size: 40px 40px;
+		background-repeat: no-repeat;
+		background-position: 8% 23px;
+		background-color: #0088c1;
+	}
+
+	.promociones h2{
+		margin: 30px 272px;
+
+		font-weight: 300;
+	}
+
+	.promociones p {
+		margin: 45px 63px;
+
+		font-size: 20px;
+		text-align: center;
+	}
+
+	.publicaciones {
+		height: 442px;
+		width: 405px;
+		float: left;
+	}
+
+	.publicaciones h2 {
+		margin-top: 90px;
+
+		color: #004e72;
+		font-size: 30px;
+		font-weight: 600;
+	}
+
+	.publicaciones p {
+		color: #004e72;
+		font-size: 25px;
+		font-weight: 300;
+	}
+
+	.imgcon2 {
+		margin-top: 40px;
+	}
+
+	/*
+     *  height: auto; es el default, no hace falta declararlo.
+     *
+     *  Igual que arriba, estas dos clases se podrian haber agrupado en una.
+     */
+	.img1 {
+		height: auto;
+		width: 150px;
+		float: left;
+	}
+
+	.img2 {
+		height: auto;
+		width: 150px;
+		float: left;
+		margin-left: 40px;
+	}
+
+	.mobileimg {
+		height: 442px;
+		width: 603px;
+		float: left;
+	}
+
+	.mobileimg img {
+		width: 100%;
+		margin-top: 33px;
+	}
+
+
+
+	/*
+     *	Aqui te has liado un poco centrando verticalmente con display: table;
+     *  Si tuviera que hacer un refactor sería algo así
+     *
+     *
+     *	.content3 {
+	 *		background: url('../img/fondo2.jpg') no-repeat center;
+	 *		background-size: cover;
+	 *		height: 420px;
+	 *	}
+	 *	.margcont3 {
+	 *		display: table;
+	 *		margin: 0 auto;
+	 *		width: 1024px;
+	 *		height: 100%;
+	 *	}
+	 *	.decora {
+	 *		display: table-cell;
+	 *		text-align: center;
+	 *		vertical-align: middle;
+	 *		width: 100%;
+	 *	}
+	 *	.decora h1 {
+	 *		background-color: rgba(94,94,94,0.7);
+	 *		color: white;
+	 *		display: inline-block;
+	 *		font-size: 30px;
+	 *		line-height: 1;
+	 *		padding: 22px 80px;
+ 	 *	}
+	 *
+	 */
+
+	.content3 {
+		height: 420px;
+		width: 100%;
+
+		background-image: url('../img/fondo2.jpg');
+		background-repeat: no-repeat;
+		background-size: 100% auto;
+		background-position: center;
+		display: table;
+	}
+	.margcont3 {
+		height: 420px;
+		width: 1024px;
+		margin: auto;
+	}
+
+	.decora {
+		height: 75px;
+		width: 400px;
+		position: relative;
+			top: 175px;
+			left: 304px;
+
+		background-color: rgba(94,94,94,0.7);
+		display: table;
+	}
+
+	.decora h1 {
+		color: white;
+		text-align: center;
+		font-size: 30px;
+	}
+
+	.content4 {
+		height:  420px;
+		width: 100%;
+	}
+
+	.margcont4 {
+		height: 420px;
+		width: 1024px;
+		margin: auto;
+
+		background-image: url('../img/header.jpg');
+		background-position: center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+	}
+
+	.testimonio {
+		height: 436px;
+		width: 405px;
+		float: left;
+	}
+
+	.testimonio h2 {
+		margin-top: 130px;
+
+		color: #004e72;
+		font-size: 28px;
+	}
+
+	.testimonio p {
+		color: #004e72;
+		font-size: 23px;
+		font-style: italic;
+	}
+
+	footer {
+		height: 90px;
+		width: 100%;
+
+		background-color: #004f70;
+	}
+
+	footer p {
+		text-align: center;
+		color: white;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
