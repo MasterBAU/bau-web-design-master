@@ -1,0 +1,533 @@
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+
+	margin:0px;
+
+
+}
+.contenedor{
+
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 auto;
+	font-family: "Open Sans Condensed", sans-serif;
+
+}
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+h1{
+	font-size: 32px;
+	color:#004e72;
+	margin: 0px;
+	overflow: auto;
+
+}
+
+h2{
+
+	font-size: 25px;
+	color:white;
+	overflow: auto;
+}
+
+p{
+
+	color:white;
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	clear: both;
+	margin: 0px;
+	overflow: auto;
+
+}
+/*----------
+header
+----------*/
+header{
+
+
+}
+.subcontenedor{
+
+	width: 860px;
+	margin: 0 auto;
+
+
+}
+.top-bar{
+
+	background-color: #004f70;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	overflow: auto;
+
+
+
+
+}
+
+.subcontenedor-1{
+
+	margin-bottom: 5px;
+	margin-top: 10px;
+
+
+
+
+}
+
+.logo{
+
+	float: left;
+
+
+
+}
+
+.iconohome{
+
+	float:left;
+	padding-top: 10px;
+
+
+
+
+}
+.textologo{
+
+	float:left;
+	padding-left: 10px;
+	padding-top: 20px;
+
+
+
+}
+
+
+.menu{
+
+	float:right;
+	padding-right: 15px;
+	padding-top: 10px;
+
+
+
+}
+
+.menu ul {
+
+
+}
+
+.menu ul li{
+
+	list-style: none;
+	float:left;
+	padding-left: 65px;
+	color:#90c5db;
+	font-size: 20px;
+	font-weight: 700;
+
+}
+.menu ul li:hover{
+
+	color:white;
+
+}
+.totalanunciotop{
+
+	clear: both;
+	width: 100%;
+
+}
+.imggrande{
+	width: 100%;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: 400px;
+
+
+}
+.subcontenedor-2{
+
+	position:relative;
+
+}
+.claim{
+
+
+	margin-left:15px;
+	position: absolute;
+	top:-260px;
+
+
+
+}
+.cuadrotituloinicio{
+	width: 450px;
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 30px;
+	background-color: rgba(255,255,255,0.5);
+
+}
+.titulo{
+
+	color:black;
+	margin: 0px;
+	text-shadow: 1px 1px white;
+
+
+}
+.subtitulo{
+
+	font-size: 16px;
+	color:black;
+	text-align: left;
+	padding-top: 15px;
+	text-shadow: 1px 1px white;
+
+}
+.calltoaction{
+
+	background-color: #009bdb;
+	width: 200px;
+	margin-top: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+}
+
+
+
+/*------------
+keybenefits
+------------*/
+.keybenefits{
+
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 30px;
+
+}
+.cuadroideas{
+
+	float: left;
+	background-color:#009bdb;
+	margin-right: 15px;
+	width: 270px;
+
+}
+
+.contenidoideas{
+
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+
+}
+
+.iconobenefits{
+
+	position:absolute;
+	padding-top: 20px;
+
+}
+
+.textobenefits{
+
+	text-align: center;
+
+}
+.titulobenefits{
+	width: 100%;
+	font-weight: 100;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin: 0 auto;
+
+}
+.subtitulobenefits{
+
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.cuadropromociones{
+	float: left;
+	background-color: #0088c1;
+	margin-left: 15px;
+	width: 550px;
+
+
+}
+.contenidopromociones{
+	padding-left: 20px;
+	padding-bottom: 30px;
+
+
+}
+/*---------
+mobile
+---------*/
+
+.mobiledevices{
+
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+.textopublicaciones{
+
+	float: left;
+	width: 340px;
+	padding-top: 20px;
+
+
+}
+
+
+.subtitulogrande{
+
+	font-size: 24px;
+	color:#004e72;
+	font-weight: 300;
+	text-align: left;
+	padding-top: 15px;
+	padding-bottom: 20px;
+	padding-right: 40px;
+
+
+}
+.botonespublicaciones{
+
+
+
+}
+.appstore{
+	float: left;
+	padding-right: 10px;
+
+}
+.googleplay{
+	float: left;
+	padding-left: 10px;
+
+
+}
+.imgpeque{
+
+	float: right;
+
+
+
+}
+/*---------
+decora
+---------*/
+
+.totaldecora{
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 70px;
+	clear: both;
+
+
+}
+.imggrande2{
+
+	height: 290px;
+}
+.subcontenedor-3{
+
+	position:relative;
+
+
+
+}
+.totalbotondecora{
+
+	position: absolute;
+	top:-170px;
+	margin-left: 200px;
+
+
+
+}
+.cuadrodecora{
+
+	background-color: rgba(0,0,0,0.5);
+	width: 380px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+
+
+}
+.textodecora{
+
+	color:white;
+	text-align: center;
+}
+/*---------
+testimonials
+---------*/
+
+.testimonios{
+
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 50px;
+
+}
+.textotestimonios{
+
+	padding-top: 100px;
+	float: left;
+	padding-right: 60px;
+	width: 400px;
+
+}
+blockquote{
+
+	font-size: 24px;
+	color:#004e72;
+	font-weight: 300;
+	text-align: left;
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin: 0px;
+}
+span{
+
+	font-size: 24px;
+	color:#004f70;
+	font-weight: 700;
+	text-align: left;
+}
+
+/*---------
+footer
+---------*/
+
+footer{
+
+	background-color: #004f70;
+	width: 100%;
+	clear: both;
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+
+}
+.textofooter{
+
+	text-align: center;
+	font-weight: 300;
+	font-size: 20px;
+
+}
+
+
+
+
+/*---------
+dropdown
+---------*/
+.top-bar {
+	overflow: visible;
+}
+.subcontenedor-1 {
+	margin-bottom: 0;
+}
+.dropdown__wrap {
+	position: relative;
+	padding-bottom: 5px;
+}
+.dropdown__wrap a {
+	color: rgb(144, 197, 219);
+	text-decoration: none;
+}
+.dropdown {
+	display: none;
+	padding: 0;
+	position: absolute;
+		top: 100%;
+		right: 0;
+}
+.menu .dropdown li {
+	background: #004f70;
+	border-bottom: 1px solid rgb(144, 197, 219);
+	padding: 0;
+	float: none;
+}
+.menu .dropdown a {
+	display: block;
+	font-size: 1rem;
+	line-height: 1.25rem;
+	padding: .5rem 1rem;
+	position: relative;
+	text-transform: uppercase;
+	min-width: 10rem;
+}
+.dropdown__wrap:hover .dropdown {
+	display: block;
+}
+.menu .dropdown li:last-child {
+	border-bottom: 0;
+}
+.dropdown li:hover a::before {
+	background: #009bdb;
+	content: '';
+	display: block;
+	position: absolute;
+		top: 0;
+		left: -.5rem;
+	width: .5rem;
+	height: 100%;
+	outline:
+}
+.dropdown li:hover a {
+	color: #fff;
+}
+.dropdown:hover li:not(:hover) a {
+	background-color: #000;
+	color: #567683;
+	opacity: .4;
+}
+.dropdown li:first-child {
+	border-top: .75rem solid transparent;
+	background-clip: padding-box;
+	position: relative;
+}
+.dropdown li:first-child::before {
+	border-color: transparent transparent #004f70 transparent;
+	border-style: solid;
+	border-width: 0 .75rem .75rem .75rem;
+	content: '';
+	display: block;
+	position: absolute;
+		top: -.75rem;
+		right: 1rem;
+	height: 0;
+	width: 1rem;
+}
