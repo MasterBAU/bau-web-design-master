@@ -111,7 +111,29 @@ li:nth-child(3n) {
         </code></pre>
 
         <p>Además podemos usar <span class="marker">nth-last-child(2)</span> para seleccionar el segundo elemento empezando por el final.</p>
+    </section>
 
+    <section>
+        <h3>Pseudoclase <span class="marker">:not()</span></h3>
+        <p><span class="marker">:not()</span> es una pseudoclase que admite como argumento a otro selector, el cual excluirá a la hora de aplicar su selección.</p>
+
+        <pre><code data-trim contenteditable>
+&#60;ul&#62;
+    &#60;li&#62;Item 1&#60;/li&#62;
+    &#60;li class="diferente"&#62;Item 2&#60;/li&#62;
+    &#60;li&#62;Item 3&#60;/li&#62;
+&#60;/ul&#62;
+        </code></pre>
+
+        <pre><code data-trim contenteditable>
+/* Selecciona todos los LI excepto el de la class .diferente */
+li:not(.diferente) { color: red; }
+        </code></pre>
+        <ul style="font-size: 1.5rem; line-height: 1; margin-bottom: 0;">
+            <li style="color: red;">Item 1</li>
+            <li>Item 2</li>
+            <li style="color: red;">Item 3</li>
+        </ul>
     </section>
 
     <section>
