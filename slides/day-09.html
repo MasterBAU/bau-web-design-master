@@ -323,7 +323,26 @@ input[type=text]:invalid {
     <section>
         <h3>Pseudoelemento <span class="marker">::before</span></h3>
         <p style="text-align: center">
-            Insertamos contenido <span class="marker">antes</span> de un elemento dado.
+            Insertamos contenido <span class="marker">antes</span> de un elemento dado mediante la declaración <span class="marker">content</span>.
+        </p>
+        <pre><code data-trim contenteditable>
+/* Insertamos un gato antes del párrafo */
+h3::before {
+    content: "(⊙_◎)";
+    color: yellow;
+    font-size: 0.7em;
+    padding-right: 20px;
+}
+
+        </code></pre>
+        <h3 class="symple-before">Say whaaat?</h3>
+
+    </section>
+
+    <section>
+        <h3>Pseudoelemento <span class="marker">::before</span></h3>
+        <p style="text-align: center">
+            Además de texto podemos definir un alto y ancho y añadir una imagen de fondo<br /> para mostrar <span style="text-decoration: line-through">gatos</span> imágenes:
         </p>
         <pre><code data-trim contenteditable>
 /* Insertamos un gato antes del párrafo */
