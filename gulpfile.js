@@ -33,7 +33,7 @@ var onError = function(err) {
 // CLEAN ================================================
 gulp.task('clean', function(callback) {
     del(
-        [ path.tmp, path.dist ],
+        [ path.tmp, path.dist + '/*' ],
         function(err, deletedFiles) {
             console.log('Files deleted:\n'.bold.green , deletedFiles.join(',\n '));
             callback();
