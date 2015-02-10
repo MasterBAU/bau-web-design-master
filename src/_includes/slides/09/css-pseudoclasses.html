@@ -1,5 +1,5 @@
 {% assign img_path = './img/slides/css-pseudoclasses' %}
-{% assign files_path = './files/css-pseudo' %}
+{% assign files_path = './files/css-pseudoclasses' %}
 
 <section class="text-left">
     <section>
@@ -7,9 +7,11 @@
     </section>
 
     <section>
-        <h4 style="text-transform: none">Llamamos <span class="marker">pseudo clase</span> a un tipo de pseudo-selector que aplica estilos a un estado concreto de los elementos del DOM en lugar de aplicarlos a los propios elementos en sí.</h4><br />
+        <p style="text-transform: none">Llamamos <span class="marker">pseudo clase</span> a un tipo de pseudo-selector que aplica estilos a un estado concreto de los elementos del DOM en lugar de aplicarlos a los propios elementos en sí.</p>
 
-        <h4 style="text-transform: none">Su sintaxis es el nombre precedido por <span class="marker">:</span></h4>
+        <p style="text-transform: none">Su sintaxis es el nombre precedido por "<em>:</em>"</p>
+
+        <hr>
 
         <h3 style="text-transform: none; color:#FF7F03">elemento<span class="marker">:pseudoclase</span></h3>
     </section>
@@ -21,7 +23,7 @@
         </p>
         <pre><code data-trim contenteditable>
 /* Estado enlace no visitado */
-a:link { 
+a:link {
     color: #c0ffee;
 }
 
@@ -41,7 +43,7 @@ a:visited {
         </p>
         <pre><code data-trim contenteditable>
 /* Estado sobre un enlace */
-a:hover { 
+a:hover {
     color: #bada55;
 }
 
@@ -60,7 +62,7 @@ a:active {
         </p>
         <pre><code data-trim contenteditable>
 /* Seleccionamos el primer elemento li de cualquier ul del DOM */
-li:first-child { 
+li:first-child {
     color: #fe0;
 }
 
@@ -78,7 +80,7 @@ nav li:first-child {
         </p>
         <pre><code data-trim contenteditable>
 /* Seleccionamos el último elemento li de cualquier ul del DOM */
-li:last-child { 
+li:last-child {
     color: #fe0;
 }
 
@@ -97,19 +99,41 @@ nav li:last-child {
         </p>
         <pre><code data-trim contenteditable>
 /* Seleccionamos sólo los LI pares */
-li:nth-child(even) { 
+li:nth-child(even) {
     color: #fafafa;
 }
 
 /* Seleccionamos un LI de cada 3 */
-li:nth-child(3n) { 
+li:nth-child(3n) {
     color: #fafafa;
 }
 
         </code></pre>
 
         <p>Además podemos usar <span class="marker">nth-last-child(2)</span> para seleccionar el segundo elemento empezando por el final.</p>
+    </section>
 
+    <section>
+        <h3>Pseudoclase <span class="marker">:not()</span></h3>
+        <p><span class="marker">:not()</span> es una pseudoclase que admite como argumento a otro selector, el cual excluirá a la hora de aplicar su selección.</p>
+
+        <pre><code data-trim contenteditable>
+&#60;ul&#62;
+    &#60;li&#62;Item 1&#60;/li&#62;
+    &#60;li class="diferente"&#62;Item 2&#60;/li&#62;
+    &#60;li&#62;Item 3&#60;/li&#62;
+&#60;/ul&#62;
+        </code></pre>
+
+        <pre><code data-trim contenteditable>
+/* Selecciona todos los LI excepto el de la class .diferente */
+li:not(.diferente) { color: red; }
+        </code></pre>
+        <ul style="font-size: 1.5rem; line-height: 1; margin-bottom: 0;">
+            <li style="color: red;">Item 1</li>
+            <li>Item 2</li>
+            <li style="color: red;">Item 3</li>
+        </ul>
     </section>
 
     <section>
@@ -119,7 +143,7 @@ li:nth-child(3n) {
         </p>
         <pre><code data-trim contenteditable>
 /* Aplicamos color cuando la URL sea: http://mysite.com/#exoplanet */
-section:exoplanet { 
+section:exoplanet {
     background-color: #fe0;
 }
         </code></pre>
