@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- lang debería de ser "es". Si definimos "en" has de cambiar el contenido a inglés -->
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Redig ?? - Revisa bien el contanido antes de publicar -->
+    <title>redign</title>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="contenedormenu">
+            <img class="logo" src="img/logo.png">
+            <nav>
+                <ul>
+                    <li class="seleccionado">inicio</li>
+                    <li>secciones</li>
+                    <li>sobre DECO</li>
+                    <li>contacto</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <article>
+    <!-- Este DIV (background1) no está cerrado -->
+        <div class="background1">
+            <div class="contenedorsuperior">
+              <section class="revista">
+                <div class="textoslider">
+                    <h1>La revista de interiorismo definitiva</h1>
+                    <p class="suscribir">Suscríbete a nuestra revista online para estar informado sobre las últimas tendencias en decoración de interiores.</p>
+                </div>
+                <!-- <button> para formularios. Utiliza un <a href="#"> con display:block; -->
+                <button class="masinfo">
+                    <p>Quiero saber más</p>
+                </button>
+            </section>
+            <section>
+                <div class="formulario">
+                <!-- P es sólo para párrafos. Utiliza H1,2,3,4,5,6 -->
+                    <p class="newsletter"> Suscríbete al newsletter</p>
+                    <form>
+                        <!-- Muy bien hecho! Has usado 2 clases por input -->
+                        <input class="campos name" type="text" placeholder="Nombre">
+                        <input class="campos email" type="email" name="userEmail" placeholder="E-mail">
+                        <input class="campos password" type="password" placeholder="Contraseña">
+                        <input class="checkbox" type="checkbox"required="">
+                        <p class="privacidad">Acepto las condiciones de privacidad</p>
+                        <input class="enviar" type="submit" value="ENVIAR">
+                    </form>
+                </div>
+            </section>
+        </div>
+    </article>
+
+    <article>
+        <div class="containerideas">
+            <section>
+                <div class="caja ideas">
+                    <img class="icono" src="img/iconoideas.png">
+                    <h3>ideas</h3>
+                    <p class="textoicono">Decora tu espacio acorde con tu estilo y a buen precio</p>
+                </div>
+
+                <div class="caja promociones">
+                    <img class="icono" src="img/iconomostring.png">
+                    <h3>promociones</h3>
+                    <p class="textoicono">Consigue hasta un 40% de descuento con nuestros códigos promocionales en productos seleccionados</p>
+                </div>
+            </section>
+
+            <section>
+                <div class="anuncio">
+                    <h2>disponible en publicaciones digitales
+                    </h2>
+                    <p class="textodescarga">Descárgate nuestra versión digital disponible para tablets y móviles Apple y Android.</p>
+                    <img class="app" src="img/appstore.png">
+                    <img class="googleplay" src="img/googleplay.png">
+                </div>
+                <img class="mobile" src="img/mobile-devices.png">
+            </section>
+        </div>
+    </article>
+    <article>
+        <div class="backgroundecora">
+            <div class="decora">
+                <p class="textofondo2">decora tu loft</p>
+            </div>
+        </div>
+    </article>
+
+    <article>
+        <div class="imagenestestimonios">
+            <div class="testimonios">
+                <h2 class="minuscula">Testimonios</h2>
+                <!-- Para citas tenemos la etiqueta <quote> -->
+                <p class="textotestimonios">"Nos ha sido de gran ayuda disponer de un catálogo tan estenso para decorar nuestro hogar"</p>
+                <p class="autor">@pepGuardiola</p>
+            </div>
+        </div>
+    </article>
+</div>
+<footer>
+    <!-- Política de privacidad de Google? :D -->
+    <p class="textofooter">&copy DecoMAG 2015 - <a href="https://www.google.es/intl/es/policies/privacy/">Política de Privacidad</a>- Todos los derechos reservados.</p>
+</footer>
+
+</html>
