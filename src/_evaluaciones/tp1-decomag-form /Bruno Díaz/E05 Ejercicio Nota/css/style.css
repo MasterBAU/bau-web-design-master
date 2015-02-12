@@ -1,0 +1,346 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+    font-weight: bolder;
+    /* No dispongo de Open Sans Condensed Italic Bold */
+    color: #004e72;
+    /* Utiliza esta: https://www.google.com/fonts/specimen/Open+Sans+Condensed */
+    /* Y la haces bold mediante la estiqueta <STRONG> */
+}
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 45px;
+}
+h3 {
+    font-size: 40.35px;
+    font-weight: lighter;
+}
+p {
+    font-size: 24px;
+}
+
+
+/* ALINEAR WEB AL CENTRO */
+/* Normalmente se le llama SITE CONTAINER o SITE WRAPPER */
+
+.wraper {
+    width: 100%;
+}
+/* Muy bien agrupado - Puedes mejorar la legibilidad si añades un salto de línea después de cada coma */
+.aligncenter, section, article, footer {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+
+/* HEADER */
+
+header {
+    background: #004f70;
+    top: 0;
+    margin-bottom: 40px;
+    height: 116px;
+    padding-top: 35px;
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+}
+header img {
+    width: 54px;
+}
+header .logotipo {
+    font-weight: bolder;
+    font-size: 40px;
+    float: left;
+}
+header .logotipo a {
+    color: white;
+    font-size: 50px;
+    text-decoration: none;
+}
+header a.selected {
+    color: white;
+    cursor: default;
+}
+header em{
+    color: #90c5db;
+}
+header ul {
+    float: right;
+}
+header li {
+    display: inline-block;
+    margin-left: 70px;
+}
+header ul a{
+    color: #90c5db;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+
+/* IMG PRINCIPAL */
+
+.imgprincipal {
+    width: 100%;
+    height: 530px;
+    /* Este nombre de imagen es excesivo - Ulitiza Photoshop para optimizar, recortar y renombrar */
+    background: transparent url('../img/minimalist-interior-design-with-1200-minimalist-interior-design-desktop-pc-and-mac-wallpaper-on-interior-design.jpg')
+        no-repeat 0 -400px;
+    padding-top: 117px;
+    color: black;
+    text-shadow: 2px 2px 0 white;
+}
+.imgprincipal .aligncenter {
+    position: relative;
+}
+.imgprincipal .aligncenter .newsletter {
+    position: absolute;
+    right: 0;
+    bottom: -113px;
+    width: 450px;
+    /* No se recomienda forzar alturas - Es mejor que fluya con el contenido */
+    height: 465px;
+    border: solid 10px #0088c2;
+    text-shadow: none;
+    color: #fff;
+}
+.imgprincipal .aligncenter .newsletter .overlay {
+    /* Este overlay no tiene mucho sentido - Es mejor colocar el color de fondo al contenedor .newsletter */
+    /* Si no se pintaba toda la caja es porque tienes algún problema de especificidad */
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+}
+.imgprincipal .aligncenter .newsletter form, .imgprincipal .aligncenter .newsletter h4 {
+    position: relative;
+    /* Poner el form por encima mediante z-index es una solución poco elegante :) */
+    z-index: 2;
+}
+.imgprincipal .aligncenter .newsletter h4 {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 22px;
+}
+.imgprincipal .aligncenter .newsletter ul {
+    padding: 0 45px;
+}
+.imgprincipal .aligncenter .newsletter ul li {
+    list-style-type: none;
+    margin-bottom: 15px;
+}
+.imgprincipal .aligncenter .newsletter input {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: bold;
+}
+.imgprincipal .aligncenter .newsletter .texto {
+    width: 270px;
+    height: 50px;
+    border-radius: 10px;
+    border: solid 1px black;
+    font-size: 22px;
+    padding-left: 65px;
+}
+.imgprincipal .aligncenter .newsletter .nombre {
+    background: #fff url(../img/iconnombre.png) no-repeat 15px center;
+}
+.imgprincipal .aligncenter .newsletter .email {
+    background: #fff url(../img/iconemail.png) no-repeat 15px center;
+}
+.imgprincipal .aligncenter .newsletter .password {
+    background: #fff url(../img/iconpassword.png) no-repeat 15px center;
+}
+.imgprincipal .aligncenter .newsletter input.acepto {
+    position: relative;
+    top: -3px;
+}
+.imgprincipal .aligncenter .newsletter label.acepto {
+    font-size: 18px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.imgprincipal .aligncenter .newsletter .button {
+    width: 240px;
+    height: 60px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px 100px;
+    padding: 0;
+}
+.txtimgprincipal {
+    width: 612px;
+    margin: 100px 0 0 25px;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.txtimgprincipal h1 {
+    padding-top: 20px;
+}
+.txtimgprincipal p {
+    color: black;
+    padding-bottom: 30px;
+}
+.button {
+    background: #009bdb;
+    color: white;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 30px;
+    margin: 30px 0 0 25px;
+    padding: 15px 40px;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* PROMOCIONES */
+
+.decomagpromos {
+    text-align: center;
+    margin-top: 50px;
+}
+.decomagpromos img {
+    width: 60px;
+    position: absolute;
+    top: 30px;
+    left: 30px
+}
+.decomagpromos h3 {
+    font-size: 35px;
+    color: white;
+    margin-top: 40px;
+}
+.decomagpromos p {
+    color: white;
+    padding: 0 50px 25px;
+}
+.decomagpromos .bluebox1 {
+    background: #009bdb;
+    width: 30%;
+    height: 230px;
+    float: left;
+    position: relative;
+}
+.decomagpromos .bluebox2 {
+    background: #009bdb;
+    width: 67%;
+    height: 230px;
+    float: right;
+    position: relative;
+}
+.decomagpromos .bluebox2 p {
+    color: white;
+    padding: 0 170px;
+}
+
+
+/* MÓVIL APP */
+
+.movilapp {
+    overflow: hidden;
+}
+.movilapp p {
+    color: #004e72;
+    font-size: 33px;
+    font-weight: lighter;
+    padding: 0;
+}
+.movilapp .txtmovilapp {
+    width: 40%;
+    /* En lugar de colocar un padding a cada caja deberías de haberlo puesto en su contenedor ".movilapp" */
+    padding-top: 150px;
+    float: left;
+}
+.movilapp ul {
+    padding: 0;
+}
+.movilapp li {
+    padding: 20px 45px 0 0;
+    list-style-type: none;
+    display: inline-block;
+}
+.movilapp .imgmovilapp {
+    width: 60%;
+    /* En lugar de colocar un padding a cada caja deberías de haberlo puesto en su contenedor ".movilapp" */
+    padding: 124px 0px 111px 0;
+    float: right;
+}
+.movilapp img {
+    float: right;
+}
+
+
+
+/* ARTICLE */
+/* Si un comentario no aporta nada no es válido - Utiliza mejor algo como: "Sección Decora tu Loft" (por ejem) */
+
+article {
+    width: 100%;
+    height: 430px;
+    background: transparent url('../img/imagen2.jpg') no-repeat top center;
+    padding-top: 11px;
+}
+article .txtdecoracion {
+    width: 550px;
+    height: 85px;
+    margin: 165px auto;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+article .txtdecoracion h2 {
+    padding-top: 13px;
+}
+.decoracion a {
+    color: white;
+    text-decoration: none;
+}
+
+
+/* TESTIMONIOS */
+
+.testimonios {
+    height: 494px;
+    background: transparent url('../img/imagentestimonio.jpg') no-repeat top center;
+    margin-top: 215px;
+    padding-top: 100px;
+}
+.txttestimonios {
+    width: 500px;
+}
+.testimonios i {
+    font-size: 40px;
+}
+.testimonios cite {
+    font-size: 30px;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+
+/* FOOTER */
+
+footer {
+    width: 100%;
+    /* Es preferible tener un contenido con padding que empuje que forzar un alto de caja */
+    height: 296px;
+    background-color: #004f70;
+    text-align: center;
+}
+footer p {
+    padding-top: 140px;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: lighter;
+    color: white;
+}
+footer a {
+    color: white;
+    text-decoration: underline;
+}

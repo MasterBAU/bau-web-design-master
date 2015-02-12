@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 05</title>
+    <link href="./css/style.css" type="text/css" rel="stylesheet"/>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    <!-- El DIV sobra. Puedes usar HEADER con clase "wraper" -->
+    <div class="wraper">
+        <header>
+            <!-- Utiliza nombres de clase más descriptivos -->
+            <div class="aligncenter">
+                <div class="logotipo">
+                    <a href="www.decomag.com/index.html"><img src="./img/iconmonstr-home-icon-256-white.png">
+                    DECO<em>MAG</em>
+                    </a>
+                </div>
+                <!-- Utiliza NAV para elementos de navegación de página en lugar de DIV -->
+                <div>
+                    <ul>
+                        <!-- los enlaces han de llevar siempre http:// -->
+                        <li><a class="selected" href="www.decomag.com/index.html">inicio</a></li>
+                        <li><a href="http://www.decomag.com/secciones.html">secciones</a></li>
+                        <li><a href="http://www.decomag.com/sobredeco.html">sobre DECO</a></li>
+                        <li><a href="http://www.decomag.com/contacto.html">contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <section class="imgprincipal">
+            <div class="aligncenter">
+                <div class="txtimgprincipal">
+                    <h1>La revista de interiorismo definitiva</h1>
+                    <p>
+                        Suscríbete a nuestra revista online para estar informado sobre las últimas tendencias en decoración de interiores.
+                    </p>
+                </div>
+                <!-- <button> para formularios. Utiliza un <a href="#"> con display:block; -->
+                <button class="button">Quiero saber más</button>
+                <div class="newsletter">
+                    <!-- .overlay no tiene sentido - Puedes añadir el color RGBA a .newsletter -->
+                    <div class="overlay"></div>
+                    <h4>Suscríbete al newsletter</h4>
+                    <form action="" method="">
+                        <ul>
+                            <li><input type="text" class="texto nombre" placeholder="Nombre"></li>
+                            <li><input type="email" class="texto email" placeholder="E-mail"></li>
+                            <li><input type="password" class="texto password" placeholder="Contraseña"></li>
+                            <li><input type="checkbox" class="acepto" id="Acepto"><label class="acepto" for="Acepto">Acepto la política de privacidad</label></li>
+                        </ul>
+                        <!-- type="submit" -->
+                        <input type="submite" class="button" value="ENVIAR">
+                    </form>
+                </div>
+            </div>
+        </section>
+        <section class="decomagpromos">
+            <div>
+                <!-- Evita numerar las clases. Utiliza nomenclaturas más descriptivas -->
+                <div class="bluebox1">
+                    <div>
+                        <!-- Esta imagen es decorativa - Debería de ir de background -->
+                        <img src="./img/iconmonstr-light-bulb-18-icon-256.png">
+                    </div>
+                    <h3>IDEAS</h3>
+                    <div>
+                        <P>Decora tu espacio acorde con tu estilo y a buen precio</P>
+                    </div>
+                </div>
+                <div class="bluebox2">
+                    <div>
+                        <!-- Esta imagen es decorativa - Debería de ir de background -->
+                        <img src="./img/iconmonstr-badge-icon-256.png">
+                        <h3>PROMOCIONES</h3>
+                    </div>
+                    <div>
+                        <P>Consigue hasta un 40% de descuento con nuestros códigos promocionales en productos seleccionados</P>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="movilapp">
+            <div class="txtmovilapp">
+                <h2>DISPONIBLE EN PUBLICACIONES DIGITALES</h2>
+                <P>Descárgate nuestra versión digital disponible para tablets y móviles Apple y Android.</P>
+
+                <!-- Perfect! -->
+                <ul>
+                    <li><a href="http://www.apple.es"><img src="./img/iconapple.png"></a></li>
+                    <li><a href="http://www.android.com"><img src="./img/iconandroid.png"></a></li>
+                </ul>
+            </div>
+            <div class="imgmovilapp">
+                <img src="./img/mobile-devices.png">
+            </div>
+        </section>
+        <article class="decoracion">
+            <div class="txtdecoracion">
+                <!-- Por qué es un link ?? -->
+                <a href="http://www.decomag.com/decoratuloft.html"><h2>DECORA TU LOFT</h2></a>
+            </div>
+        </section>
+        <section class="testimonios">
+            <div class="txttestimonios">
+                <h2>Testimonios</h2>
+                <!-- Para las citas utilizamos <QUOTE> -->
+                <i>" Nos ha sido de gran ayuda disponer de un catálogo tan extenso</br> para decorar nuestro hogar "</i> </br>
+                <cite>@pepGuardiola</cite>
+            </div>
+        </section>
+        <footer>
+            <p>&copy; DecoMAG 2015 - <a href="http://www.decomag.com/politica.html">Política de privacidad</a> - Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
