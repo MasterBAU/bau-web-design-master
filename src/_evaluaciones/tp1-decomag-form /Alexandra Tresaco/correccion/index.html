@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+  <title>DecoMag</title>
+  
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/style.css" type="text/css"/>
+</head>
+<body>
+	<header>
+		<div class="main">
+			<div class="logo">
+			<!-- No deberías de incluirlo todo dentro de un <p> 
+				 El elemento <p> es para crear un parrafo. No es un contenedor como div o span -->
+				<p><img src="img/home.png" style="width:30px; padding-right:5px;">DECO<span style="color:#90c5db; font-style:italic; font-weight:bold;">MAG</span></p>
+			</div>
+			<nav>
+				<ul class="menu">
+					<!-- estilos inline nooooooo!!! A su hoha de estilos!! :) -->
+					<li><span style="color:#fff;">inicio</span></li>
+					<li>secciones</li>
+					<li>sobre DECO</li>
+					<li>contacto</li>
+				</ul>	
+			</nav>
+		</div>
+	</header>
+	<article>
+		<section  class="home">
+			<div class="main">
+				<div class="intro">
+					<div >
+					<!-- Este sería un buen candidato para un H1 por ser el más descriptivo de la página -->
+						<h2>La revista de interiorismo definitiva</h2>
+						<p>Suscríbete a nuestra revista online para estar informado sobre las últimas tendencias en decoración de interiores.</p>
+					</div>
+					<!-- <button> para formularios. Utiliza un <a href="#"> con display:block; -->
+					<button>Quiero saber más</button>
+				</div>
+				
+				<!-- la etiqueta Form debería de llevar un "action" -->
+				<form>
+				<!-- P es sólo para párrafos. Utiliza H1,2,3,4,5,6 -->
+					<p class="suscribete">Suscríbete al newsletter</p>
+					<p>
+					<input class="user" type="text" placeholder="User">
+					</p>
+
+					<p>
+					<input class="mail" type="text" placeholder="E-mail">
+					</p>
+
+					<p>
+					<input class="password" type="password" placeholder="Contraseña">
+					</p>
+
+					<p>
+					<input type="checkbox" value="Condiciones"> Acepto la política de privacidad
+					</p>
+
+					<button class="enviar" type="button"> Enviar</button> 
+				</form>
+			</div>
+		</section>
+		
+		<!-- Utiliza nombres de clases más versátiles. "Uno" depende de su contexto (podría pasar a ser "dos" seguir teniendo la clase "uno") -->
+		<section class="uno">
+			<div class="ideas">
+				<h3>Ideas</h3>
+				<p>Decora tu espacio acorde con tu estilo y a buen precio</p>
+			</div>
+			<div class="promos">
+				<h3>Promociones</h3>
+				<p>Consigue hasta un 40% de descuento con nuestros <br>códigos promocionales en productos seleccionados</p>
+			</div>
+			<div class="publicaciones">
+			<!-- Se recomienda usar un único H1 por página para mejorar SEO. Ha de ser la frase más descriptiva del contenido de la página -->
+				<h1>Disponible en publicaciones digitales</h1>
+				<p>Descárgate nuestra versión digital para tablets y móviles Apple y Android. </p>
+				<!-- Estilos inline NOOO -->
+				<img src="img/app.png" style="width:100px; padding-right:20px;">
+				<img src="img/google.png" style="width:100px;">
+			</div>
+			<img src="img/mobile-devices.png" style="width:500px; float: right; margin-top:50px;">
+		</section>
+
+		<section class="banner">
+			<h1>Decora tu loft</h1>	
+		</section>
+
+		<section class="testimonios">
+			<div>
+				<h1>Testimonios</h1>
+				<!-- Para citas tenemos la etiqueta <quote> -->
+				<p>"Nos ha sido de gran ayuda disponer de un catálogo tan extenso para decorar nuestro hogar"</p>
+				<!-- Los IDs los reservamos para Javascript. Utiliza mejor clases -->
+				<p id="persona">@pepGuardiola</p>
+			</div>
+		</section>
+	</article>
+
+	<footer>
+		<p>@ DecoMAG 2015 - <span style="text-decoration: underline;">Politica de privacidad </span>- Todos los derechos reservados. </p>
+	</footer>
+
+</body>
+
+</html>

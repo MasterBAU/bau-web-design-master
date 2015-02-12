@@ -1,0 +1,285 @@
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0px;
+	font-family: 'Open Sans Condensed', sans-serif;
+}
+
+header {
+	width: 100%;
+	height: 115px;
+	background: #004f70;
+	position: fixed;
+	margin:0px;
+	z-index: 998;
+}
+
+.wrap{
+	width:1280px;
+	margin:0px auto;
+}
+
+a {
+	text-decoration:none;
+	-webkit-transition: all 0.3s ease-in;
+	-moz-transition: all 0.3s ease-in;
+	-o-transition: all 0.3s ease-in;
+}
+
+.logo img {
+	float: left;
+	width: 51px;
+	height: 49px;
+	margin-top: 40px;
+}
+
+.logo a h1{
+	float: left;
+	width: 100px;
+	line-height: 0em;
+	font-size: 40px;
+	margin: 72px 0px 0px 12px;
+}
+.logo a h1 {
+	color: white;
+}
+
+.logo a h1 em{
+	color: #90c5db;
+}
+
+nav {
+	float:right;
+	margin-top: 13px;
+	font-weight: 500;
+	font-size: 23px;
+	font-weight: 700;
+}
+
+nav ul {
+	margin-left:6px;
+}
+
+nav li {
+	float:left;
+}
+
+nav li a {
+	 color: #90c5db;
+	 font-size:1em;
+	 padding:27px 20px 10px 20px;
+	 display: block;
+	 text-align:center;
+	 position:relative;
+
+}
+
+nav li a:hover {
+	color: white;
+}
+
+nav li.active a {
+	color:white;
+}
+
+ol,ul {
+	list-style:none;
+}
+
+.top-heading {
+	padding-top: 100px;
+	background-image: url("../img/background.jpg");
+	background-repeat: no-repeat;
+	width: 100%;
+	height: 634px;
+	background-origin: content-box;
+	background-size: cover;
+	background-position: center;
+}
+
+.text, .botton-first {
+	text-shadow: 1px 1px 2px rgba(255, 255, 255, 1);
+}
+
+.text {
+	width: 640px;
+	height: 168px;
+	background: rgba(255, 255, 255, 0.5);
+	font-weight: 700;
+	font-size: 28px;
+	padding: 20px 20px 0px 40px;
+	margin-top: 150px;
+	float: left;
+}
+
+.text h2 {
+	line-height: 0em;
+}
+
+.text p {
+	font-size: 25px;
+}
+
+.botton-first a {
+	font-size: 30px;
+	color: white;
+	text-shadow:none;
+	background: #009bdb;
+	float: left;
+	margin-top: 30px;
+	padding: 12px 45px;
+	letter-spacing: 0.05em;
+	float: left;
+	clear: left;
+}
+
+.push {
+	clear:both;
+}
+
+.blue-box-01, .blue-box-02 {
+	height: 231px;
+	background: #009bdb;
+	float: left;
+	color: white;
+	font-size: 25px;
+	margin-top: 50px;
+	background-position: 30px 30px;
+	background-size: 63px 63px;
+	background-repeat: no-repeat;
+}
+
+.blue-box-01 {
+	width: 399px;
+	background-image: url("../img/iconmonstr-light-bulb-18-icon-256.png");
+}
+
+.blue-box-02 {
+	width: 842px;
+	margin-left: 39px;
+	background-image: url("../img/iconmonstr-badge-icon-256.png");
+	background-color: #0088c1;
+}
+
+.blue-box-01 h3, .blue-box-02 h3 {
+	font-weight: 300;
+	font-size: 38px;
+	line-height: 1.5em;
+	text-align: center;
+}
+
+
+.blue-box-01 p, .blue-box-02 p {
+	float: left;
+	clear: left;
+	text-align: center;
+	margin-top: 0px;
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	font-size: 27px;
+}
+
+.blue-box-01 p {
+	margin-left: 40px;
+	width: 325px;
+}
+
+.blue-box-02 p {
+	margin-left: 140px;
+	width: 600px;
+}
+
+.disponible {
+	float: left;
+	width: 520px;
+	color: #004e72;
+	margin-top: 130px;
+	line-height: 3.2em;
+}
+
+.disponible h1 {
+	line-height: 1.2em;
+	font-size: 50px;
+}
+
+.disponible p {
+	font-size: 40px;
+	font-weight: 300;
+}
+
+.disponible-img {
+	width: 660px;
+	height: 463px;
+	float: right;
+	margin-right: 25px;
+	margin-top: 140px;
+}
+
+.loft {
+	margin-top: 120px;
+	background-image: url("../img/loft.jpg");
+	width: 100%;
+	height: 430px;
+	background-size: cover;
+	background-position: center;
+	float: left;
+}
+
+.loft p{
+	color: white;
+	width: 577px;
+	line-height: 1.8em;
+	background: rgba(0, 0, 0, 0.4);
+	text-align: center;
+	font-size: 40px;
+	font-weight: 700;
+	margin: 0px auto;
+	margin-top: 170px;
+	letter-spacing: 0.03em;
+}
+
+.disponible a {
+	text-decoration: none;
+	color: #004e72;
+	font-weight: 700;
+	font-size: 30px;
+}
+
+.disponible a:hover {
+	text-decoration: underline;
+}
+
+.testimonios {
+	margin-top: 50px;
+	float: right;
+	background-image: url("../img/header.jpg");
+	height: 585px;
+	width: 680px;
+	background-position: top right;
+	background-repeat: no-repeat;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-ms-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: gray;
+}
+
+.copy-right p{
+	text-align: center;
+	color: white;
+	font-size: 25px;
+	padding-top: 150px;
+	height: 150px;
+	width: 100%;
+	background:#004f70;
+	margin-top: 0px;
+}
+
+.copy-right a {
+	text-decoration: underline;
+	color: white;
+}
+
