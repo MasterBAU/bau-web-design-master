@@ -2,7 +2,6 @@ html, body {
 	/* ¿Para que declaras esta propiedad? */
 	height: 100%;
 }
-
 body {
 	/* Cuando usamos 0 como valor no hace falta la unidad */
 	margin: 0px;
