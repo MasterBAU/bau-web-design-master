@@ -369,7 +369,7 @@ body {
 .cf:after {
   clear: both; }
 
-.reveal h3 {
+.reveal h3.index-title {
   margin-top: 100px;
   text-align: center; }
 .reveal .class-list {

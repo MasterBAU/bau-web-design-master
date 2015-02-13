@@ -1,0 +1,79 @@
+<section class="text-left">
+    <section>
+        <h2>Terminal Unix</h2>
+    </section>
+
+    <section>
+        <p style="text-align: center">Mediante la <span class="marker">Terminal Unix</span> podemos acceder a programas de control de versiones de código, editores de texto, comparar archivos, etc...</p>
+        <p style="text-align: center">A continuación vamos a ver un conjunto de instrucciones básicas.</p>
+    </section>
+
+                <section>
+                    <h3>Tipos de Terminal</h3>
+                    <p>MacOSX incorpora su propio terminal. En Windows deberemos de instalarlo aparte.</p>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>Terminal (Mac)</code> <span style="font-size: 1.6rem;">/Aplicaciones/Utilidades/Terminal.app</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>iTerm2 (Mac)</code> <span style="font-size: 1.6rem;"><a href="http://iterm2.com/" target="_blank">http://iterm2.com/</a></span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>Cathode (Mac)</code> <span style="font-size: 1.6rem;"><a href="http://www.secretgeometry.com/apps/cathode" target="_blank">http://www.secretgeometry.com/apps/cathode</a></span></li>
+
+                    </ul>
+                </section>
+                <section>
+                    <h3>Unidades relativas</h3>
+                    <p>Las unidades relativas son un poco más complicadas ya que su valor no es fijo sino que dependen de la medida de otro elemento. También pueden dividirse en tres grupos más pequeños: <em>unidades relativas al tamaño de fuente</em>, <em>unidades relativas al viewport</em> y <em>porcentajes</em>.</p>
+                </section>
+
+                <section>
+                    <h3>Relativas al tamaño de fuente</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>em</code></p>
+                            <p style="font-size: 1.5rem;">Es un número relativo al <code>font-size</code> del elemento. Si se aplica a la misma propiedad <code>font-size</code> se calculará en base al <code>font-size</code> heredado.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>rem</code></p>
+                            <p style="font-size: 1.5rem;">Hace referencia al <code>font-size</code> del elemento root (normalmente el <code>&#60;html&#62;</code>). Si se aplica sobre este usara de base su valor inicial.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>ex</code></p>
+                            <p style="font-size: 1.5rem;">Representa la <i>x-height</i> del elemento fuente, normalmente la altura del caracter "x" en minúsculas.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>ch</code></p>
+                            <p style="font-size: 1.5rem;">Representa el ancho del carácter "0".</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Relativas al viewport</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>vh</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del alto del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vw</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del ancho del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vmin</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del valor más bajo entre el alto y ancho del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vmax</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del valor más alto entre el alto y ancho del viewport.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                     <h3>Porcentajes</h3>
+                     <p>Podemos asignar una unidad de medida porcentual con un <em>valor seguido del signo "%"</em> (ej: 50%). El contexto que se utilizará para calcular el porcentaje variará dependiendo a que propiedad se aplique.</p>
+                     <p>Si se aplica al <code>font-size</code>, el porcentaje será relativo al <code>font-size</code> del elemento padre.</p>
+                     <p>Si se aplica al <code>width</code>, <code>margin</code> o <code>padding</code>, será relativo a las medidas de su contenedor.</p>
+                </section>
+            </section>
