@@ -362,18 +362,40 @@ body {
 .reveal.center {
   padding-top: 4rem; }
 
-.reveal .th-index h4 {
-  margin-bottom: 0.25rem;
-  text-align: left;
-  text-transform: none; }
-.reveal .th-index ul {
-  display: block;
-  margin: 0 0 2rem 2rem;
-  text-align: left;
-  list-style-position: inside; }
-.reveal .th-index li {
-  font-size: 1.5rem;
-  line-height: 1.5; }
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
+.reveal h3 {
+  margin-top: 100px;
+  text-align: center; }
+.reveal .class-list {
+  max-width: 1180px;
+  margin: 0 auto; }
+  .reveal .class-list .month {
+    float: left;
+    padding: 0 1em 1em;
+    width: 20%; }
+    .reveal .class-list .month:first-child {
+      padding-left: 0; }
+    .reveal .class-list .month:last-child {
+      padding-right: 0; }
+  .reveal .class-list h4 {
+    margin-bottom: 0.25rem;
+    text-align: left;
+    text-transform: none; }
+  .reveal .class-list ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style-position: inside; }
+  .reveal .class-list li {
+    font-size: 1.5rem;
+    line-height: 1.5; }
 
 .symple-before {
   text-transform: lowercase !important; }

@@ -1,7 +1,43 @@
 // INDEX
 // ------------------------------------------------------
+
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+
 .reveal {
-    .th-index {
+
+        h3 {
+            margin-top: 100px;
+            text-align: center;
+        }
+
+    .class-list {
+        max-width: 1180px;
+        margin: 0 auto;
+
+
+        .month {
+            float: left;
+            padding: 0 1em 1em;
+            width: 20%;
+            
+            &:first-child {
+                padding-left: 0;
+            }
+
+            &:last-child {
+                padding-right: 0;
+            }
+        }
+
         h4 {
             margin-bottom: .25rem;
             text-align: left;
@@ -9,7 +45,8 @@
         }
         ul {
             display: block;
-            margin: 0 0 2rem 2rem;
+            margin: 0;
+            padding: 0;
             text-align: left;
             list-style-position: inside;
         }
