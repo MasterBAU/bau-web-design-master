@@ -155,9 +155,12 @@
             </section>
 
 
+
+
 <section class="text-left">
-    <section>
+    <section class="unix">
         <h2>Terminal Unix</h2>
+        <img src="./img/slides/terminal/iTerm.png" alt="">
     </section>
 
     <section>
@@ -166,117 +169,158 @@
     </section>
 
                 <section>
-                    <h3>Tipos de Terminal</h3>
-                    <p>MacOSX incorpora su propio terminal. En Windows deberemos de instalarlo aparte.</p>
+                    <h3>Tipos de Terminal Unix para Mac</h3>
+                    <p>MacOSX incorpora su propia consola llamada Terminal. Si lo preferimos, podemos instalar otras consolas que permiten más funcionalidades.</p>
                     <ul class="font-list" style="font-size: 2.2rem;">
                         <li>
-                            <p style="margin-bottom:0;"><code>Terminal (Mac)</code> <span style="font-size: 1.6rem;">/Aplicaciones/Utilidades/Terminal.app</span></li>
+                            <p style="margin-bottom:0;"><code>Terminal</code> <span style="font-size: 1.6rem;">/Aplicaciones/Utilidades/Terminal.app</span></li>
                         <li>
-                            <p style="margin-bottom:0;"><code>iTerm2 (Mac)</code> <span style="font-size: 1.6rem;"><a href="http://iterm2.com/" target="_blank">http://iterm2.com/</a></span></li>
+                            <p style="margin-bottom:0;"><code>iTerm2</code> <span style="font-size: 1.6rem;"><a href="http://iterm2.com/" target="_blank">http://iterm2.com/</a></span></li>
                         <li>
-                            <p style="margin-bottom:0;"><code>Cathode (Mac)</code> <span style="font-size: 1.6rem;"><a href="http://www.secretgeometry.com/apps/cathode" target="_blank">http://www.secretgeometry.com/apps/cathode</a></span></li>
+                            <p style="margin-bottom:0;"><code>Cathode</code> <span style="font-size: 1.6rem;"><a href="http://www.secretgeometry.com/apps/cathode" target="_blank">http://www.secretgeometry.com/apps/cathode</a></span></li>
 
-                    </ul>
-                </section>
-                <section>
-                    <h3>Unidades relativas</h3>
-                    <p>Las unidades relativas son un poco más complicadas ya que su valor no es fijo sino que dependen de la medida de otro elemento. También pueden dividirse en tres grupos más pequeños: <em>unidades relativas al tamaño de fuente</em>, <em>unidades relativas al viewport</em> y <em>porcentajes</em>.</p>
-                </section>
-
-                <section>
-                    <h3>Relativas al tamaño de fuente</h3>
-                    <ul class="font-list" style="font-size: 2.2rem;">
-                        <li>
-                            <p style="margin-bottom:0;"><code>em</code></p>
-                            <p style="font-size: 1.5rem;">Es un número relativo al <code>font-size</code> del elemento. Si se aplica a la misma propiedad <code>font-size</code> se calculará en base al <code>font-size</code> heredado.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>rem</code></p>
-                            <p style="font-size: 1.5rem;">Hace referencia al <code>font-size</code> del elemento root (normalmente el <code>&#60;html&#62;</code>). Si se aplica sobre este usara de base su valor inicial.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>ex</code></p>
-                            <p style="font-size: 1.5rem;">Representa la <i>x-height</i> del elemento fuente, normalmente la altura del caracter "x" en minúsculas.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>ch</code></p>
-                            <p style="font-size: 1.5rem;">Representa el ancho del carácter "0".</p>
-                        </li>
                     </ul>
                 </section>
 
                 <section>
-                    <h3>Relativas al viewport</h3>
+                    <h3>Tipos de Terminal Unix para Windows</h3>
+                    <p>La consola que trae Windows por defecto no está basada en UNIX sino que se trata de un intérprete de MS-DOS. El archivo ejecutable se llama cmd.exe. De modo que para poder ejecutar comandos UNIX deberemos de instalar algunas de las siguientes terminales:</p>
                     <ul class="font-list" style="font-size: 2.2rem;">
                         <li>
-                            <p style="margin-bottom:0;"><code>vh</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del alto del viewport.</p>
+                            <p style="margin-bottom:0;"><code>Git BASH</code> <span style="font-size: 1.6rem;"><a href="http://git-scm.com/download/win" target="_blank">http://git-scm.com/download/win</a></span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>Cygwin</code> <span style="font-size: 1.6rem;"><a href="http://cygwin.com/install.html" target="_blank">http://cygwin.com</a></span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>Badun</code> <span style="font-size: 1.6rem;"><a href="http://babun.github.io/" target="_blank">http://babun.github.io/</a></span></li>
+
+                    </ul>
+                </section>
+
+                <section class="term">
+                    <h3>Directorios</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>cd</code></p>
+                            <p style="font-size: 1.5rem;">Entramos dentro de un directorio mediante:<br />
+                            <code class="marker">$ cd [nombre de directorio]</code></p>
+                            <p style="font-size: 1.5rem;">Salimos de un directorio mediante:<br /> 
+                            <code class="marker">$ cd .. </code></p>
                         </li>
                         <li>
-                            <p style="margin-bottom:0;"><code>vw</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del ancho del viewport.</p>
+                            <p style="margin-bottom:0;"><code>mkdir</code></p>
+                            <p style="font-size: 1.5rem;">Creamos un directorio:<br />
+                            <code class="marker">$ mkdir [nombre de directorio a crear]</code></p>
                         </li>
                         <li>
-                            <p style="margin-bottom:0;"><code>vmin</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del valor más bajo entre el alto y ancho del viewport.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>vmax</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del valor más alto entre el alto y ancho del viewport.</p>
+                            <p style="margin-bottom:0;"><code>pwd</code></p>
+                            <p style="font-size: 1.5rem;">Print working directory. Muestra el directorio en el que nos encontramos:<br />
+                            <code class="marker">$ pwd</code></p>
+                            <p style="font-size: 1.5rem;"><code class="marker">/users/david.garcia/www/bau</code></p>
                         </li>
                     </ul>
                 </section>
 
-                <section>
-                     <h3>Porcentajes</h3>
-                     <p>Podemos asignar una unidad de medida porcentual con un <em>valor seguido del signo "%"</em> (ej: 50%). El contexto que se utilizará para calcular el porcentaje variará dependiendo a que propiedad se aplique.</p>
-                     <p>Si se aplica al <code>font-size</code>, el porcentaje será relativo al <code>font-size</code> del elemento padre.</p>
-                     <p>Si se aplica al <code>width</code>, <code>margin</code> o <code>padding</code>, será relativo a las medidas de su contenedor.</p>
+                <section class="term">
+                    <h3>Visualizar archivos</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>ls</code></p>
+                            <p style="font-size: 1.5rem;">Lista todos los archivos y carpetas contenidos en un directorio:<br />
+                            <code class="marker">$ ls</code></p>
+                            <p style="font-size: 1.5rem;">Muestra la información completa de cada archivo y directorio:<br />
+                            <code class="marker">$ ls -l</code></p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>more</code></p>
+                            <p style="font-size: 1.5rem;">Mostramos el contenido de un archivo. Podemos usar [spacebar] para continuar o <code>q</code> para salir:<br />
+                            <code class="marker">$ more [nombre del archivo]</code></p>
+                            <p style="font-size: 1.5rem;">Salimos de un directorio mediante:<br /> 
+                            <code class="marker">$ cd .. </code></p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>nano</code></p>
+                            <p style="font-size: 1.5rem;">Editor de archivos de texto en terminal:<br />
+                            <code class="marker">$ nano [nombre de archivo existente]</code></p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="term">
+                    <h3>Modificar archivos</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>cp</code></p>
+                            <p style="font-size: 1.5rem;">Copia un archivo:<br />
+                            <code class="marker">$ cp [nombre de archivo original] [nombre de archivo copiado]</code></p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>mv</code></p>
+                            <p style="font-size: 1.5rem;">Movemos un archivo o directorio<br />
+                            <code class="marker">$ mv [nombre del archivo][ruta a carpeta/nombre de archivo]</code></p>
+                            <p style="font-size: 1.5rem;">Mediante <code>mv</code> también podemos renombrar un archivo:<br /> 
+                            <code class="marker">$ mv Gulpfile.js Gulpfile--BACKUP.js </code></p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>diff</code></p>
+                            <p style="font-size: 1.5rem;">Comparamos 2 archivos y nos muestra sólo en qué se diferencian:<br />
+                            <code class="marker">$ diff [archivo original][archivo a comparar]</code></p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="term">
+                    <h3>FTP vía Terminal</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>ftp</code></p>
+                            <p style="font-size: 1.5rem;">Nos conectamos a un servidor FTP remoto:<br />
+                            <code class="marker">$ ftp ftp.davecarter.me</code></p>
+                            <p style="font-size: 1.5rem;">Una vez conectados con nombre de usuario y contraseña podemos obtener archivos mediante:</p>
+                            <p style="font-size: 1.5rem;"><code class="marker">$ ftp > get</code></p>
+                            <p style="font-size: 1.5rem;">Transferir archivos:</p>
+                            <p style="font-size: 1.5rem;"><code class="marker">$ ftp > put</code></p>
+                            <p style="font-size: 1.5rem;">Cambiar a modo Transferencia de archivos Binarios:</p>
+                            <p style="font-size: 1.5rem;"><code class="marker">$ ftp > bin</code></p>
+                            <p style="font-size: 1.5rem;">Cambiar a modo Transferencia de archivos de Texto:</p>
+                            <p style="font-size: 1.5rem;"><code class="marker">$ ftp > ascii</code></p>
+                            <p style="font-size: 1.5rem;">Salimos del modo FTP:</p>
+                            <p style="font-size: 1.5rem;"><code class="marker">$ ftp > exit</code></p>
+                            <p style="font-size: 1.5rem;">Además podemos usar algunos de los comandos UNIX vistos hasta ahora como <code>cd, ls y more</code></p>
+
+                        </li>  
+                    </ul>
+                </section>
+
+                <section class="term">
+                    <h3>Utilidades</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>whoami</code></p>
+                            <p style="font-size: 1.5rem;">Muestra el nombre del usuario:<br />
+                            <code class="marker">$ whoami</code><br />
+                            <code class="marker">$ david.garcia</code></p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>date</code></p>
+                            <p style="font-size: 1.5rem;">Muestra la fecha actual:<br />
+                            <code class="marker">$ date</code><br />
+                            <code class="marker">$ lunes, 16 de febrero de 2015, 20:30:00 CET</code></p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>cal</code></p>
+                            <p style="font-size: 1.5rem;">Muestra un calendario del mes actual. Además podemos pasarle un mes y año concreto:<br />
+                            <code class="marker">$ cal [mes][año]</code><br />
+                            <code class="marker">$ cal 09 1974<br />
+                                                 $ Septiembre 1974<br />
+                                                 $ do lu ma mi ju vi sá<br />
+                                                 $  1  2  3  4  5  6  7<br />
+                                                 $  8  9 10 11 12 13 14</code></p>
+                        </li>
+                    </ul>
                 </section>
             </section>
 
 
-<section>
-    <h3>Ejercicio</h3>
-    <p>Añade un dropdown en la landing page DecoMAG</p>
-
-    <a href="files/css-pseudoclasses/home_deco_dropdown.psd.zip"><img src="img/slides/css-pseudoclasses/home_deco_dropdown.png" alt=""></a>
-</section>
-
-<section>
-    <h3>Links relacionados</h3>
-    <ul style="font-size: 1.8rem">
-        <li style="margin-bottom: .4em;">
-            <strong>Index of standard pseudo-classes</strong> <i style="color: #999;"> &mdash; MDN</i><br>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes" style="font-size: .8em; margin-top: -.5rem; display:block;">https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes</a>
-        </li>
-
-        <li style="margin-bottom: .4em;">
-            <strong>All pseudo-elements</strong> <i style="color: #999;"> &mdash; MDN</i><br>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements" style="font-size: .8em; margin-top: -.5rem; display:block;">https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-elements</a>
-        </li>
-
-        <li style="margin-bottom: .4em;">
-            <strong>:target</strong> <i style="color: #999;"> &mdash; CSS Tricks</i><br>
-            <a href="http://css-tricks.com/almanac/selectors/t/target/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://css-tricks.com/almanac/selectors/t/target/</a>
-        </li>
-
-        <li style="margin-bottom: .4em;">
-            <strong>:nth tester tool</strong> <i style="color: #999;"> &mdash; CSS Tricks</i><br>
-            <a href="http://css-tricks.com/examples/nth-child-tester/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://css-tricks.com/examples/nth-child-tester/</a>
-        </li>
-
-        <li style="margin-bottom: .4em;">
-            <strong>:nth recipes</strong> <i style="color: #999;"> &mdash; CSS Tricks</i><br>
-            <a href="http://css-tricks.com/useful-nth-child-recipies/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://css-tricks.com/useful-nth-child-recipies/</a>
-        </li>
-
-        <li style="margin-bottom: .4em;">
-            <strong>CSS Level 4 Selectors to Watch Out For</strong> <i style="color: #999;"> &mdash; Jonathan Cutrell</i><br>
-            <a href="http://webdesign.tutsplus.com/articles/css-level-4-selectors-to-watch-out-for--cms-23117" style="font-size: .8em; margin-top: -.5rem; display:block;">http://webdesign.tutsplus.com/articles/css-level-4-selectors-to-watch-out-for--cms-23117</a>
-        </li>
-    </ul>
-</section>
 
         </div>
     </div>

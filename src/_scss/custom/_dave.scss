@@ -71,3 +71,16 @@
         background: transparent;
         text-shadow: 2px 2px 2px #000;
     }
+
+
+// Terminal Unix
+
+    section.unix img {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    section.term .marker {
+        color: #37FF37;
+    }

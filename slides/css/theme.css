@@ -455,6 +455,14 @@ p.selection::selection {
   background: transparent;
   text-shadow: 2px 2px 2px #000; }
 
+section.unix img {
+  background: transparent;
+  border: none;
+  box-shadow: none; }
+
+section.term .marker {
+  color: #37FF37; }
+
 .reveal .footnote {
   position: relative; }
 
