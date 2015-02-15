@@ -1,0 +1,248 @@
+/* AFFECTED PADDINGS,JUST ON BOX */
+
+/* cool! */
+*,
+    *:before,
+    *:after {
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+body{
+	/* La altura 100% sólo se utiliza si tienes poco contenido como para llenar una página y has puesto un fondo - Sino no tiene sentido */
+	height:100%;
+	font-family: 'Lato', sans-serif;
+}
+
+/* TEXT FONTS*/
+h1{
+	/* H1 siempre es display block */
+	display:block;
+	padding:none;
+	text-shadow: 1px 1px 1px #fff;
+}
+h3{
+	/* Perfect! */
+	text-transform: uppercase;
+}
+
+/* HEADER + NAV */
+header{
+	position: fixed;
+	height: 50px;
+	width:100%;
+	background: #004f70;
+	z-index:1;
+}
+.logo{
+	float:left;
+	width:150px;
+	margin-top:10px;
+}
+.logo img{
+	width:100%;
+}
+.container{
+	/* Genial el uso de % - Para esta práctica un valor absoluto ya iba bien */
+	width:70%;
+	margin:0 auto;
+}
+nav{
+	float:right;
+}
+nav li{
+	display:inline-block;
+}
+nav a{
+	color:#90c5db;
+	text-decoration: none;
+	padding-left: 10px;
+}
+nav a:hover{
+	color:#fff;
+}
+.headimage{
+	overflow:hidden;
+	position:relative;
+}
+.headimage img{
+	width:100%;
+	/* Cuando veas un valor negativo elevado es probable que haya algo que no estás haciendo bien */
+	margin-top:-200px;
+	display:block;
+}
+.headbox{
+	width:35%;
+	height:auto;
+	position:absolute;
+	top:30%;
+	left: 15%;
+}
+.headbox_content{
+	padding:10px;
+	background: hsla(360, 100%, 100%, 0.59);
+}
+.headbox_content p{
+	text-shadow: 1px 1px 1px #fff;
+}
+.button{
+	margin-top:30px;
+}
+.button a{
+	background: #009bdb;
+	padding:15px 15px;
+	text-align: center;
+	color:#fff;
+	text-decoration: none;
+	font-size: 1.2rem;
+}
+.button a:hover{
+	background:#004f70;
+}
+
+/* MAIN CONTENT */
+/* row 1 IDEAS + PROMOCIONES*/
+.ideas{
+	float:left;
+	padding:10px 20px;
+	width:30%;
+	height:100%;
+	color:#fff;
+	/* Vaya! Resulta que sí que sabes poner imágenes de fondo!!! :) */
+	background: url("assets/iconmonstr-light-bulb-18-icon-256.png") no-repeat #009bdb;
+	background-size: 40px;
+	background-position: 20px 20%;
+}
+.promociones{
+	float:right;
+	padding:10px 20px;
+	width:65%;
+	height:100%;
+	color:#fff;
+	background: url("assets/iconmonstr-badge-icon-256.png") no-repeat #009bdb;
+	background-size: 40px;
+	background-position: 20px 20%;
+}
+.promociones h2, .ideas h2{
+	text-align: center;
+	font-weight: lighter;
+
+}
+.promociones p, .ideas p{
+	text-align: center;
+}
+/* row 2 DISPONIBLE + MOBILE*/
+.disponible{
+	float:left;	
+	width:40%;
+}
+.disponible h3{
+	margin-top:70px;
+	color:#004f70;
+}
+.apps{
+	margin-top:30px;
+}
+.apps img{
+	width:40%;
+	padding-right:10px;
+}
+.mobile_devices{
+	float:right;
+	width:55%;
+}
+.mobile_devices img{
+	width:100%;
+}
+.container_middle{
+	width:70%;
+	margin:30px auto;
+	overflow:hidden;
+}
+
+
+/* row 3 INTERIOR LOFT*/
+
+.container_fullwidth{
+	width:100%;
+	position:relative;
+}
+
+.container_fullwidth img{
+	width:100%;
+	display:block;
+}
+
+.loft{
+	background:hsla(0, 0%, 16%, 0.70);
+	position:absolute;
+	top: 40%;
+    left: 40%;
+	
+}
+a.loft{
+	text-decoration: none;
+	color:#fff;
+	padding:15px 40px;
+
+}
+a.loft:hover{
+	/* HSLA?? Hardcore style */
+	background:hsla(0, 0%, 16%, 0.90);
+}
+
+
+/* row 4 TESTIMONIALS*/
+.testimonial{
+	float:left;	
+	width:40%;
+}	
+.hfixed{
+	height:300px;
+}
+.testimonial_image{
+	float:right;
+	width:55%;
+	height:100%;
+}
+.testimonial_image img{
+	height:100%;
+	float:right;	
+}
+.testimonial h3{
+	color:#004f70;
+	margin-top:60px;
+	font-size: 1.5rem;
+}
+.testimonial p{
+	color:#004f70;
+	font-style:italic;
+	font-size: 1.2rem;
+}
+.author{
+	font-weight: bold;
+	font-size: .9rem;
+}
+
+footer{
+	background:#004f70;
+	height:100px;
+}
+ h4{
+	color:#fff;
+	text-align: center;
+	font-size:.7rem;
+	font-weight: lighter;
+	padding-top: 45px;
+}
+
+
+/* Ojo con dejar comentarios de development en producción!! */
+
+/* mirar tema clearfix */
+
+
+
+
+
