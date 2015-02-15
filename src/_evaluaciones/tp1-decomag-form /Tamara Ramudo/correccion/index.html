@@ -21,6 +21,8 @@
 
                 <div class="logo">
                     <!-- Cuidado con los espacios entre atributos -->
+                    <!-- el formato SVG no está soportado completamente. Necesitarías añadir un fallback: -->
+                    <!-- http://css-tricks.com/svg-fallbacks/ -->
                     <img id="casa"src="img/casa.svg">
 
                     <!-- Falta el atributo alt en las imagenes. Importante para accesibilidad -->
@@ -42,6 +44,7 @@
 
 
     <section class="intro">
+        <!-- En esta estructura en concreto el propio <section> puede hacer de .contenedor -->
        <div class="contenedor">
 
         <div class="destacado">
@@ -85,7 +88,9 @@
             <input class="password" type="password" placeholder="Contraseña" required="">
             <input class="checkbox izquierda" type="checkbox">
             <p class="legal"> Acepto la política de privacidad.</p>
-
+            
+            <!-- Al tratarse de un botón de "enviar" el type debería de ser "submit" -->
+            <!-- http://www.w3schools.com/tags/att_button_type.asp -->
             <button type="button"> Enviar</button>
         </form>
 

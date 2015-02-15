@@ -1,4 +1,5 @@
 
+/* Muy bien aplicado el box sizing */
 *,
 *:before,
 *:after {
@@ -138,6 +139,7 @@ li{
 .intro{
 	background-image: url("../img/interior-1200.jpg");
 	background-size: cover;
+	/* Agrupa propiedades con background */
 	background-position-x:50%;
 	background-position-y: 75%;
 	height: 400px;
@@ -169,6 +171,7 @@ li{
 	}
 
 input{
+	/* Muy buena clasificación de clases para el elemento <input> !! */
 	margin-bottom: 10px;
 	border-radius: 5px;
 	border-style: none;
@@ -230,11 +233,14 @@ a :hover {
 	margin-bottom: 50px;
 	}
 
+/* Deberías de haber usado <section> como contenedor y evitarías tener un nivel de recursividad extra con div div */
 .promos div div{
 	background-color: rgb(0,155,219);
+	/* Al agrupar elementos NO se separan con coma */
 	padding: 20px, 50px;
 	}
 
+/* Cuando agrupes clases añade un salto de línea después de la coma para mejorar la legubilidad */
 .box1, .box-ico1{
 	width: 30%;
 	}
@@ -269,9 +275,11 @@ div.titulo-imagen{
 	background-color: rgba(51,51,51,.7);
 	color: white;
 	text-align: center;
+	/* Perfect! */
 	text-transform: uppercase;
 
 	position: absolute;
+	/* Agrupa propiedades */
 	padding-left: 60px;
 	padding-right: 60px;
 	margin-top: 90px;
@@ -281,6 +289,7 @@ div.titulo-imagen{
 .testimonios .box3 img{
 
 	height: 450px;
+	/* Agrupa propiedades */
 	margin-bottom: -20px;
 	margin-top: -40px;
 
