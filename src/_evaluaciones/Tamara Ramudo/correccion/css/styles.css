@@ -1,0 +1,308 @@
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+
+  margin-top: 20px;
+  }
+
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+.clearfix {
+	*zoom: 1;
+}
+
+html{
+font-family: 'Open Sans Condensed', sans-serif;
+color:rgb(0,78,114);
+	}
+
+.contenedor{
+	margin: 0 auto;
+	position: relative;
+	width: 1024px;
+	}
+.izquierda{
+	float: left;
+	margin-right: 20px;
+	}
+.derecha{
+	float: right;
+	}
+
+header{
+	background-color: rgb(0,79,112);
+	margin-top: -40px;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+  	}
+
+h1{
+	font-size: 30px;
+	}
+
+h2{
+	font-size: 36px;
+	}
+
+h3{
+	color: white;
+	font-size: 28px;
+	font-weight: 300;
+	text-align: center;
+	text-transform: uppercase;
+	}
+p{
+	font-size: 18px;
+	font-weight: 700;
+	}
+#texto-intro{
+	color: black;
+	text-shadow:white 0 1px;
+
+	}
+
+.promos p{
+	color: white;
+	text-align: center;
+	margin-left: 25px;
+	margin-right: 25px;
+	}
+
+.publicaciones p{
+	font-size: 24px;
+	font-weight: 300;
+
+	}
+.testimonios p{
+	font-family: 'Open Sans',sans-serif;
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 300;
+	}
+#nombre{
+	font-size: 20px;
+	font-weight: 400;
+	}
+
+#logo {
+	color: white;
+	font-size: 50px;
+	margin-top: 10px;
+	}
+
+#casa{
+	margin-right: 5px;
+	}
+span{
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	color: rgb(119,172,196);
+	}
+
+.logo{
+	margin-top: -20px;
+	}
+
+ul{
+	color: white;
+	font-size: 20px;
+	list-style: none;
+	}
+
+ul a{
+	color: rgb(140,196,219);
+	margin-left: 20px;
+	text-decoration: none;
+
+	}
+
+ul a:hover{
+	color: white;
+	}
+
+li{
+	display: inline;
+	}
+
+.intro{
+	background-image: url("../img/interior-1200.jpg");
+	background-size: cover;
+	background-position-x:50%;
+	background-position-y: 75%;
+	height: 400px;
+	margin-top: -20px;
+	}
+
+.destacado {
+	background-color: rgba(255,255,255,.3);
+	position: relative;
+	padding: 20px;
+	top: 100px;
+	width: 50%;
+	}
+
+.formulario{
+	background-color: rgba(29,29,29,.4);
+	border: solid 4px rgb(0,155,219);
+	position:absolute;
+	left: 700px;
+	top: 80px;
+	padding: 20px;
+	width: 30%;
+	}
+
+.formulario h4{
+	color: white;
+	margin-top: -10px;
+	text-align: center;
+	}
+
+input{
+	margin-bottom: 10px;
+	border-radius: 5px;
+	border-style: none;
+	width: 100%;
+	height: 30px;
+
+	background-repeat: no-repeat;
+	background-size: 10%;
+	background-position:5px,0px;
+	padding-left: 40px;
+	}
+
+input.text{
+	background-image: url("../img/user.svg");
+	}
+input.email{
+	background-image: url("../img/email.svg");
+	}
+input.password{
+	background-image: url("../img/lock.svg");
+	background-size: 9%;
+	}
+input.checkbox{
+	display: inline;
+	width: 20px;
+	}
+p.legal{
+	color: white;
+	font-size: 13px;
+	font-weight: 300;
+	margin-top: 5px;
+	}
+
+
+button{
+	background-color: rgb(0,155,219);
+	border: none;
+	color: white;
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: .5px;
+	text-align: center;
+	height: 50px;
+	width: 150px;
+
+	}
+
+.formulario button{
+	border-radius: 5px;
+	height: 40px;
+	width: 70%;
+	}
+
+a :hover {
+	background-color: rgb(0,81,119);
+	}
+
+.publicaciones{
+	margin-bottom: 50px;
+	}
+
+.promos div div{
+	background-color: rgb(0,155,219);
+	padding: 20px, 50px;
+	}
+
+.box1, .box-ico1{
+	width: 30%;
+	}
+.box2, .box-ico2{
+	width: 65%;
+	}
+.box3{
+	width: 40%;
+}
+
+.box-ico1, .box-ico2 {
+	background-repeat: no-repeat;
+	background-size: 40px;
+	background-position-x: 15px;
+	background-position-y: 20px;
+	}
+
+
+.box-ico1{
+	background-image: url("../img/ideas.png");
+	}
+.box-ico2{
+	background-image: url("../img/promociones.png");
+}
+
+.decora{
+	background-image: url("../img/deco.jpg");
+	background-size: cover;
+	height: 300px;
+}
+div.titulo-imagen{
+	background-color: rgba(51,51,51,.7);
+	color: white;
+	text-align: center;
+	text-transform: uppercase;
+
+	position: absolute;
+	padding-left: 60px;
+	padding-right: 60px;
+	margin-top: 90px;
+	left: 35%;
+	}
+
+.testimonios .box3 img{
+
+	height: 450px;
+	margin-bottom: -20px;
+	margin-top: -40px;
+
+	float:right;
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
+	-o-filter: grayscale(100%);
+	filter: grayscale(100%);
+	filter: Gray();
+	}
+
+footer{
+	background-color: rgb(0,79,112);
+	height: 150px;
+	padding-top: 20px;
+}
+
+#footer{
+	font-weight: 300;
+	color: white;
+	text-align: center;
+	font-size: 15px;
+}
+
+
