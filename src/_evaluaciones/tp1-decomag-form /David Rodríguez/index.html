@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- El título ha de ser más descriptivo. Afecta al posicionamiento SEO -->
+    <title>Landing</title>
+    <!-- La hoja de estilos debería de estar en una carpeta llamada "css" -->
+    <link rel="stylesheet" href="style.css">
+    <!-- La font es Open Sans Condensed -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900' rel='stylesheet' type='text/css'>
+</head>
+<body class="nomargin">
+    <header class="barracolor">
+        <div class="porciento">
+            <div class="logo">
+                <!-- Falta el atributo "alt" y el atributo "width" ha de ir sin los "px" -->
+                <img src="assets/homedeco.png" width="160px;">
+            </div>
+            <!-- Para elementos de navegación tenemos la etiqueta <nav> que es más semántica -->
+            <div class="navegacion">
+                <ul>
+                    <li>
+                        <a href="#">
+                            inicio
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            secciones
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            sobre DECO
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            contacto
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <article class="fotocama">
+        <!-- No deberías de utilizar estilos inline! -->
+        <!-- Falta el atributo "alt" y el atributo "width" ha de ir sin los "px" -->
+        <img src="assets/minimalist-interior.png" style="width:100%">
+        <div class="porciento-2">
+            <div class="textoopacidad">
+                <h1>
+                    La revista de interiorismo definitiva
+                </h1>
+                <p>
+                    Suscríbete a nuestra revista online para estar informado sobre las últimas tendencias en decoración de interiores.
+                </p>
+            </div>
+            <a href="#">
+                <div class="botonsabermas">
+                    <p>Quiero saber más</p>
+                </div>
+            </a>
+            <div class="suscribete">
+                <!-- No deberías de utilizar estilos inline! -->
+                <p class="newsletter" style="color:white">Suscríbete al newsletter</p>
+                <!-- La etiqueta <form> es un contenedor para TODOS los mismos elementos de formulario -->
+                <form class="campos">
+                    <input class="recuadro" type="text" placeholder="Nombre">
+                </form>
+                <form class="campos">
+                    <input class="recuadro" type="text" placeholder="E-mail">
+                </form>
+                <form class="campos">
+                    <input class="recuadro" type="password" placeholder="Contraseña">
+                </form>
+                <form class="campos">
+                    <!-- Evita estilos inline -->
+                    <p style="color:white">
+                        <input type="checkbox">Acepto la política de privacidad
+                    </p>
+                </form>
+                <form class="campos">
+                    <input class="botonenviar" type="submit" value="ENVIAR">
+                </form>
+            </div>
+        </div>
+    </article>
+    <article class="ideaspromociones">
+        <div class="ideas">
+            <!-- Este encabezado debería de ser un h2. Se recomienda usar un único h1 por página para mejorar SEO -->
+            <h1>
+                IDEAS
+            </h1>
+            <p>
+                Decora tu espacio acorde con tu estilo y a buen precio
+            </p>
+            <div class="iconobombilla">
+                <!-- Esta imagen es decorativa. Debería de ir como fondo -->
+                <img src="assets/iconmonstr-light.png" width="35px">
+            </div>
+        </div>
+        <div class="promociones">
+            <!-- Este encabezado debería de ser un h2. Se recomienda usar un único h1 por página para mejorar SEO -->
+            <h1>
+                PROMOCIONES
+            </h1>
+            <p>
+                Consigue hasta un 40% de descuento con nuestros códigos promocionales en productos seleccionados
+            </p>
+            <div class="iconoestrella">
+                <!-- Esta imagen es decorativa. Debería de ir como fondo -->
+                <img src="assets/iconmonstr-badge.png" width="35px">
+            </div>
+        </div>
+    </article>
+    <article class="publicacionesdig">
+        <div class="apps">
+            <h2>
+                DISPONIBLE EN PUBLICACIONES DIGITALES
+            </h2>
+            <p>
+                Descárgate nuestra versión digital disponible para tablets y móviles Apple y Android.
+            </p>
+            <!-- Falta el atributo "alt" y el atributo "width" no puede contener "%" -->
+            <img src="assets/appleandroid.png" width="60%">
+        </div>
+        <div class="dispositivos">
+            <!-- Falta el atributo "alt" y el atributo "width" no puede contener "%" -->
+            <img src="assets/mobile-devices.png" width="100%">
+        </div>
+    </article>
+    <article class="fotoloft">
+        <!-- Falta el atributo "alt" y el atributo "width" no puede contener "%" -->
+        <img src="assets/minimalist-room.png" style="width:100%">
+        <div class="etiquetaloft">
+            <h2>DECORA TU LOFT</h2>
+        </div>
+    </article>
+    <article class="testimonios">
+        <div class="apps">
+            <h2>
+                Testimonios
+            </h2>
+            <!-- Para las citas has de utilizar la etiqueta <blockquote> -->
+            <p>
+                "Nos ha sido de gran ayuda disponer de un catálogo tan extenso para decorar nuestro hogar"
+            </p>
+            <h3>
+                @pepGuardiola
+            </h3>
+        </div>
+        <div class="fotopareja">
+            <!-- Falta el atributo "alt" y el atributo "width" no puede contener "%" -->
+            <img src="assets/pareja.png" width="50%">
+        </div>
+    </article>
+    <footer class="footer">
+        <h4 class="textofooter">
+            <!-- Política de privacidad es un enlace a otra página. No un subrayado. -->
+            DecoMAG 2015 - <u>Política de privacidad</u> - Todos los derechos reservados.
+        </h4>
+    </footer>
+</body>
+</html>
