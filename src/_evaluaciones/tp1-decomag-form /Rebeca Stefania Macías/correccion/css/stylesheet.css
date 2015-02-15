@@ -1,0 +1,443 @@
+/*
+ * Este reset es demasiado abarcativo, es mejor usar algo que no te obligue
+ * a redeclarar todos los margins y paddings nuevamente.
+ */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.clearfix:before,
+.clearfix:after{
+	content:"";
+	display: table;
+}
+.clearfix:after{
+	clear:both;
+}
+
+.clearfix{
+	*zoom: 1;
+}
+.check{
+	background-color: red;
+	width: auto;
+}
+.headernav{
+	width: 100%;
+	background-color: #004f70;
+
+	/*
+     *  Antes que fijar un valor es mejor dejar que sea el contenido el que determine
+     *  el alto de los elementos.
+     */
+	height:80px;
+
+	/* Cuando el valor es 0 podemos omitir la unidad. */
+	padding: 10px 200px 0px 200px;
+
+	position: fixed;
+	z-index: 1000;
+}
+.fondo{
+	background-image: url("../images/imgintro.jpg");
+	display: block;
+	width: 100%;
+	height: 500px;
+
+}
+
+.logo{
+	width: 250px;
+}
+
+.nav{
+	margin-top: -45px;
+	padding-right: 400px;
+	float:right;
+	text-align: center;
+	font-weight: 600;
+}
+
+a{
+	color:#90c5db;
+	text-decoration: none;
+}
+
+a:hover{
+	color:#fff;
+}
+
+li{
+	list-style-type: none;
+	display: inline-block;
+	padding-left: 20px;
+}
+
+.imginicio{
+	width:100%;
+}
+
+.cajaintro{
+
+	/*
+	 *  La manera que has elegido para posicionar las cosas es poco flexible y muy frágils.
+	 *  Es más versatil trabajar con paddings y floats para que el contenido tenga espacio
+	 *  para poder crecer.
+	 */
+	position: absolute;
+	top:150px;
+	background-color: rgba(255,255,255,0.5);
+	width: 35%;
+	height: auto;
+	margin-left:200px;
+	padding: 20px;
+	margin-bottom: 10px;
+}
+.h2intro{
+	font-weight: 600;
+}
+.botonintro{
+	position: absolute;
+		top:300px;
+	background-color: #009bdb;
+	width: 15%;
+	text-align: center;
+	color: #fff;
+	margin-left:200px;
+	margin-top: 20px;
+	padding: 20px;
+}
+.legendclass{
+	color: #fff;
+	font-size: 18px;
+	text-align: center;
+}
+
+.formulario{
+	padding: 20px;
+	width:25%;
+	position:absolute;
+		right:70px;
+		top:150px;
+	background-color: rgba(0,0,0,0.6);
+	border: solid 5px;
+	border-color: #009bdb;
+	margin-right:120px;
+}
+.botonfor{
+	border-radius: 5px;
+	padding: 10px;
+	background-color: #009bdb;
+	color:#fff;
+	border-style: none;
+	font-size: 16px;
+	margin-top: 10px;
+}
+.inputstyle{
+	width:80%;
+	height: 30px;
+	margin-top: 10px;
+	font-size: 16px;
+	border-style: none;
+	border-radius: 3px;
+	background-repeat: no-repeat;
+	background-size: 30px;
+	padding-left: 50px;
+}
+
+.nombre{
+	background-image: url("../images/nombre.png");
+}
+.mail{
+	background-image: url("../images/mail.png");
+}
+.contrasena{
+	background-image: url("../images/contrasena.png");
+}
+
+.content{
+	padding: 20px 200px 0px 200px;
+}
+
+.cajaizq{
+	float:left;
+	background-color:#009bdb;
+	width: 30%;
+	min-height: 160px;
+	text-align: center;
+	color:#fff;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 2%;
+	margin-top:20px;
+}
+
+.cajader{
+	float:right;
+	background-color:#0088c1;
+	width: 60%;
+	min-height: 160px;
+	text-align: center;
+	color:#fff;
+	font-weight: 400;
+	font-size: 18px;
+	padding: 2%;
+	margin-top:20px;
+}
+
+.imagenescajas{
+
+	/*
+	 * Todo este modulo está construido de manera muy rara con posiciones relativas
+	 * y coordenadas negativas. Me cuesta entender como llegaste a estas soluciones
+	 * tan rebuscadas.
+	 */
+	position: relative;
+		top:-40%;
+		left: -40%;
+}
+
+.h2caja{
+	font-size: 30px;
+	font-weight: 400;
+	font-style: italic;
+	position: relative;
+		top:-60px;
+}
+.textocajas{
+	margin-top: -20px;
+}
+
+.mobiles{
+	margin-top: 70px;
+	padding: 0px 200px 0px 200px;
+}
+
+.h2publicidad{
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 0.5em;
+	color: #004e72;
+}
+
+.publicaciones{
+	max-width: 45%;
+	float:left;
+}
+
+.mobile{
+	max-width: 50%;
+	float:right;
+	margin-top: 10px;
+}
+
+.botonestiendas{
+	margin-top: 20px;
+	max-width: 45%;
+	padding-right: 10px;
+	float:left;
+}
+
+.seccion{
+	position: relative;
+}
+
+.imgseccion{
+	margin-top: 70px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.seccion1{
+	position: relative;
+}
+.politicas{
+	color:#fff;
+	font-size: 12px;
+
+}
+.secciontexto{
+	position: absolute;
+
+	/*
+	 *	Estas eligiendo mal el elemento que tendría que determinar las coordenadas 0,0
+	 *  lo que te obliga a utilizar valores extremos como top: 70%;.
+	 *	Revisa todo el tema de position en general.
+	 */
+	top:70%;
+	left: 40%;
+	width: 20%;
+	margin: auto 0;
+	padding: 20px;
+	color:#fff;
+	text-align: center;
+	line-height: 1.5em;
+	background-color: rgba(0,0,0,0.6);
+}
+
+.imgtest{
+	margin-top: 30px;
+	width: 100%;
+}
+
+.textotestimonios{
+	position: absolute;
+	top:15%;
+	width: 30%;
+	margin-left:200px;
+	padding: 20px;
+	color:#004e72;
+	line-height: 1.5em;
+}
+.ptestimonio{
+	font-style: italic;
+	margin-top: 1.2em;
+	margin-bottom: 1.2em;
+}
+.h2testimonio{
+	font-weight: 600;
+	padding-top: 50px;
+}
+.footer{
+	color: #fff;
+	width: 100%;
+	background-color: #004f70;
+	text-align: center;
+	padding-top: 60px;
+	height:80px;
+}
+@media (max-width: 1000px){
+	.headernav{
+	background-color: #004f70;
+	height:100px;
+	padding: 10px 50px 0px 50px;
+	position: fixed;
+	z-index: 1000;
+}
+
+.logo{
+	width: 200px;
+}
+
+.nav{
+	margin-top: -10px;
+	float:left;
+	text-align: center;
+	font-weight: 600;
+	padding-right: 150px;
+	font-size: 12px;
+}
+.cajaintro{
+	position: absolute;
+	top:20%;
+	background-color: rgba(255,255,255,0.5);
+	width: 60%;
+	height: auto;
+	margin-left:100px;
+	padding: 20px;
+	margin-bottom: 50px;
+}
+.h2intro{
+	font-weight: 600;
+}
+.botonintro{
+	position: absolute;
+		top:300px;
+	background-color: #009bdb;
+	min-width: 150px;
+	text-align: center;
+	color: #fff;
+	margin-top: 20px;
+	margin-left: 100px;
+	padding: 20px;
+}
+.content{
+	padding: 400px 100px 0px 100px;
+}
+
+.aceptarpoliticas{
+	color:#fff;
+}
+
+.imagenescajas{
+	position: relative;
+		top:-40%;
+		left: -40%;
+
+}
+.imagenescajas{
+	position: relative;
+		top:-30%;
+		left: -30%;
+	width: 40px;
+}
+	.content{
+	padding: 20px 50px 0px 50px;
+}
+	.fondo{
+		background-image: url("../images/imgintro.jpg");
+		display: block;
+		width: 100%;
+		height: 310px;
+		}
+
+	.botonintro{
+		position: absolute;
+			top:220px;
+		background-color: #009bdb;
+		width: 15%;
+		text-align: center;
+		color: #fff;
+		margin-left:100px;
+		margin-top: 20px;
+		padding: 20px;
+	}
+	.formulario{
+		padding: 20px;
+		width:50%;
+		position:absolute;
+			left:70px;
+			top:400px;
+		background-color: rgba(0,0,0,0.6);
+		border: solid 5px;
+		border-color: #009bdb;
+		margin-right:120px;
+}
+	.imagenescajas{
+	display: none;
+}
+	.cajaizq{
+		float: left;
+		background-color:#009bdb;
+		width: 80%;
+		min-height: 140px;
+		text-align: center;
+		color:#fff;
+		font-weight: 400;
+		font-size: 18px;
+		margin-top:400px;
+		padding-top: 80px;
+	}
+
+.cajader{
+	float: left;
+	background-color:#0088c1;
+		width: 80%;
+		min-height: 160px;
+		text-align: center;
+		color:#fff;
+		font-weight: 400;
+		font-size: 18px;
+		margin-top:10px;
+	}
+.mobiles
+{
+	width: 80%;
+	margin-left: -120px;
+}
+}
