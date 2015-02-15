@@ -1,0 +1,336 @@
+
+/* Deberías de especificar unos estilos genéricos para la etiqueta <body> */
+
+
+.nomargin {
+    margin: 0px;
+}
+
+.barracolor {
+    background-color: #004f70;
+    width: 100%;
+}
+
+.porciento {
+    margin: 0 auto;
+    width: 75%;
+    /* Agrupa propiedades */
+    padding-top: 30px;
+    padding-bottom: 15px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.navegacion {
+    margin: auto;
+    padding-left:20px;
+    padding-top: 10px;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    display: inline-block;
+    float: right;
+}
+
+.navegacion ul {
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+
+.navegacion ul li {
+    /* No tiene sentido flotar el mismo elemento left & right */
+    float: right;
+    float:left;
+    /* Agrupa propiedades */
+    padding-left:30px;
+    padding-right:10px;
+}
+
+.navegacion ul li a {
+    text-decoration:none;
+    color:#90c5db;
+    font-weight:bold;
+}
+
+.navegacion ul li a:hover {
+    color: white;
+}
+
+.fotocama {
+    position: relative;
+}
+
+.porciento-2 {
+    width: 75%;
+    /* Si posicionas absolutamente este elemento margin 0 auto queda invalidado */
+    margin: 0 auto;
+    position: absolute;
+    left: 12%;
+    top: 70px;
+}
+
+.textoopacidad {
+    background-color: white;
+    opacity: 0.5;
+    float: left;
+    width: 50%;
+}
+
+.textoopacidad h1 {
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    padding-left: 25px;
+}
+
+.textoopacidad p {
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    max-width: 500px;
+    padding-left: 25px;
+}
+
+.botonsabermas {
+    background-color: #009bdb;
+    position: absolute;
+    left: ;
+    top: 150px;
+}
+
+.botonsabermas:hover {
+    background-color: #004f70;
+}
+
+.botonsabermas a {
+    text-decoration: none;
+}
+
+.botonsabermas p {
+    text-align: center;
+    color: white;
+    /* Agrupa propiedades */
+    padding-left: 15px;
+    padding-right: 15px;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+}
+
+/* Esta clase no está actuando. Actualmente estás dando estilos los elementos <p> dentro de la clase .newsletter */
+/* En la estructura HTML tienes asignada la clase .newsletter al propio elemento <p> */
+/* De modo que para que se apliquen los estilos deberías de haber puesto: p.newsletter */
+.newsletter p {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.suscribete {
+    background-color: rgba(0,0,0,0.1) ;
+    float: right;
+    width: 35%;
+    border: 5px solid #009bdb;
+    margin-left: 10%;
+}
+
+.campos {
+    /* Faltan las imágenes de fondo de los inputs */
+    text-align: center;
+    margin-top: 10px;
+}
+
+.recuadro {
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 50%;
+    font-size: 18px;
+}
+
+.politicapriv p {
+    font-family: "Lato", sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+    color: white;
+}
+
+.botonenviar {
+    background-color: #009bdb;
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    height: 30px;
+    width: 40%;
+    margin-bottom: 15px;
+}
+
+.ideaspromociones {
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.ideas {
+    background-color: #009bdb;
+    width: 29%;
+    /* No tiene sentido indicar display: inline-block a un contenedor de bloque <div> */
+    display: inline-block;
+    /* No es correcto utilizar float + position al mismo tiempo */
+    float: left;
+    position: relative;
+}
+
+.ideas h1 {
+    font-family: "Lato", sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+}
+
+.ideas p {
+    font-family: "Lato", sans-serif;
+    color: white;
+    text-align: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 15px;
+}
+
+.iconobombilla {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.promociones {
+    background-color: #0088c1;
+    width: 68%;
+    /* No tiene sentido indicar display: inline-block a un contenedor de bloque <div> */
+    display: inline-block;
+    /* No es correcto utilizar float + position al mismo tiempo */
+    float: right;
+    position: relative;
+}
+
+.promociones h1 {
+    font-family: "Lato", sans-serif;
+    color: white;
+    text-align: center;
+    font-weight: 200;
+}
+
+.promociones p {
+    font-family: "Lato", sans-serif;
+    color: white;
+    text-align: center;
+    /* Agrupa propiedades! */
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-bottom: 15px;
+}
+
+.iconoestrella {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.publicacionesdig {
+    clear: both;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+.apps {
+    display: inline-block;
+    float: left;
+    width: 49%;
+    padding-top: 30px;
+}
+
+.apps h2 {
+    font-family: "Lato", sans-serif;
+    color: #004e72;
+    max-width: 350px;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.apps p {
+    font-family: "Lato", sans-serif;
+    color: #004e72;
+    max-width: 380px;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.dispositivos {
+    display: inline-block;
+    float: right;
+    width: 49%;
+}
+
+.fotoloft {
+    clear: both;
+    padding-top: 50px;
+    position: relative;
+}
+
+.etiquetaloft {
+    background-color: black;
+    opacity: 0.5;
+    /* Si posicionas absolutamente este elemento margin 0 auto queda invalidado */
+    margin: 0 auto;
+    width: 40%;
+    position: absolute;
+    left: 30%;
+    top: 40%;
+}
+
+.etiquetaloft h2 {
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    /* Agrupa propiedades */
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.testimonios {
+    clear: both;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 90px;
+}
+
+
+.testimonios h3 {
+    font-family: "Lato", sans-serif;
+    color: #004e72;
+    font-size: 20px;
+}
+
+.footer {
+    background-color: #004f70;
+    margin: 0px;
+    padding: 0px;
+}
+
+.textofooter {
+    font-family: "Lato";
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: white;
+    /* Agrupa propiedades */
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0px;
+}
