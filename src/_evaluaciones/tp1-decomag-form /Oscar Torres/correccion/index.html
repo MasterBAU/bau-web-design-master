@@ -21,13 +21,12 @@
 
     <header>
 
-        <!--
-            Falta el atributo alt en las imagenes. Importante para accesibilidad
-        -->
+        <!-- Falta el atributo alt en las imagenes. Importante para accesibilidad -->
         <div id="logo"> <img src="./img/house.png"> </div>
 
         <div id="decomag">DECO<Span>MAG</span></div>
 
+        <!-- Podrias haber utilizado un elemento más semántico como <nav> -->
         <ul>
             <li>inicio</li>
             <li>secciones</li>
@@ -43,9 +42,7 @@
 
         <article class="fondo">
 
-            <!--
-                ¿Por que usas estilos inline?
-            -->
+            <!-- ¿Por que usas estilos inline? -->
             <h1 style="text-shadow: 1px 1px #ffffff;">La revista de interiorismo definitiva</h1>
             <p style="text-shadow: 1px 1px #ffffff;">Suscríbete a nuestra revista online para estar informado sobre las últimas tendencias en decoración de interiores</p>
         </article>
@@ -62,8 +59,10 @@
 
             <h4>Subscríbete al newsletter</h4>
 
+            <!-- la etiqueta Form debería de llevar un "action" -->
             <form>
                 <p  class="label1">
+                <!-- Las <label> vacíos no aportan ningun valor -->
                 <label></label>
                 <input class="input"  type="text" value="nombre">
                 </p>
@@ -78,6 +77,7 @@
                 <input class="input" type="text" value="password">
                 </p>
 
+                <!-- Deberías de ENVIAR mediante un elemento <button> o <input type="submit"> -->
                 <div class="botonform">Enviar</div>
 
             </form>
@@ -127,6 +127,10 @@
                     <p class="decoratuloft">DECORA TU LOFT</P>
                     </section>
 
+                    <!--
+                        Existe una etiqueta especial para marcar los testimoniales <blockquote>
+                        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote
+                    -->
                     <section class="testimonios">
                        <div class="textos">
                             <!--

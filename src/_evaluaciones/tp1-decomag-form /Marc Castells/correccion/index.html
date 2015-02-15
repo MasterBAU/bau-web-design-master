@@ -15,11 +15,11 @@
     <header class="header-zone">
         <div class="header-menu clearfix centered">
             <div class="container-logo">
-                <!--
-                    Falta el atributo alt en las imagenes. Importante para accesibilidad
-                -->
+                <!-- Falta el atributo alt en las imagenes. Importante para accesibilidad -->
                 <img id="logo" src="img/logo-decomag.png">
             </div>
+
+            <!-- Podrias haber utilizado un elemento más semántico como <nav> -->
             <div class="container-menu">
                 <ul class="menu clearfix">
                     <li class="li-inicio">inicio</li>
@@ -37,9 +37,7 @@
         de la página. <section> o <div> serían más apropiados
     -->
     <article class="container-image-01">
-            <!--
-                Esta imagen debería haberse utilizado como un fondo en el css ya que es decorativa.
-            -->
+            <!-- Esta imagen debería haberse utilizado como un fondo en el css ya que es decorativa. -->
             <img id="image-01" src="img/minimalist.jpg">
             <div class="content-frame centered">
                 <div class="boxes">
@@ -55,7 +53,14 @@
                 </div>
                 <div class="container-form">
                     <p>Suscríbete al newsletter</p>
+
+                    <!-- la etiqueta Form debería de llevar un "action" -->
                     <form>
+
+                        <!--
+                            Utilizar <label> para etiquetar los formularios y que sean accesibles:
+                            https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
+                        -->
                         <div>
                             <img id="icon-form" src="img/icon-nombre.png">
                             <input type="text" placeholder="Nombre">
@@ -145,6 +150,11 @@
             <img id="testimonials-image" src="img/header.jpg" width="1280px">
 
         <div class="testimonials-text vertical-center">
+
+            <!--
+                Existe una etiqueta especial para marcar los testimoniales <blockquote>
+                https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote
+            -->
             <div class="vertical-center">
                 <h1>Testimonios</h1>
 
