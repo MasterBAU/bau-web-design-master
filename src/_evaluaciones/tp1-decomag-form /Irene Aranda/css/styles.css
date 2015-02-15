@@ -1,0 +1,473 @@
+
+/* perfecto! */
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body{
+
+	margin:0px;
+	
+	
+}
+.contenedor{
+	/* Deberías de haber usado "width" en lugar de "max-width" */
+	max-width: 100%;
+	margin: 0 auto;
+	/* No podemos usar "auto" en padding. Sólo se usa en "margin" */
+	padding: 0 auto;
+	font-family: "Open Sans Condensed", sans-serif;
+
+}
+
+/* genial! */
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+
+.cf:after {
+    clear: both;
+}
+
+
+h1{
+	font-size: 32px;
+	color:#004e72;
+	margin: 0px;
+	/* No entiendo que querías hacer aquí con overflow auto...*/
+	overflow: auto;
+
+}
+
+h2{
+
+	font-size: 25px;
+	color:white;
+	overflow: auto;
+}
+
+p{
+
+	color:white;
+	font-weight: 700;
+	font-size: 20px;
+	text-align: center;
+	clear: both;
+	margin: 0px;
+	overflow: auto;
+
+}
+/*----------
+header
+----------*/
+header{
+	/* Si finalmente decides no declarar ningún estilo no dejes la etiqueta vacía */
+
+}
+.subcontenedor{
+
+	width: 860px;
+	margin: 0 auto;
+
+
+}
+.top-bar{
+
+	background-color: #004f70;
+	width: 100%;
+	position: fixed;
+	z-index: 1;
+	overflow: auto;
+/*
+Evita dejar tanto espacio en blanco	entre la última declaración y el cierre para mejorar la legibilidad.
+
+*/
+}
+
+.subcontenedor-1{
+	/* Agrupa propiedades */
+	margin-bottom: 5px;
+	margin-top: 10px;
+	
+
+
+
+}
+
+.logo{
+
+	float: left;
+
+
+
+}
+
+.iconohome{
+
+	float:left;
+	padding-top: 10px;
+
+	
+
+
+}
+.textologo{
+
+	float:left;
+	/* Agrupa propiedades */
+	padding-left: 10px;
+	padding-top: 20px;
+	
+	
+
+}
+
+
+.menu{
+	
+	float:right;
+	/* Agrupa propiedades */
+	padding-right: 15px;
+	padding-top: 10px;
+	
+
+
+}
+
+.menu ul {
+	/* Si finalmente decides no declarar ningún estilo no dejes la etiqueta vacía */
+
+
+}
+
+.menu ul li{
+
+	list-style: none;
+	float:left;
+	padding-left: 65px;
+	color:#90c5db;
+	font-size: 20px;
+	/* perfect! */
+	font-weight: 700;
+
+}
+.menu ul li:hover{
+	/* Si aplicas hover a un elemento que no contiene un <a href=""> tienes que usar Javascript para que funcione el enlace */
+	/* Para que cambie el cursor al pasar sobre un elemento que no sea <a> hemos de añadir:
+  	cursor: pointer; */
+	color:white;
+
+}
+.totalanunciotop{
+	/* No hay ningún float que limpiar con clear en este caso */
+	clear: both;
+	width: 100%;
+
+}
+
+/* Evita usar descripciones en nombres de clase. */ 
+/* Podrías añadir posteriormente otra imagen más grande de modo que esta clase dejaría de tener sentido */
+/* Además, deberías de haber incluído la declaración de background-img aquí en lugar de hacerlo inline */
+.imggrande{
+	width: 100%;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	height: 400px;
+
+
+}
+.subcontenedor-2{
+
+	position:relative;
+
+}
+.claim{
+
+
+	margin-left:15px;
+	position: absolute;
+	/* Este valor se debe a un error de estructura. El contenido de .claim debería de ir dentro de .imggrande */
+	top:-260px;
+
+
+
+}
+.cuadrotituloinicio{
+	width: 450px;
+	/* Agrupa propiedades */
+	padding-top: 25px;
+	padding-bottom: 25px;
+	padding-right: 25px;
+	padding-left: 30px;
+	background-color: rgba(255,255,255,0.5);
+
+}
+.titulo{
+
+	color:black;
+	margin: 0px;
+	text-shadow: 1px 1px white;
+
+
+}
+.subtitulo{
+
+	font-size: 16px;
+	color:black;
+	text-align: left;
+	padding-top: 15px;
+	text-shadow: 1px 1px white;
+	
+}
+.calltoaction{
+
+	background-color: #009bdb;
+	width: 200px;
+	margin-top: 20px;
+	/* Agrupa propiedades */
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+}
+
+
+
+/*------------
+keybenefits
+------------*/
+.keybenefits{
+
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 30px;
+
+}
+.cuadroideas{
+
+	float: left;
+	background-color:#009bdb; 
+	margin-right: 15px;
+	width: 270px;
+	
+}
+
+.contenidoideas{
+	/* Agrupa propiedades */
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 30px;
+
+}
+
+.iconobenefits{
+
+	position:absolute;
+	padding-top: 20px;
+	
+}
+
+.textobenefits{
+
+	text-align: center;
+
+}
+.titulobenefits{
+	width: 100%;
+	font-weight: 100;
+	/* Agrupa propiedades */
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin: 0 auto;
+	
+}
+.subtitulobenefits{
+
+	/* Agrupa propiedades */
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.cuadropromociones{
+	float: left;
+	background-color: #0088c1;
+	margin-left: 15px;
+	width: 550px;
+
+
+}
+.contenidopromociones{
+	/* Agrupa propiedades */
+	padding-left: 20px;
+	padding-bottom: 30px;
+
+
+}
+/*---------
+mobile
+---------*/
+
+.mobiledevices{
+	/* Esta declaración de clear te la podrías haber ahorrado si el elemento .keybenefits hubiese tenido clearfix */
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 80px;
+}
+.textopublicaciones{
+
+	float: left;
+	width: 340px;
+	padding-top: 20px;
+
+	
+}
+
+
+.subtitulogrande{
+
+	font-size: 24px;
+	color:#004e72;
+	font-weight: 300;
+	text-align: left;
+	/* Agrupa propiedades */
+	padding-top: 15px;
+	padding-bottom: 20px;
+	padding-right: 40px;
+	
+
+}
+.botonespublicaciones{
+	/* Si finalmente decides no declarar ningún estilo no dejes la etiqueta vacía */
+	
+
+}
+.appstore{
+	float: left;
+	padding-right: 10px;
+
+}
+.googleplay{
+	float: left;
+	padding-left: 10px;
+
+
+}
+.imgpeque{
+
+	float: right;
+
+
+
+}
+/*---------
+decora
+---------*/
+
+.totaldecora{
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 70px;
+	/* .totaldecora no necesita ser limpiado con clear porque el elemento de encima suyo (.subcontenedor) no está flotado */
+	clear: both;
+	
+
+}
+.imggrande2{
+
+	height: 290px;
+}
+.subcontenedor-3{
+
+	position:relative;
+
+	
+
+}
+.totalbotondecora{
+
+	position: absolute;
+	top:-170px;
+	margin-left: 200px;
+	
+	
+
+}
+.cuadrodecora{
+
+	background-color: rgba(0,0,0,0.5);
+	width: 380px;
+	margin: 0 auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	
+
+}
+.textodecora{
+
+	color:white;
+	text-align: center;
+}
+/*---------
+testimonials
+---------*/
+
+.testimonios{
+
+	width: 100%;
+	margin: 0 auto;
+	padding-top: 50px;
+
+}
+.textotestimonios{
+
+	padding-top: 100px;
+	float: left;
+	padding-right: 60px;
+	width: 400px;
+	
+}
+blockquote{
+
+	font-size: 24px;
+	color:#004e72;
+	font-weight: 300;
+	text-align: left;
+
+	padding-top: 20px;
+	padding-bottom: 30px;
+	margin: 0px;
+}
+span{
+
+	font-size: 24px;
+	color:#004f70;
+	font-weight: 700;
+	text-align: left;
+}
+
+/*---------
+footer
+---------*/
+
+footer{
+
+	background-color: #004f70;
+	width: 100%;
+	clear: both;
+	padding-top: 70px;
+	padding-bottom: 70px;
+
+
+}
+.textofooter{
+
+	text-align: center;
+	font-weight: 300;
+	font-size: 20px;
+
+}
