@@ -75,10 +75,18 @@
 
 // Terminal Unix
 
-    section.unix img {
-        background: transparent;
-        border: none;
-        box-shadow: none;
+    section.unix {
+    
+        code {
+            color: #37FF37;
+            font-size: 1.5em;
+        }
+
+        img {
+                background: transparent;
+                border: none;
+                box-shadow: none;
+        }
     }
 
     section.term .marker {

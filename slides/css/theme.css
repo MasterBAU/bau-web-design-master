@@ -455,6 +455,9 @@ p.selection::selection {
   background: transparent;
   text-shadow: 2px 2px 2px #000; }
 
+section.unix code {
+  color: #37FF37;
+  font-size: 1.5em; }
 section.unix img {
   background: transparent;
   border: none;
