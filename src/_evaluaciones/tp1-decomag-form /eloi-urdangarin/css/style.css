@@ -8,7 +8,15 @@ body {
 
 	margin-top: 80px;
 	background-image:url(../img/design.jpg);
+
+	/*
+	 * Intenta no fijar tanto las alturas y que sea el contenido el que determine las
+	 * dimensiones del elemento.
+	 * Si quieres mas control del diseño puedes usar min-height en lugar de height,
+	 * para garantizar una altura mínima pero que no se descuadre si el contenido crece.
+ 	 */
 	height: 400px;
+
 	background-size: 100% auto;
 	background-repeat: no-repeat;
 	background-position:  right bottom -80px;
@@ -45,7 +53,13 @@ body {
 .intro {
 
  	background-color: rgba(255,255,255, 0.5);
+
+	/*
+	 * Declaras el font-family cada vez cuando sería más sencillo
+	 * declararlo solo una vez en el body
+	 */
 	font-family: 'Open Sans Condensed', sans-serif;
+
 	width: 400px;
 	padding: 10px;
 	text-shadow: 1px 1px #fff;
@@ -172,6 +186,10 @@ h1 {
 h2 {
 
 	font-size: 23px;
+
+	/*
+	 * Los valores numéricos en font-weight no llevan unidad.
+	 */
 	font-weight: 100px;
 }
 
@@ -190,7 +208,7 @@ header {
 		padding-top: 20px;
 		position: fixed;
 			top: 0;
-			left: 0;	
+			left: 0;
 		height: 70px;
 		z-index: 100;
 }
