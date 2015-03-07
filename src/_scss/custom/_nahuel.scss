@@ -74,98 +74,94 @@
 
 
 /* DAY 03 */
-.reveal .specificity {
-    color: #333;
-    font-family: "League Gothic", Impact, sans-serif;
-    font-size: 8rem;
-    line-height: 1.2;
-    margin-top: 10rem;
-    text-align: center;
-    text-shadow: 1px 1px 0 #fff;
-}
-.reveal .specificity span {
-    background: rgba(0,0,0, .2);
-    box-shadow: inset 0 0 10px rgba(0,0,0, .5);
-    display: inline-block;
-    margin: 0 1rem;
-    padding: 2rem 3rem;
-    position: relative;
-}
-.reveal .specificity span:after {
-    font-family: "Lato", sans-serif;
-    font-size: 2rem;
-    line-height: 1;
-    position: absolute;
-        top: -3rem;
-        left: 0;
-        right: 0;
-    text-align: center;
-}
-.reveal .specificity__inline    { color: hsl(0, 60%, 45%);   }
-.reveal .specificity__id        { color: hsl(45, 60%, 45%);  }
-.reveal .specificity__class     { color: hsl(90, 60%, 45%);  }
-.reveal .specificity__element   { color: hsl(185, 60%, 45%); }
+.reveal {
+    .specificity {
+        color: #333;
+        font-family: "Oswald", Impact, sans-serif;
+        font-size: 8rem;
+        line-height: 1.2;
+        margin-top: 10rem;
+        text-align: center;
 
-.reveal .specificity .specificity__inline:after {
-    content: 'Style attribute';
-        top: -5rem;
-}
-.reveal .specificity .specificity__id:after {
-    content: 'IDs';
-}
-.reveal .specificity .specificity__class:after {
-    content: 'Class, \00000apseudo-class,\00000a attribute';
-    font-size: 1.5rem;
-        top: -5.5rem;
-    white-space:pre;
-}
-.reveal .specificity .specificity__element:after {
-    content: 'Elements';
+        span {
+            background: rgba(0,0,0, .2);
+            box-shadow: inset 0 0 10px rgba(0,0,0, .5);
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 2rem 3rem;
+            position: relative;
+
+            &:after {
+                font-family: "Open sans", sans-serif;
+                font-size: 2rem;
+                font-weight: 600;
+                line-height: 1;
+                position: absolute;
+                    top: -3rem;
+                    left: 0;
+                    right: 0;
+                text-align: center;
+            }
+        }
+    }
+    .specificity__inline    { color: hsl(0, 60%, 45%);   }
+    .specificity__id        { color: hsl(45, 60%, 45%);  }
+    .specificity__class     { color: hsl(90, 60%, 45%);  }
+    .specificity__element   { color: hsl(185, 60%, 45%); }
+
+    .specificity {
+        .specificity__inline:after {
+            content: 'Style attribute';
+                top: -5rem;
+        }
+        .specificity__id:after {
+            content: 'IDs';
+        }
+        .specificity__class:after {
+            content: 'Class, \00000apseudo-class,\00000a attribute';
+            font-size: 1.5rem;
+                top: -5.5rem;
+            white-space:pre;
+        }
+        .specificity__element:after {
+            content: 'Elements';
+        }
+    }
+    .specificity__example {
+        box-shadow: none;
+        margin: 1rem 0 3rem;
+        font-size: 3rem;
+    }
+    .specificity--important {
+        margin-top: 1rem;
+
+        span {
+            font-size: 4rem;
+            margin: 0 1rem;
+            padding: 0 1rem;
+            position: relative;
+
+            &:after {
+                display: none;
+            }
+        }
+    }
+    .specificity {
+        .specificity__important-wrap {
+            background: transparent;
+            box-shadow: none;
+            margin: 0;
+            padding: 1rem 0;
+
+            &:first-of-type {
+                outline: 1px solid red;
+            }
+        }
+    }
 }
 
-.reveal .specificity__example    {
-    box-shadow: none;
-    margin: 1rem 0 3rem;
-    font-size: 3rem;
-}
-.reveal .specificity--important {
-    margin-top: 1rem;
-}
-.reveal .specificity--important span {
-    font-size: 4rem;
-    margin: 0 1rem;
-    padding: 0 1.5rem;
-    position: relative;
-}
-.reveal .specificity--important span:after {
-    display: none;
-}
-.reveal .specificity .specificity__important-wrap {
-    background: transparent;
-    box-shadow: none;
-    margin: 0;
-    padding: 1rem;
-}
-.reveal .specificity .specificity__important-wrap:first-of-type {
-    outline: 1px solid red;
-}
 
-.reveal .dl-example {
-    float: right;
-    font-size: 1.5rem;
-    line-height: 1.3;
-    list-style-position: inside;
-    margin: 0;
-    text-align: left;
-    width: 40%;
-}
-.reveal .dl-example dt {
-    font-weight: bold;
-    margin-top: .25em;
-}
-.reveal .dl-example dd {
-    text-indent: 1em;
-}
+
 
 
 /* DAY 04 */
