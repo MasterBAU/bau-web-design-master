@@ -1,0 +1,93 @@
+{% assign img_path = './img/slides/sass' %}
+
+<section class="unix">
+
+    <section>
+        <img src="{{ img_path }}/sass.png" alt="" width="250">
+        <h4>Programación en SASS</h4>
+    </section>
+
+    <section>
+        <h3>Declarando Variables</h3>
+        <p class="marker">Una variable es un registro donde guardamos un dato que necesitaremos aplicar en diferentes partes de nuestro código.</p>
+        <p>Para poder utilizar una variable primero hemos de crearla y asignarle un valor. <br />A este proceso se le denomina <span class="marker">declaración de variables</span></p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+Sintaxis
+
+// Color Variables
+$primaryColor: rgba(255,0,0,.5);
+$secondaryColor: rgba(255,100,100,.5);
+
+        </code></pre>
+        <p>Podemos almacenar, colores, valores en píxeles o en %, tipografías, etc...</p>
+    </section>
+
+    <section>
+        <h3>Utilizando Variables</h3>
+        <p>Una vez declarada, podemos reutilizar las variables en tantos lugares de nuestro código como necesitemos.</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Aplying color
+h1 {
+    color: $primaryColor;
+}
+
+h2 {
+    color: $secondaryColor;
+}
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>CSS resultante</h3>
+        <p>Al aplicar las variables <code style="font-size: .9em;">$prymaryColor</code> y <code style="font-size: .9em;">$secondaryColor</code> a los h1 y h2 respectivamente SASS nos genera el siguiente CSS:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Preprocessed CSS result
+h1 {
+    color: rgba(255,0,0,.5);
+}
+
+h2 {
+    color: rgba(255,100,100,.5);
+}
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Anidación</h3>
+        <p>SASS permite anidar un selector CSS dentro de otro para obtener una mayor versatilidad:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+.slider-container {
+    float:left;
+    max-width: $inner-width;
+    
+    mg {
+            border: none;
+            display: block;
+            margin: $gutter;
+        }
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Resultado de Anidación</h3>
+        <p>En la anidación anterior el CSS resultante será:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+.slider-container  {
+    float:left;
+    max-width: 768px;
+} 
+    
+.slider-container img {
+    border: none;
+    display: block;
+    margin: 20px;
+}
+        </code></pre>
+    </section>
+
+
+
+</section>
