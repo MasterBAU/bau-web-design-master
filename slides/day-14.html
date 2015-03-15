@@ -68,6 +68,7 @@
         <ul>
             <li>Variables</li>
             <li>Anidación de clases y selectores</li>
+            <li>Imports</li>
             <li>Extensiones de clases</li>
             <li>Funciones - (Mixins)</li>
             <li>Operaciones aritméticas</li>
@@ -155,7 +156,7 @@ $ sass --watch src/sass:public/css
 
     <section>
         <img src="./img/slides/sass/sass.png" alt="" width="250">
-        <h4>Programación en SASS</h4>
+        <h4>Programación en SASS<br /> (Primera parte)</h4>
     </section>
 
     <section>
@@ -239,6 +240,65 @@ h2 {
         </code></pre>
     </section>
 
+    <section>
+        <h3>Diversificar archivos SASS</h3>
+        <p>Para agilizar el proceso de edición y depuración de errores evitaremos trabajar con un único archivo CSS. En lugar de eso crearemos diferentes archivos SASS que separarán en módulos nuestro código.</p>
+        <p class="marker">Finalmente, todos los archivos SASS los combinaremos en un sólo CSS para evitar realizar múltiples llamadas HTTP que ralentizen la carga de nuestro site.</p>
+    </section>
+
+    <section>
+        <h3>Importando archivos SASS</h3>
+        <p>Para crear esa estructura modularizada utilizaremos <span class="marker">@import</span> en nuestro archivo style.scss. <span class="marker">El resultado será un style.css con <strong>todo el código importado.</strong></span></p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Contenido de style.scss
+
+@import "base/header";
+@import "base/layout";
+@import "base/footer";
+@import "tipography/headings";
+@import "components/buttons";
+@import "components/boxes";
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Nombres de archivos</h3>
+        <p>Para indicar en SASS que un archivo concreto es un módulo le añadimos un "_" delante del nombre. De esta forma no crearemos un archivo CSS más sino que formará parte del @import</p>
+
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Nombres de los módulos SASS
+
+base/_header.scss
+base/layout
+base/footer
+tipography/_headings.scss
+components/_buttons.scss
+components/_boxes.scss
+
+// Archivo SASS
+style.scss
+        </code></pre>
+    </section>
+
+    <section>
+        <p>La estructura de archivos quedaría así:</p>
+        <img src="./img/slides/sass/estructura-sass.png" alt="" style="margin: -20px 0 0 0;">
+    </section>
+
+    <section>
+        <p>La importancia de modularizar con @import</p>
+        <p>Un proyecto web se compone de múltiples elementos. Creando un archivo SASS para cada uno facilitamos el mantenimiento y el debug de errores.</p>
+        <p class="marker"><strong>Una propuesta de estructura sería:</strong></p>
+        <ul>
+            <li><span class="marker">styles.scss</span>=> Relizamos todos los imports</li>
+            <li><span class="marker">settings.scss</span>=> Declaramos las variables de entorno</li>
+            <li><span class="marker">/helpers</span>=> Carpeta donde incluimos: normalize, clearfix, etc...</li>
+            <li><span class="marker">/grid</span>=> Carpeta donde incluimos el framework o grid</li>
+            <li><span class="marker">/layout</span>=> Carpeta de archivos que dan estructura al site</li>
+            <li><span class="marker">/components</span>=> Carpeta de elementos reutilizables</li>
+            <li><span class="marker">/theme</span>=> Carpeta en la que definimos la presentación</li>
+        </ul>
+    </section>
 
 
 </section>
@@ -249,8 +309,10 @@ h2 {
 
     <h3 style="color: #444; text-shadow: none; font-weight: bold">Ejercicio</h3>
     <p style="color: #444; text-shadow: none;">Refactoriza tu proyecto en SASS y sube los cambios a Git</p>
+    <p style="color: #444; text-shadow: none;">Deberás de modularizar la estructura CSS actual de tu proyecto en  módulos SASS separados según tipología.</p>
 
     <img src="./img/slides/sass/loading-cat.gif" alt="" width="500" style="border: none; box-shadow: none">
+    <small style="margin-top:-60px">meowww</small>
 </section>
 
 
