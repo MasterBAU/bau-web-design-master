@@ -1,0 +1,103 @@
+{% assign img_path = './img/slides/html-tables' %}
+
+<section>
+    
+    <section>
+        <h3>Características del elemento <span class="marker">table</span></h3>
+    </section>
+    
+    <section>
+    <ul>
+        <li>Una tabla está formada por una sucesión de celdas dispuestas de forma ordenada en filas y columnas.</li>
+        <li>Su función principal es la de tabular datos de forma sencilla.</li>
+    </ul>
+        <pre><code data-trim>
+
+<table>
+    <tr>
+        <td>Celda 1</td>
+        <td>Celda 2</td>
+        <td>Celda 3</td>
+    </tr>        
+</table>
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Renderizado</h3>
+        <p class="marker">El código del ejemplo anterior tendría la siguiente estructura:</p>
+        <img src="{{img_path}}/table.png" alt="">
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Elementos de una tabla</h3>
+        <ul>
+            <li><span class="marker">TABLE</span> - Define las características genéricas de la tabla. (borde, ancho, etc)</li>
+            <li><span class="marker">THEAD</span> - Aportamos semántica al encabezado de la tabla.</li>
+            <li><span class="marker">TBODY</span> - Define el contenido principal de la tabla.</li>
+            <li><span class="marker">TFOOT</span> - Aportamos semántica al pie de la tabla.</li></li>
+            <li><span class="marker">TR</span> - Contenedor de celdas que definen una fila.</li>
+            <li><span class="marker">TH</span> - Celdas contenidas dentro de un THEAD.</li>
+            <li><span class="marker">TD</span> - Celdas contenidas dentro de un TBODY.</li>
+            <li><span class="marker">CAPTION</span> - Elemento designado para aportar una descripción semántica a la tabla.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Formateado CSS</h3>
+        <ul>
+            <li>Por defecto una tabla ocupa sólo el espacio mínimo de los elementos que contiene</li>
+            <li>Tiene su propio tipo de <span class="marker">display:table</span></li>
+        </ul>
+
+        <p><a href="files/tables/index.html">ejemplo table</a></p>
+    </section>
+
+    <section>
+        <h3>Anidación</h3>
+        <p>Las tablas pueden ser anidadas las unas dentro de las otras para representar estructuras de datos más complejas.</p>
+        
+        <p><a href="files/tables/anidacion.html">ejemplo anidación</a></p>
+    </section>
+
+    <section>
+        <h3>Atributo <span class="marker">colspan</span></h3>
+        <p>Una celda puede ser "extendida" en columnas mediante el atributo <span class="marker">colspan</span>. De esta forma podemos combinarlas según nos interese.</p>
+            <pre><code data-trim>
+
+<table>
+    <caption>Celda 1 extendida en 2 columnas</caption>
+    <tr>
+        <td colspan="2">Celda 1</td>
+        <td>Celda 3</td>
+    </tr>        
+</table>
+
+        </code></pre>
+        <p><a href="files/tables/colspan.html">ejemplo colspan</a></p>
+    </section>
+
+    <section>
+        <h3>Atributo <span class="marker">rowspan</span></h3>
+        <p>De la misma manera, una celda también puede ser "extendida" en filas mediante <span class="marker">rowspan</span>.</p>
+            <pre><code data-trim>
+
+<table>
+    <caption>Celda 1 extendida en 2 filas</caption>
+    <tr>
+        <td rowspan="2">Celda 1</td>
+        <td>Celda 2</td>
+    </tr> 
+    <tr>
+        <td>Celda 4</td>
+    </tr> 
+</table>
+
+        </code></pre>
+        <p><a href="files/tables/rowspan.html">ejemplo rowspan</a></p>
+    </section>
+
+</section>

@@ -1,0 +1,88 @@
+{% assign img_path = './img/slides/sass' %}
+
+<section>
+    <section>
+        <h3>OOCSS</h3>
+        <p>- Otra de las grandes ventajas de usar SASS es la posibilidad que nos ofrece de trabajar con el paradigma de orientación a objetos.</p>
+        <p>- En líneas generales el objetivo es separar presentación de contenido para poder reutilizar bloques de código.</p>
+    </section>
+
+    <section>
+        <h3>@extend</h3>
+        <p>Mediante <code style="font-size: 1em" class="marker">@extend</code> SASS nos permite abstraer declaraciones que son comunes en diferentes clases. De esta forma podemos crear "objetos" con múltiples variantes de forma sencilla:</p>
+                <pre><code data-noescape contenteditable>
+
+.message {
+  background: lightgrey;
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  <span data-noescape class="marker">@extend .message;</span>
+  background: green;
+}
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Resultado de @extend</h3>
+        <p>El CSS resultante de extender una clase dentro de otra viene a ser una suma de ambas:</p>
+        <pre>
+            <code data-noescape contenteditable>
+.message,
+.success {
+  background: lightgrey;
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  background: green;
+}
+            </code>
+        </pre>
+    </section>
+
+    <section>
+        <h3>Múltiples @extend</h3>
+        <p>Extendiendo múltiples objetos podemos crear otros nuevos más complejos:</p>
+                <pre><code data-noescape contenteditable>
+.box-rounded {
+    [...]
+}
+
+.alert-message {
+    background: red;
+}
+
+.alert-box {
+    <span class="marker">@extend .box-rounded;</span>
+    <span class="marker">@extend .alert-message;</span>  
+    [...]
+}
+        </code></pre>
+    </section>
+
+<section>
+        <h3>Phantom %classes</h3>
+        <p>Hay clases que sólo las vamos a utilizar como "extends" de otras más complejas. Para evitar crear código innecesario utilizaremos <span class="marker">Phantom classes</span></p>
+        <p>Sólo se compilan en el CSS final si la usamos mediante @extend:</p>
+        <pre><code data-noescape contenteditable>
+%alert {
+    background: red;
+}
+
+.warning-message {
+    <span class="marker">@extend %alert;</span>  
+    [...]
+}
+        </code></pre>
+        <small>Muy útiles en style guides o frameworks reutilizables</small>
+    </section>
+
+
+</section>

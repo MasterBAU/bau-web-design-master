@@ -1,0 +1,115 @@
+{% assign img_path = './img/slides/sass' %}
+
+<section>
+    <section>
+        <h3>Mixins</h3>
+        <p>Llamamos mixins a bloques de código SASS reutilizable que ejecuta una tarea específica.</p>
+        <pre><code data-noescape contenteditable>
+
+@mixin <span style="color: aqua">header-title</span> {
+  border-bottom: 1px solid #ccc;
+  color: #333;
+  font-size: 2em;
+  font-family: 'Pacifico', sans-serif;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>@include</h3>
+        <p>Para reutilizar un mixin lo incluimos en nuestra declaración mediante:</p>
+        <pre><code>
+.heading h1 {
+  @include <span style="color: aqua">header-title</span>;
+  [...]
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Mixins con argumentos</h3>
+        <p>La versatilidad de un mixin se ve incrementada con la posibilidad de pasarle un argumento externo que podemos computar dentro de él:</p>
+        <pre><code data-noescape contenteditable>
+
+@mixin <span style="color: aqua">header-title</span> <span class="marker">($color)</span> {
+  border-bottom: 1px solid #ccc;
+  color: <span class="marker">$color</span>;
+  font-size: 2em;
+  font-family: 'Pacifico', sans-serif;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Pasando argumentos a mixins</h3>
+        <p>Podemos usar el mismo mixin en declaraciones diferentes pasando diferentes argumentos cada vez:</p>
+        <pre><code>
+.heading h1 {
+  @include <span style="color: aqua">header-title</span><span data-noescape class="marker">(#fe0)</span>;
+}
+
+.post-article h2 {
+  @include <span style="color: aqua">header-title</span><span data-noescape class="marker">(#bada55)</span>;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Mixins con múltiples argumentos</h3>
+        <p>Podemos pasar más de un argumento separándolos por comas:</p>
+        <pre><code data-noescape contenteditable>
+
+@mixin <span style="color: aqua">header-title</span> <span class="marker">($color, $background)</span> {
+  border-bottom: 1px solid #ccc;
+  color: <span class="marker">$color</span>;
+  background: <span class="marker">$background</span>;
+  font-size: 2em;
+  font-family: 'Pacifico', sans-serif;
+}
+        </code></pre>
+    </section>
+    
+    <section>
+        <h3>Pasando múltiples argumentos</h3>
+        <p>Debemos de respetar el orden, el número de argumentos y han de estar separados por comas:</p>
+        <pre><code>
+.heading h1 {
+  @include <span style="color: aqua">header-title</span><span data-noescape class="marker">(#fe0, #bada55)</span>;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Argumentos por defecto</h3>
+        <p>En ocasiones es conveniente disponer de la posibilidad de no indicar ningún argumento y que nuestro mixin aplique valores por defecto:</p>
+        <pre><code data-noescape contenteditable>
+
+@mixin <span style="color: aqua">header-title</span> <span class="marker">($color: #222222, $background: #fafafa)</span> {
+  border-bottom: 1px solid #ccc;
+  color: <span class="marker">$color</span>;
+  background: <span class="marker">$background</span>;
+  font-size: 2em;
+  font-family: 'Pacifico', sans-serif;
+}
+        </code></pre>
+        <small>Definimos valores por defecto para $color y $background</small>
+    </section>
+
+    <section>
+        <h3>Sobreescribiendo valores por defecto</h3>
+        <p>Si no pasamos como argumento alguno de los valores el mixin aplica el valor definido por defecto. En caso contrario el valor del argumento prevalece soble el valor por defecto:</p>
+        <pre><code>
+.heading h1 {
+  @include <span style="color: aqua">header-title</span><span data-noescape class="marker">(#fe0)</span>;
+  <span style="color: lightgreen">// Background será el valor por defecto #fafafa</span>
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Downsides</h3>
+        <p>A pesar de que los mixins nos ayudan enormemente a crear bloques de código reutilizables y personalizables, hemos de tener en cuenta que cada llamada a un mixin es una nueva inserción en nuestro CSS final. De modo que si llamamos 10 veces al mismo mixin estaremos repitiendo el mismo bloque de código cada vez.</p>
+        <p>En este caso quizás resulte más conveniente utilizar @extend</p>
+    </section>
+
+</section>
