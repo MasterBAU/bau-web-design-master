@@ -24,7 +24,8 @@
 		td {
 			background-color: white;
 			border: 1px solid #000;
-			padding: 20px;
+			padding: 10px;
+			height: 100px;
 			text-align: center;
 			position: relative;
 			top: 0;
@@ -56,13 +57,21 @@
 		caption {
 			background: #F0F8FF;
 			border: 1px solid #7B7B7B;
-			font-size: .7em;
+			font-size: 1.5em;
 			margin: 50px 0 -45px;
 			padding: 20px 0 50px;
 		}
 
-		.highlighted {
-			background-color: #FDF6A7;
+		.va-top {
+			vertical-align: top;
+		}
+
+		.va-middle {
+			vertical-align: middle;
+		}
+
+		.va-bottom {
+			vertical-align: bottom;
 		}
 
 	</style>
@@ -70,37 +79,14 @@
 <body>
 
 	<table>
-		<caption><strong>Ningún animal</strong> ha sido maltratado durante la creación de esta tabla</caption>
-		<thead>
-			<tr>
-				<th>Columna 1</th>
-				<th>Columna 2</th>
-				<th>Columna 3</th>				
-			</tr>
-		</thead>
+		<caption><strong>Vertical Align</strong></caption>
 
 		<tr>
-			<td>Celda 1</td>
-			<td>Celda 2</td>
-			<td>Celda 3</td>
+			<td class="va-top">vertical-align: top</td>
+			<td class="va-middle">vertical-align: middle</td>
+			<td class="va-bottom">vertical-align: bottom</td>
 		</tr> 
-		<tr>
-			<td colspan="2" class="highlighted">Celda 4 extendida 2 columnas</td>
-			<td>Celda 6</td>
-		</tr>
-		<tr>
-			<td>Celda 7</td>
-			<td>Celda 8</td>
-			<td>Celda 9</td>
-		</tr>
-
-		<tfoot>
-			<tr>
-				<td>Footer 1</td>
-				<td>Footer 2</td>
-				<td>Footer 3</td>
-			</tr>
-		</tfoot>        
+       
 	</table>
 	
 </body>
