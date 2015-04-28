@@ -1,4 +1,15 @@
 
+.reveal blockquote {
+    padding: 1rem;
+
+    footer {
+        font-size: 1.5rem;
+        font-style: normal;
+        margin-top: 1rem;
+        text-transform: uppercase;
+        text-align: left;
+    }
+}
 .reveal .footnote {
     position: relative;
 }
@@ -410,4 +421,14 @@
     .reveal .mq p {
         color: blue;
     }
+}
+
+.reveal .sprite {
+    background-color: #fff;
+    background-image: url(../img/slides/wpo/sprite.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
 }

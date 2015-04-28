@@ -1,0 +1,87 @@
+{% assign img_path = './img/slides/wpo' %}
+<section class="text-left">
+    <section>
+        <h2 style="text-align: center;">Reducir la cantidad de recursos</h2>
+        <p style="text-align: center;">
+            <img src="{{ img_path }}/requests.gif" alt="" width="480" style="border: none; box-shadow: none">
+        </p>
+    </section>
+
+    <section data-transition="fade">
+        <p style="text-align: center;">
+            <img src="{{ img_path }}/request-4.png" alt="" width="700" style="border: 0; box-shadow: none;" >
+        </p>
+    </section>
+
+    <section data-transition="fade">
+        <p style="text-align: center;">
+            <img src="{{ img_path }}/request-5.png" alt="" width="700" style="border: 0; box-shadow: none;" >
+        </p>
+    </section>
+
+    <section>
+        <h3>Combinar CSS</h3>
+        <p>Intentar tener un <strong>solo archivo Css</strong>. Gracias al <em>@import</em> Sass es sencillo creando un archivo principal que será el que se compile en css y sólo incluirá llamadas al resto de las hojas de estilo.</p>
+        <hr style="margin: 0.75rem 0;">
+        <p><em>styles.scss</em> => <em>styles.css</em></p>
+        <pre style="margin-top: 1rem;"><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/forms';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/navigation';
+@import 'components/slider';
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Concatenar el Javascript</h3>
+        <p>Con el Javascript podemos hacer lo mismo que el con el Css y combinar todos los archivos en uno solo, aunque no es tan sencillo. Hay que tener en cuenta más parametros como el orden de carga, la dependencia entre unos archivos y otros o qué scripts se necesitan ejecutar en qué momento.</p>
+        <hr>
+        <p><a href="http://refresh-sf.com/">Online JavaScript/CSS Compressor</a></p>
+    </section>
+
+    <section>
+        <h3>Combinar imágenes (spriting)</h3>
+        <p>La técnica de sprites consiste en combinar varias imágenes en un sólo archivo y luego mediante Css mostrar únicamente la que necesitasmos.</p>
+        <p style="text-align: center;">
+            <img src="{{ img_path }}/sprite-demo.png" alt="" width="300" style="border: 0; box-shadow: none;" >
+        </p>
+
+
+    </section>
+
+    <section>
+        <div class="sprite"></div>
+        <hr>
+        <pre><code>
+.icon {
+    background-image: url(../img/sprite.png);
+    background-repeat: none;
+    width: 64px;
+    height: 64px;
+}
+.icon-fb { background-position: 0 0; }
+.icon-tw { background-position: -64px 0; }
+.icon-ig { background-position: -128px 0; }
+        </code></pre>
+    </section>
+
+    <section>
+        <p>Otra variante de spriting es la de incluir todas las imágenes en base 64 en una hoja de estilo asociadas a una class.</p>
+
+        <pre><code>
+.icon {
+    background-position: ceter center;
+    background-repeat: none;
+    width: 32px;
+    height: 32px;
+}
+.icon-fb { background-image: url(base64:); }
+.icon-tw { background-image: url(base64:); }
+.icon-ig { background-image: url(base64:); }
+        </code></pre>
+    </section>
+</section>
