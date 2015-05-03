@@ -1,0 +1,101 @@
+{% assign img_path = './img/slides/grunt' %}
+<section class="text-left">
+    <section>
+        <h2 style="text-align: center;">Crear un task de Grunt</h2>
+        <p>Comenzaremos creando una tarea para que grunt compile Sass cuando se lo indiquemos.</p>
+        <p>Normalmento los pasos a seguir serán:</p>
+        <ol>
+            <li>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</li>
+            <li>Agregar el módulo a la lista que cargar Grunt al iniciar.</li>
+            <li>Crear una tarea y configurarla según nuestras necesidades.</li>
+            <li>Agregar la tarea a un workflow más grande.</li>
+        </ol>
+    </section>
+
+    <section>
+        <ol>
+            <li><em>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</em></li>
+            <li>Agregar el módulo a la lista que cargar Grunt al iniciar.</li>
+            <li>Crear una tarea y configurarla según nuestras necesidades.</li>
+            <li>Agregar la tarea a un workflow más grande.</li>
+        </ol>
+    </section>
+
+    <section>
+        <p style="font-size: 2rem;">Buscaremos en Google "grunt" seguido de lo que queramos automatizar a ver si encontramos algún módulo que haga lo que necesitamos.</p>
+        <p style="font-size: 2rem;">De entre los resultados, lo mejor es acceder directamente a la página en github del módulo que queramos.</p>
+        <p style="font-size: 2rem;">Para nuestro ejemplo buscaremos "grunt sass"</p>
+        <p style="font-size: 2rem;">Instalamos el módulo copiando el comando que nos proporciona la página (omitimos el $).</p>
+        <hr>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-sass">https://github.com/gruntjs/grunt-contrib-sass</a></p>
+    </section>
+
+    <section>
+        <pre><code>
+npm install --save-dev grunt-contrib-sass
+        </code></pre>
+        <p>"<em>npm</em>" es el comando para ejecutar acciones con el gestor de paquetes de node.js (node package manager).</p>
+        <p>"<em>install</em>" es la accion que queremos ejecutar</p>
+        <p>"<em>--save-dev</em>" es una opción extra del comando install que hará que además de instalar el paquete lo agregue a la lista de dependencias en el package.json para que la próxima persona en descargarse el proyecto sepa que módulos necesita para que funcione.</p>
+        <p>"<em>grunt-contrib-sass</em>" es el paquete que estamos instalando en este momento.</p>
+    </section>
+
+    <section>
+        <ol>
+            <li>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</li>
+            <li><em>Agregar el módulo a la lista que cargar Grunt al iniciar.</em></li>
+            <li>Crear una tarea y configurarla según nuestras necesidades.</li>
+            <li>Agregar la tarea a un workflow más grande.</li>
+        </ol>
+    </section>
+
+    <section>
+        <p>Indicamos a grunt que tiene que cargar el módulo para poder utilizarlo luego con a siguiente línea.</p>
+        <pre><code>
+grunt.loadNpmTasks('grunt-contrib-sass');
+        </code></pre>
+    </section>
+
+    <section>
+        <ol>
+            <li>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</li>
+            <li>Agregar el módulo a la lista que cargar Grunt al iniciar.</li>
+            <li><em>Crear una tarea y configurarla según nuestras necesidades.</em></li>
+            <li>Agregar la tarea a un workflow más grande.</li>
+        </ol>
+    </section>
+
+    <section>
+        <p>Configuramos el task de sass para que nos compile el archivo <em>main.scss</em> en <em>main.css</em>. Podemos incluir una opción para especificar el estilo que tendrá el css resultante.</p>
+        <pre><code>
+sass: {
+    dist: {
+        options: {
+            style: 'expanded'
+        },
+        files: {
+            'main.css': 'main.scss'
+        }
+    }
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <ol>
+            <li>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</li>
+            <li>Agregar el módulo a la lista que cargar Grunt al iniciar.</li>
+            <li>Crear una tarea y configurarla según nuestras necesidades.</li>
+            <li><em>Agregar la tarea a un workflow más grande.</em></li>
+        </ol>
+    </section>
+
+    <section>
+        <p>Agregamos nuestro task ('sass') dentro del task default para que se ejecute cuand corremos el comando "grunt" en la terminal.</p>
+        <pre><code>
+grunt.registerTask('default', [
+    'sass'
+]);
+        </code></pre>
+    </section>
+</section>
