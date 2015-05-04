@@ -168,12 +168,114 @@ grunt.registerTask('default', [
 
 
 <section class="text-left">
-    <h2 style="text-align: center;">Workflow con Grunt</h2>
-    <p>Organizaremos las carpetas en dos grandes directorios:</p>
-    <ul>
-        <li><em>src</em>: donde guardaremos las fuentes y que será nuestro directorio de trabajo.</li>
-        <li><em>dist</em>: donde Grunt compilará las fuentes y del cual nosotros no tocaremos nada.</li>
-    </ul>
+    <section>
+        <h2 style="text-align: center;">Workflow con Grunt</h2>
+        <p>Organizaremos las carpetas en dos grandes directorios:</p>
+        <ul>
+            <li><em>src</em>: donde guardaremos las fuentes y que será nuestro directorio de trabajo.</li>
+            <li><em>dist</em>: donde Grunt compilará las fuentes y del cual nosotros no tocaremos nada.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>clean</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-clean">grunt-contrib-clean</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+clean: {
+    build: [
+        'dist'
+    ]
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>autoprefixer</h3>
+        <p><a href="https://github.com/nDmitry/grunt-autoprefixer">grunt-autoprefixer</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+autoprefixer: {
+    options: {
+        browsers: [
+            'last 2 versions',
+            '> 2%',
+            'ie 8',
+            'ie 9'
+        ]
+    },
+    dist: {
+        src: 'dist/css/main.css',
+        dest: 'dist/css/main.css'
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>pixrem</h3>
+        <p><a href="https://github.com/robwierzbowski/grunt-pixrem">grunt-pixrem</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+pixrem: {
+    options: {
+        rootvalue: '100%'
+    },
+    dist: {
+        src: 'dist/css/main.css',
+        dest: 'dist/css/main.css'
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>concat</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+concat: {
+    dist: {
+        src: [
+            'src/js/components/**/*.js'
+        ],
+        dest: 'dist/js/main.js'
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>uglify</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+uglify: {
+    main: {
+        files: {
+            'dist/js/main.min.js': 'dist/js/main.js'
+        }
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>copy</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-copy">grunt-contrib-copy</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+ copy: {
+    main: {
+        expand: true,
+        cwd: 'src/',
+        src: '**/*.html',
+        dest: 'dist/',
+        filter: 'isFile',
+    },
+},
+        </code></pre>
+    </section>
 </section>
 
 
