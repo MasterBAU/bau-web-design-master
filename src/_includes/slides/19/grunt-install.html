@@ -1,14 +1,78 @@
+{% assign img_path = './img/slides/grunt' %}
+
 <section>
-    <ul>
-        <li>Install Node</li>
-        <li>Install Grunt global + CLI</li>
-        <li>Crear package.json</li>
-        <li>Crear gruntfile.js</li>
-    </ul>
+	<section>
+		<img class="logo-node" src="{{img_path}}/logo-node.svg" alt="">
+		<p>Se trata de un Framework que nos permite crear aplicaciones Javascript que se ejecutan en servidor. Grunt necesita <span class="marker">Node.js</span> para poder ejecutarse</p>
+	</section>
 
-    Dave, puedes sacar info de aqui: http://24ways.org/2013/grunt-is-not-weird-and-hard/
+	<section>
+		<h3>Instalación de NODE.JS</h3>
+		<p>Para instalarlo podemos descargar el instalador de la página web de Node:</p>
+		<a href="https://nodejs.org/"><img class="logo-pkg" src="{{img_path}}/node-pkg.png" alt=""></a>
+	</section>
 
-    Los contenidos que necesito que hagas son los que van hasta el subtitulo:
+	<section>
+		<img class="logo-npm" src="{{img_path}}/logo-npm.svg" alt="">
+		<p>Node Package Manager</p>
+		<p>Mediante NPM podemos instalar diversas aplicaciones basadas en Node. Como por ejemplo Grunt:</p>
+		<pre><code data-trim contenteditable>
 
-    "LET’S MAKE GRUNT CONCATENATE SOME FILES"
+$ npm install grunt --save-dev
+
+        </code></pre>
+	</section>
+
+	<section>
+		<h3>Package.json</h3>
+		<p>Grunt se instala a nivel de "proyecto". Cada proyecto tiene un archivo llamado <span class="marker">package.json</span> el cual lleva un control de todas las dependencias del proyecto.</p>
+
+		<pre><code data-trim contenteditable>
+
+{
+  "name": "example-project",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
+
+        </code></pre>
+        <small>JSON => JavaScript Object Notation</small>
+	</section>
+
+	<section>
+		<h3>Instalar dependencias con NPM</h3>
+		<p>Una vez definidas todas las dependencias en el archivo <span class="marker">package.json</span> sólo necesitamos ejecutar un comando para que se instalen todas a la vez:</p>
+
+		<pre><code data-trim contenteditable>
+
+$ npm install
+
+        </code></pre>
+	</section>
+	
+	<section>
+		<h3>Grunt CLI</h3>
+		<p>Cada proyecto puede tener una versión de Grunt diferente. Mediante Grunt CLI instalamos Grunt de forma global y lo ejecutamos a nivel local de proyecto.</p>
+		<p>Cada proyecto Grunt necesita un archivo de configuración llamado Gruntfile.js</p>
+
+				<pre><code data-trim contenteditable>
+
+$ npm install -g grunt-cli
+
+        </code></pre>
+	</section>
+
+	<section>
+		<h3>Gruntfile</h3>
+		<p>La función principal de este archivo de configuración es:</p>
+		<ul>
+			<li>Configuración del proyecto y de sus tareas</li>
+			<li>Carga de plugins del proyecto</li>
+			<li>Definición de tareas personalizadas del proyecto</li>
+		</ul>
+	</section>
 </section>
+
+

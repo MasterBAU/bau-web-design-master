@@ -92,3 +92,24 @@
     section.term .marker {
         color: #37FF37;
     }
+
+    section img.logo-node {
+        width: 800px;
+        border: none;
+          background: rgba(0, 0, 0, 0);
+          box-shadow: none;
+    }
+
+    a img.logo-pkg {
+        width: 200px;
+        border: none;
+          background: rgba(0, 0, 0, 0);
+          box-shadow: none;
+    }
+
+    section img.logo-npm {
+        width: 300px;
+        border: none;
+          background: rgba(0, 0, 0, 0);
+          box-shadow: none;
+    }
