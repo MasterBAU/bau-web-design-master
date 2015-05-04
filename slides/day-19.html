@@ -213,6 +213,24 @@ autoprefixer: {
     </section>
 
     <section>
+        <h3>csso</h3>
+        <p><a href="https://github.com/t32k/grunt-csso">grunt-csso</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+csso: {
+    compress: {
+        options: {
+            report: 'gzip'
+        },
+        files: {
+            'dist/css/main.min.css': ['dist/css/main.css']
+        }
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
         <h3>pixrem</h3>
         <p><a href="https://github.com/robwierzbowski/grunt-pixrem">grunt-pixrem</a></p>
         <hr>
@@ -222,8 +240,8 @@ pixrem: {
         rootvalue: '100%'
     },
     dist: {
-        src: 'dist/css/main.css',
-        dest: 'dist/css/main.css'
+        src: 'dist/css/main.min.css',
+        dest: 'dist/css/main.min.css'
     }
 },
         </code></pre>
@@ -265,7 +283,7 @@ uglify: {
         <p><a href="https://github.com/gruntjs/grunt-contrib-copy">grunt-contrib-copy</a></p>
         <hr>
         <pre><code data-trim contenteditable>
- copy: {
+copy: {
     main: {
         expand: true,
         cwd: 'src/',
@@ -273,6 +291,102 @@ uglify: {
         dest: 'dist/',
         filter: 'isFile',
     },
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>imagemin</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-imagemin">grunt-contrib-imagemin</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+imagemin: {
+    dist: {
+        files: [{
+            expand: true,
+            cwd: 'src/',
+            src: ['**/*.{png,jpg,gif}'],
+            dest: 'dist/'
+        }]
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>svgmin</h3>
+        <p><a href="https://github.com/sindresorhus/grunt-svgmin">grunt-svgmin</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+svgmin: {
+    dist: {
+        expand: true,
+        cwd: 'src/img',
+        src: ['*.svg'],
+        dest: 'dist/img'
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>watch</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a></p>
+        <hr>
+        <pre><code data-trim contenteditable style="font-size: 1rem;">
+watch: {
+    css: {
+        files: ['src/scss/**/*.scss'],
+        tasks: ['sass', 'autoprefixer', 'csso', 'pixrem'],
+    },
+    js: {
+        files: ['src/js/components/**/*.js'],
+        tasks: ['concat', 'uglify'],
+    },
+    html: {
+        files: ['src/**/*.html'],
+        tasks: ['copy'],
+        options: {
+            livereload: true,
+        },
+    },
+    svg: {
+        files: ['src/**/*.svg'],
+        tasks: ['svgmin'],
+        options: {
+            livereload: true,
+        },
+    },
+    img: {
+        files: ['src/**/*.{png,jpg,gif}'],
+        tasks: ['imagemin'],
+        options: {
+            livereload: true,
+        },
+    },
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>browser-sync</h3>
+        <p><a href="http://www.browsersync.io/docs/grunt/">grunt-browser-sync</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+browserSync: {
+    dev: {
+        bsFiles: {
+            src : [
+                'dist/css/*.css',
+                'dist/js/*.js',
+                'dist/*.html'
+            ]
+        },
+        options: {
+            watchTask: true,
+            server: 'dist'
+        }
+    }
 },
         </code></pre>
     </section>
