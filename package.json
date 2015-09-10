@@ -16,7 +16,7 @@
     "gulp-changed": "~1.1.0",
     "gulp-concat": "~2.4.3",
     "gulp-plumber": "~0.6.6",
-    "gulp-sass": "~1.2.4",
+    "gulp-sass": "2.0.4",
     "merge-stream": "~0.1.6",
     "run-sequence": "~1.0.2"
   }
