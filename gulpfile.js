@@ -15,6 +15,7 @@ var gulp        = require('gulp'),
     del         = require('del'),
     changed     = require('gulp-changed'),
     cp          = require('child_process'),
+    ghPages     = require('gulp-gh-pages'),
     runSequence = require('run-sequence');
 
 
@@ -163,3 +164,16 @@ gulp.task('default', function(callback) {
         ['watch'],
     callback);
 });
+
+
+// DEPLOY =====================================================================
+  gulp.task('upload', ['build'], function() {
+    return gulp.src( path.dist + '/**/*')
+      .pipe(ghPages());
+  });
+
+  gulp.task('deploy', ['upload'], function(callback) {
+    runSequence(
+      'clean',
+      callback)
+  });
