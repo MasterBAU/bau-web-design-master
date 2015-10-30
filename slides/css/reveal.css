@@ -82,11 +82,11 @@ body {
  *********************************************/
 .reveal .slides section .fragment {
   opacity: 0;
-  -webkit-transition: all 0.2s ease;
-  -moz-transition: all 0.2s ease;
-  -ms-transition: all 0.2s ease;
-  -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  -ms-transition: all .2s ease;
+  -o-transition: all .2s ease;
+  transition: all .2s ease; }
 
 .reveal .slides section .fragment.visible {
   opacity: 1; }
@@ -448,11 +448,11 @@ body {
   overflow: visible;
   z-index: 1;
   text-align: center;
-  -webkit-transition: -webkit-perspective 0.4s ease;
-  -moz-transition: -moz-perspective 0.4s ease;
-  -ms-transition: -ms-perspective 0.4s ease;
-  -o-transition: -o-perspective 0.4s ease;
-  transition: perspective 0.4s ease;
+  -webkit-transition: -webkit-perspective .4s ease;
+  -moz-transition: -moz-perspective .4s ease;
+  -ms-transition: -ms-perspective .4s ease;
+  -o-transition: -o-perspective .4s ease;
+  transition: perspective .4s ease;
   -webkit-perspective: 600px;
   -moz-perspective: 600px;
   -ms-perspective: 600px;
