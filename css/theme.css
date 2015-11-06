@@ -408,13 +408,13 @@ body {
 .reveal .class-list {
   max-width: 1180px;
   margin: 0 auto; }
-  .reveal .class-list .index-block {
+  .reveal .class-list .month {
     float: left;
     padding: 0 1em 1em;
-    width: 80%; }
-    .reveal .class-list .index-block:first-child {
+    width: 20%; }
+    .reveal .class-list .month:first-child {
       padding-left: 0; }
-    .reveal .class-list .index-block:last-child {
+    .reveal .class-list .month:last-child {
       padding-right: 0; }
   .reveal .class-list h4 {
     margin-bottom: .25rem;
