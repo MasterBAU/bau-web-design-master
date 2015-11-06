@@ -228,9 +228,9 @@ body {
 .reveal a {
   color: #13daec;
   text-decoration: none;
-  -webkit-transition: color 0.15s ease;
-  -moz-transition: color 0.15s ease;
-  transition: color 0.15s ease; }
+  -webkit-transition: color .15s ease;
+  -moz-transition: color .15s ease;
+  transition: color .15s ease; }
 
 .reveal a:hover {
   color: #71e9f4;
@@ -251,9 +251,9 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
 
 .reveal a img {
-  -webkit-transition: all 0.15s linear;
-  -moz-transition: all 0.15s linear;
-  transition: all 0.15s linear; }
+  -webkit-transition: all .15s linear;
+  -moz-transition: all .15s linear;
+  transition: all .15s linear; }
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
@@ -360,7 +360,7 @@ body {
 .reveal a:not(.image) {
   color: #13daec;
   text-decoration: none;
-  transition: color 0.15s ease; }
+  transition: color .15s ease; }
   .reveal a:not(.image):hover {
     border: none;
     color: #71e9f4;
@@ -408,13 +408,13 @@ body {
 .reveal .class-list {
   max-width: 1180px;
   margin: 0 auto; }
-  .reveal .class-list .month {
+  .reveal .class-list .index-block {
     float: left;
     padding: 0 1em 1em;
-    width: 20%; }
-    .reveal .class-list .month:first-child {
+    width: 80%; }
+    .reveal .class-list .index-block:first-child {
       padding-left: 0; }
-    .reveal .class-list .month:last-child {
+    .reveal .class-list .index-block:last-child {
       padding-right: 0; }
   .reveal .class-list h4 {
     margin-bottom: .25rem;
@@ -539,7 +539,7 @@ section img.logo-npm {
   font-size: .75rem;
   font-weight: bold;
   line-height: 1.75;
-  margin: 1em 0 0 -0.875em;
+  margin: 1em 0 0 -.875em;
   display: block;
   position: absolute;
   top: 100%;
@@ -561,7 +561,7 @@ section img.logo-npm {
   cursor: pointer;
   font-size: 1.2em;
   margin-top: .5em;
-  padding: 0.25em 0.5em;
+  padding: .25em .5em;
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.25); }
 
 .reveal #hi-button:hover {
@@ -825,8 +825,7 @@ section img.logo-npm {
     top: -50px; }
   .reveal .pos__container.is--collapsed:before {
     top: -10px; }
-  .reveal .pos__container.no--tooltip:before,
-  .reveal .pos__container.no--tooltip:after {
+  .reveal .pos__container.no--tooltip:before, .reveal .pos__container.no--tooltip:after {
     display: none; }
 
 .reveal .pos__container-1:after {
@@ -863,7 +862,7 @@ section img.logo-npm {
 
 .reveal .bg-image pre code {
   font-size: 1.5rem;
-  padding: 0.75em 1em; }
+  padding: .75em 1em; }
 
 .reveal .image-wrap {
   background-color: rgba(255, 255, 255, 0.6);
