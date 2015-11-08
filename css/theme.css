@@ -512,6 +512,11 @@ a img.logo-pkg {
   background: transparent;
   box-shadow: none; }
 
+.reveal section img {
+  background: transparent;
+  box-shadow: none;
+  border: none; }
+
 section img.logo-npm {
   width: 300px;
   border: none;
