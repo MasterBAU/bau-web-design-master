@@ -167,13 +167,7 @@ gulp.task('default', function(callback) {
 
 
 // DEPLOY =====================================================================
-  gulp.task('upload', ['build'], function() {
+  gulp.task('deploy', ['build'], function() {
     return gulp.src( path.dist + '/**/*')
       .pipe(ghPages());
-  });
-
-  gulp.task('deploy', ['upload'], function(callback) {
-    runSequence(
-      'clean',
-      callback)
   });
