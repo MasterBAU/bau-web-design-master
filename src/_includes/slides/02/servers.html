@@ -1,40 +1,94 @@
 {% assign img_path = './img/slides/servers' %}
+
 <section>
-    <section>
-        <h2><strong>Alojamiento y servidores web</strong></h2>
-    </section>
+  <section>
+    <h2>Clientes y servidores</h2>
+  </section>
 
-    <section>
-        <h2>Estructura cliente - servidor</h2>
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">La web puede resumirse como una serie de interacciones entre dos tipos de sistemas: <em>Servidores</em> y <em>Clientes</em></p>
+    <img src="{{ img_path }}/client-server.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
+  </section>
 
-        <img src="{{ img_path }}/servidorWeb.jpg" alt="">
-        <p>
-            Esquema simplificado de conexión bidireccional a un servidor web.
-        </p>
-    </section>
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">Los <em>Clientes</em> son los encargados de solicitar y mostrar el contenido web.</p>
+    <img src="{{ img_path }}/clients.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
+  </section>
 
-    <section>
-        <h2>Transacciones</h2>
-
-        <img src="{{ img_path }}/cliente-servidor.png" alt="">
-        <small>Pedimos una URL, se convierte a IP y el Servidor web retorna el contenido.</small>
-    </section>
-
-    <section>
-        <h2>Protocolos de comunicación</h2>
-        <ul>
-            <li>
-                <span class="marker">HTTP</span> - Hyper Text Transfer Protocol
-            </li>
-
-            <li>
-                <span class="marker">TCP/IP</span> - Transmission Control Protocol / Internet Protocol
-            </li>
-
-            <li>
-                <span class="marker">FTP</span> - File Transfer Protocol
-            </li>
-        </ul>
-    </section>
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">Los <em>Servidores</em> son aplicaciones (software) encrgados de enviar contenido a los Clientes cuando este lo solicita.</p>
+    <img src="{{ img_path }}/servers.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
+  </section>
 </section>
 
+<section>
+  <section>
+    <h2>Ciclo de una transacción web</h2>
+  </section>
+
+  <section data-transition="fade">
+    <img src="{{ img_path }}/request-1.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="{{ img_path }}/request-2.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="{{ img_path }}/request-3.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="{{ img_path }}/request-4.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="{{ img_path }}/request-5.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="{{ img_path }}/request-6.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+</section>
+
+<!--
+<section>
+  <section>
+    <h2><strong>Alojamiento y servidores web</strong></h2>
+  </section>
+
+  <section>
+    <h2>Estructura cliente - servidor</h2>
+
+    <img src="{{ img_path }}/servidorWeb.jpg" alt="">
+    <p>
+      Esquema simplificado de conexión bidireccional a un servidor web.
+    </p>
+  </section>
+
+  <section>
+    <h2>Transacciones</h2>
+
+    <img src="{{ img_path }}/cliente-servidor.png" alt="">
+    <small>Pedimos una URL, se convierte a IP y el Servidor web retorna el contenido.</small>
+  </section>
+
+  <section>
+    <h2>Protocolos de comunicación</h2>
+    <ul>
+      <li>
+        <span class="marker">HTTP</span> - Hyper Text Transfer Protocol
+      </li>
+
+      <li>
+        <span class="marker">TCP/IP</span> - Transmission Control Protocol / Internet Protocol
+      </li>
+
+      <li>
+        <span class="marker">FTP</span> - File Transfer Protocol
+      </li>
+    </ul>
+  </section>
+</section>
+
+ -->
