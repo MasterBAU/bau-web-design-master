@@ -1,62 +1,41 @@
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
-@font-face {
-  font-family: 'Open sans';
-  src: url("../fonts/OpenSans-CondLight-webfont.eot");
-  src: url("../fonts/OpenSans-CondLight-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/OpenSans-CondLight-webfont.woff") format("woff"), url("../fonts/OpenSans-CondLight-webfont.ttf") format("truetype"), url("../fonts/OpenSans-CondLight-webfont.svg") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
-@font-face {
-  font-family: 'Open sans';
-  src: url("../fonts/opensans-condbold-webfont.eot");
-  src: url("../fonts/opensans-condbold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/opensans-condbold-webfont.woff") format("woff"), url("../fonts/opensans-condbold-webfont.ttf") format("truetype"), url("../fonts/opensans-condbold-webfont.svg") format("svg");
-  font-weight: bold;
-  font-style: normal; }
-
 /* --------------------------------------------------------------------------------
    *** THEME ***
 -------------------------------------------------------------------------------- */
 /**
- * Default theme for reveal.js.
+ * Beige theme for reveal.js.
  *
  * Copyright (C) 2011-2012 Hakim El Hattab, http://hakim.se
  */
-@font-face {
-  font-family: 'League Gothic';
-  src: url("../../lib/font/league_gothic-webfont.eot");
-  src: url("../../lib/font/league_gothic-webfont.eot?#iefix") format("embedded-opentype"), url("../../lib/font/league_gothic-webfont.woff") format("woff"), url("../../lib/font/league_gothic-webfont.ttf") format("truetype"), url("../../lib/font/league_gothic-webfont.svg#LeagueGothicRegular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
-
+@import url(../fonts/league-gothic/league-gothic.css);
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic);
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: #1c1e20;
-  background: -moz-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #555a5f), color-stop(100%, #1c1e20));
-  background: -webkit-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -o-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: -ms-radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background: radial-gradient(center, circle cover, #555a5f 0%, #1c1e20 100%);
-  background-color: #2b2b2b; }
+  background: #f7f2d3;
+  background: -moz-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, white), color-stop(100%, #f7f2d3));
+  background: -webkit-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
+  background: -o-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
+  background: -ms-radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
+  background: radial-gradient(center, circle cover, white 0%, #f7f2d3 100%);
+  background-color: #f7f3de; }
 
 .reveal {
   font-family: "Lato", sans-serif;
   font-size: 36px;
   font-weight: normal;
-  letter-spacing: -0.02em;
-  color: #eeeeee; }
+  color: #333; }
 
 ::selection {
-  color: white;
-  background: #ff5e99;
+  color: #fff;
+  background: rgba(79, 64, 28, 0.99);
   text-shadow: none; }
 
 .reveal .slides > section,
 .reveal .slides > section > section {
-  line-height: 1.2em;
+  line-height: 1.3;
   font-weight: inherit; }
 
 /*********************************************
@@ -69,12 +48,13 @@ body {
 .reveal h5,
 .reveal h6 {
   margin: 0 0 20px 0;
-  color: #eeeeee;
+  color: #333;
   font-family: "League Gothic", Impact, sans-serif;
-  line-height: 1em;
-  letter-spacing: 0.02em;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: normal;
   text-transform: uppercase;
-  text-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  text-shadow: none;
   word-wrap: break-word; }
 
 .reveal h1 {
@@ -90,14 +70,14 @@ body {
   font-size: 1em; }
 
 .reveal h1 {
-  text-shadow: 0 1px 0 #cccccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbbbbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaaaaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.25), 0 20px 20px rgba(0, 0, 0, 0.15); }
 
 /*********************************************
  * OTHER
  *********************************************/
 .reveal p {
-  margin-bottom: 10px;
-  line-height: 1.2em; }
+  margin: 20px 0;
+  line-height: 1.3; }
 
 /* Ensure certain elements are never larger than the slide itself */
 .reveal img,
@@ -153,7 +133,7 @@ body {
   display: block;
   position: relative;
   width: 70%;
-  margin: 5px auto;
+  margin: 20px auto;
   padding: 5px;
   font-style: italic;
   background: rgba(255, 255, 255, 0.05);
@@ -170,7 +150,7 @@ body {
   display: block;
   position: relative;
   width: 90%;
-  margin: 15px auto;
+  margin: 20px auto;
   text-align: left;
   font-size: 0.55em;
   font-family: monospace;
@@ -186,9 +166,7 @@ body {
   padding: 5px;
   overflow: auto;
   max-height: 400px;
-  word-wrap: normal;
-  background: #3F3F3F;
-  color: #DCDCDC; }
+  word-wrap: normal; }
 
 .reveal table {
   margin: auto;
@@ -203,6 +181,14 @@ body {
   text-align: left;
   padding: 0.2em 0.5em 0.2em 0.5em;
   border-bottom: 1px solid; }
+
+.reveal table th[align="center"],
+.reveal table td[align="center"] {
+  text-align: center; }
+
+.reveal table th[align="right"],
+.reveal table td[align="right"] {
+  text-align: right; }
 
 .reveal table tr:last-child td {
   border-bottom: none; }
@@ -226,20 +212,20 @@ body {
  * LINKS
  *********************************************/
 .reveal a {
-  color: #13daec;
+  color: #8b743d;
   text-decoration: none;
   -webkit-transition: color .15s ease;
   -moz-transition: color .15s ease;
   transition: color .15s ease; }
 
 .reveal a:hover {
-  color: #71e9f4;
+  color: #c0a86e;
   text-shadow: none;
   border: none; }
 
 .reveal .roll span:after {
   color: #fff;
-  background: #0d99a5; }
+  background: #564826; }
 
 /*********************************************
  * IMAGES
@@ -247,8 +233,12 @@ body {
 .reveal section img {
   margin: 15px 0px;
   background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #eeeeee;
+  border: 4px solid #333;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+
+.reveal section img.plain {
+  border: 0;
+  box-shadow: none; }
 
 .reveal a img {
   -webkit-transition: all .15s linear;
@@ -257,39 +247,39 @@ body {
 
 .reveal a:hover img {
   background: rgba(255, 255, 255, 0.2);
-  border-color: #13daec;
+  border-color: #8b743d;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.55); }
 
 /*********************************************
  * NAVIGATION CONTROLS
  *********************************************/
-.reveal .controls div.navigate-left,
-.reveal .controls div.navigate-left.enabled {
-  border-right-color: #13daec; }
+.reveal .controls .navigate-left,
+.reveal .controls .navigate-left.enabled {
+  border-right-color: #8b743d; }
 
-.reveal .controls div.navigate-right,
-.reveal .controls div.navigate-right.enabled {
-  border-left-color: #13daec; }
+.reveal .controls .navigate-right,
+.reveal .controls .navigate-right.enabled {
+  border-left-color: #8b743d; }
 
-.reveal .controls div.navigate-up,
-.reveal .controls div.navigate-up.enabled {
-  border-bottom-color: #13daec; }
+.reveal .controls .navigate-up,
+.reveal .controls .navigate-up.enabled {
+  border-bottom-color: #8b743d; }
 
-.reveal .controls div.navigate-down,
-.reveal .controls div.navigate-down.enabled {
-  border-top-color: #13daec; }
+.reveal .controls .navigate-down,
+.reveal .controls .navigate-down.enabled {
+  border-top-color: #8b743d; }
 
-.reveal .controls div.navigate-left.enabled:hover {
-  border-right-color: #71e9f4; }
+.reveal .controls .navigate-left.enabled:hover {
+  border-right-color: #c0a86e; }
 
-.reveal .controls div.navigate-right.enabled:hover {
-  border-left-color: #71e9f4; }
+.reveal .controls .navigate-right.enabled:hover {
+  border-left-color: #c0a86e; }
 
-.reveal .controls div.navigate-up.enabled:hover {
-  border-bottom-color: #71e9f4; }
+.reveal .controls .navigate-up.enabled:hover {
+  border-bottom-color: #c0a86e; }
 
-.reveal .controls div.navigate-down.enabled:hover {
-  border-top-color: #71e9f4; }
+.reveal .controls .navigate-down.enabled:hover {
+  border-top-color: #c0a86e; }
 
 /*********************************************
  * PROGRESS BAR
@@ -298,73 +288,13 @@ body {
   background: rgba(0, 0, 0, 0.2); }
 
 .reveal .progress span {
-  background: #13daec;
+  background: #8b743d;
   -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
   transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985); }
 
-/*********************************************
- * SLIDE NUMBER
- *********************************************/
-.reveal .slide-number {
-  color: #13daec; }
-
-.reveal {
-  font-family: "Open sans", sans-serif; }
-
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-  font-family: "Open sans", Impact, sans-serif;
-  line-height: 1.2em;
-  text-shadow: 2px 2px 2px #000; }
-
-.reveal em {
-  color: #1b91ff;
-  font-style: normal; }
-
-.reveal a:not(.image) {
-  text-decoration: underline; }
-
-.reveal p code {
-  font-size: 0.85em;
-  display: inline-block;
-  padding: 0 0.25em; }
-  .reveal p code:first-child {
-    padding-left: 0; }
-
-.reveal ul {
-  display: block;
-  padding-left: 3rem; }
-
-.reveal li {
-  margin-bottom: .25em; }
-
-.reveal hr {
-  border-style: dashed;
-  color: rgba(0, 0, 0, 0.2);
-  margin: 1em auto; }
-
-.reveal pre {
-  margin-top: 2em; }
-  .reveal pre code {
-    padding: 10px; }
-
 .reveal small {
   display: block; }
-
-.reveal .marker {
-  color: #D5C70F; }
-
-.reveal .text-left p {
-  text-align: left; }
-
-.reveal a:not(.image) {
-  color: #13daec;
-  text-decoration: none;
-  transition: color .15s ease; }
-  .reveal a:not(.image):hover {
-    border: none;
-    color: #71e9f4;
-    text-shadow: none; }
 
 .reveal section img {
   display: inline-block;
@@ -401,34 +331,37 @@ body {
 .cf:after {
   clear: both; }
 
-.reveal h3.index-title {
-  margin-top: 100px;
-  text-align: center; }
-
-.reveal .class-list {
-  max-width: 1180px;
-  margin: 0 auto; }
-  .reveal .class-list .index-block {
-    float: left;
-    padding: 0 1em 1em;
-    width: 80%; }
-    .reveal .class-list .index-block:first-child {
-      padding-left: 0; }
-    .reveal .class-list .index-block:last-child {
-      padding-right: 0; }
-  .reveal .class-list h4 {
-    margin-bottom: .25rem;
-    text-align: left;
-    text-transform: none; }
-  .reveal .class-list ul {
-    display: block;
-    margin: 0;
-    padding: 0;
-    text-align: left;
-    list-style-position: inside; }
-  .reveal .class-list li {
-    font-size: 1.5rem;
-    line-height: 1.5; }
+.reveal {
+  overflow: auto; }
+  .reveal a:not(img) {
+    text-decoration: underline; }
+  .reveal .index-title {
+    margin-top: 100px;
+    text-align: center; }
+  .reveal .class-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1180px;
+    margin: 0 auto; }
+    .reveal .class-list .index-block {
+      flex-basis: 20rem;
+      flex-grow: 1;
+      flex-shrink: 0;
+      max-width: 23rem;
+      padding: 1rem 1.5rem; }
+    .reveal .class-list h4 {
+      margin-bottom: .25rem;
+      text-align: left;
+      text-transform: none; }
+    .reveal .class-list ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      list-style-position: inside; }
+    .reveal .class-list li {
+      font-size: 1.25rem;
+      line-height: 1.4; }
 
 .symple-before {
   text-transform: lowercase !important; }
@@ -554,7 +487,7 @@ section img.logo-npm {
   height: 1.75em; }
 
 .reveal .subtitulo {
-  color: yellow;
+  color: red;
   font-family: 'Comic Sans MS';
   font-size: xx-large; }
 
