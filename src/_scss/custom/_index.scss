@@ -3,56 +3,54 @@
 
 .cf:before,
 .cf:after {
-    content: " ";
-    display: table;
+  content: " ";
+  display: table;
 }
 
 .cf:after {
-    clear: both;
+  clear: both;
 }
 
-
 .reveal {
+  overflow: auto;
+  a:not(img) {
+    text-decoration: underline;
+  }
 
-        h3.index-title {
-            margin-top: 100px;
-            text-align: center;
-        }
+  .index-title {
+    margin-top: 100px;
+    text-align: center;
+  }
 
-    .class-list {
-        max-width: 1180px;
-        margin: 0 auto;
+  .class-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1180px;
+    margin: 0 auto;
 
-
-        .index-block {
-            float: left;
-            padding: 0 1em 1em;
-            width: 80%;
-            
-            &:first-child {
-                padding-left: 0;
-            }
-
-            &:last-child {
-                padding-right: 0;
-            }
-        }
-
-        h4 {
-            margin-bottom: .25rem;
-            text-align: left;
-            text-transform: none;
-        }
-        ul {
-            display: block;
-            margin: 0;
-            padding: 0;
-            text-align: left;
-            list-style-position: inside;
-        }
-        li {
-            font-size: 1.5rem;
-            line-height: 1.5;
-        }
+    .index-block {
+      flex-basis: 20rem;
+      flex-grow: 1;
+      flex-shrink: 0;
+      max-width: 23rem;
+      padding: 1rem 1.5rem;
     }
+
+    h4 {
+      margin-bottom: .25rem;
+      text-align: left;
+      text-transform: none;
+    }
+    ul {
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: left;
+      list-style-position: inside;
+    }
+    li {
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+  }
 }
