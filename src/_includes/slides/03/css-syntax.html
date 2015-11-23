@@ -1,43 +1,87 @@
-{% assign img_path = './img/slides/css-syntax' %}
 <section>
-    <section>
-        <h3><strong>Sintaxis</strong></h3>
-        <h3><span class="marker">Estructura del código CSS</span></h3>
-    </section>
+  <section>
+    <h2>Sintáxis CSS</h2>
+    <h3>Componentes de una regla CSS</h3>
+  </section>
 
-    <section>
-        <h2>Selector</h2>
-        <p>Mediante el Selector indicamos al código el elemento al que queremos aplicar formato.</p>
-        <img src="{{ img_path }}/css-selectores01.jpg" alt="">
-    </section>
+  <section>
+    <h3 style="color: #27ae60;">Selector</h3>
+    <p style="text-align: left;">Mediante el Selector indicamos al código el elemento al que queremos aplicar formato.</p>
+    <p style="text-align: left;">Una regla está formada por un selector</span> y una declaración o bloque de declaraciones</span>.</p>
+    <hr />
+    <pre style="box-shadow: none; font-size: 1em;">
+<span style="outline: 4px solid #27ae60; display: inline-block; padding: 0 .3em .2em;">p</span> {
+  color: red;
+  font-weight: bold;</span>
+}
+    </pre>
+  </section>
 
-    <section>
-        <h2>Declaración</h2>
-        <p>El código entre { } es la secuencia de estilos que aplicaremos al Selector.</p>
-        <img src="{{ img_path }}/css-selectores02.jpg" alt="">
-    </section>
+  <section>
+    <h3 style="color: #d35400;">Declaración</h3>
+    <p style="text-align: left;">Es el código entre { } es la secuencia de estilos que aplicaremos al Selector.</p>
+    <hr />
+    <pre style="box-shadow: none; font-size: 1em;">
+p {
+  <span style="outline: 4px solid #d35400; display: inline-block; padding: 0 .3em .2em;">color: red;
+font-weight: bold;</span>
+}
+    </pre>
+  </section>
 
-    <section>
-        <h2>Propiedad</h2>
-        <p>Atributo del Selector que queremos modificar. Finaliza siempre en :</p>
-        <img src="{{ img_path }}/css-selectores03.jpg" alt="">
-    </section>
+  <section>
+    <h3 style="color: #4E4EB9">Propiedad</h3>
+    <p style="text-align: left;">Atributo del Selector que queremos modificar. Finaliza siempre en :</p>
+    <pre style="box-shadow: none; font-size: 1em;">
+p {
+  <span style="outline: 4px solid #4E4EB9; display: inline-block; padding: 0 .3em .2em;">color:</span> red;
+  <span style="outline: 4px solid #4E4EB9; display: inline-block; padding: 0 .3em .2em;">font-weight:</span> bold;
+    </pre>
+  </section>
 
-    <section>
-        <h2>Valor</h2>
-        <p>Modificando el Valor de una propiedad aplicamos un estilo al selector. <br />Finaliza siempre en ;</p>
-        <img src="{{ img_path }}/css-selectores04.jpg" alt="">
-    </section>
+  <section>
+    <h3 style="color: #DC6ABC">Valor</h3>
+    <p style="text-align: left;">Modificando el Valor de una propiedad aplicamos un estilo al selector. <br />Finaliza siempre en ;</p>
+    <pre style="box-shadow: none; font-size: 1em;">
+p {
+  color: <span style="outline: 4px solid #DC6ABC; display: inline-block; padding: 0 .3em .2em;">red</span>;
+  font-weight: <span style="outline: 4px solid #DC6ABC; display: inline-block; padding: 0 .3em .2em;">bold</span>;
+    </pre>
+  </section>
 
-    <section>
-        <h2>Formato</h2>
-        <p>Los espacios en blanco y saltos de línea se utilizan para mejorar la legibilidad.</p>
-        <img src="{{ img_path }}/css-selectores05.jpg" alt="">
-    </section>
+  <section>
+  <h3>Comentarios</h3>
+    <p>Al igual que con HTML, podemos insertar comentarios en nuestro código CSS. Para abrir un comentario escribiremos <code>/*</code> y para cerrarlo <code>*/</code></p>
+    <pre><code contenteditable>
+  p {
+    color: blue;
+  }
 
-    <section>
-        <h2>Comentarios de código</h2>
-        <p>Los comentarios tienen el formato: <span class="marker">/* ...comentario... */</span></p>
-        <img src="{{ img_path }}/css-selectores06.jpg" alt="">
-    </section>
+  /* Este es un comentario de una sola linea */
+
+  /*
+    pero tambien
+    puede tener
+    varias
+    lineas
+  */
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Formato</h3>
+    <p>Los espacios en blanco y saltos de línea se utilizan para mejorar la legibilidad.</p>
+    <pre><code>
+  /* Esto: */
+  p {
+    color: red;
+    font-weight: bold;
+  }
+
+
+  /* Es lo mismo que esto: */
+  p { color: red; font-weight: bold; }
+  </code></pre>
+  </section>
+
 </section>
