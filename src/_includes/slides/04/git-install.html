@@ -1,0 +1,85 @@
+{% assign img_path = './img/slides/git' %}
+
+<section>
+  <section>
+    <img src="{{ img_path }}/git-logo.png" alt="" width="150">
+    <h2>Instalación</h2>
+  </section>
+
+  <section>
+    <img src="{{ img_path }}/git-commandline.png" alt="" width="100">
+    <h3>Command Line Tools</h3>
+    <pre><code contenteditable>
+  $ xcode-select --install
+    </code></pre>
+    <small>Es probable que necesitemos descargar las Command Line Tools for Xcode</small>
+  </section>
+
+  <section>
+    <h3>Descarga Git</h3>
+    <h4 class="marker">Selecciona la versión adecuada a tu Sistema Operativo:</h4>
+    <p>Git está disponible para Windows, Mac, Linux y Solaris.</p>
+    <a href="http://git-scm.com/downloads" target="_blank"><img src="{{ img_path }}/download-folder.png" alt="" width="150"></a>
+  </section>
+
+  <section>
+    <img src="{{ img_path }}/git-settings.png" alt="" width="100">
+    <h3>Configuración</h3>
+    <p>Indicamos a Git nuestra info de usuario</p>
+    <pre><code>
+  $ git config --global user.name "David G."
+  $ git config --global user.email dave74@gmail.com
+  $ git config --global core.editor nano
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">init</span></h3>
+    <h4 class="marker">Creamos un repositorio local</h4>
+    <p>En un directorio vacío ejecutamos el siguiente comando:</p>
+    <pre><code contenteditable>
+  $ > mkdir git-hangout
+  $ > cd git-hangout
+  $ git-hangout > git init
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Directorio <span class="marker">Git</span></h3>
+    <p>Git init crea un directorio oculto <span class="marker">.git</span> con el siguiente contenido:</p>
+    <ul>
+      <li><span class="marker">COMMIT_EDITMSG:</span> Comentarios de mensajes de commit</li>
+      <li><span class="marker">HEAD:</span> Puntero hacia la rama activa</li>
+      <li><span class="marker">config:</span> URLs de origin e info de ramas</li>
+      <li>...</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Crear un nuevo archivo:</h3>
+    <p class="marker">Git llevará un control exhaustivo sobre todos los cambios que vayamos haciendo.</p>
+    <pre><code contenteditable>
+  $ touch README.md
+    </code></pre>
+    <small>El comando UNIX <span class="marker">touch</span> nos crea un nuevo archivo. <br />Edítalo y guarda los cambios.</small>
+  </section>
+
+  <section>
+    <h3>.gitignore</h3>
+    <p class="marker">Incluimos TODO lo que NO queramos incluir en nuestro repositorio.</p>
+    <pre><code contenteditable>
+  $ touch .gitignore
+    </code></pre>
+    <small>Podemos crear uno ad-hoc en: <a href="https://www.gitignore.io/">gitignore.io</a></small>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">Status</span>:</h3>
+    <p class="marker">Listado de archivos nuevos (untracked), borrados o editados</p>
+    <pre><code contenteditable>
+  $ git status
+    </code></pre>
+    <p><img src="{{ img_path }}/git-status.png" alt="" width="800"></p>
+    <small>Rutas relativas a la raíz del repositorio.</small>
+  </section>
+</section>
