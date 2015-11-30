@@ -331,37 +331,37 @@ body {
 .cf:after {
   clear: both; }
 
-.reveal {
-  overflow: auto; }
-  .reveal a:not(img) {
-    text-decoration: underline; }
-  .reveal .index-title {
-    margin-top: 100px;
-    text-align: center; }
-  .reveal .class-list {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1180px;
-    margin: 0 auto; }
-    .reveal .class-list .index-block {
-      flex-basis: 20rem;
-      flex-grow: 1;
-      flex-shrink: 0;
-      max-width: 23rem;
-      padding: 1rem 1.5rem; }
-    .reveal .class-list h4 {
-      margin-bottom: .25rem;
-      text-align: left;
-      text-transform: none; }
-    .reveal .class-list ul {
-      display: block;
-      margin: 0;
-      padding: 0;
-      text-align: left;
-      list-style-position: inside; }
-    .reveal .class-list li {
-      font-size: 1.25rem;
-      line-height: 1.4; }
+.reveal a:not(img) {
+  text-decoration: underline; }
+
+.reveal .index-title {
+  margin-top: 100px;
+  text-align: center; }
+
+.reveal .class-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1180px;
+  margin: 0 auto; }
+  .reveal .class-list .index-block {
+    flex-basis: 20rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 23rem;
+    padding: 1rem 1.5rem; }
+  .reveal .class-list h4 {
+    margin-bottom: .25rem;
+    text-align: left;
+    text-transform: none; }
+  .reveal .class-list ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style-position: inside; }
+  .reveal .class-list li {
+    font-size: 1.25rem;
+    line-height: 1.4; }
 
 .symple-before {
   text-transform: lowercase !important; }
