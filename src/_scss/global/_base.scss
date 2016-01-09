@@ -1,0 +1,21 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.Page-wrap {
+  margin: 4rem auto 2rem;
+  padding: 1rem 0;
+  max-width: 60rem;
+}

@@ -300,29 +300,6 @@ body {
   display: inline-block;
   text-align: center; }
 
-.topheader {
-  background: #222;
-  padding: .5rem;
-  position: fixed;
-  width: 100%;
-  z-index: 10; }
-
-.topheader img {
-  float: left;
-  height: 3rem; }
-
-.topheader h2 {
-  color: white;
-  font-family: "Open sans", sans-serif;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  margin: 0 200px;
-  padding: .75rem 0;
-  text-align: center; }
-
-.reveal.center {
-  padding-top: 4rem; }
-
 .cf:before,
 .cf:after {
   content: " ";
@@ -362,6 +339,10 @@ body {
   .reveal .class-list li {
     font-size: 1.25rem;
     line-height: 1.4; }
+
+.sg-Page-wrap {
+  margin: 0 auto;
+  max-width: 60rem; }
 
 .symple-before {
   text-transform: lowercase !important; }
@@ -843,6 +824,9 @@ section img.logo-npm {
   margin: 0 auto;
   width: 64px;
   height: 64px; }
+
+.reveal .fz-s {
+  font-size: 1.5rem; }
 
 /*
 

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Introducción al HTML | Máster en Diseño Web | Módulo III Programación Frontend</title>
+
+    <meta name="description" content="Máster en Diseño Web | Módulo III">
+    <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    
+    
+        <link rel="stylesheet" href="css/global.css">
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="topheader">
+    <a href="./index.html"><img src="./img/logo-bau-es.svg"></a>
+    <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
+</div>
+
+    <div class="Page-wrap reveal">
+        
+
+<section>
+  <section>
+    <h2>Clientes y servidores</h2>
+  </section>
+
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">La web puede resumirse como una serie de interacciones entre dos tipos de sistemas: <em>Servidores</em> y <em>Clientes</em></p>
+    <img src="./img/slides/servers/client-server.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">Los <em>Clientes</em> son los encargados de solicitar y mostrar el contenido web.</p>
+    <img src="./img/slides/servers/clients.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">Los <em>Servidores</em> son aplicaciones (software) encrgados de enviar contenido a los Clientes cuando este lo solicita.</p>
+    <img src="./img/slides/servers/servers.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Ciclo de una transacción web</h2>
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-1.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-2.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-3.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-4.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-5.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-6.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+</section>
+
+<!--
+<section>
+  <section>
+    <h2><strong>Alojamiento y servidores web</strong></h2>
+  </section>
+
+  <section>
+    <h2>Estructura cliente - servidor</h2>
+
+    <img src="./img/slides/servers/servidorWeb.jpg" alt="">
+    <p>
+      Esquema simplificado de conexión bidireccional a un servidor web.
+    </p>
+  </section>
+
+  <section>
+    <h2>Transacciones</h2>
+
+    <img src="./img/slides/servers/cliente-servidor.png" alt="">
+    <small>Pedimos una URL, se convierte a IP y el Servidor web retorna el contenido.</small>
+  </section>
+
+  <section>
+    <h2>Protocolos de comunicación</h2>
+    <ul>
+      <li>
+        <span class="marker">HTTP</span> - Hyper Text Transfer Protocol
+      </li>
+
+      <li>
+        <span class="marker">TCP/IP</span> - Transmission Control Protocol / Internet Protocol
+      </li>
+
+      <li>
+        <span class="marker">FTP</span> - File Transfer Protocol
+      </li>
+    </ul>
+  </section>
+</section>
+
+ -->
+
+
+<section>
+  <section>
+    <h2 style="letter-spacing: .05em;">URL</h2>
+    <h3>(Uniform Resource Locator)</h3>
+    <hr>
+    <p style="text-align: center;">http://www.baued.es/es/estudios/workshops.html</p>
+  </section>
+
+  <section>
+    <p>Las <strong>URL</strong> son direcciones exclusivas que nos permiten localizar recursos dentro de internet.</p>
+    <p>Generalmente están compuestas de 3 partes principales:
+    </p>
+    <ul>
+      <li><span style="color: #27ae60;">el protocolo</span></li>
+      <li><span style="color: #d35400;">el nombre del sitio</span></li>
+      <li><span style="color: #8e44ad;">la ruta absoluta al recurso en concreto</span></li>
+    </ul>
+    <hr>
+    <p style="text-align: center;"><span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em;">http://</span><span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em;">www.baued.es</span><span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em;">/es/estudios/workshops.html</span></p>
+  </section>
+
+  <section>
+    <h3>Protocolo</h3>
+    <p>Los protocolos son lenguajes simples que permiten a diferentes ordenadores compartir información entre sí independientemente de la configuración, sistema operativo o software que utilicen.</p>
+    <hr>
+    <p style="text-align: center;"><span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em;">http://</span><span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">www.baued.es</span><span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">/es/estudios/workshops.html</span></p>
+  </section>
+
+  <section>
+    <h3>The internet protocol suit</h3>
+    <p>Algunos protocolos comúnes en el entorno de internet: FTP, <span class="fragment highlight-blue">HTTP</span>, SMTP, TCP/IP, UPD.</p>
+    <p class="fragment">En concreto, el encargado de transferir datos a través de internet es el protocolo HTTP (HyperText Transfer Protocol)</p>
+    <hr>
+    <p style="text-align: center;"><span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em;">http://</span><span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">www.baued.es</span><span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">/es/estudios/workshops.html</span></p>
+  </section>
+
+  <section>
+    <h3>Sitio Web</h3>
+    <p>El nombre del sitio web se compone a su vez de varias partes:
+    </p>
+    <ol style="font-size: .75em;">
+      <li><strong>Subdominio:</strong> Es una carpeta dentro del servidor donde está alojada la web (por defecto suele ser "www")</li>
+      <li><strong>Nombre del dominio:</strong> Es el nombre de nuestra web.</li>
+      <li><strong>Dominio de nivel superior (top level domain):</strong> Es el nombre que el cliente usa para encontrar el servidor correspondiente. Puede ser genérico o geográfico.</li>
+    </ol>
+    <hr>
+    <p style="text-align: center;">
+      <span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">http://</span>
+      <span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em;">
+        <span class="footnote" style="border: 1px solid rgba(255,255,255,.6); display: inline-block; padding: 0 .2em" data-content="1">www.</span>
+        <span class="footnote" style="border: 1px solid rgba(255,255,255,.6); display: inline-block; padding: 0 .2em" data-content="2">baued</span>
+        <span class="footnote" style="border: 1px solid rgba(255,255,255,.6); display: inline-block; padding: 0 .2em" data-content="3">.es</span>
+      </span>
+      <span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">/es/estudios/workshops.html</span>
+    </p>
+  </section>
+
+  <section>
+    <h3>Ruta del recurso</h3>
+    <p>Es la ruta dentro de la carpeta del dominio al recurso específico que el cliente HTTP está solicitando.</p>
+    <p>Si no se especifica en la URL, el cliente intentará encontrar el archivo que esté configurado para mostrarse por defecto (normalmente <code>index.html</code> o <code>default.html</code>) </p>
+    <hr>
+    <p style="text-align: center;"><span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2">http://</span><span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">www.baued.es</span><span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em;;">/es/estudios/workshops.html</span></p>
+  </section>
+</section>
+
+
+<section class="text-left">
+  <section>
+    <h2>Los lenguajes de la web</h2>
+  </section>
+
+  <section>
+    <h3 style="margin-bottom: 3rem; text-align: left; text-transform: none;">Hay 3 lenguajes encargados de crear un sitio web:</h3>
+    <ul>
+      <li><strong><span class="marker">HTML</span></strong> (Hypertext Markup Language) - Estructura</li>
+      <li><strong><span class="marker">CSS</span></strong> (Cascading Style Sheets) - Presentación</li>
+      <li><strong><span class="marker">Javascript</span></strong> - Comportamiento</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>HTML</h2>
+    <h3>(Hypertext Markup Language)</h3>
+    <p>Es el lenguaje que se utiliza para crear la estructura y el contenido de un documento web.</p>
+    <p>Se trata de un <strong>lenguaje de marcado</strong>, es decir un sistema para <i>identificar</i> y <i>describir</i> los diferentes elementos de una página</p>
+
+    <pre><code data-trim contenteditable>
+&#60;h1&#62;h1 - Titular de nivel 1 &#60;/h1&#62;
+&#60;h2&#62;h2 - Titular de nivel 2 &#60;/h2&#62;
+&#60;p&#62;Esto es un párrafo con un &#60;strong&#62;texto destacado&#60;/strong&#62;.&#60;/p&#62;
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>CSS</h2>
+    <h3 class="subtitulo">(Cascading Style Sheets)</h3>
+    <p>Es un lenguaje creado para controlar la <i>presentación</i> (el estilo) de un documento HTML.</p>
+
+    <pre><code data-trim contenteditable>
+.subtitulo {
+  color: red;
+  font-family: 'Comic Sans MS';
+  font-size: xx-large;
+}
+  </code></pre>
+</section>
+
+<section>
+  <h2>Javascript</h2>
+  <p>Es un lenguaje de programación que se utiliza para agregar interactividad y comportamientos dinámicos a nuestras páginas.</p>
+  <pre><code data-trim contenteditable>
+(function(){
+  var hi_button    = document.getElementById('hi-button'),
+  hi_container = document.getElementById('hi-container');
+
+  hi_button.onclick = function() {
+    hi_container.innerHTML = '&#60;h2 class="hi"&#62;Hola&#60;/h2&#62;';
+  }
+})();
+</code></pre>
+
+<p id="hi-container" style="text-align: center;"><button id="hi-button">Saludar</button></p>
+<script>
+  (function(){
+    var hi_button    = document.getElementById('hi-button'),
+    hi_container = document.getElementById('hi-container');
+
+    hi_button.onclick = function() {
+      hi_container.innerHTML = '<h2 class="hi">Hola</h2>';
+    }
+  })();
+</script>
+</section>
+
+<section>
+  <h2>Lenguajes server-side</h2>
+  <p>Son lenguajes que se ejecutan en el servidor. Se utilizan para crear sitios web con contenidos dinámicos y aplicaciones.</p>
+  <p>Algunos de estos lenguajes son:</p>
+  <ul>
+    <li>PHP</li>
+    <li>Python</li>
+    <li>Ruby</li>
+    <li>.NET</li>
+    <li>Java</li>
+    <li>Javascript (Node.js, Rhino, SpiderMonkey)</li>
+  </ul>
+</section>
+</section>
+
+
+<section>
+    <h1 style="font-size: 3em">Introducción al HTML</h1>
+</section>
+
+<section class="text-left">
+  <section>
+    <h2>Sintáxis HTML</h2>
+  </section>
+
+  <section>
+    <p>Los elementos son la estructura básica de HTML.</p>
+    <p>Para marcar un elemento solo necesitamos dos <em>etiquetas</em> o <i>tags</i> (escritas entre corchetes angulares: <,>), una de apertura y una de cierre, que se diferencia por llevar una &ldquo; / &rdquo; tras el primer corchete.</p>
+    <p></p>
+    <hr>
+    <p style="text-align: center;"><code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">&#60;elemento&#62;</code>Contenido.<code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">&#60;&#47elemento&#62;</code></p>
+  </section>
+
+  <section>
+    <p>Extisten también <em>elementos vacíos</em>, o sea, que no llevan contenido por lo que tampoco utilizan etiqueta de cierre</p>
+    <p><code>&#60;img&#62;</code>, <code>&#60;br&#62;</code> o <code>&#60;hr&#62;</code> son algunos ejemplos.</p>
+  </section>
+
+  <section>
+    <p>Los elementos pueden <em>anidarse unos dentro de otros</em> (con ciertas restricciones).</p>
+    <p>En ese caso debe cerrarse siempre primero el elemento hijo antes de cerrar el padre</p>
+    <pre><code data-trim contenteditable>
+&#60;body&#62;
+  &#60;h1&#62;Titular del contenido&#60;/h1&#62;
+  &#60;p&#62;Contenido de la página&#60;/p&#62;
+&#60;/body&#62;
+    </code></pre>
+  </section>
+
+  <section>
+    <p>Los elementos pueden contener <em>atributos</em>. Los atributos son instrucciones que modifican la forma en que se comporta el elemento.</p>
+    <p>Los atributos se componen de un <span style="color: rgb(39, 174, 96);">nombre</span> y un <span style="color: rgb(174, 39, 82);">valor</span>, escritos con la siguiente sintáxis:</p>
+    <hr>
+    <p style="text-align: center;"><code>&#60;a <span style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">href</span>=<span style="background: rgba(174, 39, 82, .7); color: #fff; display: inline-block; padding: .2em .3em;">"http://www.google.com"</span>&#62;Google&#60;/a&#62;</code></p>
+  </section>
+
+  <section>
+    <p>Podemos insertar comentarios en nuestro código para hacer anotaciones que consideremos necesarias para entenderlo mejor.</p>
+    <p>Todo lo que se escriba dentro de un comentario no será leido por el navegador.</p>
+    <pre><code data-trim contenteditable>
+&#60;!--
+  Esto texto no se verá en el navegador
+  porque es un comentario
+--&#62;
+
+&#60;p&#62;Esto texto si se mostrará&#60;/p&#62;
+    </code></pre>
+  </section>
+</section>
+
+
+<section class="text-left">
+  <section>
+    <h2>Estructura de una pagina web</h2>
+    <div>
+      <pre><code data-trim contenteditable>
+&#60;!DOCTYPE html&#62;
+&#60;html&#62;
+  &#60;head&#62;
+    &#60;meta charset ="utf-8"&#62;
+    &#60;title&#62;Titulo de la página&#60;/title&#62;
+  &#60;/head&#62;
+
+  &#60;body&#62;
+    &#60;h1&#62;Titular del contenido&#60;/h1&#62;
+    &#60;p&#62;Contenido de la página&#60;/p&#62;
+  &#60;/body&#62;
+&#60;/html&#62;
+      </code></pre>
+    </div>
+  </section>
+
+  <section style="text-align: left; font-size: 2rem">
+    <h3>Head</h3>
+    <p>El elemento <code><span class="marker">&#60;head&#62;</span></code> contiene información descriptiva del mismo documento.<br />
+    Su contenido <span class="marker">no</span> se mostrará en la ventana del navegador.</p>
+    <p>Algunos contenidos del <code><span class="marker">&#60;head&#62;</span></code> pueden ser:</p>
+    <ul>
+      <li>El título de la pagina &#60;title&#62;.</li>
+      <li>La codificación de caracteres.</li>
+      <li>Links a los estilos CSS.</li>
+      <li>Links a archivos javascript.</li>
+      <li>Etiqueta &#60;meta viewport&#62; para controlar la visualización en dispositivos móviles.</li>
+      <li>Información SEO.</li>
+    </ul>
+  </section>
+
+  <section>
+    <pre style="margin: 0; width: 95%"><code data-trim contenteditable style="height: 60vh">
+&#60;head&#62;
+  &#60;meta charset="utf-8"&#62;
+
+  &#60;title&#62;Bau, Centro Universitario de Diseño de Barcelona&#60;/title&#62;
+
+  &#60;meta name="description" content="En Bau te formarás como profesional del
+  diseño web"&#62;
+
+  &#60;meta name="keywords" content="bau, bau diseño, bau escuela, escuela bau,
+  bau universidad, Centro Universitario de Diseño de Barcelona, bau master"&#62;
+
+  &#60;meta name="viewport" content="width=device-width, initial-scale=1"&#62;
+
+  &#60;link rel="stylesheet" href="css/styles.css"&#62;
+  &#60;script src="js/modernizr.js"&#62;&#60;/script&#62;
+  &#60;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&#62;
+&#60;/head&#62;
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Body</h3>
+    <p>El elemento <code><span class="marker">&#60;body&#62;</span></code> contiene todo aquello que se mostrará la ventana del navegador.</p>
+  </section>
+</section>
+
+
+<!--
+<section>
+    <h2>Ejercicio</h2>
+    <p style="text-align:center;">Crear estructura de documento HTML</p>
+    <a href="../exercise/01/01.zip">01.zip</a>
+</section>
+-->
+
+<section>
+    <section>
+        <h2>Elementos de texto</h2>
+    </section>
+
+    <section>
+        <table>
+            <thead>
+                <th>Etiqueta</th>
+                <th>Elemento que representa</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&#60;h1-h6&#062;</code></td>
+                    <td>Titulares. Tienen 6 niveles diferentes.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;p&#062;</code></td>
+                    <td>Párrfos de texto.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;ul&#062;</code></td>
+                    <td>Listas dónde el orden de sus elementos no es importante.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;ol&#062;</code></td>
+                    <td>Listas dónde sus elementos tienen un órden determinado.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;li&#062;</code></td>
+                    <td>Elemento de una lista. Siempre tienen que estar dentro de un &#60;ul&#062; o &#60;ol&#062;</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;blockquote&#062;</code></td>
+                    <td>Un bloque de texto que contiene un testimonio de otra fuente.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <table>
+            <thead>
+                <th>Etiqueta</th>
+                <th>Elemento que representa</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&#60;a&#062;</code></td>
+                    <td>Un <a href="#">link</a>. La url a la que apunta se especifica con el atributo <code>href</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;strong&#062;</code></td>
+                    <td>Un texto <strong>destacado</strong>. Por defecto se renderiza en negrita.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;em&#062;</code></td>
+                    <td>Un texto <em>enfatizado</em>. Por defecto se renderiza en itálica.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;u&#062;</code></td>
+                    <td>Un texto <u>subrayado</u>.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;mark&#062;</code></td>
+                    <td>Un texto <mark>resaltado</mark>.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;code&#062;</code></td>
+                    <td>Representa trozos de <code>código</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+
+
+<section>
+    <h2>Ejercicio</h2>
+    <a href="https://docs.google.com/document/d/11rGG4hL6L6NyfLspbPoloGiB8z7cKBocLZqjitANOX0/edit">Maquetación de texto</a>
+</section>
+
+
+
+<section>
+    <section>
+        <h2>Elementos estructurales</h2>
+    </section>
+
+    <section>
+        <table style="font-size: 1.8rem;">
+            <thead>
+                <th>Etiqueta</th>
+                <th>Elemento que representa</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&#60;div&#062; y &#60;span&#062;</code></td>
+                    <td>Elementos sin contenido semántico. El primero es inline, mientras que el segundo es block.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;header&#062;</code></td>
+                    <td>Cabecera de un documento o de una sección del documento. Suele contener un elemento <code>&#60;h1...h6&#62;</code></td>
+                </tr>
+                <tr>
+                    <td><code>&#60;footer&#062;</code></td>
+                    <td>Pie de un documento o de una sección del documento.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;nav&#062;</code></td>
+                    <td>Navegación de un documento o página. Contiene enlaces a otros documentos o a secciones del mismo documento.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;article&#062;</code></td>
+                    <td>Sección de un documento cuyo contenido tenga sentido por si mismo independientemente de su contexto.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;section&#062;</code></td>
+                    <td>Un grupo de contenido de temática relacionada.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;aside&#062;</code></td>
+                    <td>Sección de una página con contenido relacionado o complementario al contenido principal.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <p>Una estructura muy básica de una página podría ser algo así:</p>
+        <img src="./img/slides/html-structural-elements/structure-html5.png" alt="" style="border: 0; height: 500px; ">
+    </section>
+</section>
+
+
+    </div>
+
+</body>
+</html>

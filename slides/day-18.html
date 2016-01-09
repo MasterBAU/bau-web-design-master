@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Fundamentos CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
+
+    <meta name="description" content="Máster en Diseño Web | Módulo III">
+    <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    
+    
+        <link rel="stylesheet" href="css/global.css">
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="topheader">
+    <a href="./index.html"><img src="./img/logo-bau-es.svg"></a>
+    <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
+</div>
+
+    <div class="Page-wrap reveal">
+        <section class="text-left">
+    <section>
+        <h2>¿Por qué es importante la performance en la web?</h2>
+    </section>
+
+    <section>
+        <p style="margin-bottom: 2rem; text-align: center;">El usuario va navegando tan tranquilamente cuando...</p>
+        <div>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-Gz02QZSNPY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section>
+        <blockquote style="font-size: 2.5rem">
+            <p>&ldquo;It’s time for us to treat performance as an essential design feature, not just as a technical best practice.&rdquo;</p>
+            <footer>Brad Frost - <a href="http://bradfrost.com/blog/post/performance-as-design/">Performance As Design</a></footer>
+        </blockquote>
+    </section>
+
+    <section>
+        <p>El performance de la web no sólo afecta a la experiencia del usuario, sino <a href="http://googlewebmastercentral.blogspot.com.es/2010/04/using-site-speed-in-web-search-ranking.html">también al SEO</a>, y por supuesto <strong>al negocio</strong>.</p>
+    </section>
+
+    <section style="font-size: 2rem;">
+        <h3>Algunas estadísticas</h3>
+        <div class="fragment">
+            <p><strong>Amazon</strong></p>
+            <p>Aumenta sus ganancias en un <em>1%</em> cada <em>100ms</em> de mejora en la velocidad de descarga.</p>
+        </div>
+        <div class="fragment">
+            <hr>
+            <p><strong>Yahoo</strong></p>
+            <p><em>9%</em> de aumento en el tráfico por cada <em>400ms</em> de mejora.</p>
+        </div>
+
+        <div class="fragment">
+            <hr>
+            <p><strong>Etsy</strong></p>
+            <p>Cada <em>160k</em> extra de peso en una página aumenta <em>12%</em> la taza de rebote.</p>
+        </div>
+    </section>
+</section>
+
+
+<section class="text-left">
+    <section>
+        <h2 style="text-align: center;">¿Qué podemos hacer para mejorar el performance?</h2>
+        <p style="text-align: center;">
+            <img src="./img/slides/wpo/improve.gif" alt="" width="700" style="border: none; box-shadow: none">
+        </p>
+    </section>
+
+    <section>
+        <blockquote style="font-size: 2.5rem">
+            <p>&ldquo;80-90% of the time spent by users waiting for pages to load is spent on the frontend, all the work that needs to be done after the HTML document has arrived.&rdquo;</p>
+            <footer>Steve Souders - <a href="http://stevesouders.com/hpws/"> High Performance Web Sites</a></footer>
+        </blockquote>
+    </section>
+
+    <section>
+        <h3>Performance 101</h3>
+        <ul>
+            <li>Reducir las llamadas (requests) al servidor</li>
+            <li>Reducir el peso de los recursos</li>
+            <li style="opacity: 0.5">Optimizar el cache</li>
+        </ul>
+    </section>
+</section>
+
+
+<section class="text-left">
+    <section>
+        <h2 style="text-align: center;">Reducir la cantidad de recursos</h2>
+        <p style="text-align: center;">
+            <img src="./img/slides/wpo/requests.gif" alt="" width="480" style="border: none; box-shadow: none">
+        </p>
+    </section>
+
+    <section data-transition="fade">
+        <p style="text-align: center;">
+            <img src="./img/slides/wpo/request-4.png" alt="" width="700" style="border: 0; box-shadow: none;" >
+        </p>
+    </section>
+
+    <section data-transition="fade">
+        <p style="text-align: center;">
+            <img src="./img/slides/wpo/request-5.png" alt="" width="700" style="border: 0; box-shadow: none;" >
+        </p>
+    </section>
+
+    <section>
+        <h3>Combinar CSS</h3>
+        <p>Intentar tener un <strong>solo archivo Css</strong>. Gracias al <em>@import</em> Sass es sencillo creando un archivo principal que será el que se compile en css y sólo incluirá llamadas al resto de las hojas de estilo.</p>
+        <hr style="margin: 0.75rem 0;">
+        <p><em>styles.scss</em> => <em>styles.css</em></p>
+        <pre style="margin-top: 1rem;"><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+@import 'base/normalize';
+@import 'base/typography';
+@import 'base/forms';
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'components/navigation';
+@import 'components/slider';
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Concatenar el Javascript</h3>
+        <p>Con el Javascript podemos hacer lo mismo que el con el Css y combinar todos los archivos en uno solo, aunque no es tan sencillo. Hay que tener en cuenta más parametros como el orden de carga, la dependencia entre unos archivos y otros o qué scripts se necesitan ejecutar en qué momento.</p>
+        <hr>
+        <p><a href="http://refresh-sf.com/">Online JavaScript/CSS Compressor</a></p>
+    </section>
+
+    <section>
+        <h3>Combinar imágenes (spriting)</h3>
+        <p>La técnica de sprites consiste en combinar varias imágenes en un sólo archivo y luego mediante Css mostrar únicamente la que necesitasmos.</p>
+        <p style="text-align: center;">
+            <img src="./img/slides/wpo/sprite-demo.png" alt="" width="300" style="border: 0; box-shadow: none;" >
+        </p>
+
+
+    </section>
+
+    <section>
+        <div class="sprite"></div>
+        <hr>
+        <pre><code>
+.icon {
+    background-image: url(../img/sprite.png);
+    background-repeat: none;
+    width: 64px;
+    height: 64px;
+}
+.icon-fb { background-position: 0 0; }
+.icon-tw { background-position: -64px 0; }
+.icon-ig { background-position: -128px 0; }
+        </code></pre>
+    </section>
+
+    <section>
+        <p>Otra variante de spriting es la de incluir todas las imágenes en base 64 en una hoja de estilo asociadas a una class.</p>
+
+        <pre><code>
+.icon {
+    background-position: ceter center;
+    background-repeat: none;
+    width: 32px;
+    height: 32px;
+}
+.icon-fb { background-image: url(base64:); }
+.icon-tw { background-image: url(base64:); }
+.icon-ig { background-image: url(base64:); }
+        </code></pre>
+    </section>
+</section>
+
+
+<section class="text-left">
+    <section>
+        <h2 style="text-align: center;">Reducir el peso de los recursos</h2>
+        <p style="text-align: center;">
+            <img src="./img/slides/wpo/size.gif" alt="" width="500" style="border: none; box-shadow: none">
+        </p>
+    </section>
+
+    <section>
+        <h3>Compresión Gzip</h3>
+        <p>Los archivos de texto (.html, .css, .js, etc) pueden enviarse comprimidos desde el servidor para reducir su peso durante el viaje hasta el cliente. Esta reducción suele ser muy significativa.</p>
+        <p>Lo normal seria que nuestro servicio de host tenga activada la <em>compresión gzip</em> pero nunca está de más comprobarlo, y en caso de que no sea así, ponernos en contacto con ellos para que la activen.</p>
+        <hr>
+        <p><a href="http://gzipwtf.com/">gzipWTF</a></p>
+        <p><a href="http://checkgzipcompression.com/">Check GZIP compression</a></p>
+    </section>
+
+    <section>
+        <h3>Minificar archivos Css y Js</h3>
+        <p style="font-size: 2rem;">Solemos escribir nuestro Css y nuestro Javascript optimizado para su lectura, es decir, con una indentación y espaciado claro, comentarios, etc. Los ordenadores no necesitan esto para interpretarlos y es por eso que a la hora de subir un fichero al servidor podemos reducir bastante su peso si nos deshacemos de todo lo que no sea imprescindible.</p>
+    </section>
+
+    <section>
+        <h3>Minificar archivos Css y Js</h3>
+        <p style="font-size: 2rem;">Para ello existen varias herramientas. Por convención se suele diferenciar a los ficheros comprimidos con la extensión .min (Ej: styles.min.css)</p>
+        <p style="font-size: 2rem;"><a href="http://csscompressor.com/">CSS Compressor</a></p>
+        <hr style="margin: 0.75rem 0;">
+        <p>Tambien podemos compilar el css comprimido directamente desde Sass.</p>
+        <pre><code>
+sass style.scss:style.css --style compressed
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Comprimir imágenes</h3>
+        <p>Es recomendable comprimir lo máximo posible las imágenes antes de subirlas al servidor.</p>
+        <p>Desde Photoshop tendremos más control sobre la compresión final desde la ventana de Guardar para web (cmd + alt + shift + S) o podemos usar una herramienta externa como <a href="https://imageoptim.com/">ImageOptim</a> o <a href="http://pngmini.com/">ImageAlpha</a></p>
+    </section>
+</section>
+
+<section>
+    <h3>Web Performance</h3>
+    <ul style="font-size: 1.8rem">
+
+        <li style="margin-bottom: .8em;">
+            <strong>Perf Rocks</strong><br />
+            <a href="http://perf.rocks/" style="font-size: .8em;">perf.rocks/</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Design Decisions Through The Lens Of A Performance Budget</strong> <i style="color: #999;"> &mdash; Yesenia Perez-Cruz</i><br />
+            <a href="https://vimeo.com/108328247" style="font-size: .8em;">vimeo.com/108328247</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Designing for Front-End Page Speed</strong> <i style="color: #999;"> &mdash; Lara Hogan</i><br />
+            <a href="https://www.youtube.com/watch?v=RtpVZ5OzJlc" style="font-size: .8em;">www.youtube.com/watch?v=RtpVZ5OzJlc</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Web performance</strong> <i style="color: #999;"> &mdash; Andy Davies</i><br />
+            <a href="http://www.fivesimplesteps.com/products/web-performance" style="font-size: .8em;">www.fivesimplesteps.com/products/web-performance</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Website Performance Optimization</strong> <i style="color: #999;"> &mdash; Ilya Grigorik</i><br />
+            <a href="https://www.udacity.com/course/website-performance-optimization--ud884" style="font-size: .8em;">/www.udacity.com/course/website-performance-optimization--ud884</a>
+        </li>
+
+    </ul>
+</section>
+    </div>
+
+</body>
+</html>
