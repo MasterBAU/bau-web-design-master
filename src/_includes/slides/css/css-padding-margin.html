@@ -1,37 +1,38 @@
-<section class="text-left">
+<section id="margin-and-padding">
     <section>
         <h2>Padding y margin</h2>
     </section>
 
     <section>
         <h3>Padding</h3>
-        <p style="text-align: left; font-size: 2rem;">El <code>padding</code> es el espacio interior que separa el contenido del borde de la caja.</p>
+        <p>El <code>padding</code> es el espacio interior que separa el contenido del borde de la caja.</p>
         <hr>
-        <div class="box-model__margin" style="background-color: #ccc;">
-            <div class="box-model" style="background-color: #e74c3c; border: 1px solid #666;" >
-                <span style="background-color: #ccc;" contenteditable>contenido</span>
+        <div class="BoxModelGraphic-margin bg-grayLight bdc-gray">
+            <div class="BoxModelGraphic-padding bdc-gray bg-red">
+                <span class="BoxModelGraphic-content bg-grayLight c-grayDarker" contenteditable>contenido</span>
             </div>
         </div>
     </section>
 
     <section>
         <h3>Margin</h3>
-        <p style="text-align: left; font-size: 2rem;">El <code>margin</code> es el espacio exterior que separa el al elemento del resto de los elementos.</p>
+        <p>El <code>margin</code> es el espacio exterior que separa el al elemento del resto de los elementos.</p>
         <hr>
-        <div class="box-model__margin" style="background-color: #e74c3c;">
-            <div class="box-model" style="background-color: #aaa; border: 1px solid #666">
-                <span style="background-color: #ccc;" contenteditable>contenido</span>
+        <div class="BoxModelGraphic-margin">
+            <div class="BoxModelGraphic-padding bg-grayLighter bdc-gray">
+                <span class="BoxModelGraphic-content bg-grayLight c-grayDarker" contenteditable>contenido</span>
             </div>
         </div>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">Tanto el <code>padding</code> como el <code>margin</code> nos permiten controlar cada uno de sus lados individualmente con las siguientes propiedades:</p>
-        <ul>
-            <li style="font-size: 1.8rem;"><code>padding-top</code> | <code>padding-right</code> | <code>padding-bottom</code> | <code>padding-left</code></li>
-            <li style="font-size: 1.8rem;"><code>margin-top</code> | <code>margin-right</code> | <code>margin-bottom</code> | <code>margin-left</code></li>
+        <p>Tanto el <code>padding</code> como el <code>margin</code> nos permiten controlar cada uno de sus lados individualmente con las siguientes propiedades:</p>
+        <ul class="fz-xs">
+            <li><code>padding-top</code> | <code>padding-right</code> | <code>padding-bottom</code> | <code>padding-left</code></li>
+            <li><code>margin-top</code> | <code>margin-right</code> | <code>margin-bottom</code> | <code>margin-left</code></li>
         </ul>
-        <pre><code data-trim contenteditable>.box {
+<pre><code data-trim contenteditable>
+.box {
     padding-top: 10px;
     padding-bottom: 30px;
     padding-left: 10%;
@@ -40,14 +41,15 @@
     margin-bottom: 30px;
     margin-left: 20px;
     margin-right: 20px;
-
-}</code></pre>
+}
+</code></pre>
 </section>
 
-<section>
-    <p style="text-align: left; font-size: 1.75rem;">También pueden declararse <em>todos los lados en una sola propiedad</em> (<code>padding</code> y <code>margin</code> respectivamente) separando los valores con un espacio y siguiendo el <strong>sentido de las agujas del reloj</strong>.</p>
-    <p style="text-align: left; font-size: 1.75rem;">Si utilizamos esta abreviación, cuando el valor derecho es igual al izquierdo podemos omitir este último. Si además el valor superior e inferior también son iguales podemos omitir el inferior.</p>
-    <pre><code data-trim contenteditable>.box {
+<section class="fz-s">
+    <p>También pueden declararse <em>todos los lados en una sola propiedad</em> (<code>padding</code> y <code>margin</code> respectivamente) separando los valores con un espacio y siguiendo el <strong>sentido de las agujas del reloj</strong>.</p>
+    <p>Si utilizamos esta abreviación, cuando el valor derecho es igual al izquierdo podemos omitir este último. Si además el valor superior e inferior también son iguales podemos omitir el inferior.</p>
+<pre><code data-trim contenteditable>
+.box {
     padding-top:    10px;
     padding-right:  20px;
     padding-bottom: 10px;
@@ -61,6 +63,7 @@
 
     /* e igual a: */
     padding: 10px 20px;
-}</code></pre>
+}
+</code></pre>
     </section>
 </section>

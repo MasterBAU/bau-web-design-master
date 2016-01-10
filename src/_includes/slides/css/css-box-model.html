@@ -26,15 +26,14 @@
         </div>
         <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">Area de contenido</span> | <span class="c-yellow">Padding</span> | <span class="c-red">Border</span> | <span class="c-cyan">Margin</span></p>
         <hr>
-<pre><code contenteditable>
-    .box {
-        width: 300px;
-        height: 50px;
-        border: 5px solid #d8cd00;
-        margin: 50px;
-        padding: 50px;
-    }
-
+<pre><code data-trim contenteditable>
+.box {
+    width: 300px;
+    height: 50px;
+    border: 5px solid #d8cd00;
+    margin: 50px;
+    padding: 50px;
+}
 </code></pre>
     </section>
 
@@ -46,15 +45,14 @@
         </div>
         <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">300px</span> + <span class="c-yellow">50px * 2</span> + <span class="c-red">5px * 2</span> = <span class="fz-xs">410px</span></p>
         <hr>
-<pre><code contenteditable>
-    .box {
-        width: 300px;
-        height: 50px;
-        border: 5px solid #d8cd00;
-        margin: 50px;
-        padding: 50px;
-    }
-
+<pre><code data-trim contenteditable>
+.box {
+    width: 300px;
+    height: 50px;
+    border: 5px solid #d8cd00;
+    margin: 50px;
+    padding: 50px;
+}
 </code></pre>
     </section>
 
@@ -70,13 +68,14 @@
     
     <section>
         <p>Es una buena idea, sobre todo si trabajamos con una layout flexible (en porcentajes) declarar <em><code>box-sizing: border-box</code></em> para todos los elementos usando el selector universal (<code>*</code>).</p>
-        <pre><code data-trim contenteditable>*,
+<pre><code data-trim contenteditable>*,
 *:before,
 *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}</code></pre>
+}
+</code></pre>
         <p class="fz-xs ta-c"><a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">“Inheriting box-sizing Probably Slightly Better Best-Practice”</a> - Chris Coyier</p>
     </section>
 </section>

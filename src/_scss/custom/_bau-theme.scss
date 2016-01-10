@@ -5,6 +5,14 @@
     }
   }
 
+  pre {
+    font-size: 1.25rem;
+
+    code {
+      padding: .75rem 1rem;
+    }
+  }
+
   // FONT-SIZE HELPERS
   // --------------------------------------------------------------------------
   .fz-s {
@@ -39,22 +47,45 @@
   // COLOR HELPERS
   // --------------------------------------------------------------------------
   .c {
-    &-red { color: $c-red; }
-    &-orange { color: $c-orange; }
-    &-yellow { color: $c-yellow; }
-    &-green { color: $c-green; }
-    &-cyan { color: $c-cyan; }
-    &-blue { color: $c-blue; }
-    &-purple { color: $c-purple; }
+    &-red { color: $c-red !important; }
+    &-orange { color: $c-orange !important; }
+    &-yellow { color: $c-yellow !important; }
+    &-green { color: $c-green !important; }
+    &-cyan { color: $c-cyan !important; }
+    &-blue { color: $c-blue !important; }
+    &-purple { color: $c-purple !important; }
+    &-gray { color: $c-gray !important; }
+    &-grayDarker { color: $c-grayDarker !important; }
   }
 
   .bg {
-    &-red { background-color: $c-red; }
-    &-orange { background-color: $c-orange; }
-    &-yellow { background-color: $c-yellow; }
-    &-green { background-color: $c-green; }
-    &-cyan { background-color: $c-cyan; }
-    &-blue { background-color: $c-blue; }
-    &-purple { background-color: $c-purple; }
+    &-red { background-color: $c-red !important; }
+    &-orange { background-color: $c-orange !important; }
+    &-yellow { background-color: $c-yellow !important; }
+    &-green { background-color: $c-green !important; }
+    &-cyan { background-color: $c-cyan !important; }
+    &-blue { background-color: $c-blue !important; }
+    &-purple { background-color: $c-purple !important; }
+    &-grayLighter { background-color: $c-grayLighter !important; }
+    &-grayLight { background-color: $c-grayLight !important; }
+    &-gray { background-color: $c-gray !important; }
+    &-grayDark { background-color: $c-grayDark !important; }
+    &-grayDarker { background-color: $c-grayDarker !important; }
+  }
+
+  .bdc {
+    &-gray { border-color: $c-gray !important; }
+    &-grayDark { border-color: $c-grayDark !important; }
+    &-red { border-color: $c-red !important; }
+  }
+
+  // CUSTOM CLASSES
+  // --------------------------------------------------------------------------
+  .u-highlighted {
+    background-color: hsla(200, 70%, 60%, .4);
+    
+    .u-highlighted {
+      background-color: hsla(100, 70%, 60%, .5);
+    }
   }
 }

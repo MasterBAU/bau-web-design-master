@@ -3,7 +3,8 @@
 
 // Box Model
 // --------------------------------------------------------
-#box-model {
+#box-model,
+#margin-and-padding {
   .BoxModelGraphic {
     &-margin {
       border: 2px dashed $c-blue;
@@ -38,35 +39,40 @@
     }
   }
 }
-// .reveal .box-model__margin {
-//     box-sizing: border-box;
-//     border: 2px dashed #2c3e50;
-//     background: rgba(243, 156, 18, .6);
-//     display: inline-block;
-//     padding: 50px;
-//     width: 514px;
-// }
-// .reveal
 
-// .reveal .box-model__inline {
-//     line-height: 40px;
-// }
-// .reveal .box-model__inline strong {
-//     padding: 0;
-// }
-// .reveal .borders-example code {
-//   background: #eaeaed;
-//   color: #666;
-//   font-size: 14px;
-//   line-height: 24px;
-//   display: inline-block;
-//   height: 70px;
-//   margin: 0 14px;
-//   padding-top: 20px;
-//   text-align: center;
-//   width: 90px;
-// }
-// .reveal .border-solid  { border: 2px solid #9799a7; }
-// .reveal .border-double { border: 6px double #9799a7; }
-// .reveal .border-dashed { border: 8px dashed #9799a7; }
-// .reveal .border-dotted { border: 4px dotted #9799a7; }
+
+// Width and Height
+// --------------------------------------------------------
+#width-and-height {
+  .BoxModelGraphic {
+  }
+}
+
+
+// Borders
+// --------------------------------------------------------
+#borders {
+  .BordersExample {
+    vertical-align: top;
+
+    code {
+      background: $c-grayLighter;
+      border-width: 6px;
+      border-color: $c-red; 
+      color: $c-grayDark;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 14px;
+      padding-top: 20px;
+      text-align: center;
+      width: 90px;
+      height: 90px;
+    }
+    
+    &--solid  { border-style: solid; }
+    &--double { border-style: double; }
+    &--dashed { border-style: dashed; }
+    &--dotted { border-style: dotted; }
+  }
+}
