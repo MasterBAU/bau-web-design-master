@@ -1,0 +1,60 @@
+.reveal {
+  .slides {
+    p, ul, ol{
+      text-align: left;
+    }
+  }
+
+  // FONT-SIZE HELPERS
+  // --------------------------------------------------------------------------
+  .fz-s {
+    & { font-size: 2rem !important; }
+    p, ul, ol { font-size: 2rem; }
+  }
+
+  .fz-xs {
+    & { font-size: 1.5rem !important; }
+    p, ul, ol { font-size: 1.5rem; }
+  }
+
+  .fz-xxs {
+    & { font-size: 1.25rem !important; }
+    p, ul, ol { font-size: 1.25rem; }
+  }
+
+  // TEXT-ALIGN HELPERS
+  // --------------------------------------------------------------------------
+  .ta-c {
+    &, p, ul, ol {
+      text-align: center !important;
+    }
+  }
+
+  .ta-l {
+    &, p, ul, ol {
+      text-align: left !important;
+    }
+  }
+
+  // COLOR HELPERS
+  // --------------------------------------------------------------------------
+  .c {
+    &-red { color: $c-red; }
+    &-orange { color: $c-orange; }
+    &-yellow { color: $c-yellow; }
+    &-green { color: $c-green; }
+    &-cyan { color: $c-cyan; }
+    &-blue { color: $c-blue; }
+    &-purple { color: $c-purple; }
+  }
+
+  .bg {
+    &-red { background-color: $c-red; }
+    &-orange { background-color: $c-orange; }
+    &-yellow { background-color: $c-yellow; }
+    &-green { background-color: $c-green; }
+    &-cyan { background-color: $c-cyan; }
+    &-blue { background-color: $c-blue; }
+    &-purple { background-color: $c-purple; }
+  }
+}

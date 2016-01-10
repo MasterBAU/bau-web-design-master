@@ -8,10 +8,10 @@ html {
   box-sizing: inherit;
 }
 
-html,
-body {
-  height: auto !important;
-  overflow: visible !important;
+#no-reveal,
+#no-reveal body {
+  height: auto;
+  overflow: visible;
 }
 
 .Page-wrap {

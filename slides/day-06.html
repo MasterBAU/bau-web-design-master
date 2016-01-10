@@ -17,9 +17,6 @@
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css" id="theme">
     
-    
-        <link rel="stylesheet" href="css/global.css">
-    
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
@@ -44,22 +41,30 @@
     <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
 </div>
 
-    <div class="Page-wrap reveal">
-        <!-- { include slides/sublime-tips/sublime-tip-settings.html } -->
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Módulo III <br />
+                    <span class="marker">Programación Frontend</span>
+                </h3>
+                <h3><strong>CSS: Box Model</strong></h3>
+            </section>
 
-<section class="text-left">
+            <!-- { include slides/sublime-tips/sublime-tip-settings.html } -->
+
+<section id="box-model" class="fz-s">
     <section>
         <h2>Box model</h2>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">Todos los elementos en una página web son cajas rectangulares.</p>
-        <p style="text-align: left; font-size: 2rem;">Las características de estas cajas podemos describirlas a través del <em>box-model</em>.</p>
+        <p>Todos los elementos en una página web son cajas rectangulares.</p>
+        <p>Las características de estas cajas podemos describirlas a través del <em>box-model</em>.</p>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">Hay varias propiedades CSS que controlan las dimensiones de cada elemento:</p>
-        <ul style="text-align: left; font-size: 2rem;">
+        <p>Hay varias propiedades CSS que controlan las dimensiones de cada elemento:</p>
+        <ul>
             <li><em><code>width</code></em> y <em><code>height</code></em>, que definen las dimensiones del elemento (aunque, como se aplican exactamente, dependerá de la propiedad <code>display</code>)</li>
             <li><em><code>padding</code></em>, que determina el espacio entre el contenido y el borde exterior.</li>
             <li>El mismo <em><code>border</code></em> de la caja.</li>
@@ -67,43 +72,50 @@
         </ul>
     </section>
 
-    <section style="text-align: center;">
-        <div class="box-model__margin">
-            <div class="box-model">
-                <span style="height: 50px" contenteditable>contenido</span>
+    <section>
+        <div class="BoxModelGraphic-margin">
+            <div class="BoxModelGraphic-padding">
+                <span class="BoxModelGraphic-content" contenteditable>contenido</span>
             </div>
         </div>
-        <p style="font-size: 1.2rem; font-weight: bold; margin-top: 1rem; text-align: center;"><span style=" margin: 0 1em; color: #37cbd7;">Area de contenido</span> | <span style=" margin: 0 1em; color: #27ae60;">Padding</span> | <span style=" margin: 0 1em; color: #d8cd00;">Border</span> | <span style=" margin: 0 1em; color: rgb(213, 126, 0);">Margin</span></p>
+        <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">Area de contenido</span> | <span class="c-yellow">Padding</span> | <span class="c-red">Border</span> | <span class="c-cyan">Margin</span></p>
         <hr>
-        <pre><code data-trim contenteditable>.box {
-    width: 300px;
-    height: 50px;
-    border: 5px solid #d8cd00;
-    margin: 50px;
-    padding: 50px;
-}</code></pre>
+<pre><code contenteditable>
+    .box {
+        width: 300px;
+        height: 50px;
+        border: 5px solid #d8cd00;
+        margin: 50px;
+        padding: 50px;
+    }
+
+</code></pre>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem">Por defecto <strong>el navegador añade los paddings y los bordes a las dimensiones del elemento</strong></p>
-        <div class="box-model" style="display: inline-block; margin: 1rem 0;">
-            <span style="height: 50px" contenteditable>contenido</span>
+        <p>Por defecto <strong>el navegador añade los paddings y los bordes a las dimensiones del elemento</strong></p>
+        
+        <div class="BoxModelGraphic-padding">
+            <span  class="BoxModelGraphic-content" contenteditable>contenido</span>
         </div>
-        <p style="font-size: 1.2rem; font-weight: bold; margin-top: 1rem; text-align: center;"><span style=" margin: 0 1em; color: #37cbd7;">300px</span> + <span style=" margin: 0 1em; color: #27ae60;">50px * 2</span> + <span style=" margin: 0 1em; color: #d8cd00;">5px * 2</span> = <span style=" margin: 0 1em; font-size: 1.5rem;">410px</span></p>
+        <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">300px</span> + <span class="c-yellow">50px * 2</span> + <span class="c-red">5px * 2</span> = <span class="fz-xs">410px</span></p>
         <hr>
-        <pre><code data-trim contenteditable>.box {
-    width: 300px;
-    height: 50px;
-    border: 5px solid #d8cd00;
-    margin: 50px;
-    padding: 50px;
-}</code></pre>
+<pre><code contenteditable>
+    .box {
+        width: 300px;
+        height: 50px;
+        border: 5px solid #d8cd00;
+        margin: 50px;
+        padding: 50px;
+    }
+
+</code></pre>
     </section>
 
     <section>
         <h3>Box-sizing</h3>
-        <p style="text-align: left; font-size: 2rem"><code>box-sizing</code> tiene 3 valores posibles:</p>
-        <ul style="text-align: left; font-size: 2rem">
+        <p><code>box-sizing</code> tiene 3 valores posibles:</p>
+        <ul>
             <li><em><code>content-box</code></em>: el que se aplica por defecto y calcula el <code>width</code> y <code>height</code> teniendo en cuenta únicamente el contenido.</li>
             <li><em><code>padding-box</code></em>: Incluye el <code>padding</code> dentro de las dimensiones del elemento.</li>
             <li><em><code>border-box</code></em>: Incluye <code>padding</code> y <code>border</code> dentro de las dimensiones.</li>
@@ -111,7 +123,7 @@
     </section>
     
     <section>
-        <p style="text-align: left; font-size: 2rem">Es una buena idea, sobre todo si trabajamos con una layout flexible (en porcentajes) declarar <em><code>box-sizing: border-box</code></em> para todos los elementos usando el selector universal (<code>*</code>).</p>
+        <p>Es una buena idea, sobre todo si trabajamos con una layout flexible (en porcentajes) declarar <em><code>box-sizing: border-box</code></em> para todos los elementos usando el selector universal (<code>*</code>).</p>
         <pre><code data-trim contenteditable>*,
 *:before,
 *:after {
@@ -119,7 +131,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }</code></pre>
-        <p class="fz-s" style="text-align: center;"><a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">“Inheriting box-sizing Probably Slightly Better Best-Practice”</a> - Chris Coyier</p>
+        <p class="fz-xs ta-c"><a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">“Inheriting box-sizing Probably Slightly Better Best-Practice”</a> - Chris Coyier</p>
     </section>
 </section>
 
@@ -467,7 +479,33 @@ overflow: visible;
     </ul>
 </section>
 
+        </div>
     </div>
 
+    <script src="js/reveal/head.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'js/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+</script>
 </body>
 </html>
