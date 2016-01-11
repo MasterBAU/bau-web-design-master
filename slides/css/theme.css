@@ -297,6 +297,9 @@ body {
   .reveal pre code {
     padding: .75rem 1rem; }
 
+.reveal a:not(img) {
+  text-decoration: underline; }
+
 .reveal .fz-s {
   font-size: 2rem !important; }
 
@@ -322,25 +325,25 @@ body {
   text-align: left !important; }
 
 .reveal .c-red {
-  color: #ee535a !important; }
+  color: #e11d24 !important; }
 
 .reveal .c-orange {
-  color: #dc764b !important; }
+  color: #e14f24 !important; }
 
 .reveal .c-yellow {
-  color: #f7ad4a !important; }
+  color: #fabe52 !important; }
 
 .reveal .c-green {
   color: #99b456 !important; }
 
 .reveal .c-cyan {
-  color: #20cbe3 !important; }
+  color: #88b9e4 !important; }
 
 .reveal .c-blue {
-  color: #3184ce !important; }
+  color: #7ea9c3 !important; }
 
 .reveal .c-purple {
-  color: #9362ad !important; }
+  color: #b394c7 !important; }
 
 .reveal .c-gray {
   color: #999 !important; }
@@ -349,25 +352,25 @@ body {
   color: #333 !important; }
 
 .reveal .bg-red {
-  background-color: #ee535a !important; }
+  background-color: #e11d24 !important; }
 
 .reveal .bg-orange {
-  background-color: #dc764b !important; }
+  background-color: #e14f24 !important; }
 
 .reveal .bg-yellow {
-  background-color: #f7ad4a !important; }
+  background-color: #fabe52 !important; }
 
 .reveal .bg-green {
   background-color: #99b456 !important; }
 
 .reveal .bg-cyan {
-  background-color: #20cbe3 !important; }
+  background-color: #88b9e4 !important; }
 
 .reveal .bg-blue {
-  background-color: #3184ce !important; }
+  background-color: #7ea9c3 !important; }
 
 .reveal .bg-purple {
-  background-color: #9362ad !important; }
+  background-color: #b394c7 !important; }
 
 .reveal .bg-grayLighter {
   background-color: #ddd !important; }
@@ -391,17 +394,17 @@ body {
   border-color: #666 !important; }
 
 .reveal .bdc-red {
-  border-color: #ee535a !important; }
+  border-color: #e11d24 !important; }
 
 .reveal .u-highlighted {
-  background-color: rgba(82, 177, 224, 0.4); }
+  background-color: rgba(126, 169, 195, 0.4); }
   .reveal .u-highlighted .u-highlighted {
-    background-color: rgba(129, 224, 82, 0.5); }
+    background-color: rgba(126, 169, 195, 0.5); }
 
 #box-model .BoxModelGraphic-margin,
 #margin-and-padding .BoxModelGraphic-margin {
-  border: 2px dashed #3184ce;
-  background: #20cbe3;
+  border: 2px dashed #7ea9c3;
+  background: #88b9e4;
   display: inline-block;
   padding: 50px;
   width: 404px;
@@ -409,8 +412,8 @@ body {
 
 #box-model .BoxModelGraphic-padding,
 #margin-and-padding .BoxModelGraphic-padding {
-  background: #f7ad4a;
-  border: 5px solid #ee535a;
+  background: #fabe52;
+  border: 5px solid #e11d24;
   display: inline-block;
   padding: 50px;
   width: 300px; }
@@ -419,7 +422,7 @@ body {
 #margin-and-padding .BoxModelGraphic-content {
   color: #fff;
   display: block;
-  background: #9362ad;
+  background: #b394c7;
   font-size: 40px;
   line-height: 50px; }
 
@@ -433,7 +436,7 @@ body {
   #borders .BordersExample code {
     background: #ddd;
     border-width: 6px;
-    border-color: #ee535a;
+    border-color: #e11d24;
     color: #666;
     display: inline-block;
     font-size: 14px;
@@ -576,6 +579,13 @@ body {
   padding: 1rem 0;
   max-width: 60rem; }
 
+.cf:before, .cf:after {
+  content: " ";
+  display: table; }
+
+.cf:after {
+  clear: both; }
+
 .topheader {
   background: #222;
   padding: .5rem 1rem;
@@ -642,3 +652,35 @@ body {
 #s-style-guide .sg-Section-body {
   margin-bottom: 6rem;
   padding: 0 4rem; }
+
+.reveal a:not(img) {
+  text-decoration: underline; }
+
+.reveal .index-title {
+  margin-top: 100px;
+  text-align: center; }
+
+.reveal .class-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 69rem;
+  margin: 0 auto; }
+  .reveal .class-list .index-block {
+    flex-basis: 20rem;
+    flex-grow: 1;
+    flex-shrink: 0;
+    max-width: 23rem;
+    padding: 1rem 1.5rem; }
+  .reveal .class-list h4 {
+    margin-bottom: .25rem;
+    text-align: left;
+    text-transform: none; }
+  .reveal .class-list ul {
+    display: block;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    list-style-position: inside; }
+  .reveal .class-list li {
+    font-size: 1.25rem;
+    line-height: 1.4; }
