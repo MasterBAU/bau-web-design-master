@@ -227,10 +227,7 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  margin: 15px 0px; }
 
 .reveal section img.plain {
   border: 0;
@@ -666,10 +663,10 @@ body {
   max-width: 69rem;
   margin: 0 auto; }
   .reveal .class-list .index-block {
-    flex-basis: 20rem;
+    flex-basis: 25%;
     flex-grow: 1;
     flex-shrink: 0;
-    max-width: 23rem;
+    max-width: 19rem;
     padding: 1rem 1.5rem; }
   .reveal .class-list h4 {
     margin-bottom: .25rem;

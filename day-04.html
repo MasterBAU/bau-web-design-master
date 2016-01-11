@@ -47,7 +47,7 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Terminal UNIX</strong></h3>
+                <h3><strong>Terminal UNIX + Git Basic</strong></h3>
             </section>
 
             
@@ -264,6 +264,8 @@
 
 
 
+
+
 <section>
   <section>
     <img src="./img/slides/git/git-logo.png" alt="" width="150">
@@ -310,7 +312,6 @@
     </ul>
   </section>
 </section>
-</section>
 
 
 
@@ -353,9 +354,9 @@
     <h4 class="marker">Creamos un repositorio local</h4>
     <p>En un directorio vacío ejecutamos el siguiente comando:</p>
     <pre><code contenteditable>
-  $ > mkdir git-hangout
-  $ > cd git-hangout
-  $ git-hangout > git init
+  $ mkdir git-test
+  $ cd git-test
+  $ git init
     </code></pre>
   </section>
 
@@ -545,68 +546,6 @@
   </section>
 </section>
 
-
-
-
-
-<section>
-  <section>
-    <img src="./img/slides/git/git-branch.png" alt="" width="100">
-    <h2>Ramas en Git</h2>
-    <small>$ git branch</small>
-  </section>
-
-  <section>
-    <h3>Git <span class="marker">branch</span></h3>
-    <p>Una rama nos permite aislar una nueva funcionalidad en nuestro código que después podremos añadir a la versión principal.</p>
-    <p><span class="marker">Para crear una nueva rama:</span></p>
-    <pre><code contenteditable>
-      $ git branch feature/sliderhome
-    </code></pre>
-  </section>
-
-  <section>
-    <img src="./img/slides/git/git-merge.png" alt="" width="100">
-    <h3>Git <span class="marker">merge</span></h3>
-    <p>Git procura combinar los cambios automáticamente*.</p>
-    <p>Si no reconoce qué parte del código ha de quedarse y cual eliminar, hemos de editarlo manualmente.</p>
-    <small>*Recursive strategy</small>
-  </section>
-
-  <section>
-    <img src="./img/slides/git/git-merge-conflict.png" alt="" width="100">
-    <h3>Git merge conflict</h3>
-    <p>Cuando Git no puede identificar qué cambios ha de mantener y cual eliminar lanzará el siguiente mensaje:</p>
-    <pre style="font-size: 1.2rem"><code contenteditable>
-  $ git merge iss53
-  Auto-merging index.html
-  CONFLICT (content): Merge conflict in index.html
-  Automatic merge failed; fix conflicts and then commit the result.
-    </code></pre>
-  </section>
-
-  <section>
-    <h3>Fixing Merge conflict</h3>
-    <pre><code contenteditable>
-
-  Código sin conflicto
-
-  <<<<<<< HEAD
-  I love cats!
-  =======
-  Dogs are better
-  >>>>>>> Master (o SHA del commit)
-
-  Código sin conflicto
-
-    </code></pre>
-  </section>
-
-  <section>
-    <h3>Fixing Merge conflict</h3>
-    <img src="./img/slides/git/git-merge-schema.png" alt="">
-  </section>
-</section>
 
 
         </div>
