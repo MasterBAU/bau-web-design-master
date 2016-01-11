@@ -1,16 +1,5 @@
 // INDEX
 // ------------------------------------------------------
-
-.cf:before,
-.cf:after {
-  content: " ";
-  display: table;
-}
-
-.cf:after {
-  clear: both;
-}
-
 .reveal {
   a:not(img) {
     text-decoration: underline;
@@ -24,7 +13,7 @@
   .class-list {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1180px;
+    max-width: 69rem;
     margin: 0 auto;
 
     .index-block {
@@ -40,6 +29,7 @@
       text-align: left;
       text-transform: none;
     }
+    
     ul {
       display: block;
       margin: 0;
@@ -47,6 +37,7 @@
       text-align: left;
       list-style-position: inside;
     }
+    
     li {
       font-size: 1.25rem;
       line-height: 1.4;

@@ -1,0 +1,49 @@
+ <section>
+    <section>
+        <h2>Asociar CSS al HTML</h2>
+    </section>
+
+    <section>
+        <p>Existen tres maneras de relacionar un CSS a un HTML en concreto:</p>
+        <ul>
+            <li>Estilo <i>inline</i>.</li>
+            <li>Estilos embebidos en documento HTML.</li>
+            <li>Hoja de estilos externa.</li>
+        </ul>
+    </section>
+
+    <section>
+        <p>Podemos asignar estilos CSS directamente en un elemento HTML mediante el atributo <code>style=""</code>.</p>
+        <p>Los estilos solo se aplicarán a ese elemento en concreto, por lo cual el selector no se utiliza en este caso.</p>
+        <pre><code data-trim contenteditable>&#60;p style="color: red"&#62;Esto es un párrafo rojo.&#60;/p&#62;</code></pre>
+    </section>
+    
+    <section>
+        <p>Otra forma de utilizar CSS es mediante un tag <code>&#60;style&#62;</code> en el <code>&#60;head&#62;</code> del documento.</p>
+        <p>Los estilos se aplicaran a todos los elementos de la página de acuerdo a los selectores utilizados.<p/>
+<pre><code >
+    &#60;head&#62;
+         &#60;style&#62;
+            p {
+                color: red;
+            }
+            h1 {
+                color : blue;
+            }
+        &#60;/style&#62;
+    &#60;/head&#62;
+
+</code></pre>
+    </section>
+
+    <section>
+        <p>La manera más eficiente de relacionar CSS y HTML es utilizando una hoja de estilo externa, lo que nos permite compartir un mismo CSS para todo nuestro sitio web.</p>
+        <p>Esta hoja es un archivo con extensión .css que se incluye en el <code>&#60;head&#62;</code> del HTML mediante un tag <code>&#60;link&#62;</code>.</p>
+<pre><code>
+    &#60;head&#62;
+        &#60;link rel="stylesheet" href="css/styles.css"&#62;
+    &#60;/head&#62;
+    
+</code></pre>
+    </section>
+</section>

@@ -1,0 +1,59 @@
+$ff-sans-alt: 'Roboto', sans-serif;
+
+#s-style-guide {
+  .sg {
+    &-h1,
+    &-h2,
+    &-h3 {
+      text-shadow: none;
+      text-transform: none;
+      font-family: $ff-sans-alt;
+    }
+
+    &-h1 {
+      font-size: 5.61rem;
+      font-weight: 700;
+      margin-bottom: 5rem;
+      text-align: right;
+    }
+
+    &-h2 {
+      border-bottom: 2px solid;
+      font-size: 3.157rem;
+      font-weight: 300;
+      margin-bottom: 2rem;
+      padding: .5rem 0; 
+    }
+
+    &-h3 {
+      font-size: 1.777rem;
+      font-weight: 900;
+      margin: 4rem 0 1rem;
+      text-indent: -2rem;
+      text-transform: uppercase;
+
+      code {
+        background-color: hsla(60, 90%, 50%, .3);
+        font-weight: 400;
+        margin: 0 .5rem;
+        padding: 0 .5rem;
+        text-transform: none;
+      }
+    }
+
+    &-hs {
+      font-size: 4.209rem;
+      font-size: 3.157rem;
+      font-size: 2.369rem;
+      font-size: 1.777rem;
+      font-size: 1.333rem;
+    }
+
+    &-Section {
+      &-body {
+        margin-bottom: 6rem;
+        padding: 0 4rem;
+      }
+    }
+  }
+}

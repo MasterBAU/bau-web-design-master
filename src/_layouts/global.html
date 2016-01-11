@@ -1,26 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="no-reveal">
 
 {% include head.html %}
 
 <body>
     {% include topheader.html %}
 
-    <div class="reveal">
-        <div class="slides">
-            <section>
-                <h3>Módulo III <br />
-                    <span class="marker">Programación Frontend</span>
-                </h3>
-                <h3><strong>{{ page.lesson_title }}</strong></h3>
-            </section>
-
-            {{ content }}
-
-        </div>
+    <div class="Page-wrap reveal">
+        {{ content }}
     </div>
-
-    {% include scripts-footer.html %}
 
 </body>
 </html>

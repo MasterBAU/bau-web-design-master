@@ -1,0 +1,78 @@
+// CSS
+// ----------------------------------------------------------------------------
+
+// Box Model + Margin And Padding
+// --------------------------------------------------------
+#box-model,
+#margin-and-padding {
+  .BoxModelGraphic {
+    &-margin {
+      border: 2px dashed $c-blue;
+      background: $c-cyan;
+      display: inline-block;
+      padding: 50px;
+      width: 404px;
+      text-align: center;
+    }
+
+    &-padding {
+      background: $c-yellow;
+      border: 5px solid $c-red;
+      display: inline-block;
+      padding: 50px;
+      width: 300px;
+    }
+
+    &-content {
+      color: #fff;
+      display: block;
+      background: $c-purple;
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    &-legend {
+      span {
+        font-weight: bold;
+        margin: 0 1em;
+      }
+    }
+  }
+}
+
+
+// Width and Height
+// --------------------------------------------------------
+#width-and-height {
+  .BoxModelGraphic {
+  }
+}
+
+
+// Borders
+// --------------------------------------------------------
+#borders {
+  .BordersExample {
+    vertical-align: top;
+
+    code {
+      background: $c-grayLighter;
+      border-width: 6px;
+      border-color: $c-red; 
+      color: $c-grayDark;
+      display: inline-block;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 0 14px;
+      padding-top: 20px;
+      text-align: center;
+      width: 90px;
+      height: 90px;
+    }
+    
+    &--solid  { border-style: solid; }
+    &--double { border-style: double; }
+    &--dashed { border-style: dashed; }
+    &--dotted { border-style: dotted; }
+  }
+}

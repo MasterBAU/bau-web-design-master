@@ -13,10 +13,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css" id="theme">
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -51,19 +52,19 @@
 
             <!-- { include slides/sublime-tips/sublime-tip-settings.html } -->
 
-<section class="text-left">
+<section id="box-model" class="fz-s">
     <section>
         <h2>Box model</h2>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">Todos los elementos en una página web son cajas rectangulares.</p>
-        <p style="text-align: left; font-size: 2rem;">Las características de estas cajas podemos describirlas a través del <em>box-model</em>.</p>
+        <p>Todos los elementos en una página web son cajas rectangulares.</p>
+        <p>Las características de estas cajas podemos describirlas a través del <em>box-model</em>.</p>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">Hay varias propiedades CSS que controlan las dimensiones de cada elemento:</p>
-        <ul style="text-align: left; font-size: 2rem;">
+        <p>Hay varias propiedades CSS que controlan las dimensiones de cada elemento:</p>
+        <ul>
             <li><em><code>width</code></em> y <em><code>height</code></em>, que definen las dimensiones del elemento (aunque, como se aplican exactamente, dependerá de la propiedad <code>display</code>)</li>
             <li><em><code>padding</code></em>, que determina el espacio entre el contenido y el borde exterior.</li>
             <li>El mismo <em><code>border</code></em> de la caja.</li>
@@ -71,43 +72,48 @@
         </ul>
     </section>
 
-    <section style="text-align: center;">
-        <div class="box-model__margin">
-            <div class="box-model">
-                <span style="height: 50px" contenteditable>contenido</span>
+    <section>
+        <div class="BoxModelGraphic-margin">
+            <div class="BoxModelGraphic-padding">
+                <span class="BoxModelGraphic-content" contenteditable>contenido</span>
             </div>
         </div>
-        <p style="font-size: 1.2rem; font-weight: bold; margin-top: 1rem; text-align: center;"><span style=" margin: 0 1em; color: #37cbd7;">Area de contenido</span> | <span style=" margin: 0 1em; color: #27ae60;">Padding</span> | <span style=" margin: 0 1em; color: #d8cd00;">Border</span> | <span style=" margin: 0 1em; color: rgb(213, 126, 0);">Margin</span></p>
+        <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">Area de contenido</span> | <span class="c-yellow">Padding</span> | <span class="c-red">Border</span> | <span class="c-cyan">Margin</span></p>
         <hr>
-        <pre><code data-trim contenteditable>.box {
+<pre><code data-trim contenteditable>
+.box {
     width: 300px;
     height: 50px;
     border: 5px solid #d8cd00;
     margin: 50px;
     padding: 50px;
-}</code></pre>
+}
+</code></pre>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem">Por defecto <strong>el navegador añade los paddings y los bordes a las dimensiones del elemento</strong></p>
-        <div class="box-model" style="display: inline-block; margin: 1rem 0;">
-            <span style="height: 50px" contenteditable>contenido</span>
+        <p>Por defecto <strong>el navegador añade los paddings y los bordes a las dimensiones del elemento</strong></p>
+        
+        <div class="BoxModelGraphic-padding">
+            <span  class="BoxModelGraphic-content" contenteditable>contenido</span>
         </div>
-        <p style="font-size: 1.2rem; font-weight: bold; margin-top: 1rem; text-align: center;"><span style=" margin: 0 1em; color: #37cbd7;">300px</span> + <span style=" margin: 0 1em; color: #27ae60;">50px * 2</span> + <span style=" margin: 0 1em; color: #d8cd00;">5px * 2</span> = <span style=" margin: 0 1em; font-size: 1.5rem;">410px</span></p>
+        <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">300px</span> + <span class="c-yellow">50px * 2</span> + <span class="c-red">5px * 2</span> = <span class="fz-xs">410px</span></p>
         <hr>
-        <pre><code data-trim contenteditable>.box {
+<pre><code data-trim contenteditable>
+.box {
     width: 300px;
     height: 50px;
     border: 5px solid #d8cd00;
     margin: 50px;
     padding: 50px;
-}</code></pre>
+}
+</code></pre>
     </section>
 
     <section>
         <h3>Box-sizing</h3>
-        <p style="text-align: left; font-size: 2rem"><code>box-sizing</code> tiene 3 valores posibles:</p>
-        <ul style="text-align: left; font-size: 2rem">
+        <p><code>box-sizing</code> tiene 3 valores posibles:</p>
+        <ul>
             <li><em><code>content-box</code></em>: el que se aplica por defecto y calcula el <code>width</code> y <code>height</code> teniendo en cuenta únicamente el contenido.</li>
             <li><em><code>padding-box</code></em>: Incluye el <code>padding</code> dentro de las dimensiones del elemento.</li>
             <li><em><code>border-box</code></em>: Incluye <code>padding</code> y <code>border</code> dentro de las dimensiones.</li>
@@ -115,155 +121,163 @@
     </section>
     
     <section>
-        <p style="text-align: left; font-size: 2rem">Es una buena idea, sobre todo si trabajamos con una layout flexible (en porcentajes) declarar <em><code>box-sizing: border-box</code></em> para todos los elementos usando el selector universal (<code>*</code>).</p>
-        <pre><code data-trim contenteditable>*,
+        <p>Es una buena idea, sobre todo si trabajamos con una layout flexible (en porcentajes) declarar <em><code>box-sizing: border-box</code></em> para todos los elementos usando el selector universal (<code>*</code>).</p>
+<pre><code data-trim contenteditable>*,
 *:before,
 *:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}</code></pre>
+}
+</code></pre>
+        <p class="fz-xs ta-c"><a href="https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/">“Inheriting box-sizing Probably Slightly Better Best-Practice”</a> - Chris Coyier</p>
     </section>
 </section>
 
-<section class="text-left">
+<section id="width-and-height">
     <section>
         <h2>Width y height</h2>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;"><em><code>width</code></em> y <em><code>height</code></em> son las propiedades que determinan el <em>ancho</em> y <em>alto</em>, respectivamente, del area de contenido de un elemento html.</p>
+        <p><em><code>width</code></em> y <em><code>height</code></em> son las propiedades que determinan el <em>ancho</em> y <em>alto</em>, respectivamente, del area de contenido de un elemento html.</p>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;"><strong>Por defecto su valor es <code>auto</code></strong>, es decir que se asignaran automaticamente dependiendo de si el elemento es inline o block.</p>
-        <ul style="text-align: left; font-size: 2rem;">
+        <p><strong>Por defecto su valor es <code>auto</code></strong>, es decir que se asignaran automaticamente dependiendo de si el elemento es inline o block.</p>
+        <ul>
             <li>Si es <code>inline</code>, el <code>width</code> será tan largo como el contenido.</li>
             <li>Si es <code>block</code>, ocupará el 100% de su contenedor.</li>
         </ul>
 
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 4rem auto 0; width: 80%;">
-            <h4 style="background: hsla(200, 70%, 60%, .3); text-align:left; text-transform: none;">Lorem ipsum dolor sit</h4>
-            <p style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3);" >consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <a href="#" style="background: hsla(100, 70%, 60%, .3); color: blue; text-decoration: underline;" >libero iure expedita</a> minima labore magnam.</p>
+        <div style="border: 2px dotted hsla(0,0%,60%,.8); margin: 3rem auto 0; width: 80%;">
+            <h4 class="ta-l u-highlighted" style="text-transform: none;">Lorem ipsum dolor sit</h4>
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <a href="#" class="u-highlighted" style="color: blue; text-decoration: underline;" >libero iure expedita</a> minima labore magnam.</p>
         </div>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">El <code>height</code> por su parte, dependerá del alto del contenido, por lo que, si se trata de texto <strong>estará ligado al <code>line-height</code></strong> del mismo.</p>
+        <p>El <code>height</code> por su parte, dependerá del alto del contenido, por lo que, si se trata de texto <strong>estará ligado al <code>line-height</code></strong> del mismo.</p>
 
-        <div style="margin: 4rem auto 0; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); font-size: .7em; margin: 0; line-height: 30px;">Lorem ipsum dolor sit amet,consectetur adipisicing elit.</p>
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet,consectetur adipisicing elit.</p>
         </div>
 
-        <div style="margin: 4rem auto 0; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); font-size: .7em; margin: 0; line-height: 30px;">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
         </div>
     </section>
-                </section>
+</section>
 
-<section class="text-left">
+<section>
     <section>
         <h2>Display</h2>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">La propiedad <em><code>display</code></em> es la encargada de controlar si un elemento se comportará como un elemento <code>block</code> o uno <code>inline</code> (entre otras opciones).</p>
+        <p>La propiedad <em><code>display</code></em> es la encargada de controlar si un elemento se comportará como un elemento <code>block</code> o uno <code>inline</code> (entre otras opciones).</p>
     </section>
 
     <section>
         <h3>Display: block</h3>
-        <p style="text-align: left; font-size: 2rem">Los elementos <em><code>block</code></em> ocupan el 100% de su contenedor desplazando al siguiente elemento a una nueva línea.</p>
-        <p style="text-align: left; font-size: 2rem">Aplican las propiedades del box-model de manera normal.</p>
+        <p>Los elementos <em><code>block</code></em> ocupan el 100% de su contenedor desplazando al siguiente elemento a una nueva línea.</p>
+        <p>Aplican las propiedades del box-model de manera normal.</p>
     </section>
 
-    <section>
+    <section class="fz-s">
         <h3>Display: inline</h3>
-        <p style="text-align: left; font-size: 2rem">Los elementos <em><code>inline</code></em> mantienen el flow normal de texto.</p>
-        <p style="text-align: left; font-size: 2rem">Tienen algunas particularidades a la hora de interpretar el box-model.</p>
-        <ul style="text-align: left; font-size: 2rem">
+        <p>Los elementos <em><code>inline</code></em> mantienen el flow normal de texto.</p>
+        <p>Tienen algunas particularidades a la hora de interpretar el box-model.</p>
+
+        <ul>
             <li>Ignoran el <code>width</code> y el <code>height</code></li>
             <li>Si se le aplican <code>paddings</code> verticales no afectaran la posición de los elementos que les rodean.</li>
             <li>El background no cubrirá la altura total del alto de línea, sino que se ajustará al contenido.</li>
         </ul>
 
-        <div style="margin: 4rem auto 0; width: 80%;">
-            <p class="box-model__inline" style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3);">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong style="background: hsla(100, 70%, 60%, .3);">libero iure expedita</strong> minima labore magnam.</p>
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong class="u-highlighted">libero iure expedita</strong> minima labore magnam.</p>
         </div>
     </section>
 
     <section>
         <h3>Display: inline-block</h3>
-        <p style="text-align: left; font-size: 2rem">El valor <em><code>inline-block</code></em> es una combinación de los dos anteriores.</p>
-        <p style="text-align: left; font-size: 2rem">Los elementos <code>inline-block</code> mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></p>
+        <p>El valor <em><code>inline-block</code></em> es una combinación de los dos anteriores.</p>
+        <p>Los elementos <code>inline-block</code> mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></p>
 
-        <div style="margin: 4rem auto 0; width: 80%;">
-            <p class="box-model__inline" style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3); display: inline-block;">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong style="background: hsla(100, 70%, 60%, .3);" >libero iure expedita</strong> minima labore magnam.</p>
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong class="u-highlighted">libero iure expedita</strong> minima labore magnam.</p>
         </div>
     </section>
 
     <section>
         <h3>Display: none</h3>
-        <p style="text-align: left; font-size: 2rem;">El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
-        <p style="text-align: left; font-size: 2rem;">Un lector de voz ignorará nuestro contenido con <code>display: none</code>, lo cual tenemos que tener en cuenta si no queremos afectar la accesibilidad a la hora de ocultar algo.</p>
+        <p>El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
+        <p>Un lector de voz ignorará nuestro contenido con <code>display: none</code>, lo cual tenemos que tener en cuenta si no queremos afectar la accesibilidad a la hora de ocultar algo.</p>
     </section>
 </section>
 
-<section class="text-left">
+<section>
     <section>
         <h2>Visibilty y opacity</h2>
     </section>
 
     <section>
         <h3>Visibility</h3>
-        <p style="text-align: left; font-size: 1.75rem;">La propiedad <em><code>visibility</code></em> nos permite hacer invisible un objeto pero que este <strong>siga ocupando su lugar en el flow del documento</strong>, por lo que el resto de los elementos seguirán comportándose como si estuviera allí.</p>
+        <p>La propiedad <em><code>visibility</code></em> nos permite hacer invisible un objeto pero que este <strong>siga ocupando su lugar en el flow del documento</strong>, por lo que el resto de los elementos seguirán comportándose como si estuviera allí.</p>
         <hr>
-        <p style="text-align: left; font-size: 1.75rem;">Los posibles valores para <code>visibiliy</code> son:<br>
+        <p>Los posibles valores para <code>visibiliy</code> son:<br>
         <code>visible</code> | <code>hidden</code> | <code>collapse</code></p>
     </section>
 
-    <section>
+    <section class="fz-s">
         <h3>Opacity</h3>
-        <p style="text-align: left; font-size: 1.75rem;">Podemos controlar la opacidad de un elemento con la propiedad <em><code>opacity</code></em>, cuyo valor va de 0 (transparente) a 1 (opaco).</p>
-        <p style="text-align: left; font-size: 1.75rem;">Hay que tener en cuenta que los elementos contenidos por el elemento al que apliquemos opacity también se verán afectados y su opacidad máxima siempre será la del elemento padre.</p>
+        <p>Podemos controlar la opacidad de un elemento con la propiedad <em><code>opacity</code></em>, cuyo valor va de 0 (transparente) a 1 (opaco).</p>
+        <p>Hay que tener en cuenta que los elementos contenidos por el elemento al que apliquemos opacity también se verán afectados y su opacidad máxima siempre será la del elemento padre.</p>
         <hr>
-        <pre><code data-trim contenteditable>&#060;p&#062;El parrafo tiene una opacidad del 50% por eso, aunque el strong tenga
-el 100%, &#060;strong&#062;sigue siendo semitransparente.&#060;/strong&#062;&#060;/p&#062;</code></pre>
-        <pre><code data-trim contenteditable>p { opacity: .5; }
-strong { opacity: 1; }</code></pre>
-        <p style="text-align: left; font-size: 1.75rem; opacity: .5;">El parrafo tiene una opacidad del 50% por eso, aunque el strong tenga el 100%, <strong style="opacity: 1;">sigue siendo semitransparente.</strong></p>
+<pre><code data-trim data-trim contenteditable>
+&#060;p&#062;El parrafo tiene una opacidad del 50% por eso, aunque el strong
+tenga el 100%, &#060;strong&#062;sigue siendo semitransparente.&#060;/strong&#062;&#060;/p&#062;
+</code></pre>
+
+<pre><code data-trim contenteditable>
+p { opacity: .5; }
+strong { opacity: 1; }
+</code></pre>
+        <p class="fz-xs" style="opacity: .5;">El parrafo tiene una opacidad del 50% por eso, aunque el strong tenga el 100%, <strong style="opacity: 1;">sigue siendo semitransparente.</strong></p>
     </section>
 </section>
 
 
-<section class="text-left">
+<section>
     <section>
         <h2>Overflow</h2>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">Cuando forzamos las dimensiones del elemento con <em><code>width</code></em> y <em><code>height</code></em> pueden darse dos casos:</p>
-        <ul style="text-align: left; font-size: 2rem;">
+        <p>Cuando forzamos las dimensiones del elemento con <em><code>width</code></em> y <em><code>height</code></em> pueden darse dos casos:</p>
+        <ul>
             <li>Si el contenido ocupa menos que las dimensiones del elemento, el resto de espacio quedará vacio.</li>
             <li>Si el contenido no cabe dentro de las dimensiones asignadas, se saldrá del elemento. Podemos controlar exactamente de que manera con la propiedad <em><code>overflow</code></em>.</li>
         </ul>
     </section>
 
     <section>
-        <pre><code data-trim contenteditable>p { height: 220px; }</code></pre>
+        <pre><code contenteditable>p { height: 220px; }</code></pre>
         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 220px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+            <p class="u-highlighted fz-xs" style="border: 1px solid hsla(200, 70%, 60%, .6);height: 220px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
         </div>
         <hr>
-        <pre><code data-trim contenteditable>p { height: 80px; }</code></pre>
+        <pre><code contenteditable>p { height: 80px; }</code></pre>
         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
 
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 80px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+            <p class="u-highlighted fz-xs" style="border: 1px solid hsla(200, 70%, 60%, .6); height: 80px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
         </div>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">La propiedad <em><code>overflow</code></em> controla lo que sucede con el contenido cuando excede el tamaño del elemento contenedor. Sus posibles valores son:</p>
-        <ul style="text-align: left; font-size: 2rem;">
+        <p>La propiedad <em><code>overflow</code></em> controla lo que sucede con el contenido cuando excede el tamaño del elemento contenedor. Sus posibles valores son:</p>
+        <ul class="ta-l">
             <li><code>visible</code></li>
             <li><code>hidden</code></li>
             <li><code>scroll</code></li>
@@ -273,88 +287,97 @@ strong { opacity: 1; }</code></pre>
 
     <section>
         <h3>Overflow: visible</h3>
-        <pre><code data-trim contenteditable>p {
-height: 80px;
-overflow: visible;
-}</code></pre>
+<pre><code data-trim contenteditable>
+p {
+    height: 80px;
+    overflow: visible;
+}
+</code></pre>
         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 80px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+            <p class="u-highlighted fz-xs" style="border: 1px solid hsla(200, 70%, 60%, .6); height: 80px; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
         </div>
     </section>
 
     <section>
         <h3>Overflow: hidden</h3>
-        <pre><code data-trim contenteditable>p {
+<pre><code data-trim contenteditable>
+p {
     height: 80px;
     overflow: hidden;
-}</code></pre>
+}
+</code></pre>
         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 80px; overflow: hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+            <p class="u-highlighted fz-xs" style="border: 1px solid hsla(200, 70%, 60%, .6); height: 80px; overflow: hidden; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
         </div>
     </section>
 
     <section>
         <h3>Overflow: scroll</h3>
-        <pre><code data-trim contenteditable>p {
+<pre><code data-trim contenteditable>
+p {
     height: 150px;
     overflow: scroll;
-}</code></pre>
+}
+</code></pre>
         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 60%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 150px; overflow: scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsam quae quibusdam temporibus laboriosam dolorem explicabo modi, esse corrupti error sapiente nemo et odit ea natus consequuntur beatae, voluptate expedita!.</p>
+            <p class="u-highlighted fz-xs" style="border: 1px solid hsla(200, 70%, 60%, .6); height: 150px; overflow: scroll; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsam quae quibusdam temporibus laboriosam dolorem explicabo modi, esse corrupti error sapiente nemo et odit ea natus consequuntur beatae, voluptate expedita!.</p>
         </div>
     </section>
 
     <section>
         <h3>Overflow: auto</h3>
-        <pre><code data-trim contenteditable>p {
+<pre><code data-trim contenteditable>
+p {
     height: 150px;
     overflow: auto;
-}</code></pre>
+}
+</code></pre>
         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto 1em; width: 60%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 150px; overflow: auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsam quae quibusdam temporibus laboriosam dolorem explicabo modi, esse corrupti error sapiente nemo et odit ea natus consequuntur beatae, voluptate expedita!.</p>
+            <p class="u-highlighted fz-xs" style="border: 1px solid hsla(200, 70%, 60%, .6); height: 150px; overflow: auto; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsam quae quibusdam temporibus laboriosam dolorem explicabo modi, esse corrupti error sapiente nemo et odit ea natus consequuntur beatae, voluptate expedita!.</p>
         </div>
 
         <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 60%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 150px; overflow: auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum.</p>
+            <p class="u-highlighted fz-xs" style="border: 1px solid hsla(200, 70%, 60%, .6); height: 150px; overflow: auto; margin: 0;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum.</p>
         </div>
     </section>
 </section>
 
 
-<section class="text-left">
+<section id="margin-and-padding">
     <section>
         <h2>Padding y margin</h2>
     </section>
 
     <section>
         <h3>Padding</h3>
-        <p style="text-align: left; font-size: 2rem;">El <code>padding</code> es el espacio interior que separa el contenido del borde de la caja.</p>
+        <p>El <code>padding</code> es el espacio interior que separa el contenido del borde de la caja.</p>
         <hr>
-        <div class="box-model__margin" style="background-color: #ccc;">
-            <div class="box-model" style="background-color: #e74c3c; border: 1px solid #666;" >
-                <span style="background-color: #ccc;" contenteditable>contenido</span>
+        <div class="BoxModelGraphic-margin bg-grayLight bdc-gray">
+            <div class="BoxModelGraphic-padding bdc-gray bg-red">
+                <span class="BoxModelGraphic-content bg-grayLight c-grayDarker" contenteditable>contenido</span>
             </div>
         </div>
     </section>
 
     <section>
         <h3>Margin</h3>
-        <p style="text-align: left; font-size: 2rem;">El <code>margin</code> es el espacio exterior que separa el al elemento del resto de los elementos.</p>
+        <p>El <code>margin</code> es el espacio exterior que separa el al elemento del resto de los elementos.</p>
         <hr>
-        <div class="box-model__margin" style="background-color: #e74c3c;">
-            <div class="box-model" style="background-color: #aaa; border: 1px solid #666">
-                <span style="background-color: #ccc;" contenteditable>contenido</span>
+        <div class="BoxModelGraphic-margin">
+            <div class="BoxModelGraphic-padding bg-grayLighter bdc-gray">
+                <span class="BoxModelGraphic-content bg-grayLight c-grayDarker" contenteditable>contenido</span>
             </div>
         </div>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">Tanto el <code>padding</code> como el <code>margin</code> nos permiten controlar cada uno de sus lados individualmente con las siguientes propiedades:</p>
-        <ul>
-            <li style="font-size: 1.8rem;"><code>padding-top</code> | <code>padding-right</code> | <code>padding-bottom</code> | <code>padding-left</code></li>
-            <li style="font-size: 1.8rem;"><code>margin-top</code> | <code>margin-right</code> | <code>margin-bottom</code> | <code>margin-left</code></li>
+        <p>Tanto el <code>padding</code> como el <code>margin</code> nos permiten controlar cada uno de sus lados individualmente con las siguientes propiedades:</p>
+        <ul class="fz-xs">
+            <li><code>padding-top</code> | <code>padding-right</code> | <code>padding-bottom</code> | <code>padding-left</code></li>
+            <li><code>margin-top</code> | <code>margin-right</code> | <code>margin-bottom</code> | <code>margin-left</code></li>
         </ul>
-        <pre><code data-trim contenteditable>.box {
+<pre><code data-trim contenteditable>
+.box {
     padding-top: 10px;
     padding-bottom: 30px;
     padding-left: 10%;
@@ -363,14 +386,15 @@ overflow: visible;
     margin-bottom: 30px;
     margin-left: 20px;
     margin-right: 20px;
-
-}</code></pre>
+}
+</code></pre>
 </section>
 
-<section>
-    <p style="text-align: left; font-size: 1.75rem;">También pueden declararse <em>todos los lados en una sola propiedad</em> (<code>padding</code> y <code>margin</code> respectivamente) separando los valores con un espacio y siguiendo el <strong>sentido de las agujas del reloj</strong>.</p>
-    <p style="text-align: left; font-size: 1.75rem;">Si utilizamos esta abreviación, cuando el valor derecho es igual al izquierdo podemos omitir este último. Si además el valor superior e inferior también son iguales podemos omitir el inferior.</p>
-    <pre><code data-trim contenteditable>.box {
+<section class="fz-s">
+    <p>También pueden declararse <em>todos los lados en una sola propiedad</em> (<code>padding</code> y <code>margin</code> respectivamente) separando los valores con un espacio y siguiendo el <strong>sentido de las agujas del reloj</strong>.</p>
+    <p>Si utilizamos esta abreviación, cuando el valor derecho es igual al izquierdo podemos omitir este último. Si además el valor superior e inferior también son iguales podemos omitir el inferior.</p>
+<pre><code data-trim contenteditable>
+.box {
     padding-top:    10px;
     padding-right:  20px;
     padding-bottom: 10px;
@@ -384,64 +408,76 @@ overflow: visible;
 
     /* e igual a: */
     padding: 10px 20px;
-}</code></pre>
+}
+</code></pre>
     </section>
 </section>
 
-<section class="text-left">
+<section id="borders">
     <section>
         <h2>Borders</h2>
     </section>
 
-    <section>
-        <p style="text-align: left; font-size: 1.75rem;"><code>border</code> es la propiedad usada para controlar el borde que delimita un elemento y requiere tres valores: <code>width</code>, <code>style</code> y <code>color</code> separados por un espacio.</p>
-        <pre style="float:left; width: 70%;"><code data-trim contenteditable>.box {
+    <section class="fz-xs">
+        <p><code>border</code> es la propiedad usada para controlar el borde que delimita un elemento y requiere tres valores: <code>width</code>, <code>style</code> y <code>color</code> separados por un espacio.</p>
+<pre style="float:left; width: 70%;"><code data-trim contenteditable>
+.box {
     border: 1px solid red;
-}</code></pre>
+}
+</code></pre>
         <div style="border: 1px solid red; float:right; margin: 20px 10% 0 0; width: 80px; height: 80px;"></div>
-        <p style="clear: both; text-align: left; font-size: 1.75rem;">Si queremos afectar estos valores de manera individual utilizaremos las propiedades: <em><code>border-width</code></em>, <em><code>border-style</code></em> y <em><code>border-color</code></em>, que pueden a su vez contener 4 valores, uno por lado, al igual que el padding o el margin.</p>
-        <pre style="float:left; width: 70%;"><code data-trim contenteditable>.box {
+        <p style="clear: both;">Si queremos afectar estos valores de manera individual utilizaremos las propiedades: <em><code>border-width</code></em>, <em><code>border-style</code></em> y <em><code>border-color</code></em>, que pueden a su vez contener 4 valores, uno por lado, al igual que el padding o el margin.</p>
+<pre style="float:left; width: 70%;"><code data-trim contenteditable>
+.box {
     border-width: 1px 8px 6px 4px;
     border-style: solid;
     border-color: red blue;
-}</code></pre>
+}
+</code></pre>
         <div style="border-width: 1px 8px 6px 4px; border-style: solid; border-color: red blue; float:right; margin: 40px 10% 0 0; width: 80px; height: 80px;"></div>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 2rem;">Tambien podemos combinar las propiedades anteriores con los diferentes valores <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> para cambios muy precisos.</p>
-        <pre><code data-trim contenteditable>.box {
+        <p>Tambien podemos combinar las propiedades anteriores con los diferentes valores <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> para cambios muy precisos.</p>
+<pre><code data-trim contenteditable>
+.box {
     border-right-style: solid;
     border-top-width: 4px;
     border-bottom-color: red;
-}</code></pre>
+}
+</code></pre>
     </section>
 
     <section>
-        <p style="text-align: left; font-size: 1.75rem;">Los posibles estilos de borde que nos ofrece CSS para la propiedad <em><code>border-style</code></em> son:</p>
-        <p style="font-size: .7em;">
+        <p>Los posibles estilos de borde que nos ofrece CSS para la propiedad <em><code>border-style</code></em> son:</p>
+        <p class="fz-xs">
             <code>none</code> | <code>hidden</code> | <code>dotted</code> | <code>dashed</code> | <code>solid</code> | <code>double</code> | <code>groove</code> | <code>ridge</code> | <code>inset</code> | <code>outset</code>
         </p>
         <hr>
-        <div class="borders-example">
-            <code class="border-solid">2px <br> solid</code>
-            <code class="border-double">6px <br> double</code>
-            <code class="border-dashed">8px <br> dashed</code>
-            <code class="border-dotted">4px <br> dotted</code>
+        <div class="BordersExample">
+            <code class="BordersExample--solid">2px <br> solid</code>
+            <code class="BordersExample--double">6px <br> double</code>
+            <code class="BordersExample--dashed">8px <br> dashed</code>
+            <code class="BordersExample--dotted">4px <br> dotted</code>
         </div>
     </section>
 
-    <section>
+    <section class="fz-s">
         <h3>border-radius</h3>
-        <p style="text-align: left; font-size: 2rem;">La propiedad <em><code>border-radius</code></em> nos permite redondear las esquinas de nuestras cajas.</p>
-        <p style="text-align: left; font-size: 2rem;">En su forma más simple funciona similar al propiedad a otras propiedades, aceptando 4 valores separados por espacio que indicarán el <strong>radio de la circunferencia</strong> que aplicaremos a las esquinas, empezando el primer valor en la esquina superior izquierda y desplazandose en sentido horario.</p>
+        <p>La propiedad <em><code>border-radius</code></em> nos permite redondear las esquinas de nuestras cajas.</p>
+        <p>En su forma más simple funciona similar al propiedad a otras propiedades, aceptando 4 valores separados por espacio que indicarán el <strong>radio de la circunferencia</strong> que aplicaremos a las esquinas, empezando el primer valor en la esquina superior izquierda y desplazandose en sentido horario.</p>
         <pre><code contenteditable>.box { border-radius: 10px 40px 40px 10px; }</code></pre>
-        <div style="background: #eaeaed; border: 4px solid #666; border-radius: 10px 40px 40px 10px; margin: 1em auto 0; width: 100px; height: 100px;">
+        <div class="bg-grayLighter bdc-red" style="border: 6px solid; border-radius: 10px 40px 40px 10px; margin: 1em auto 0; width: 100px; height: 100px;">
         </div>
     </section>
 </section>
 
 <section>
+    <h2>Ejercicio</h2>
+    <a href="./files/exercises/buttons.zip">Descargar</a>
+</section>
+
+<section class="fz-s">
     <h3>Links relacionados</h3>
     <ul>
         <li style="margin-bottom: .8em;">
@@ -470,12 +506,11 @@ overflow: visible;
     </ul>
 </section>
 
-
         </div>
     </div>
 
     <script src="js/reveal/head.min.js"></script>
-<script src="js/reveal/reveal.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
 
 <script>
     // Full list of configuration options available here:
@@ -499,6 +534,5 @@ overflow: visible;
         ]
     });
 </script>
-
 </body>
 </html>

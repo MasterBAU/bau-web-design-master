@@ -1,0 +1,100 @@
+.reveal {
+  .slides {
+
+  // BASE STYLES
+  // --------------------------------------------------------------------------
+    p, ul, ol{
+        text-align: left;
+      }
+    }
+
+    pre {
+      font-size: 1.25rem;
+
+      code {
+        padding: .75rem 1rem;
+      }
+    }
+
+    a:not(img) {
+      text-decoration: underline;
+    }
+
+  // HELPERS
+  // --------------------------------------------------------------------------
+  // FONT-SIZE
+  // --------------------------------------------------------
+    .fz-s {
+      & { font-size: 2rem !important; }
+      p, ul, ol { font-size: 2rem; }
+    }
+
+    .fz-xs {
+      & { font-size: 1.5rem !important; }
+      p, ul, ol { font-size: 1.5rem; }
+    }
+
+    .fz-xxs {
+      & { font-size: 1.25rem !important; }
+      p, ul, ol { font-size: 1.25rem; }
+    }
+
+  // TEXT-ALIGN HELPERS
+  // --------------------------------------------------------
+    .ta-c {
+      &, p, ul, ol {
+        text-align: center !important;
+      }
+    }
+
+    .ta-l {
+      &, p, ul, ol {
+        text-align: left !important;
+      }
+    }
+
+  // COLOR HELPERS
+  // --------------------------------------------------------
+    .c {
+      &-red { color: $c-red !important; }
+      &-orange { color: $c-orange !important; }
+      &-yellow { color: $c-yellow !important; }
+      &-green { color: $c-green !important; }
+      &-cyan { color: $c-cyan !important; }
+      &-blue { color: $c-blue !important; }
+      &-purple { color: $c-purple !important; }
+      &-gray { color: $c-gray !important; }
+      &-grayDarker { color: $c-grayDarker !important; }
+    }
+
+    .bg {
+      &-red { background-color: $c-red !important; }
+      &-orange { background-color: $c-orange !important; }
+      &-yellow { background-color: $c-yellow !important; }
+      &-green { background-color: $c-green !important; }
+      &-cyan { background-color: $c-cyan !important; }
+      &-blue { background-color: $c-blue !important; }
+      &-purple { background-color: $c-purple !important; }
+      &-grayLighter { background-color: $c-grayLighter !important; }
+      &-grayLight { background-color: $c-grayLight !important; }
+      &-gray { background-color: $c-gray !important; }
+      &-grayDark { background-color: $c-grayDark !important; }
+      &-grayDarker { background-color: $c-grayDarker !important; }
+    }
+
+    .bdc {
+      &-gray { border-color: $c-gray !important; }
+      &-grayDark { border-color: $c-grayDark !important; }
+      &-red { border-color: $c-red !important; }
+    }
+
+  // CUSTOM CLASSES
+  // --------------------------------------------------------
+    .u-highlighted {
+      background-color: rgba($c-blue, .4);
+      
+      .u-highlighted {
+        background-color: rgba($c-blue, .5);
+      }
+    }
+}
