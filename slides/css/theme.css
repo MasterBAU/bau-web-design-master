@@ -344,10 +344,10 @@ body {
   max-width: 1180px;
   margin: 0 auto; }
   .reveal .class-list .index-block {
-    flex-basis: 20rem;
+    flex-basis: 25%;
     flex-grow: 1;
     flex-shrink: 0;
-    max-width: 23rem;
+    max-width: 19rem;
     padding: 1rem 1.5rem; }
   .reveal .class-list h4 {
     margin-bottom: .25rem;

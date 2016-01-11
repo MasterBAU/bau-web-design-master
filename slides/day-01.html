@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Evolución e Historia de Internet | Máster en Diseño Web | Módulo III Programación Frontend</title>
+
+    <meta name="description" content="Máster en Diseño Web | Módulo III">
+    <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="topheader">
+    <a href="./index.html"><img src="./img/logo-bau-es.svg"></a>
+    <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
+</div>
+
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Módulo III <br />
+                    <span class="marker">Programación Frontend</span>
+                </h3>
+                <h3><strong>Evolución e Historia de Internet</strong></h3>
+            </section>
+
+            
+
+<section>
+    <h2>¿Cómo empezó todo?</h2>
+
+    <img src="./img/slides/internet-history/sputnik.png" alt="">
+    <p>
+        Lanzamiento del Sputnik.
+    </p>
+
+    <small>1957</small>
+</section>
+
+<section>
+    <h2>Inferioridad tecnológica</h2>
+    <p>
+        En plena guerra fria, los EEUU se apresuran a crear la agencia de defensa DARPA y años más tarde la agencia aero-espacial NASA.
+    </p>
+
+    <p>
+        Uno de los primeros encargos de agencia Darpa fue diseñar una red fiable que resistiese un ataque nuclear.
+    </p>
+</section>
+
+<section>
+    <img src="./img/slides/internet-history/darpa.png" alt="">
+    <p>
+        La necesidad de compartir datos entre ordenadores de diferentes arquitecturas y sistemas operativos hace que se investiguen formas de crear una <br /><span class="marker">red para transmitir información.</span>
+    </p>
+</section>
+
+<section>
+    <section>
+        <h2>Topologías de red</h2>
+        <h3>Red Centralizada</h3>
+        <p>
+            La única infraestructura existente con capacidad de comunicar cualquier parte de EEUU era la red telefónica. Su diseño basado en un nodo central la convertía en una red muy vulnerable.
+        </p>
+        <img src="./img/slides/internet-history/red-centralizada.png" alt="">
+        <small>La destrucción del nodo central inutiliza la red</small>
+    </section>
+
+    <section>
+        <h2>Topologías de red</h2>
+        <h3>Red descentralizada</h3>
+        <p>
+            Aporta una capa más de tolerancia a fallos de nodos centrales pero sigue siendo vulnerable al poder quedar partes de la red inaccesibles.
+        </p>
+        <img src="./img/slides/internet-history/red-descentralizada.png" alt="">
+        <small>La destrucción de un nodo inutiliza sólo parte de la red</small>
+    </section>
+
+    <section>
+        <h2>Topologías de red</h2>
+        <h3>Red distribuida</h3>
+        <p>
+            Ningún nodo depende de otro para poder hacer llegar su mensaje. Un mismo nodo puede utilizar la ruta que más rápida resulte para la transmisión de la información.
+        </p>
+        <img src="./img/slides/internet-history/red-distribuida.png" alt="">
+        <small>La red distribuia asienta las bases de Internet</small>
+    </section>
+</section>
+
+<section>
+    <h2>Red de conmutación de paquetes</h2>
+
+    <p>
+        Para poder transmitir datos por una red se crea un sistema que divide la información en <span class="marker">paquetes</span> y se vuelve a ensamblar en destino.
+    </p>
+</section>
+
+<section data-background="#007777">
+    <h2>ARPANET</h2>
+    <p>
+        Se crea ARPANET. La primera red telemática basada en conmutación de paquetes tolerante a fallos.
+    </p>
+    <img src="./img/slides/internet-history/arpanet.png" alt="">
+    <small>Red ARPANET en el año 1969</small>
+</section>
+
+<section>
+    <p>En 1965 se conectan por primera vez el ordenador TX 2 de Massachusetts con el Q32 computer de California mediante una red conmutada de baja velocidad *.</p>
+
+    <img src="./img/slides/internet-history/computer-tx2.png" alt="TX2 computer">
+
+    <small>* El ancho de banda de Arpanet era de 56Kbps</small>
+</section>
+
+<section>
+    <h2>El protocolo TCP/IP</h2>
+    <p>
+        Se estandarizan protocolos de transmisión de datos que permiten realizar conexiones fiables.
+        <ul>
+            <li>TCP - Garantiza que todos los paquetes se han enviado y recibido correctamente</li>
+            <li>IP - Proporciona el direccionamiento entre dos nodos.</li>
+        </ul>
+    </p>
+    <small>Transmission Control Protocol / Internet Protocol</small>
+</section>
+
+<section>
+    <section>
+        <h2>World Wide Web Consortium</h2>
+        <p>La <span class="marker">W3C</span> es una comunidad internacional con el principal objetivo de ser un medio de único de acceso a la información independientemente del hardware, software, infraestructura de red, idioma, cultura, localización geográfica, o habilidad física o mental.</p>
+    </section>
+
+    <section>
+        <h2>Estándares Web</h2>
+        <p>La <span class="marker">W3C</span> define mediante consenso una serie de especificaciones técnicas que determinan las tecnologías que se usarán para navegar por la web.</p>
+    </section>
+
+    <section>
+        <h2>Tecnologías W3C</h2>
+        <ul>
+            <li>Diseño Web y aplicaciones</li>
+            <li>Arquitectura Web a nivel de protocolos (URIs y HTTP)</li>
+            <li>Web semántica (Datos vs Documentos)</li>
+            <li>XML</li>
+            <li>Servicios Web</li>
+            <li>Web de dispositivos</li>
+            <li>Navegadores y herramientas de desarrollo</li>
+        </ul>
+        <br />
+        <br />
+        <small>Más información en la web de la <a href="http://www.w3.org/standards/" target="_blank">W3C</a></small>
+    </section>
+
+    <section>
+        <h2>The Web Standards Project WaSP</h2>
+        <p>Grupo de independiente de profesionales web dedicados a promover el uso de los estándares web. Creadores del <a href="http://acid2.acidtests.org/#top" target="_blank">ACID test</a></p>
+        <img src="./img/slides/internet-history/acid.png" alt="">
+        <small>Con <a href="http://alistapart.com/author/zeldman" target="_blank">Jeffrey Zeldman</a> de Alist apart como componente del grupo.</small>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1971</span> - En Cambridge, Massachussets, se envía el primer e-mail. Arpanet dispone de 23 ordenadores en aquel momento.</p>
+
+        <img src="./img/slides/internet-history/crono-email.png" alt="">
+
+        <small>En primer plano vemos el ordenador BBN-TENEXA (BBNA) (64k), que fue el receptor del primer correo electrónico. Al fondo, el ordenador BBN-TENEXB (BBNB) (48k), que fue el que envió dicho correo electrónico. A la izquierda, vemos una terminal Teletype KSR-33 donde se imprimió el e-ma.<br />
+        10 Años más tarde <a href="http://www.angeldust.org.uk/Amstrad.htm" target="_blank">estos ordenadores</a> tendrán una capacidad similar</small>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1971</span> - Se transmite el primer virus por la red (Creeper).</p>
+        <p>A partir de este virus se creó para eliminarlo el programa Reaper, que tenía la capacidad de distribuirse a los equipos infectados tan rápido como el virus.</p>
+        <img src="./img/slides/internet-history/crono-creeper.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1973</span> - Inglaterra y Noruega se unen a Arpanet con un ordenador cada uno.</p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1974</span> - Se utiliza por primera vez la palabra <span class="marker">Internet</span></p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1976</span> - Se desarrollan los cables coaxiales Ethernet que mejoran la velocidad de las conexiones.</p>
+        <img src="./img/slides/internet-history/crono-ethernet.png" alt="">
+        <small>Desarrollado por Bob Metacalfe en Xerox PARC en 1973</small>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1978</span> - Nace el SPAM. Se envía el primer mensaje de e-mail no solicitado.</p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1982</span> - Nace el EMOTICONO. Scott Fahlman propone utilizar el símbolo :-) después de una broma.</p>
+        <h2>:-)</h2>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1983</span> - Se introduce el protocolo TCP/IP de forma obligatoria a todos los ordenadores que forman la red Arpanet.</p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1989</span> - Tim Berners Lee crea la primera página web basada en hipertexto donde explicaba el funcionamiento de la <span class="marker">WWW</span>. La función inicial de la <strong>WWW</strong> fue la de difundir los resultados de las investigaciones científicas del CERN.</p>
+        <p>Esta es la <a href="http://info.cern.ch/hypertext/WWW/TheProject.html" target="_blank">primera página</a> web en su URL original.</p>
+        <img src="./img/slides/internet-history/crono-firstwebserver.png" alt="">
+        <small>Imagen del primer servidor web del mundo</small>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1993</span> - Mosaic Communications Corporation crea Mosaic, el primer navegador web con interfaz gráfica.</p>
+        <img src="./img/slides/internet-history/mosaic.png" alt="">
+        <p>...y un año más tarde nace su sucesor: <a href="http://thenextweb.com/insider/2014/10/13/20-years-ago-today-modern-web-born-launch-netscape-navigator/" target="_blank">Netscape Navigator</a></p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1995</span> - Se lanza YAHOO, el primer indexador de la WWW. <br />
+            Su acrónimo viene de <span class="marker">Y</span>et <span class="marker">A</span>nother <span class="marker">H</span>ierarchical <span class="marker">O</span>fficious <span class="marker">O</span>racle</p>
+        <img src="./img/slides/internet-history/crono-yahoo.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1995</span> - Nace Amazon, el primer e-commerce de Internet con un catálogo de 1 millón de libros.</p>
+        <img src="./img/slides/internet-history/crono-amazon.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1995</span> - Microsoft lanza Windows 95. La primera versión no incluía de serie el protocolo TCP/IP instalado ni Internet Explorer.</p>
+        <p>Un año más tarde lanzan Windows 95 SP2</p>
+        <img src="./img/slides/internet-history/crono-win95.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1997</span> - Apple publica su web. En una época en la que se encontraba cerca de la bancarrota y Steve Jobs se reincorpora a la compañía.</p>
+        <img src="./img/slides/internet-history/crono-apple.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1998</span> - Sergey Brin y Larry Page lanzan Google. </p>
+        <p>El diseño es así de sencillo porque ninguno de los dos sabía HTML</p>
+        <img src="./img/slides/internet-history/crono-google.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">1999</span> - Internet alcanza la cifra de 1 Millón de usuarios.</p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">2000</span> - Internet alcanza la cifra de <strong>50 Millones de usuarios</strong>.</p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">2001</span> - Se crea Wikipedia. La primera enciclopedia colectiva del mundo.</p>
+        <img src="./img/slides/internet-history/crono-wikipedia.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">2003</span> - Nacen Wordpress, LinkedIn, MySpace, Skype... <br />
+            Se empieza a hablar de la web 2.0.</p>
+        <img src="./img/slides/internet-history/crono-wordpress.png" alt="">
+        <small>La Web 2.0 nos permite realizar trabajo colaborativo entre varios usuarios o colaboradores.</small>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">2004</span> - Google lanza GMail. La primera aplicación web de correo que permitía almacenar 1GB.</p>
+        <img src="./img/slides/internet-history/crono-gmail.png" alt="">
+        <p>Internet alcanza los 1.000 Millones de usuarios.</p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">2004</span> - En este mismo año Facebook nace como un directorio online de estudiantes de las universidades americanas.</p>
+        <img src="./img/slides/internet-history/crono-facebook.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">2005</span> - Youtube. La primera versión estaba destinada a buscar pareja al estilo <br />Hot or Not, similar a lo que hizo Zuckenberg inicialmente con The Facebook.</p>
+        <img src="./img/slides/internet-history/crono-youtube.png" alt="">
+        <p>Internet alcanza los 1.000 Millones de usuarios.</p>
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">2006</span> - Twitter. Su primera versión tampoco tenía mucho que ver con la actual. Su claim era "What are you doing now?".</p>
+        <img src="./img/slides/internet-history/crono-twitter.png" alt="">
+    </section>
+
+    <section>
+        <h2>Cronología</h2>
+        <p><span class="marker">2008</span> - Google crea Chrome. Aporta la novedad de navegar en modo incógino, permite extensiones y rápidamente se adopta como el navegador por defecto por los desarrolladores por su velocidad ejecutando javascript.</p>
+        <img src="./img/slides/internet-history/crono-chrome.png" alt="">
+        <p>Internet alcanza los 1.000 Millones de usuarios.</p>
+    </section>
+
+    <section data-background="#007777">
+        <h1 style="line-height:.9em;">2014</h1>
+        <h3 style="line-height:.7em;">Internet alcanza los</h3>
+        <h2 style="line-height:.7em;"><span class="marker">2.975 Millones</span></h2><h3>de usuarios.</h3>
+        <img src="./img/slides/internet-history/crono-internetusers.png" alt=""><br />
+        <a href="http://www.internetlivestats.com/internet-users/" target="_blank">Internet live stats</a>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Navegadores Web y motores de renderizado</h2>
+    </section>
+    <section>
+        <h2>Trident</h2>
+        <img src="./img/slides/internet-history/IE_logo.png" />
+        <p>Este <span class="marker">render engine</span> de Microsoft se usó en todos los IE hasta la versión 9. <br />Las versiones 10 y superiores se basan en Lynx.</p>
+        <p>No soportaba estándares web. La representación del mismo código en el resto de motores era inconsistente.</p>
+    </section>
+
+    <section>
+        <h2>Gecko</h2>
+        <img src="./img/slides/internet-history/gecko_logo.png" />
+        <p>Creado para Netscape Navigator 1.0 en diciembre de 1994. Mejorado por Mozilla Foundation y ya con el nombre de Gecko, pasó a formar parte de <a href="http://website-archive.mozilla.org/www.mozilla.org/firefox_releasenotes/en-US/firefox/releases/0.7.html" target="_blank">Firebird</a> y posteriormente de Firefox y el cliente de correo Thunderbird. Multiplataforma y web standards compliant.</p>
+    </section>
+
+    <section>
+        <h2>Webkit</h2>
+        <img src="./img/slides/internet-history/webkit_logo.png" />
+        <p>Basado en Konkeror de KDE Linux. Modificado por Apple e introducido en Safari en 2003. A partir de entonces deja de ser Software Libre.
+        </p>
+        <small>No se libera completamente hasta el 2010 con el lanzamiento de Webkit2</small>
+    </section>
+
+    <section>
+        <h2>Edge</h2>
+        <img src="./img/slides/internet-history/edge_logo.png" width="200" />
+        <p>El sucesor de Trident. Desarrollado con el <i>code name</i> Spartan. Mejor rendimiento, mayor soporte de estándares web y disponible con Windows 10.</p>
+        <small>Conectividad con OneDrive e integración con Cortana.</small>
+    </section>
+
+    <section>
+        <h2>Blink</h2>
+        <img src="./img/slides/internet-history/blink_logo.png" />
+        <p>Desarrollado por Google en 2013 como parte del proyecto open source Chromium. Pasa a formar parte de Chrome v28 y Opera v15. Una de sus características es que mejora el multi-proceso y pretende acabar con los <em>vendor prefixes</em></p>
+        <a href="http://www.chromium.org/blink" target="_blank">Página oficial</a><br><br>
+        <small>Su nombre es un guiño a la etiqueta blink creada por Netscape.</small>
+    </section>
+</section>
+
+<section>
+    <h3>Enlaces de interés</h3>
+    <ul>
+        <li>Libro: <a href="http://www.amazon.com/Where-Wizards-Stay-Up-Late/dp/0684812010" target="_blank">Where Wizards Stay Up Late: The Origins of the Internet</a></li>
+        <li>Libro: <a href="http://biblioweb.sindominio.net/telematica/command_es/command_es.pdf" target="_blank">En el principio. . . fue la línea de comandos</a></li>
+        <li>Terminología: <a href="http://chsi.harvard.edu/markone/language.html" target="_blank">Many terms commonly used in computer programming.</a></li>
+        <li>Enlaces: <a href="http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html" target="_blank">Simulador del primer navegador web en modo texto</a></li>
+        <li>Enlace: <a href="http://www.w3c.es/" target="_blank">W3C</a></li>
+        <li>Enlace: <a href="http://alistapart.com/article/alphabet" target="_blank">A Standardista’s Alphabet</a></li>
+    </ul>
+</section>
+
+
+
+
+
+<section>
+  <section>
+    <img src="./img/slides/level-test/completely-different.gif" alt="" style="height: 400px;">
+  </section>
+
+  <section>
+    <h2>¡Exámen sorpresa! &#94;_&#94;</h2>
+    <div class="fragment">
+      <img src="./img/slides/level-test/panic.gif" alt="" style="height: 350px;">
+      <p>Descargar: <a href="files/level-test/assets.zip">assets.zip</a></p>
+      <a  href="files/level-test/y0da.html"
+          style="
+            background: transparent;
+            display: block;
+            position: absolute;
+            top: 0;
+            margin-left: -10px;
+            left: 50%;
+            width: 20px;
+            height: 20px;
+            z-index: 999999;"
+      ></a>
+    </div>
+  </section>
+</section>
+
+
+
+
+        </div>
+    </div>
+
+    <script src="js/reveal/head.min.js"></script>
+<script src="js/reveal/reveal.min.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'js/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+</script>
+
+</body>
+</html>
