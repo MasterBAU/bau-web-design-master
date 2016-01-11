@@ -1,12 +1,12 @@
 {% assign img_path = './img/slides/git' %}
 
 <section>
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <img src="{{ img_path }}/github-octocat.png" alt="" width="150">
     <h2>Inicializando repositorios remotos</h2>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <img src="{{ img_path }}/github-octocat.png" alt="" width="150">
     <h3>Github</h3>
     <img src="{{ img_path }}/github-create-repo.png" width="600" alt="">
@@ -14,7 +14,7 @@
     <a href="http://github.com" target="_blank">crea una cuenta en Github</a>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>Git <span class="marker">clone</span> mediante HTTPS</h3>
     <p>Creamos una copia de un repositorio remoto existente</p>
     <pre><code data-trim contenteditable>
@@ -22,7 +22,7 @@
     </code></pre>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>URL's Git sobre HTTPS</h3>
     <ul>
       <li>Facilita el acceso a través de firewalls</li>
@@ -31,7 +31,7 @@
     </ul>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>HTTPS + credential-osxkeychain</h3>
     <p>Almacena user/pass en texto plano</p>
     <pre><code data-trim contenteditable>
@@ -41,7 +41,7 @@
     <small>Más info en <a href="https://help.github.com/articles/caching-your-github-password-in-git/">Git Help</a></small>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>URL's Git sobre Secure Shell (SSH)</h3>
     <ul>
       <li>Basado en clave pública/privada</li>
@@ -52,7 +52,7 @@
     <small>En la sección <span class="marker">/Settings/SSH Keys</span> de tu cuenta de Github</small>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>Generando Claves SSH</h3>
     <pre><code data-trim contenteditable>
       $ ssh-keygen -t rsa -b 4096 -C "dave74@gmail.com"
@@ -60,7 +60,7 @@
     <small>Puedes añadir una <span class="marker">clave de seguridad</span> o dejarla en blanco.</small>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>Añadir clave SSH a <span class="marker">ssh-agent</span></h3>
     <pre><code data-trim contenteditable>
       $ ssh-add ~/.ssh/id_rsa
@@ -68,7 +68,7 @@
     <small>Puedes añadir una <span class="marker">clave de seguridad</span> o dejarla en blanco.</small>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>Copiar clave SSH al <span class="marker">portapapeles</span></h3>
     <pre><code data-trim contenteditable>
       $ pbcopy < ~/.ssh/id_rsa.pub

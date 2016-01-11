@@ -53,12 +53,12 @@
             
 
 <section>
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <img src="./img/slides/git/github-octocat.png" alt="" width="150">
     <h2>Inicializando repositorios remotos</h2>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <img src="./img/slides/git/github-octocat.png" alt="" width="150">
     <h3>Github</h3>
     <img src="./img/slides/git/github-create-repo.png" width="600" alt="">
@@ -66,7 +66,7 @@
     <a href="http://github.com" target="_blank">crea una cuenta en Github</a>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>Git <span class="marker">clone</span> mediante HTTPS</h3>
     <p>Creamos una copia de un repositorio remoto existente</p>
     <pre><code data-trim contenteditable>
@@ -74,7 +74,7 @@
     </code></pre>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>URL's Git sobre HTTPS</h3>
     <ul>
       <li>Facilita el acceso a través de firewalls</li>
@@ -83,7 +83,7 @@
     </ul>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>HTTPS + credential-osxkeychain</h3>
     <p>Almacena user/pass en texto plano</p>
     <pre><code data-trim contenteditable>
@@ -93,7 +93,7 @@
     <small>Más info en <a href="https://help.github.com/articles/caching-your-github-password-in-git/">Git Help</a></small>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>URL's Git sobre Secure Shell (SSH)</h3>
     <ul>
       <li>Basado en clave pública/privada</li>
@@ -104,7 +104,7 @@
     <small>En la sección <span class="marker">/Settings/SSH Keys</span> de tu cuenta de Github</small>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>Generando Claves SSH</h3>
     <pre><code data-trim contenteditable>
       $ ssh-keygen -t rsa -b 4096 -C "dave74@gmail.com"
@@ -112,7 +112,7 @@
     <small>Puedes añadir una <span class="marker">clave de seguridad</span> o dejarla en blanco.</small>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>Añadir clave SSH a <span class="marker">ssh-agent</span></h3>
     <pre><code data-trim contenteditable>
       $ ssh-add ~/.ssh/id_rsa
@@ -120,7 +120,7 @@
     <small>Puedes añadir una <span class="marker">clave de seguridad</span> o dejarla en blanco.</small>
   </section>
 
-  <section data-background="#20325F">
+  <section data-background="#66B9F2">
     <h3>Copiar clave SSH al <span class="marker">portapapeles</span></h3>
     <pre><code data-trim contenteditable>
       $ pbcopy < ~/.ssh/id_rsa.pub
@@ -195,6 +195,81 @@
   </section>
 </section>
 
+
+
+
+<section>
+  <section data-background="#66B9F2">
+    <img src="./img/slides/git/git-fork.png" alt="">
+    <h3>Pull Request</h3>
+    <img src="./img/slides/git/github-octocat.png" width="100" alt="">
+    <p>Github.com</p>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>Objetivo</h3>
+    <p>Aportar una mejora al software existente</p>
+    <p>Contribuir en un proyecto <span class="marker">Open Source</span></p>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>PR como colaborador</h3>
+    <p>Sólo disponible si tenemos permisos de escritura</p>
+    <ul>
+      <li>Clonamos el repo</li>
+      <li>Creamos rama <span class="marker">feature</span></li>
+      <li>Añadimos cambios a esa rama</li>
+      <li>La publicamos a <span class="marker">origin</span></li>
+      <li>Solicitamos la <span class="marker">Pull Request</span></li>
+    </ul>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>PR como contribuidor</h3>
+    <p><strong>No</strong> tenemos permisos de escritura</p>
+    <ul>
+      <li>Hacemos un <span class="marker">fork</span> del proyecto</li>
+      <li>Creamos una rama con nuestra propuesta</li>
+      <li>Solicitamos una <span class="marker">Pull Request</span>...</li>
+      <li>El owner del proyecto puede <span style="color: #5F5">aceptarla</span> o <span style="color: #F55">denegarla</span></li>
+    </ul>
+    <img style="display:block; margin: 30px auto 0" class="fragment" src="./img/slides/git/github-pullrequest.jpg" width="200" alt="">
+  </section>
+
+  <section data-background="#66B9F2">
+    <img src="./img/slides/git/git-fork.png" alt="">
+    <h3>Ejemplo práctico de PR</h3>
+    </section>
+
+</section>
+
+<section>
+    <section>
+        <h2>Links relacionados</h2>
+        <ul style="font-size: 1.8rem">
+            <li style="margin-bottom: .4em;">
+                <strong>Free online Git Book</strong><i style="color: #999;"> &mdash; Scott Chacon and Ben Straub</i><br>
+                <a href="http://git-scm.com/book/en/v2" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://git-scm.com/book/en/v2</a>
+            </li>
+            <li style="margin-bottom: .4em;">
+                <strong>git - the simple guide</strong><i style="color: #999;"> &mdash; Roger Dudler</i><br>
+                <a href="http://rogerdudler.github.io/git-guide/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://rogerdudler.github.io/git-guide/</a>
+            </li>
+            <li style="margin-bottom: .4em;">
+                <strong>Try Github - Interactive git console</strong> <i style="color: #999;"> &mdash; Github & Code Academy</i><br>
+                <a href="https://try.github.io" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">https://try.github.io</a>
+            </li>
+            <li style="margin-bottom: .4em;">
+                <strong>Bitbucket - Unlimited private code repositories</strong><br>
+                <a href="https://bitbucket.org/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">https://bitbucket.org/</a>
+            </li>
+            <li style="margin-bottom: .4em;">
+                <strong>Sourcetree - Opensource Git client</strong><br>
+                <a href="http://www.sourcetreeapp.com/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://www.sourcetreeapp.com/</a>
+            </li>
+        </ul>
+    </section>
+</section>
         </div>
     </div>
 
