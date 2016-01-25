@@ -1,28 +1,28 @@
 {% assign img_path = './img/slides/css-background' %}
 
-<section class="text-left">
-    <section>
-        <h2>Propiedad background</h2>
-    </section>
+<section>
+  <section>
+    <h2>Propiedad background</h2>
+  </section>
 
-    <section>
-        <p>Como sucede con otras propiedades, podemos utilizar la propiedad <em><code>background</code></em> para agrupar varias propiedades de las antes mencionadas.</p>
-        <p>Todas las propiedades son opcionales y pueden ir en cualquier orden, excepto los valores de <code>background-position</code>, primero siempre va el horizontal seguido inmediatamente del vertical.</p>
-        <p>hay que tener en cuenta que si omitimos un valor este se asignará su valor por defecto.</p>
-    </section>
+  <section>
+    <p>Como sucede con otras propiedades, podemos utilizar la propiedad <em><code>background</code></em> para agrupar varias propiedades de las antes mencionadas.</p>
+    <p>Todas las propiedades son opcionales y pueden ir en cualquier orden, excepto los valores de <code>background-position</code>, primero siempre va el horizontal seguido inmediatamente del vertical.</p>
+    <p>hay que tener en cuenta que si omitimos un valor este se asignará su valor por defecto.</p>
+  </section>
 
-    <section class="bg-image">
-        <pre><code data-trim contenteditable style="font-size: 1.25rem">
+  <section class="bg-image">
+    <pre><code data-trim contenteditable>
 div {
-    background: #ccc url(megaman.png) no-repeat center top content-box;
+  background: #ccc url(megaman.png) no-repeat center top content-box;
 }
-        </code></pre>
+  </code></pre>
 
-        <div class="image-wrap is--megaman"  style="background: #ccc url( {{ img_path }}/megaman.png) no-repeat center top content-box;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
+  <div class="fz-xs image-wrap is--megaman"  style="background: #ccc url( {{ img_path }}/megaman.png) no-repeat center top content-box;">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+    <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+  </div>
+</section>
 </section>

@@ -1,35 +1,35 @@
-<section class="text-left">
-    <section>
-        <h2>Repeating background</h2>
-    </section>
+<section id="gradient-repeat">
+  <section>
+    <h2>Repeating background</h2>
+  </section>
 
-    <section>
-        <p style="font-size: 1.8rem">Las propiedades <em><code>repeating-linear-gradient</code></em> y <em><code>repeating-radial-gradient</code></em> nos permiten repetir el degadado como si de un patrón se tratara. El tamaño del degradado lo definirá el último <i>color-stop</i>.</p>
-        <pre><code data-trim contenteditable>
+  <section>
+    <p class="fz-xs">Las propiedades <em><code>repeating-linear-gradient</code></em> y <em><code>repeating-radial-gradient</code></em> nos permiten repetir el degadado como si de un patrón se tratara. El tamaño del degradado lo definirá el último <i>color-stop</i>.</p>
+    <pre><code data-trim contenteditable>
 div {
-    background-image:
-        repeating-linear-gradient(
-            HotPink,
-            SkyBlue 30px
-        );
+  background-image:
+    repeating-linear-gradient(
+      HotPink,
+      SkyBlue 30px
+    );
 }
-        </code></pre>
-        <div class="gradient-wrap" style="background-image: repeating-linear-gradient(HotPink, SkyBlue 30px);"></div>
-    </section>
+  </code></pre>
+  <div class="gradient-wrap" style="background-image: repeating-linear-gradient(HotPink, SkyBlue 30px);"></div>
+</section>
 
-    <section>
-       <pre><code data-trim contenteditable>
+<section>
+ <pre><code data-trim contenteditable>
 div {
-    background-image:
-        repeating-radial-gradient(
-            circle,
-            HotPink,
-            HotPink 20px,
-            SkyBlue 20px,
-            SkyBlue 50px
-        );
+  background-image:
+    repeating-radial-gradient(
+      circle,
+      HotPink,
+      HotPink 20px,
+      SkyBlue 20px,
+      SkyBlue 50px
+    );
 }
-        </code></pre>
-        <div class="gradient-wrap" style="background-image: repeating-radial-gradient(circle, HotPink, HotPink 20px, SkyBlue 20px, SkyBlue 50px);"></div>
-    </section>
+</code></pre>
+<div class="gradient-wrap" style="background-image: repeating-radial-gradient(circle, HotPink, HotPink 20px, SkyBlue 20px, SkyBlue 50px);"></div>
+</section>
 </section>

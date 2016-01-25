@@ -228,7 +228,13 @@
 
 // Backgrounds
 // --------------------------------------------------------
-#backgrounds {
+#bg-image,
+#bg-repeat,
+#bg-position,
+#bg-attachment,
+#bg-clip,
+#bg-origin,
+#bg-size {
   .bg-image pre code {
     font-size: 1.5rem;
     padding: .75em 1em;
@@ -256,6 +262,21 @@
   }
 }
 
+
+// Backgrounds
+// -------------------------------------------------------
+#gradient-linear,
+#gradient-radial,
+#gradient-repeat,
+#gradient-multiple {
+  .gradient-wrap {
+      border: 2px solid rgba(0,0,0, .5);
+      font-size: 1.4rem;
+      margin: 1.5rem auto;
+      width: 60%;
+      height: 300px;
+  }
+}
 
 // Float
 // --------------------------------------------------------
