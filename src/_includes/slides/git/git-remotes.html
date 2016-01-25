@@ -1,0 +1,83 @@
+{% assign img_path = './img/slides/git' %}
+
+<section>
+  <section data-background="#66B9F2">
+    <img src="{{ img_path }}/github-octocat.png" alt="" width="150">
+    <h2>Inicializando repositorios remotos</h2>
+  </section>
+
+  <section data-background="#66B9F2">
+    <img src="{{ img_path }}/github-octocat.png" alt="" width="150">
+    <h3>Github</h3>
+    <img src="{{ img_path }}/github-create-repo.png" width="600" alt="">
+    <br />
+    <a href="http://github.com" target="_blank">crea una cuenta en Github</a>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>Git <span class="marker">clone</span> mediante HTTPS</h3>
+    <p>Creamos una copia de un repositorio remoto existente</p>
+    <pre><code data-trim contenteditable>
+      $ git clone https://github.com/user/repo.git
+    </code></pre>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>URL's Git sobre HTTPS</h3>
+    <ul>
+      <li>Facilita el acceso a través de firewalls</li>
+      <li>No necesita configuración previa</li>
+      <li>Has de proporcionar tu login/pass para acceder a <span class="marker">origin</span></li>
+    </ul>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>HTTPS + credential-osxkeychain</h3>
+    <p>Almacena user/pass en texto plano</p>
+    <pre><code data-trim contenteditable>
+      $ git config --global credential.helper osxkeychain // Mac OSX
+      $ git config --global credential.helper wincred // Windows
+    </code></pre>
+    <small>Más info en <a href="https://help.github.com/articles/caching-your-github-password-in-git/">Git Help</a></small>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>URL's Git sobre Secure Shell (SSH)</h3>
+    <ul>
+      <li>Basado en clave pública/privada</li>
+      <li>Requiere de instalación de clave pública en <span class="marker">origin</span></li>
+    </ul>
+    <p></p>
+    <p></p>
+    <small>En la sección <span class="marker">/Settings/SSH Keys</span> de tu cuenta de Github</small>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>Generando Claves SSH</h3>
+    <pre><code data-trim contenteditable>
+      $ ssh-keygen -t rsa -b 4096 -C "dave74@gmail.com"
+    </code></pre>
+    <small>Puedes añadir una <span class="marker">clave de seguridad</span> o dejarla en blanco.</small>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>Añadir clave SSH a <span class="marker">ssh-agent</span></h3>
+    <pre><code data-trim contenteditable>
+      $ ssh-add ~/.ssh/id_rsa
+    </code></pre>
+    <small>Puedes añadir una <span class="marker">clave de seguridad</span> o dejarla en blanco.</small>
+  </section>
+
+  <section data-background="#66B9F2">
+    <h3>Copiar clave SSH al <span class="marker">portapapeles</span></h3>
+    <pre><code data-trim contenteditable>
+      $ pbcopy < ~/.ssh/id_rsa.pub
+    </code></pre>
+    <small>Podemos abrirla con <span class="marker">Sublime Text</span> y copiar el contenido.</small>
+  </section>
+
+  <section data-background="{{ img_path }}/git-https-ssh.jpg">
+    <h3 style="color:black">HTTPS o SSH</h3>
+  </section>
+
+</section>

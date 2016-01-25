@@ -255,3 +255,148 @@
     height: 350px;
   }
 }
+
+
+// Float
+// --------------------------------------------------------
+.float-wrap {
+  border: 1px dotted #333;
+  background: rgba(255, 255, 255, .1);
+  margin: 0 auto 1em;
+  overflow: auto;
+  width: 352px;
+}
+.float-box {
+  background: gold;
+  border: 2px solid orange;
+  margin: .25em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100px;
+  color: black;
+  padding: 20px 0;
+}
+.float-left { float: left; }
+.float-right { float: right; }
+
+.float-example-02 .float-wrap,
+.float-example-03 .float-wrap {
+  overflow: visible;
+  width: 450px;
+}
+
+.float-example-02 .float-wrap {
+  padding: .5em;
+}
+.float-example-03 .float-wrap {
+  background: transparent;
+  border-color:rgba(0, 0, 0, .4);
+  padding: .25em;
+}
+.float-example-03 p {
+  font-size: 1.5rem;
+}
+.float-clear {
+  clear: both;
+  background: hsla(200, 60%, 50%, .3);
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: .5em;
+  text-align: center;
+}
+
+.float-example-02 .float-cleared {
+  overflow: auto;
+}
+
+.hidden-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em;
+}
+.hidden-link:hover {
+  background: rgba(0,0,0, .1);
+}
+
+// css-position.html
+// ------------------------------------------------------
+.pos__container {
+  border: 2px solid rgba(150,255,255, .5);
+  font-size: 1.5rem;
+  line-height: 50px;
+  margin: 0 auto;
+  position: relative;
+  width: 300px;
+
+  &:after {
+    background: #ECBF8A;
+    content: '.container';
+    position: absolute;
+    top: 0px;
+    left: -120px;
+    text-align: center;
+    width: 100px;
+    height: 50px;
+  }
+  &:before {
+    border: 5px solid;
+    border-color: transparent transparent #222 #222;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    width: 0;
+    height: 0;
+  }
+  &.is--collapsed {
+    &:after {
+      top: -50px;
+    }
+    &:before {
+      top: -10px;
+    }
+  }
+  &.no--tooltip {
+    &:before,
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.pos__container-1 {
+  &:after {
+    content: '.container-1';
+    top: 80px;
+    left: -80px;
+  }
+  &:before {
+    top: 120px;
+    left: 20px;
+  }
+}
+
+.pos__container-2 {
+  border: 2px solid rgba(255,150,150, .7);
+  padding: 40px;
+
+  &:after {
+    content: '.container-2';
+  }
+}
+
+.pos__box {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+  height: 100px
+}
+.pos__box-1 { background: #27ae60; }
+.pos__box-2 { background: #8e44ad; }
+.pos__box-3 { background: #d35400; }

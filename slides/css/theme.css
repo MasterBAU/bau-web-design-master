@@ -228,10 +228,7 @@ body {
  * IMAGES
  *********************************************/
 .reveal section img {
-  margin: 15px 0px;
-  background: rgba(255, 255, 255, 0.12);
-  border: 4px solid #333;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); }
+  margin: 15px 0px; }
 
 .reveal section img.plain {
   border: 0;
@@ -434,6 +431,7 @@ body {
   .reveal .u-highlighted .u-highlighted {
     background-color: rgba(126, 169, 195, 0.5); }
 
+<<<<<<< HEAD
 .reveal .u-marked {
   color: #5698c1;
   font-weight: bold; }
@@ -441,6 +439,133 @@ body {
 .reveal .u-overBg {
   color: #fff;
   text-shadow: 2px 2px 1px black; }
+=======
+.reveal .float-wrap {
+  border: 1px dotted #333;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 auto 1em;
+  overflow: auto;
+  width: 352px; }
+
+.reveal .float-box {
+  background: gold;
+  border: 2px solid orange;
+  margin: .25em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100px;
+  color: black;
+  padding: 20px 0; }
+
+.reveal .float-left {
+  float: left; }
+
+.reveal .float-right {
+  float: right; }
+
+.reveal .float-example-02 .float-wrap,
+.reveal .float-example-03 .float-wrap {
+  overflow: visible;
+  width: 450px; }
+
+.reveal .float-example-02 .float-wrap {
+  padding: .5em; }
+
+.reveal .float-example-03 .float-wrap {
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0.4);
+  padding: .25em; }
+
+.reveal .float-example-03 p {
+  font-size: 1.5rem; }
+
+.reveal .float-clear {
+  clear: both;
+  background: rgba(51, 153, 204, 0.3);
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: .5em;
+  text-align: center; }
+
+.reveal .float-example-02 .float-cleared {
+  overflow: auto; }
+
+.reveal .hidden-link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1em;
+  height: 1em; }
+
+.reveal .hidden-link:hover {
+  background: rgba(0, 0, 0, 0.1); }
+
+.reveal .pos__container {
+  border: 2px solid rgba(150, 255, 255, 0.5);
+  font-size: 1.5rem;
+  line-height: 50px;
+  margin: 0 auto;
+  position: relative;
+  width: 300px; }
+  .reveal .pos__container:after {
+    background: #ECBF8A;
+    content: '.container';
+    position: absolute;
+    top: 0px;
+    left: -120px;
+    text-align: center;
+    width: 100px;
+    height: 50px; }
+  .reveal .pos__container:before {
+    border: 5px solid;
+    border-color: transparent transparent #222 #222;
+    content: '';
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: -20px;
+    width: 0;
+    height: 0; }
+  .reveal .pos__container.is--collapsed:after {
+    top: -50px; }
+  .reveal .pos__container.is--collapsed:before {
+    top: -10px; }
+  .reveal .pos__container.no--tooltip:before, .reveal .pos__container.no--tooltip:after {
+    display: none; }
+
+.reveal .pos__container-1:after {
+  content: '.container-1';
+  top: 80px;
+  left: -80px; }
+
+.reveal .pos__container-1:before {
+  top: 120px;
+  left: 20px; }
+
+.reveal .pos__container-2 {
+  border: 2px solid rgba(255, 150, 150, 0.7);
+  padding: 40px; }
+  .reveal .pos__container-2:after {
+    content: '.container-2'; }
+
+.reveal .pos__box {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 100px;
+  text-align: center;
+  width: 100px;
+  height: 100px; }
+
+.reveal .pos__box-1 {
+  background: #27ae60; }
+
+.reveal .pos__box-2 {
+  background: #8e44ad; }
+
+.reveal .pos__box-3 {
+  background: #d35400; }
+>>>>>>> c16b2335bc731ecc790c75549ba742036c23f1cf
 
 #box-model .BoxModelGraphic-margin,
 #margin-and-padding .BoxModelGraphic-margin {
@@ -826,10 +951,10 @@ body {
   max-width: 69rem;
   margin: 0 auto; }
   .reveal .class-list .index-block {
-    flex-basis: 20rem;
+    flex-basis: 25%;
     flex-grow: 1;
     flex-shrink: 0;
-    max-width: 23rem;
+    max-width: 19rem;
     padding: 1rem 1.5rem; }
   .reveal .class-list h4 {
     margin-bottom: .25rem;
