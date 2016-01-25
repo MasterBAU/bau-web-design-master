@@ -3,7 +3,8 @@
 
   // BASE STYLES
   // --------------------------------------------------------------------------
-    p, ul, ol{
+    p, ul, ol {
+        margin-top: 0;
         text-align: left;
       }
     }
@@ -20,36 +21,78 @@
       text-decoration: underline;
     }
 
+    h1 > span {
+      display: block;
+      font-size: .6em;
+    }
+
   // HELPERS
   // --------------------------------------------------------------------------
   // FONT-SIZE
   // --------------------------------------------------------
-    .fz-s {
-      & { font-size: 2rem !important; }
-      p, ul, ol { font-size: 2rem; }
-    }
+    .fz {
+      &-xxs {
+        & { font-size: 1.25rem !important; }
+        p, ul, ol { font-size: 1.25rem; }
+      }
 
-    .fz-xs {
-      & { font-size: 1.5rem !important; }
-      p, ul, ol { font-size: 1.5rem; }
-    }
+      &-xs {
+        & { font-size: 1.5rem !important; }
+        p, ul, ol { font-size: 1.5rem; }
+      }
 
-    .fz-xxs {
-      & { font-size: 1.25rem !important; }
-      p, ul, ol { font-size: 1.25rem; }
+      &-s {
+        &:not(section) { font-size: 2rem !important; }
+        p, ul, ol { font-size: 2rem; }
+      }
+
+      &-m {
+        &:not(section) { font-size: 2.5rem !important; }
+        p, ul, ol { font-size: 2.5rem; }
+      }
+
+      &-l {
+        &:not(section) { font-size: 3rem !important; }
+        p, ul, ol { font-size: 3rem; }
+      }
     }
 
   // TEXT-ALIGN HELPERS
   // --------------------------------------------------------
-    .ta-c {
-      &, p, ul, ol {
-        text-align: center !important;
+    .ta {
+      &-c {
+        &, p, ul, ol {
+          text-align: center !important;
+        }
+      }
+      &-l {
+        &, p, ul, ol {
+          text-align: left !important;
+        }
       }
     }
 
-    .ta-l {
-      &, p, ul, ol {
-        text-align: left !important;
+  // MARGIN HELPERS
+  // --------------------------------------------------------
+    .mb {
+      &-0 {
+        margin-bottom: 0 !important;
+      }
+
+      &-xxs {
+        margin-bottom: .25rem !important;
+      }
+
+      &-xs {
+        margin-bottom: .5rem !important;
+      }
+
+      &-s {
+        margin-bottom: .75rem !important;
+      }
+
+      &-m {
+        margin-bottom: 1rem !important;
       }
     }
 
@@ -61,7 +104,7 @@
       &-yellow { color: $c-yellow !important; }
       &-green { color: $c-green !important; }
       &-cyan { color: $c-cyan !important; }
-      &-blue { color: $c-blue !important; }
+      &-blue { color: $c-blueDark !important; }
       &-purple { color: $c-purple !important; }
       &-gray { color: $c-gray !important; }
       &-grayDarker { color: $c-grayDarker !important; }
@@ -92,9 +135,19 @@
   // --------------------------------------------------------
     .u-highlighted {
       background-color: rgba($c-blue, .4);
-      
+
       .u-highlighted {
         background-color: rgba($c-blue, .5);
       }
+    }
+
+    .u-marked {
+      color: $c-blueDark;
+      font-weight: bold;
+    }
+
+    .u-overBg {
+      color: #fff;
+      text-shadow: 2px 2px 1px rgba(0, 0, 0, 1);
     }
 }

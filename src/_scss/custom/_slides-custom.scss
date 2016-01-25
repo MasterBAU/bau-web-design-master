@@ -58,7 +58,7 @@
     code {
       background: $c-grayLighter;
       border-width: 6px;
-      border-color: $c-red; 
+      border-color: $c-red;
       color: $c-grayDark;
       display: inline-block;
       font-size: 14px;
@@ -69,10 +69,189 @@
       width: 90px;
       height: 90px;
     }
-    
+
     &--solid  { border-style: solid; }
     &--double { border-style: double; }
     &--dashed { border-style: dashed; }
     &--dotted { border-style: dotted; }
+  }
+}
+
+
+// Specificity
+// --------------------------------------------------------
+#specificity {
+  .specificity {
+    color: #333;
+    font-family: "Oswald", Impact, sans-serif;
+    font-size: 8rem;
+    line-height: 1.2;
+    margin-top: 10rem;
+    text-align: center;
+
+    &-item {
+      background: rgba(0,0,0, .2);
+      box-shadow: inset 0 0 10px rgba(0,0,0, .5);
+      display: inline-block;
+      margin: 0 1rem;
+      padding: 2rem 3rem;
+      position: relative;
+
+      &:after {
+        font-family: "Open sans", sans-serif;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1;
+        position: absolute;
+            left: 0;
+            right: 0;
+        text-align: center;
+      }
+
+      &--inline {
+        color: $c-red;
+
+        &:after {
+          content: 'Style attribute';
+          top: -5rem;
+        }
+      }
+
+      &--id {
+        color: $c-purple;
+
+        &:after {
+          content: 'IDs';
+          top: -3rem;
+        }
+      }
+
+      &--class {
+        color: $c-green;
+
+        &:after {
+            content: 'Class, \00000apseudo-class,\00000a attribute';
+            font-size: 1.5rem;
+                top: -5.5rem;
+            white-space:pre;
+        }
+      }
+
+      &--element {
+        color: $c-blue;
+
+        &:after {
+          content: 'Elements';
+          top: -3rem;
+        }
+      }
+    }
+
+    &-example {
+      box-shadow: none;
+      margin: 1rem 0 3rem;
+      font-size: 3rem;
+    }
+
+    &-important {
+      margin-top: 1rem;
+
+      span {
+        font-size: 4rem;
+        margin: 0 1rem;
+        padding: 0 1rem;
+        position: relative;
+
+        &:after {
+          display: none;
+        }
+
+        &.specificity-importantWrap {
+          background: transparent;
+          box-shadow: none;
+          margin: 0;
+          padding: 1rem 0;
+
+          &:first-of-type {
+            outline: 1px solid red;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// Pseudo-elements
+// --------------------------------------------------------
+#pseudo-elements {
+  .PsElementsDemo {
+    &-before,
+    &-after {
+      text-align: center;
+    }
+
+    &-before {
+      &::before {
+        content: "(^⁎˃ᆺ˂) ";
+        color: $c-orange;
+        font-size: .9em;
+        margin-right: .5em;
+      }
+    }
+
+    &-after {
+      &::after {
+        content: " (≚ᄌ≚)ﾉ”";
+        color: $c-orange;
+        font-size: .9em;
+        margin-right: .5em;
+      }
+    }
+
+    &-img {
+      &:after {
+        content: "";
+        background: url(../img/cat-watching.gif) no-repeat center center;
+        background-size: cover;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        height: 100px;
+      }
+    }
+
+
+  }
+}
+
+
+// Backgrounds
+// --------------------------------------------------------
+#backgrounds {
+  .bg-image pre code {
+    font-size: 1.5rem;
+    padding: .75em 1em;
+  }
+  .image-wrap {
+    background-color: rgba(255,255,255, .6);
+    border: 2px solid rgba(0,0,0, .5);
+    color: #000;
+    font-size: 1.4rem;
+    margin: 1.5rem auto;
+    padding: 1em;
+    width: 60%;
+  }
+  .is--dalek { background-image: url(../img/slides/css-background/dalek.png); }
+  .is--megaman { background-image: url(../img/slides/css-background/megaman.png); }
+  .is--tripi {
+    background-image: url(../img/slides/css-background/background-clip2.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 20px solid rgba(0,0,0, .4);
+    color: #fff;
+    padding: 50px;
+    width: 350px;
+    height: 350px;
   }
 }
