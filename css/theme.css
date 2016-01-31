@@ -583,6 +583,66 @@ body {
   width: 150px;
   height: 100px; }
 
+.symple-before {
+  text-transform: lowercase !important; }
+  .symple-before:before {
+    content: "(⊙_◎)";
+    color: green;
+    font-size: 0.7em;
+    padding-right: 20px; }
+
+p.catwatching {
+  font-size: 24px;
+  padding-left: 20px; }
+  p.catwatching:before {
+    content: "";
+    background: url(../img/slides/css-pseudoclasses/cat-watching.gif) -110px;
+    float: left;
+    margin: 0 30px 0 30px;
+    height: 200px;
+    width: 300px; }
+
+pre.whitecat-pre {
+  margin-left: 0;
+  width: 60%; }
+
+p.whitecat {
+  font-size: 24px;
+  padding-left: 20px;
+  position: relative;
+  width: 63%; }
+  p.whitecat:after {
+    content: "";
+    background-image: url(../img/slides/css-pseudoclasses/whitecat.gif);
+    position: absolute;
+    top: -262px;
+    right: -250px;
+    height: 400px;
+    width: 240px; }
+
+.firstletter::first-letter {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #D5C70F;
+  display: inline-block;
+  float: left;
+  font-weight: bolder;
+  font-size: 3em;
+  margin: 0 15px 0 50px;
+  padding: 35px 30px 45px;
+  text-shadow: 2px 2px 2px #000; }
+
+.firstline::first-line {
+  color: #D5C70F;
+  font-weight: bold;
+  font-size: .8em;
+  line-height: 1.2;
+  text-shadow: 2px 2px 2px #000; }
+
+p.selection::selection {
+  color: #D5C70F;
+  background: transparent;
+  text-shadow: 2px 2px 2px #000; }
+
 #bg-image .bg-image pre code,
 #bg-repeat .bg-image pre code,
 #bg-position .bg-image pre code,
