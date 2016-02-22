@@ -50,7 +50,93 @@
                 <h3><strong>Sass Intro</strong></h3>
             </section>
 
-            
+            <section class="text-left">
+    <section>
+        <h2>Unidades de medida en CSS</h2>
+    </section>
+
+    <section>
+        <p>Las unidades de medida en CSS pueden dividirse en <strong>dos grandes grupos</strong>: <em>unidades absolutas</em> y <em>unidades relativas</em></p>
+        <p>La sintaxis para declarar una medida siempre será igual: un número seguido de la unidad correspondiente. Algunas propiedades CSS aceptan <strong>valores negativos</strong>.</p>
+    </section>
+
+                <section>
+                    <h3>Unidades absolutas</h3>
+                    <p>Las unidades absolutas son las más directas, están relacionadas a una medida física. La más utilizada es el pixel pero hay varias más:</p>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>px</code> <span style="font-size: 1.6rem;">(píxel)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>mm</code> <span style="font-size: 1.6rem;">(milimetro)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>cm</code> <span style="font-size: 1.6rem;">(centímetro, 10 millimeters)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>in</code> <span style="font-size: 1.6rem;">(pulgada, 2.54 centímetros)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>pt</code> <span style="font-size: 1.6rem;">(punto, 1/72 de pulgada)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>pc</code> <span style="font-size: 1.6rem;">(pica, 12 puntos)</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Unidades relativas</h3>
+                    <p>Las unidades relativas son un poco más complicadas ya que su valor no es fijo sino que dependen de la medida de otro elemento. También pueden dividirse en tres grupos más pequeños: <em>unidades relativas al tamaño de fuente</em>, <em>unidades relativas al viewport</em> y <em>porcentajes</em>.</p>
+                </section>
+
+                <section>
+                    <h3>Relativas al tamaño de fuente</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>em</code></p>
+                            <p style="font-size: 1.5rem;">Es un número relativo al <code>font-size</code> del elemento. Si se aplica a la misma propiedad <code>font-size</code> se calculará en base al <code>font-size</code> heredado.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>rem</code></p>
+                            <p style="font-size: 1.5rem;">Hace referencia al <code>font-size</code> del elemento root (normalmente el <code>&#60;html&#62;</code>). Si se aplica sobre este usara de base su valor inicial.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>ex</code></p>
+                            <p style="font-size: 1.5rem;">Representa la <i>x-height</i> del elemento fuente, normalmente la altura del caracter "x" en minúsculas.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>ch</code></p>
+                            <p style="font-size: 1.5rem;">Representa el ancho del carácter "0".</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Relativas al viewport</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>vh</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del alto del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vw</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del ancho del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vmin</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del valor más bajo entre el alto y ancho del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vmax</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del valor más alto entre el alto y ancho del viewport.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                     <h3>Porcentajes</h3>
+                     <p>Podemos asignar una unidad de medida porcentual con un <em>valor seguido del signo "%"</em> (ej: 50%). El contexto que se utilizará para calcular el porcentaje variará dependiendo a que propiedad se aplique.</p>
+                     <p>Si se aplica al <code>font-size</code>, el porcentaje será relativo al <code>font-size</code> del elemento padre.</p>
+                     <p>Si se aplica al <code>width</code>, <code>margin</code> o <code>padding</code>, será relativo a las medidas de su contenedor.</p>
+                </section>
+            </section>
+
+
+
 
 <section>
     <section>
@@ -84,72 +170,7 @@
 
 </section>
 
-
-
-<section class="unix">
-
-    <section>
-        <img src="./img/slides/sass/sass.png" alt="" width="250">
-        <h4>Instalación de SASS</h4>
-    </section>
-
-    <section>
-        <h3>Gema Ruby</h3>
-        <h4 class="marker">Instalaremos SASS utilizando la instrucción Ruby "Gem"</h4>
-        <pre><code data-trim contenteditable>
-
-$ sudo gem install sass
-
-        </code></pre>
-        <p>En MacOSX Ruby viene instalado. Desde Windows tenemos que instalarlo.</p>
-        <a href="http://rubyinstaller.org/" target="_blank"><img src="./img/slides/sass/ruby.png" alt="" width="100"></a>
-    </section>
-
-    <section>
-        <h3>Permisos de Usuario</h3>
-        <p class="marker">Debemos de autentificarnos como super-usuarios para poder realizar la instalación de la Gema Ruby SASS con la instrucción <code style="font-size: 1em">sudo</code></p>
-        <pre><code data-trim contenteditable style="font-size: 1em; line-height: 1.7">
-$ sudo gem install sass
-
-Password: *******
-Successfully installed sass-3.4.13
-Parsing documentation for sass-3.4.13
-1 gem installed
-
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>Preprocesado SASS</h3>
-        <p>El único formato de estilos que entienden los navegadores web es el <span class="marker">CSS</span>. Mediante SASS traducimos su sintaxis y todas sus funcionalidades a CSS estandar.</p>
-        <p class="marker">Se llama pre-procesado de SASS a la acción de convertir la sintaxis SASS al CSS que posteriormente procesará el navegador web para renderizar la página.</p>
-    </section>
-
-    <section>
-        <h3>Tipos de archivo</h3>
-        <p>Para el preprocesado necesitaremos tener una carpeta con los archivos de nuestro proyecto web en SASS que hará de <span class="marker">origen</span> y otra carpeta de <span class="marker">destino</span> en la que generaremos de forma automática los archivos CSS estandar.</p>
-        <p>La extensión de archivo SASS es <span class="marker">.scss</span></p>
-        <img src="./img/slides/sass/folders.png" alt="" width="400">
-    </section>
-
-    <section>
-        <h3>SASS Watching</h3>
-        <p>Una vez creados los directorios origen/destino indicamos a SASS que "vigile" los cambios que se produzcan en la carpeta de origen</p>
-        <pre><code data-trim contenteditable>
-$ sass --watch src/sass:public/css
-        </code></pre>
-        <p class="marker">El preprocesador SASS generará en tiempo real el archivo CSS resultante de las modificaciones que hagamos en el archivo de origen en SASS.</p>
-    </section>
-
-    <section>
-        <h3>Sobre los archivos .scss</h3>
-        <p>Una vez finalizado el proyecto en SASS <span class="marker">solo subiremos la carpeta con los archivos CSS</span>. Los archivos SASS los guardaremos por si necesitamos editar o añadir nuevos cambios.</p>
-        <p>Los archivos SASS vienen a ser los PSD's de un diseño web.</p>
-    </section>
-
-
-
-</section>
+<!-- {#% include slides/sass/sass-instalacion.html %} -->
 
 
 
