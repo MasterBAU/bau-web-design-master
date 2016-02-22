@@ -1,4 +1,4 @@
-<section class="text-left">
+<section>
   <section>
     <h2>Elementos de formulario</h2>
     <p>Los formularios nos permiten obtener información del usuario. <br />El resultado puede ser una búsqueda en una base de datos o el envío del contenido por e-mail.</p>
@@ -8,89 +8,55 @@
   <section>
     <h3>Estructura básica</h3>
     <pre><code data-trim contenteditable>
-      <form>
-        <input type="text" placeholder="Municipio, barrio, CP...">
-        <input type="submit">Buscar</input>
-      </form>
+<form>
+  <input type="text" placeholder="Municipio, barrio, CP...">
+  <input type="submit">Buscar</input>
+</form>
     </code></pre>
-
   </section>
 
   <section>
     <h3>&lt;form&gt;</h3>
     <p>La etiqueta Form se utiliza para crear un formulario.<br />
       Puede contener los siguientes atributos que nos van a permitir definir su comportamiento:</p>
-
       <ul>
         <li><span class="marker">action="send.php"</span> > Permite indicar la URL a la que se enviarán los datos.</li>
         <li><span class="marker">name="MiForm"</span> > Especificamos el nombre del formulario.</li>
         <li><span class="marker">autocomplete="on/off"</span> > Autocompletar campos de forma automática</li>
         <li><span class="marker">method="get/post"</span> > Define como enviará los datos.</li>
       </ul>
-
-
-    </section>
   </section>
+</section>
 
+<section>
   <section>
+    <h3>&lt;input&gt;</h3>
+    <p> Es el elemento básico de un formulario.<br />
+      Su funcionalidad varía dependiendo del valor de su atributo "type".<br />
+      Si omitimos el valor de "type" por defecto es "text".</p>
+      <pre><code data-trim contenteditable>
+<form>
+  <input type="text" value="nombre"/>
+</form>
+      </code></pre>
+      <br />
+      <p>
+        <input type="text" style="width: 550px; font-size: 1em; margin:0 30px; display: inline-block"/>
+      </p>
+    </section>
+
     <section>
-      <h3>&lt;input&gt;</h3>
-      <p> Es el elemento básico de un formulario.<br />
-        Su funcionalidad varía dependiendo del valor de su atributo "type".<br />
-        Si omitimos el valor de "type" por defecto es "text".</p>
+      <h4>Atributo placeholder</h4>
+      <p>El elemento <code>&#060;input type="text"&#062;</code> puede disponer de otros atributos como por ejemplo <span class="marker">placeholder</span>. En este caso nos permite añadir un contenido predefinido.<br />
+        Este atributo sólo puede contener texto.</p>
         <pre><code data-trim contenteditable>
-          <form>
-            <input type="text" value="nombre"/>
-          </form>
+<form>
+  <input type="text" placeholder="Introduce tu nombre"/>
+</form>
         </code></pre>
 
-        <br />
-        <p>
-          <input type="text" style="width: 550px; font-size: 1em; margin:0 30px; display: inline-block"/>
-        </p>
-
-      </section>
-
-      <section>
-        <h4>Atributo placeholder</h4>
-        <p>El elemento INPUT type="text" puede disponer de otros atributos como por ejemplo <span class="marker">placeholder</span>. En este caso nos permite añadir un contenido predefinido.<br />
-          Este atributo sólo puede contener texto.</p>
-          <pre><code data-trim contenteditable>
-            <form>
-              <input type="text" placeholder="Introduce tu nombre"/>
-            </form>
-          </code></pre>
-
-          <br />
-
-          <p><small>Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</small></p>
-          <p><input type="text" name="nombre" placeholder="Introduce tu nombre" style="font-size: 1em;" /></p>
-          <style>
-          ::-webkit-input-placeholder {
-            color: grey;
-            text-align: center;
-            font-size: .8em;
-          }
-
-          :-moz-placeholder { /* Firefox 18- */
-            color: grey;
-            text-align: center;
-            font-size: .8em;
-          }
-
-          ::-moz-placeholder {  /* Firefox 19+ */
-            color: grey;
-            text-align: center;
-            font-size: .8em;
-          }
-
-          :-ms-input-placeholder {
-            color: grey;
-            text-align: center;
-            font-size: .8em;
-          }
-          </style>
-
+        <p class="fz-xs">Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</p>
+        <p><input type="text" name="nombre" placeholder="Introduce tu nombre" /></p>
         </section>
 
         <section>
@@ -178,15 +144,15 @@
           <p style="font-size: .8em;"><input type="checkbox" style="font-size: 110%; display: inline;"/>Opción 2</p>
 
           <style>
-          input[type=checkbox]
-          {
-            /* Double-sized Checkboxes */
-            -ms-transform: scale(2); /* IE */
-            -moz-transform: scale(2); /* FF */
-            -webkit-transform: scale(2); /* Safari and Chrome */
-            -o-transform: scale(2); /* Opera */
-            padding: 10px;
-          }
+            input[type=checkbox]
+            {
+              /* Double-sized Checkboxes */
+              -ms-transform: scale(2); /* IE */
+              -moz-transform: scale(2); /* FF */
+              -webkit-transform: scale(2); /* Safari and Chrome */
+              -o-transform: scale(2); /* Opera */
+              padding: 10px;
+            }
           </style>
 
           <small>Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</small>
@@ -212,15 +178,15 @@
           </div>
 
           <style>
-          input[type=radio]
-          {
-            /* Double-sized Checkboxes */
-            -ms-transform: scale(2); /* IE */
-            -moz-transform: scale(2); /* FF */
-            -webkit-transform: scale(2); /* Safari and Chrome */
-            -o-transform: scale(2); /* Opera */
-            padding: 10px;
-          }
+            input[type=radio]
+            {
+              /* Double-sized Checkboxes */
+              -ms-transform: scale(2); /* IE */
+              -moz-transform: scale(2); /* FF */
+              -webkit-transform: scale(2); /* Safari and Chrome */
+              -o-transform: scale(2); /* Opera */
+              padding: 10px;
+            }
           </style>
 
           <small>Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</small>
@@ -350,5 +316,5 @@
 
                     <p>No clicar!!!</p>
                     <button type="button" onclick="window.location.href ='http://www.nyan.cat/'">No lo hagas..</button>
+                  </section>
                 </section>
-              </section>

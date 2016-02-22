@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Table element</title>
+	<style type="text/css">
+
+		body {
+			font-family: sans-serif;
+		}
+		
+		table {
+			background: #C0BEBE;
+			border: 1px solid #000;
+			box-shadow: 0 0 10px;
+			margin: 50px auto;
+			/*height: 50%;*/
+			padding: 10px;
+			width: 80%;
+
+			/*border-spacing: 20px;*/
+		}
+
+		td {
+			background-color: white;
+			border: 1px solid #000;
+			padding: 10px;
+			height: 100px;
+			text-align: center;
+			position: relative;
+			top: 0;
+			transition: all 0.3s ease;
+
+			/*margin: 20px;*/
+		}
+
+		thead th {
+			background-color: #00BFFF;
+			border: 1px solid #000;
+			padding: 20px;
+			text-transform: uppercase;
+		}
+
+		td:hover {
+			background-color: #ADEAFF;
+			box-shadow: 1px 8px 10px rgba(0, 0, 0, 0.3);
+			cursor: pointer;
+			position: relative;
+			top: -3px;
+		}
+
+		tfoot td {
+			background-color: #E4E2E2;
+			color: #a00;
+		}
+
+		caption {
+			background: #F0F8FF;
+			border: 1px solid #7B7B7B;
+			font-size: 1.5em;
+			margin: 50px 0 -45px;
+			padding: 20px 0 50px;
+		}
+
+		.va-top {
+			vertical-align: top;
+		}
+
+		.va-middle {
+			vertical-align: middle;
+		}
+
+		.va-bottom {
+			vertical-align: bottom;
+		}
+
+	</style>
+</head>
+<body>
+
+	<table>
+		<caption><strong>Vertical Align</strong></caption>
+
+		<tr>
+			<td class="va-top">vertical-align: top</td>
+			<td class="va-middle">vertical-align: middle</td>
+			<td class="va-bottom">vertical-align: bottom</td>
+		</tr> 
+       
+	</table>
+	
+</body>
+</html>

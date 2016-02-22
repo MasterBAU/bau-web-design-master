@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Fundamentos CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
+
+    <meta name="description" content="Máster en Diseño Web | Módulo III">
+    <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="topheader">
+    <a href="./index.html"><img src="./img/logo-bau-es.svg"></a>
+    <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
+</div>
+
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Módulo III <br />
+                    <span class="marker">Programación Frontend</span>
+                </h3>
+                <h3><strong>Terminal UNIX + Git Basic</strong></h3>
+            </section>
+
+            
+
+<section class="text-left">
+    <section>
+        <h2>Sublime Text Tip</h2>
+    </section>
+
+    <section>
+        <h3>Ultra fast files finder</h3>
+        <table>
+            <tr>
+                <td><code>Cmd + p +</code></td>
+                <td>nombre del archivo a buscar</td>
+            </tr>
+        </table>
+        <img src="./img/slides/sublime-tip-selection/finding-files.gif" alt="" style="height: 55vh">
+    </section>
+
+</section>
+
+
+
+
+<section>
+  <section class="unix">
+    <h2>Terminal Unix</h2>
+    <img src="./img/slides/terminal/iTerm.png" alt="">
+  </section>
+
+  <section>
+    <p>Mediante la <span class="marker">Terminal Unix</span> podemos acceder a programas de control de versiones de código, editores de texto, comparar archivos, etc...</p>
+    <p>A continuación vamos a ver un conjunto de instrucciones básicas.</p>
+  </section>
+
+  <section>
+    <h3>Tipos de Terminal Unix para Mac</h3>
+    <p>MacOSX incorpora su propia consola llamada Terminal. Si lo preferimos, podemos instalar otras consolas que permiten más funcionalidades.</p>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>Terminal</code> <span style="font-size: 1.6rem;">/Aplicaciones/Utilidades/Terminal.app</span></p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>iTerm2</code> <span style="font-size: 1.6rem;"><a href="http://iterm2.com/" target="_blank">http://iterm2.com/</a></span></p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>Cathode</code> <span style="font-size: 1.6rem;"><a href="http://www.secretgeometry.com/apps/cathode" target="_blank">http://www.secretgeometry.com/apps/cathode</a></span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Tipos de Terminal Unix para Windows</h3>
+    <p>La consola que trae Windows por defecto no está basada en UNIX sino que se trata de un intérprete de MS-DOS. El archivo ejecutable se llama cmd.exe. De modo que para poder ejecutar comandos UNIX deberemos de instalar algunas de las siguientes terminales:</p>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>Git BASH</code> <span style="font-size: 1.6rem;"><a href="http://git-scm.com/download/win" target="_blank">http://git-scm.com/download/win</a></span></p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>Cygwin</code> <span style="font-size: 1.6rem;"><a href="http://cygwin.com/install.html" target="_blank">http://cygwin.com</a></span></p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>Babun</code> <span style="font-size: 1.6rem;"><a href="http://babun.github.io/" target="_blank">http://babun.github.io/</a></span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Navegar Directorios</h3>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom: 0;"><code>cd</code></p>
+        <p style="font-size: 1.5rem;">
+          Entramos dentro de un directorio mediante:<br />
+          <code class="marker">$ cd [nombre de directorio]</code>
+        </p>
+
+        <p style="font-size: 1.5rem;">
+          Salimos de un directorio mediante:<br />
+          <code class="marker">$ cd .. </code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>pwd</code></p>
+        <p style="font-size: 1.5rem;">
+          Print working directory. Muestra el directorio en el que nos encontramos:<br />
+          <code class="marker">$ pwd</code>
+        </p>
+
+        <p style="font-size: 1.5rem;"><code class="marker">/users/david.garcia/www/bau</code></p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Crear carpetas y ficheros</h3>
+
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>mkdir</code></p>
+        <p style="font-size: 1.5rem;">
+          Creamos un directorio:<br />
+          <code class="marker">$ mkdir [nombre de directorio a crear]</code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>touch</code></p>
+        <p style="font-size: 1.5rem;">Crea un archivo nuevo vacío o actualiza la fecha de modificación de uno existente:<br />
+          <code class="marker">$ touch [opciones][nombre de archivo/os]</code><br />
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Visualizar archivos</h3>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>ls</code></p>
+        <p style="font-size: 1.5rem;">
+          Lista todos los archivos y carpetas contenidos en un directorio:<br />
+          <code class="marker">$ ls</code>
+        </p>
+        <p style="font-size: 1.5rem;">
+          Muestra la información completa de cada archivo y directorio:<br />
+          <code class="marker">$ ls -l</code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>more</code></p>
+        <p style="font-size: 1.5rem;">
+          Mostramos el contenido de un archivo. Podemos usar [spacebar] para continuar o <code>q</code> para salir:<br />
+          <code class="marker">$ more [nombre del archivo]</code>
+        </p>
+
+        <p style="font-size: 1.5rem;">
+          Salimos de un directorio mediante:<br />
+          <code class="marker">$ cd .. </code>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Editores archivos</h3>
+    <ul>
+      <li>
+        <p style="margin-bottom:0;"><code>nano</code></p>
+        <p style="font-size: 1.5rem;">
+          Editor de archivos de texto en terminal:<br />
+          <code class="marker">$ nano [nombre de archivo existente]</code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>Vim</code></p>
+        <p style="font-size: 1.5rem;">
+          Otro Editor de archivos de texto en terminal:<br />
+          <code class="marker">$ vi [nombre de archivo existente]</code>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Modificar archivos</h3>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>cp</code></p>
+        <p style="font-size: 1.5rem;">
+          Copia un archivo:<br />
+          <code class="marker">$ cp [nombre de archivo original] [nombre de archivo copiado]</code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>mv</code></p>
+        <p style="font-size: 1.5rem;">
+          Movemos un archivo o directorio<br />
+          <code class="marker">$ mv [nombre del archivo][ruta a carpeta/nombre de archivo]</code>
+        </p>
+        <p style="font-size: 1.5rem;">
+          Mediante <code>mv</code> también podemos renombrar un archivo:<br />
+          <code class="marker">$ mv Gulpfile.js Gulpfile--BACKUP.js </code>
+        </p>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Modificar archivos</h3>
+
+    <ul>
+      <li>
+        <p style="margin-bottom:0;"><code>diff</code></p>
+        <p style="font-size: 1.5rem;">
+          Comparamos 2 archivos y nos muestra sólo en qué se diferencian:<br />
+          <code class="marker">$ diff [archivo original][archivo a comparar]</code>
+        </p>
+      </li>
+    </ul>
+  </section>
+</section>
+
+
+
+
+
+
+<section>
+  <section>
+    <img src="./img/slides/git/git-logo.png" alt="" width="150">
+    <h2>Software de <br />Control de versiones</h2>
+  </section>
+
+  <section>
+    <h3>¿Qué es Git?</h3>
+    <h4>Git es un Software de control de versiones <span class="marker">distribuido</span> y <span class="marker">descentralizado</span> que permite a un equipo de desarrolladores trabajar sobre el mismo código.</h4>
+  </section>
+
+  <section>
+    <h3>Control de versiones <span class="marker">distribuido</span></h3>
+    <p>Se denomina "distribuido" porque cada miembro del equipo dispone de <span class="marker">una copia completa del código</span>.</p>
+
+    <img src="./img/slides/git/distributed.png" alt="" width="300">
+  </section>
+
+  <section>
+    <h3>Control de versiones <span class="marker">descentralizado</span></h3>
+    <p>Los miembros del equipo pueden enviarse código, recibirlo y desarrollar funcionalidades de forma conjunta y <span class="marker">separada del servidor central</span>.</p>
+    <img src="./img/slides/git/git-centr-decentr.png" alt="" width="500">
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-ok.png" alt="" width="100">
+    <h3>Vetajas de usar Git</h3>
+    <ul>
+      <li>Versionado distribuido de código</li>
+      <li>Código colaborativo</li>
+      <li>Recuperación de archivos</li>
+      <li>Estándar actual</li>
+    </ul>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-super.png" alt="">
+    <h3>Git en Terminal</h3>
+    <ul>
+      <li>Mayor control</li>
+      <li>Shorcuts / Plugins</li>
+      <li>Mejora tu productividad</li>
+      <li style="color: grey"><strike>Ligarás más</strike></li>
+    </ul>
+  </section>
+</section>
+
+
+
+
+<section>
+  <section>
+    <img src="./img/slides/git/git-logo.png" alt="" width="150">
+    <h2>Instalación</h2>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-commandline.png" alt="" width="100">
+    <h3>Command Line Tools</h3>
+    <pre><code contenteditable>
+  $ xcode-select --install
+    </code></pre>
+    <small>Es probable que necesitemos descargar las Command Line Tools for Xcode</small>
+  </section>
+
+  <section>
+    <h3>Descarga Git</h3>
+    <h4 class="marker">Selecciona la versión adecuada a tu Sistema Operativo:</h4>
+    <p>Git está disponible para Windows, Mac, Linux y Solaris.</p>
+    <a href="http://git-scm.com/downloads" target="_blank"><img src="./img/slides/git/download-folder.png" alt="" width="150"></a>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-settings.png" alt="" width="100">
+    <h3>Configuración</h3>
+    <p>Indicamos a Git nuestra info de usuario</p>
+    <pre><code>
+  $ git config --global user.name "David G."
+  $ git config --global user.email dave74@gmail.com
+  $ git config --global core.editor nano
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">init</span></h3>
+    <h4 class="marker">Creamos un repositorio local</h4>
+    <p>En un directorio vacío ejecutamos el siguiente comando:</p>
+    <pre><code contenteditable>
+  $ mkdir git-test
+  $ cd git-test
+  $ git init
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Directorio <span class="marker">Git</span></h3>
+    <p>Git init crea un directorio oculto <span class="marker">.git</span> con el siguiente contenido:</p>
+    <ul>
+      <li><span class="marker">COMMIT_EDITMSG:</span> Comentarios de mensajes de commit</li>
+      <li><span class="marker">HEAD:</span> Puntero hacia la rama activa</li>
+      <li><span class="marker">config:</span> URLs de origin e info de ramas</li>
+      <li>...</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Crear un nuevo archivo:</h3>
+    <p class="marker">Git llevará un control exhaustivo sobre todos los cambios que vayamos haciendo.</p>
+    <pre><code contenteditable>
+  $ touch README.md
+    </code></pre>
+    <small>El comando UNIX <span class="marker">touch</span> nos crea un nuevo archivo. <br />Edítalo y guarda los cambios.</small>
+  </section>
+
+  <section>
+    <h3>.gitignore</h3>
+    <p class="marker">Incluimos TODO lo que NO queramos incluir en nuestro repositorio.</p>
+    <pre><code contenteditable>
+  $ touch .gitignore
+    </code></pre>
+    <small>Podemos crear uno ad-hoc en: <a href="https://www.gitignore.io/">gitignore.io</a></small>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">Status</span>:</h3>
+    <p class="marker">Listado de archivos nuevos (untracked), borrados o editados</p>
+    <pre><code contenteditable>
+  $ git status
+    </code></pre>
+    <p><img src="./img/slides/git/git-status.png" alt="" width="800"></p>
+    <small>Rutas relativas a la raíz del repositorio.</small>
+  </section>
+</section>
+
+
+
+
+<section>
+  <section>
+    <img src="./img/slides/git/git-logo.png" alt="" width="150">
+    <h2>Flujo de trabajo con Git</h2>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-laptop.png" alt="" width="300">
+    <h3>Local &amp; Remote</h3>
+    <p>El flujo de Git se distribuye en 3 estados locales y uno remoto</p>
+  </section>
+
+  <section>
+    <h3>Estados <span class="marker">Locales</span></h3>
+    <h4 class="marker" style="text-align: center; text-transform: none; font-size: 1.2em">A nivel local disponemos de:</h4><br />
+    <ul>
+      <li><span class="marker">Working Dir</span> > El directorio donde almacenamos los archivos</li>
+      <li><span class="marker">Staging</span> > El estado en el que avisamos a Git de que hemos realizado cambios</li>
+      <li><span class="marker">HEAD</span> > El puntero hacia el último bloque de código <code style="font-size: .8em">(commit)</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Working dir</h3>
+    <p>El primer nivel es nuestra <span class="marker">carpeta de trabajo</span>. Podemos añadir, quitar, editar archivos y Git sólo se encargará de controlar los archivos que han sido modificados:</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-wd.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">add</span></h3>
+    <p>Una vez creados, modificados, añadidos o borrados los archivos al <span class="marker">working dir</span> los pasamos al <span>staging</span> mediante:</p>
+    <pre><code contenteditable>
+  $ git add nombre de archivo/os
+    </code></pre>
+    <p> o bien:</p>
+    <pre><code contenteditable>
+  $ git add --all
+    </code></pre>
+    <p>todos los archivos</p>
+  </section>
+
+  <section>
+    <h3>Staging</h3>
+    <p>En el segundo nivel nuestros archivos están preparados para ser <span class="marker">empaquetados</span>. Podemos seguir trabajando y repetir el proceso tantas veces como necesitemos.</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-staging.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">commit</span></h3>
+    <p>Cuando hemos completado un conjunto de cambios, los "empaquetamos" mediante la instrucción <span>commit</span> y los colocamos en el <span class="marker">HEAD</span> mediante:</p>
+    <pre><code contenteditable>
+      $ git commit -m 'mensaje descriptivo'
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>HEAD</h3>
+    <p>Nuestro conjunto de cambios está listo para enviar al repositorio remoto. El HEAD es nuestra "bandeja de salida". Podemos seguir trabajando y crear más "commits".</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-head.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/github-octocat.png" alt="">
+    <h3>ORIGIN remoto</h3>
+    <p>Ahora vincularemos nuestro repo local con uno remoto en <span>Github</span> para poder trabajar en equipo:</p>
+
+    <a href="http://github.com" target="_blank">Créate una cuenta en Github.com</a>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">remote add origin</span></h3>
+    <p>Una vez creado el repositorio remoto en Github lo "vinculamos" a nuestro repositorio local mediante:</p>
+    <pre><code contenteditable>
+  $ git remote add origin https://github.com/user/repo.git
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">push</span></h3>
+    <p>Una vez indicado a Git que tenemos un repositorio remoto podemos enviar el conjunto de cambios contenidos en nuestro HEAD mediante:</p>
+    <pre><code contenteditable>
+  $ git push -u origin master
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Origin</h3>
+    <p>Por defecto Git denomina <span class="marker">origin</span> a nuestro repositorio remoto y crea una rama llamada <span class="marker">master</span>. Enviamos el contenido de HEAD mediante:</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-origin.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">clone</span></h3>
+    <p>Un software de control de versiones adquiere mayor relevancia cuando colaboran diferentes miembros de un equipo sobre el mismo código.</p>
+    <p>Una vez creado el repositorio remoto, el resto de miembros del equipo pueden bajarse una copia a sus equipos mediante:</p>
+
+    <pre><code contenteditable>
+  $ git clone https://github.com/user/repo.git
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">pull</span></h3>
+    <p>Sincronizar nuestro local con origin</p>
+    <p>Antes de enviar nuestros cambios tenemos que bajarnos la última versión de <span class="marker">repositorio remoto</span></p>
+
+    <pre><code contenteditable>
+  $ git pull origin master
+    </code></pre>
+    <small>obtenemos los últimos cambios de origin y los combinamos con la rama master</small>
+  </section>
+
+  <section>
+    <h3>Sincronizando versiones</h3>
+    <p>Cuando obtenemos archivos del repositorio remoto a nuestra copia local Git obtiene todos los archivos nuevos que se hayan añadido y elimina los que se hayan quitado.</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-pull.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-log.png" alt="" width="100">
+    <h3>Git <span class="marker">log</span></h3>
+    <p>Consulta el historial de "commits" realizados por los diferentes miembros del equipo mediante:</p>
+    <pre><code contenteditable>
+  $ git log
+    </code></pre>
+  </section>
+</section>
+
+
+
+        </div>
+    </div>
+
+    <script src="js/reveal/head.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'js/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+</script>
+</body>
+</html>

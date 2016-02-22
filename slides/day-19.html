@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" id="no-reveal">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Fundamentos CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
+
+    <meta name="description" content="Máster en Diseño Web | Módulo III">
+    <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="topheader">
+    <a href="./index.html"><img src="./img/logo-bau-es.svg"></a>
+    <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
+</div>
+
+    <div class="Page-wrap reveal">
+        
+
+<section>
+	<section>
+		<img class="logo-node" src="./img/slides/grunt/logo-node.svg" alt="">
+		<p>Se trata de un Framework que nos permite crear aplicaciones Javascript que se ejecutan en servidor. Grunt necesita <span class="marker">Node.js</span> para poder ejecutarse</p>
+	</section>
+
+	<section>
+		<h3>Instalación de NODE.JS</h3>
+		<p>Para instalarlo podemos descargar el instalador de la página web de Node:</p>
+		<a href="https://nodejs.org/"><img class="logo-pkg" src="./img/slides/grunt/node-pkg.png" alt=""></a>
+	</section>
+
+	<section>
+		<img class="logo-npm" src="./img/slides/grunt/logo-npm.svg" alt="">
+		<p>Node Package Manager</p>
+		<p>Mediante NPM podemos instalar diversas aplicaciones basadas en Node. Como por ejemplo Grunt:</p>
+		<pre><code data-trim contenteditable>
+
+$ npm install grunt --save-dev
+
+        </code></pre>
+	</section>
+
+	<section>
+		<h3>Package.json</h3>
+		<p>Grunt se instala a nivel de "proyecto". Cada proyecto tiene un archivo llamado <span class="marker">package.json</span> el cual lleva un control de todas las dependencias del proyecto.</p>
+
+		<pre><code data-trim contenteditable>
+
+{
+  "name": "example-project",
+  "version": "0.1.0",
+  "devDependencies": {
+    "grunt": "~0.4.1"
+  }
+}
+
+        </code></pre>
+        <small>JSON => JavaScript Object Notation</small>
+	</section>
+
+	<section>
+		<h3>Instalar dependencias con NPM</h3>
+		<p>Una vez definidas todas las dependencias en el archivo <span class="marker">package.json</span> sólo necesitamos ejecutar un comando para que se instalen todas a la vez:</p>
+
+		<pre><code data-trim contenteditable>
+
+$ npm install
+
+        </code></pre>
+	</section>
+	
+	<section>
+		<h3>Grunt CLI</h3>
+		<p>Cada proyecto puede tener una versión de Grunt diferente. Mediante Grunt CLI instalamos Grunt de forma global y lo ejecutamos a nivel local de proyecto.</p>
+		<p>Cada proyecto Grunt necesita un archivo de configuración llamado Gruntfile.js</p>
+
+				<pre><code data-trim contenteditable>
+
+$ npm install -g grunt-cli
+
+        </code></pre>
+	</section>
+
+	<section>
+		<h3>Gruntfile</h3>
+		<p>La función principal de este archivo de configuración es:</p>
+		<ul>
+			<li>Configuración del proyecto y de sus tareas</li>
+			<li>Carga de plugins del proyecto</li>
+			<li>Definición de tareas personalizadas del proyecto</li>
+		</ul>
+	</section>
+</section>
+
+
+
+
+
+
+
+<section class="text-left">
+    <section>
+        <h2 style="text-align: center;">Crear un task de Grunt</h2>
+        <p>Comenzaremos creando una tarea para que grunt compile Sass cuando se lo indiquemos.</p>
+        <p>Normalmento los pasos a seguir serán:</p>
+        <ol>
+            <li>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</li>
+            <li>Agregar el módulo a la lista que cargar Grunt al iniciar.</li>
+            <li>Crear una tarea y configurarla según nuestras necesidades.</li>
+            <li>Agregar la tarea a un workflow más grande.</li>
+        </ol>
+        <hr>
+        <p><a href="./files/grunt/ejemplo-grunt.zip">ejemplo-grunt.zip</a></p>
+    </section>
+
+    <section>
+        <ol>
+            <li><em>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</em></li>
+            <li>Agregar el módulo a la lista que cargar Grunt al iniciar.</li>
+            <li>Crear una tarea y configurarla según nuestras necesidades.</li>
+            <li>Agregar la tarea a un workflow más grande.</li>
+        </ol>
+    </section>
+
+    <section>
+        <p style="font-size: 2rem;">Buscaremos en Google "grunt" seguido de lo que queramos automatizar a ver si encontramos algún módulo que haga lo que necesitamos.</p>
+        <p style="font-size: 2rem;">De entre los resultados, lo mejor es acceder directamente a la página en github del módulo que queramos.</p>
+        <p style="font-size: 2rem;">Para nuestro ejemplo buscaremos "grunt sass"</p>
+        <p style="font-size: 2rem;">Instalamos el módulo copiando el comando que nos proporciona la página (omitimos el $).</p>
+        <hr>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-sass">https://github.com/gruntjs/grunt-contrib-sass</a></p>
+    </section>
+
+    <section>
+        <pre><code>
+npm install --save-dev grunt-contrib-sass
+        </code></pre>
+        <p>"<em>npm</em>" es el comando para ejecutar acciones con el gestor de paquetes de node.js (node package manager).</p>
+        <p>"<em>install</em>" es la accion que queremos ejecutar</p>
+        <p>"<em>--save-dev</em>" es una opción extra del comando install que hará que además de instalar el paquete lo agregue a la lista de dependencias en el package.json para que la próxima persona en descargarse el proyecto sepa que módulos necesita para que funcione.</p>
+        <p>"<em>grunt-contrib-sass</em>" es el paquete que estamos instalando en este momento.</p>
+    </section>
+
+    <section>
+        <ol>
+            <li>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</li>
+            <li><em>Agregar el módulo a la lista que cargar Grunt al iniciar.</em></li>
+            <li>Crear una tarea y configurarla según nuestras necesidades.</li>
+            <li>Agregar la tarea a un workflow más grande.</li>
+        </ol>
+    </section>
+
+    <section>
+        <p>Indicamos a grunt que tiene que cargar el módulo para poder utilizarlo luego con a siguiente línea.</p>
+        <pre><code>
+grunt.loadNpmTasks('grunt-contrib-sass');
+        </code></pre>
+    </section>
+
+    <section>
+        <ol>
+            <li>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</li>
+            <li>Agregar el módulo a la lista que cargar Grunt al iniciar.</li>
+            <li><em>Crear una tarea y configurarla según nuestras necesidades.</em></li>
+            <li>Agregar la tarea a un workflow más grande.</li>
+        </ol>
+    </section>
+
+    <section>
+        <p>Configuramos el task de sass para que nos compile el archivo <em>main.scss</em> en <em>main.css</em>. Podemos incluir una opción para especificar el estilo que tendrá el css resultante.</p>
+        <pre><code>
+sass: {
+    dist: {
+        options: {
+            style: 'expanded'
+        },
+        files: {
+            'main.css': 'main.scss'
+        }
+    }
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <ol>
+            <li>Buscar en Google un módulo que haga lo que necesitmos e instalarlo.</li>
+            <li>Agregar el módulo a la lista que cargar Grunt al iniciar.</li>
+            <li>Crear una tarea y configurarla según nuestras necesidades.</li>
+            <li><em>Agregar la tarea a un workflow más grande.</em></li>
+        </ol>
+    </section>
+
+    <section>
+        <p>Agregamos nuestro task ('sass') dentro del task default para que se ejecute cuand corremos el comando "grunt" en la terminal.</p>
+        <pre><code>
+grunt.registerTask('default', [
+    'sass'
+]);
+        </code></pre>
+    </section>
+</section>
+
+
+<section class="text-left">
+    <section>
+        <h2 style="text-align: center;">Workflow con Grunt</h2>
+        <p>Organizaremos las carpetas en dos grandes directorios:</p>
+        <ul>
+            <li><em>src</em>: donde guardaremos las fuentes y que será nuestro directorio de trabajo.</li>
+            <li><em>dist</em>: donde Grunt compilará las fuentes y del cual nosotros no tocaremos nada.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>clean</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-clean">grunt-contrib-clean</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+clean: {
+    build: [
+        'dist'
+    ]
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>autoprefixer</h3>
+        <p><a href="https://github.com/nDmitry/grunt-autoprefixer">grunt-autoprefixer</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+autoprefixer: {
+    options: {
+        browsers: [
+            'last 2 versions',
+            '> 2%',
+            'ie 8',
+            'ie 9'
+        ]
+    },
+    dist: {
+        src: 'dist/css/main.css',
+        dest: 'dist/css/main.css'
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>csso</h3>
+        <p><a href="https://github.com/t32k/grunt-csso">grunt-csso</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+csso: {
+    compress: {
+        options: {
+            report: 'gzip'
+        },
+        files: {
+            'dist/css/main.min.css': ['dist/css/main.css']
+        }
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>pixrem</h3>
+        <p><a href="https://github.com/robwierzbowski/grunt-pixrem">grunt-pixrem</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+pixrem: {
+    options: {
+        rootvalue: '100%'
+    },
+    dist: {
+        src: 'dist/css/main.min.css',
+        dest: 'dist/css/main.min.css'
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>concat</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-concat">grunt-contrib-concat</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+concat: {
+    dist: {
+        src: [
+            'src/js/components/**/*.js'
+        ],
+        dest: 'dist/js/main.js'
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>uglify</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-uglify">grunt-contrib-uglify</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+uglify: {
+    main: {
+        files: {
+            'dist/js/main.min.js': 'dist/js/main.js'
+        }
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>copy</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-copy">grunt-contrib-copy</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+copy: {
+    main: {
+        expand: true,
+        cwd: 'src/',
+        src: '**/*.html',
+        dest: 'dist/',
+        filter: 'isFile',
+    },
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>imagemin</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-imagemin">grunt-contrib-imagemin</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+imagemin: {
+    dist: {
+        files: [{
+            expand: true,
+            cwd: 'src/',
+            src: ['**/*.{png,jpg,gif}'],
+            dest: 'dist/'
+        }]
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>svgmin</h3>
+        <p><a href="https://github.com/sindresorhus/grunt-svgmin">grunt-svgmin</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+svgmin: {
+    dist: {
+        expand: true,
+        cwd: 'src/img',
+        src: ['*.svg'],
+        dest: 'dist/img'
+    }
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>watch</h3>
+        <p><a href="https://github.com/gruntjs/grunt-contrib-watch">grunt-contrib-watch</a></p>
+        <hr>
+        <pre><code data-trim contenteditable style="font-size: 1rem;">
+watch: {
+    css: {
+        files: ['src/scss/**/*.scss'],
+        tasks: ['sass', 'autoprefixer', 'csso', 'pixrem'],
+    },
+    js: {
+        files: ['src/js/components/**/*.js'],
+        tasks: ['concat', 'uglify'],
+    },
+    html: {
+        files: ['src/**/*.html'],
+        tasks: ['copy'],
+        options: {
+            livereload: true,
+        },
+    },
+    svg: {
+        files: ['src/**/*.svg'],
+        tasks: ['svgmin'],
+        options: {
+            livereload: true,
+        },
+    },
+    img: {
+        files: ['src/**/*.{png,jpg,gif}'],
+        tasks: ['imagemin'],
+        options: {
+            livereload: true,
+        },
+    },
+},
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>browser-sync</h3>
+        <p><a href="http://www.browsersync.io/docs/grunt/">grunt-browser-sync</a></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+browserSync: {
+    dev: {
+        bsFiles: {
+            src : [
+                'dist/css/*.css',
+                'dist/js/*.js',
+                'dist/*.html'
+            ]
+        },
+        options: {
+            watchTask: true,
+            server: 'dist'
+        }
+    }
+},
+        </code></pre>
+    </section>
+</section>
+
+
+<section>
+    <h3>Web Performance</h3>
+    <ul style="font-size: 1.8rem">
+
+        <li style="margin-bottom: .8em;">
+            <strong>Perf Rocks</strong><br />
+            <a href="http://perf.rocks/" style="font-size: .8em;">perf.rocks/</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Design Decisions Through The Lens Of A Performance Budget</strong> <i style="color: #999;"> &mdash; Yesenia Perez-Cruz</i><br />
+            <a href="https://vimeo.com/108328247" style="font-size: .8em;">vimeo.com/108328247</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Designing for Front-End Page Speed</strong> <i style="color: #999;"> &mdash; Lara Hogan</i><br />
+            <a href="https://www.youtube.com/watch?v=RtpVZ5OzJlc" style="font-size: .8em;">www.youtube.com/watch?v=RtpVZ5OzJlc</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Web performance</strong> <i style="color: #999;"> &mdash; Andy Davies</i><br />
+            <a href="http://www.fivesimplesteps.com/products/web-performance" style="font-size: .8em;">www.fivesimplesteps.com/products/web-performance</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Website Performance Optimization</strong> <i style="color: #999;"> &mdash; Ilya Grigorik</i><br />
+            <a href="https://www.udacity.com/course/website-performance-optimization--ud884" style="font-size: .8em;">/www.udacity.com/course/website-performance-optimization--ud884</a>
+        </li>
+
+    </ul>
+</section>
+    </div>
+
+</body>
+</html>
