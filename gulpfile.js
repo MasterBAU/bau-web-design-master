@@ -126,7 +126,7 @@ gulp.task('build', function(callback) {
     runSequence(
         'clean',
         [
-            // 'html',
+            'html',
             'images',
             'files',
             'svg',
