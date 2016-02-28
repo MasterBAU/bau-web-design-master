@@ -10,8 +10,6 @@ var gulp        = require('gulp'),
     colors      = require('colors'),
     plumber     = require('gulp-plumber'),
     sass        = require('gulp-sass'),
-    concat      = require('gulp-concat'),
-    merge       = require('merge-stream'),
     del         = require('del'),
     changed     = require('gulp-changed'),
     cp          = require('child_process'),
@@ -85,20 +83,10 @@ gulp.task('fonts', function() {
 
 // JS ===================================================
 gulp.task('js', function() {
-    var scripts =  gulp.src([ path.src + '/_js/**/*.js', '!' + path.src + '/_js/reveal/*.js'])
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest( path.dist + '/js' ));
-
-    var scripts_min =  gulp.src( path.src + '/_js/reveal/*.js')
-        .pipe(plumber({
-            errorHandler: onError
-        }))
-        .pipe(gulp.dest( path.dist + '/js/reveal' ));
-
-    return merge(scripts, scripts_min);
+    return gulp.src([
+      path.src + '/_js/reveal/*.js'
+    ])
+    .pipe(gulp.dest( path.dist + '/js/reveal'))
 });
 
 
