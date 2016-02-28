@@ -1,7 +1,7 @@
 source:      ./src
 destination: ./slides
-layouts:     _layouts
-data_source: _includes
+layouts_dir:     _layouts
+data_dir: _includes
 
 # Handling Reading
 exclude:      [
