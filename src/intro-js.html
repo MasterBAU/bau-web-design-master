@@ -1,0 +1,52 @@
+---
+
+layout: slides
+title: 'Programacion Frontend'
+
+lesson_title: 'Javascript'
+
+---
+
+{% include slides/js/js-why.html %}
+
+{% include slides/js/js-boring.html %}
+
+
+<section>
+  <p>Javascript nos permite hacer mejores webs, proporcionando una mejor experiencia al usuario con interacciones más elaboradas.</p>
+</section>
+
+{% include slides/js/js-basics.html %}
+
+<section>
+  <h3>jQuery</h3>
+  <p>Es una libreria Javascript que nos permite:</p>
+  <ul>
+    <li>Interactuar con el DOM de manera sencilla</li>
+    <pre><code data-trim contenteditable>
+document.getElementById('id_de_elemento'); //versión Javascript
+$('#id_de_elemento'); //versión con jQuery
+    </code></pre>
+    <li>Detectar elementos (clicks, hover, teclas presionadas...)</li>
+    <li>Manipular los CSS de un elemento</li>
+    <li>Animaciones</li>
+    <li>AJAX</li>
+  </ul>
+</section>
+<section>
+  Referencia de funciones jQuery: <a href="http://oscarotero.com/jquery/">http://oscarotero.com/jquery/</a>
+</section>
+<section>
+  <h3>Ejemplos</h3>
+  <ul>
+    <li>
+      Mostrar/ocultar bloque de texto al hacer click sobre su titular.
+    </li>
+    <li>
+      Display de algo al hacer hover sobre un elemento.
+    </li>
+    <li>
+      Carrusel de imágenes.
+    </li>
+  </ul>
+</section>
