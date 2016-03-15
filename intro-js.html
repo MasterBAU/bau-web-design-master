@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Programacion Frontend | Máster en Diseño Web | Módulo III Programación Frontend</title>
+
+    <meta name="description" content="Máster en Diseño Web | Módulo III">
+    <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="topheader">
+    <a href="./index.html"><img src="./img/logo-bau-es.svg"></a>
+    <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
+</div>
+
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Módulo III <br />
+                    <span class="marker">Programación Frontend</span>
+                </h3>
+                <h3><strong>Javascript</strong></h3>
+            </section>
+
+            <section>
+	<section>
+			<h3>¿Por qué tendría que aprender Javascript?</h3>
+			<ul>
+				 <li>
+					 Libertad para implementar las interacciones que se os ocurran (o poder estimar cual es el coste de implementarlas).
+				 </li>
+				 <li>
+					 Entender el lenguaje, y lo que se puede hacer con el, abre más posibilidades en vuestros diseños.
+				 </li>
+			</ul>
+	</section>
+</section>
+
+
+<section>
+    <h3>Empecemos con la parte aburrida 😱😭😪</h3>
+</section>
+<section>
+  <h3>Javascript</h3>
+  <ul>
+    <li>Fue creado en 1995 por Brendan Eich, que trabajaba para NetScape</li>
+    <li>ECMAScript es el estándar de Javascript especificado por ECMA (European Computer Manufactorers Association)</li>
+    <li>La versión actual es la 5, aunque hay muchas cosas de la versión 6 a punto de llegar.</li>
+</section>
+<section>
+  <h3>OK, pero ¿que es Javascript?</h3>
+</section>
+<section>
+  <blockquote>
+    Javascript es un lenguaje débilmente tipado, dinámico, interpretado, basado en prototipos, orientado a objetos, funcional e imperativo. Creado originalmente para usarse en el lado del cliente (navegador), aunque también desde el lado del servidor, y en los últimos años, como motor para aplicaciones de escritorio.
+  </blockquote>
+</section>
+<section>
+  <img src="http://media.giphy.com/media/cqcTjuggnRqIE/giphy.gif">
+</section>
+<section>
+  <img src="http://anothercleanslate.com/wp-content/uploads/2014/03/Tumblr_milp5c3tPu1rxmwhyo1_500.gif">
+</section>
+<section>
+  <h3>😁</h3>
+</section>
+
+
+
+
+<section>
+  <p>Javascript nos permite hacer mejores webs, proporcionando una mejor experiencia al usuario con interacciones más elaboradas.</p>
+</section>
+
+<section>
+	<h3>Empezando a trabajar con Javascript</h3>
+	<h4>Un programa es un listado de instrucciones que se ejecutan de manera lineal.</h4>
+	<pre>
+		<code data-trim contenteditable>
+			var message = 'hola!';
+console.log(message);
+		</code>
+	</pre>
+</section>
+<section>
+	<h3>Sintaxis</h3>
+	<h4>La sintaxis de un lenguaje de programación es un conjunto de reglas a través del cual podemos construir los programas, como por ejemplo:</h4>
+	<ul>
+		<li><code>;</code> nos permite separar instrucciones de código</li>
+		<li><code>var return true false function</code> son ejemplos de <strong>palabras clave</strong>, tienen un significado sintáctico determinado.</li>
+		<li><code>var</code> nos permite definir variables nuevas. Las variables guardan datos de diversos tipos.</li>
+	</ul>
+</section>
+<section>
+  <h3>Funciones</h3>
+  <p>Son los verbos de la programación. Nos ayudan a expresarle al intérprete (en nuestro caso, el navegador) que acciones realizar.</p>
+  <pre><code data-trim contenteditable>
+    //a y b son parámetros de la función
+    function suma(a, b) {
+      return a + b; //"return" indica que la función acaba ahí y devuelve el resultado al lado de return
+    }
+
+    var resultado = suma(10, 5); //resultado = 15
+  </code></pre>
+</section>
+<section>
+  <h3>Empezando a trabajar con Javascript</h3>
+  <h4>Podemos incluir código Javascript en nuestras webs de dos maneras:</h4>
+  <ul>
+    <li>Directamente en el código fuente, con un tag &lt;script&gt:</li>
+    <pre><code data-trim contenteditable>
+      <script>
+  var saludo = 'hola!';
+  console.log(saludo);
+</script>
+    </code></pre>
+    <li>Escribiéndolo en un archivo con extensión .js, y referenciándolo desde el HTML:</li>
+    <pre><code data-trim contenteditable>
+      &lt;script type="text/javascript" src="path/a/nuestro/archivo.js"&gt;</script>
+    </code></pre>
+  </ul>
+</section>
+<section>
+  <h3>Objetos</h3>
+  <h4>Son colecciones de propiedades, nos permiten agrupar un conjunto de información en una única variable.<h4>
+  <pre><code data-trim contenteditable>
+    var teacher = {
+    name: ‘Mike’,
+		age: 26,
+    loves_javascript: true
+};
+  </code></pre>
+</section>
+
+
+<section>
+  <h3>jQuery</h3>
+  <p>Es una libreria Javascript que nos permite:</p>
+  <ul>
+    <li>Interactuar con el DOM de manera sencilla</li>
+    <pre><code data-trim contenteditable>
+document.getElementById('id_de_elemento'); //versión Javascript
+$('#id_de_elemento'); //versión con jQuery
+    </code></pre>
+    <li>Detectar elementos (clicks, hover, teclas presionadas...)</li>
+    <li>Manipular los CSS de un elemento</li>
+    <li>Animaciones</li>
+    <li>AJAX</li>
+  </ul>
+</section>
+<section>
+  Referencia de funciones jQuery: <a href="http://oscarotero.com/jquery/">http://oscarotero.com/jquery/</a>
+</section>
+<section>
+  <h3>Ejemplos</h3>
+  <ul>
+    <li>
+      Mostrar/ocultar bloque de texto al hacer click sobre su titular.
+    </li>
+    <li>
+      Display de algo al hacer hover sobre un elemento.
+    </li>
+    <li>
+      Carrusel de imágenes.
+    </li>
+  </ul>
+</section>
+
+        </div>
+    </div>
+
+    <script src="js/reveal/head.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'js/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+</script>
+</body>
+</html>
