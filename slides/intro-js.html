@@ -101,34 +101,36 @@
 </section>
 
 <section>
-	<h3>Empezando a trabajar con Javascript</h3>
-	<h4>Un programa es un listado de instrucciones que se ejecutan de manera lineal.</h4>
-	<pre>
-		<code data-trim contenteditable>
-			var message = 'hola!';
+  <h3>Empezando a trabajar con Javascript</h3>
+  <h4>Un programa es un listado de instrucciones que se ejecutan de manera lineal.</h4>
+  <pre>
+    <code data-trim contenteditable>
+      var message = 'hola!';
 console.log(message);
-		</code>
-	</pre>
+    </code>
+  </pre>
 </section>
 <section>
-	<h3>Sintaxis</h3>
-	<h4>La sintaxis de un lenguaje de programación es un conjunto de reglas a través del cual podemos construir los programas, como por ejemplo:</h4>
-	<ul>
-		<li><code>;</code> nos permite separar instrucciones de código</li>
-		<li><code>var return true false function</code> son ejemplos de <strong>palabras clave</strong>, tienen un significado sintáctico determinado.</li>
-		<li><code>var</code> nos permite definir variables nuevas. Las variables guardan datos de diversos tipos.</li>
-	</ul>
+  <h3>Sintaxis</h3>
+  <h4>La sintaxis de un lenguaje de programación es un conjunto de reglas a través del cual podemos construir los programas, como por ejemplo:</h4>
+  <ul>
+    <li><code>;</code> nos permite separar instrucciones de código</li>
+    <li><code>var return true false function</code> son ejemplos de <strong>palabras clave</strong>, tienen un significado sintáctico determinado.</li>
+    <li><code>var</code> nos permite definir variables nuevas. Las variables guardan datos de diversos tipos.</li>
+  </ul>
 </section>
 <section>
   <h3>Funciones</h3>
   <p>Son los verbos de la programación. Nos ayudan a expresarle al intérprete (en nuestro caso, el navegador) que acciones realizar.</p>
-  <pre><code data-trim contenteditable>
-    //a y b son parámetros de la función
-    function suma(a, b) {
-      return a + b; //"return" indica que la función acaba ahí y devuelve el resultado al lado de return
-    }
+  <pre><code data-trim contenteditable class="hljs js">
+/* a y b son parámetros de la función */
+function suma(a, b) {
+  /* "return" indica que la función acaba ahí y devuelve
+  el resultado al lado de return. */
+  return a + b;
+}
 
-    var resultado = suma(10, 5); //resultado = 15
+var resultado = suma(10, 5); // resultado = 15
   </code></pre>
 </section>
 <section>
@@ -136,8 +138,8 @@ console.log(message);
   <h4>Podemos incluir código Javascript en nuestras webs de dos maneras:</h4>
   <ul>
     <li>Directamente en el código fuente, con un tag &lt;script&gt:</li>
-    <pre><code data-trim contenteditable>
-      <script>
+    <pre><code data-trim contenteditable  class="hljs html js">
+<script>
   var saludo = 'hola!';
   console.log(saludo);
 </script>
@@ -150,12 +152,12 @@ console.log(message);
 </section>
 <section>
   <h3>Objetos</h3>
-  <h4>Son colecciones de propiedades, nos permiten agrupar un conjunto de información en una única variable.<h4>
-  <pre><code data-trim contenteditable>
-    var teacher = {
-    name: ‘Mike’,
-		age: 26,
-    loves_javascript: true
+  <h4>Son colecciones de propiedades, nos permiten agrupar un conjunto de información en una única variable.</h4>
+  <pre><code data-trim contenteditable class="hljs js">
+var teacher = {
+  name: 'Mike',
+  age: 26,
+  loves_javascript: true
 };
   </code></pre>
 </section>
