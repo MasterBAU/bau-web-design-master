@@ -56,12 +56,12 @@
     <p class="ta-c"><a href="files/html-forms/form.zip">Ejemplo</a></p>
   </section>
 
-  <section>
+  <section class="ta-l">
     <p>Los formularios nos permiten obtener información del usuario. <br />El resultado puede ser una búsqueda en una base de datos o el envío del contenido por e-mail.</p>
     <img src="img/slides/html-forms/forms-example01.jpg" alt="">
   </section>
 
-  <section>
+  <section class="ta-l">
     <h3>Estructura básica</h3>
     <pre><code data-trim contenteditable>
 <form>
@@ -71,7 +71,7 @@
     </code></pre>
   </section>
 
-  <section>
+  <section class="ta-l">
     <h3>&lt;form&gt;</h3>
     <p>La etiqueta Form se utiliza para crear un formulario.<br />
       Puede contener los siguientes atributos que nos van a permitir definir su comportamiento:</p>
@@ -84,8 +84,8 @@
   </section>
 </section>
 
-<section>
-  <section>
+<section class="ta-l">
+  <section class="ta-l">
     <h3>&lt;input&gt;</h3>
     <p> Es el elemento básico de un formulario.<br />
       Su funcionalidad varía dependiendo del valor de su atributo "type".<br />
@@ -101,7 +101,7 @@
       </p>
     </section>
 
-    <section>
+    <section class="ta-l">
       <h4>Atributo placeholder</h4>
       <p>El elemento <code>&#060;input type="text"&#062;</code> puede disponer de otros atributos como por ejemplo <span class="marker">placeholder</span>. En este caso nos permite añadir un contenido predefinido.<br />
         Este atributo sólo puede contener texto.</p>
@@ -115,7 +115,7 @@
         <p><input type="text" name="nombre" placeholder="Introduce tu nombre"  style="width: 550px; font-size: 1.5rem; margin:0 30px; padding: .25rem .5rem; display: inline-block:" /></p>
       </section>
 
-        <section>
+        <section class="ta-l">
           <h4>Atributo autofocus</h4>
           <p>Mediante <span class="marker">autofocus</span> el cursor se situa de forma automática en el elemento INPUT al cargar la página.</p>
           <pre><code data-trim contenteditable>
@@ -129,7 +129,7 @@
           <p><input type="text" name="nombre" style="width: 550px; font-size: 1.5rem; margin:0 30px; padding: .25rem .5rem; display: inline-block:"/></p>
         </section>
 
-        <section>
+        <section class="ta-l">
           <h4>Atributo required</h4>
           <p>Con <span class="marker">required</span> obligamos al usuario a introducir un valor en este campo.</p>
           <pre><code data-trim contenteditable>
@@ -147,7 +147,7 @@
 
         </section>
 
-        <section>
+        <section class="ta-l">
           <h4>&lt;input type="password"&gt;</h4>
           <p>Oculta el valor del campo contraseña mientras se escribe</p>
           <pre><code data-trim contenteditable>
@@ -161,7 +161,7 @@
 
         </section>
 
-        <section>
+        <section class="ta-l">
           <h4>&lt;input type="file"&gt;</h4>
           <p>Permite especificar un tipo de archivo concreto para adjuntar en el envío del formulario.</p>
           <pre><code data-trim contenteditable>
@@ -172,7 +172,7 @@
           <p><input type="file" name="imagen" accept="image/*" style="transform: scale(1.5);"></p>
         </section>
 
-        <section>
+        <section class="ta-l">
 
           <h4>&lt;input type="submit"&gt;</h4>
           <pre><code data-trim contenteditable>
@@ -185,7 +185,7 @@
         </section>
 
 
-  <section>
+  <section class="ta-l">
     <h4>&lt;input type="checkbox"&gt;</h4>
     <p>Este elemento permite 2 estados: Marcado/desmarcado (true/false)</p>
     <pre><code data-trim contenteditable>
@@ -213,7 +213,7 @@
     </p>
   </section>
 
-  <section>
+  <section class="ta-l">
     <h4>&lt;input type="radio"&gt;</h4>
     <p>Este elemento permite 2 estados Marcado/desmarcado (true/false) pero limita al usuario a escoger entre un número limitado de opciones:</p>
     <pre><code data-trim contenteditable>
@@ -247,12 +247,12 @@
       </p>
   </section>
 
-  <section>
+  <section class="ta-l">
     <h3>Nuevos elementos incluidos en</h3>
     <h2><span class="marker">HTML5</span></h2>
   </section>
 
-        <section>
+        <section class="ta-l">
           <h4>&lt;input type="color"&gt;</h4>
           <p>Permite especificar un color.</p>
           <pre><code data-trim contenteditable>
@@ -264,7 +264,7 @@
           <p>El color seleccionado es: <input id="color-elegido" type="text" readonly="" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px; display:inline-block;"></p>
         </section>
 
-        <section>
+        <section class="ta-l">
           <h4>&lt;input type="date"&gt;</h4>
           <p> Permite especificar una fecha con un calendario desplegable.<br />
             Además podemos restringir valores máximos y mínimos para una fecha concreta.</p>
@@ -277,7 +277,7 @@
           </section>
 
 
-          <section>
+          <section class="ta-l">
             <h4>&lt;input type="email"&gt;</h4>
             <p> Validación automática de formato e-mail.<br />
               En dispositivos móviles el teclado muestra la @.</p>
@@ -292,7 +292,7 @@
               </form>
             </section>
 
-            <section>
+            <section class="ta-l">
               <h4>&lt;input type="number"&gt;</h4>
               <p> Especificamos campos para introducir exclusivamente valores numéricos.<br />
                 Podemos realizar operaciones aritméticas.</p>
@@ -304,7 +304,7 @@
                 <p><a href="files/forms/numbers.html" target="_blank">Ejemplo de operaciones aritméticas con "number"</a></p>
               </section>
 
-              <section>
+              <section class="ta-l">
                 <h4>&lt;input type="range"&gt;</h4>
                 <p> Permite al usuario seleccionar un valor numérico deslizando un control.<br />
                   Podemos definir un valor mínimo, otro máximo y el valor de cada incremento.</p>
@@ -317,7 +317,7 @@
                 </section>
               </section>
 
-  <section>
+  <section class="ta-l">
     <h3>&lt;select&gt;</h3>
     <p> Especificamos el valor inicial del elemento.<br />
       Normalmente asignamos un valor con este atributo para elementos que no son editables por el usuario:</p>
@@ -341,7 +341,7 @@
 
   </section>
 
-  <section>
+  <section class="ta-l">
     <h3>&lt;textarea&gt;</h3>
     <p> Definimos un area con una anchura y altura determinada para que el usuario pueda introducir sus comentarios.</p>
 
@@ -357,7 +357,7 @@
     </textarea>
   </section>
 
-  <section>
+  <section class="ta-l">
     <h3>&lt;button&gt;</h3>
     <p> Elemento diseñado específicamente para enviar los datos del formulario de la misma forma que hacía anteriormente INPUT type="submit".</br />
     La ventaja principal es que permite contener elementos HTML.</p>
