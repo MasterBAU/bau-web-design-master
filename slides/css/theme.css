@@ -843,6 +843,106 @@ p.selection::selection {
 .pos__box-3 {
   background: #d35400; }
 
+.symple-before {
+  text-transform: lowercase !important; }
+  .symple-before:before {
+    content: "(⊙_◎)";
+    color: yellow;
+    font-size: 0.7em;
+    padding-right: 20px; }
+
+.catwatching {
+  padding-left: 20px; }
+  .catwatching:before {
+    content: "";
+    background-image: url(../img/slides/css-pseudoclasses/cat-watching.gif);
+    float: left;
+    margin: 0 30px 0 50px;
+    height: 250px;
+    width: 400px; }
+
+pre.whitecat-pre {
+  margin-left: 0;
+  width: 60%; }
+
+.whitecat {
+  padding-left: 20px;
+  position: relative;
+  width: 63%; }
+  .whitecat:after {
+    content: "";
+    background-image: url(../img/slides/css-pseudoclasses/whitecat.gif);
+    position: absolute;
+    top: -222px;
+    right: -250px;
+    height: 400px;
+    width: 240px; }
+
+.firstletter::first-letter {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #D5C70F;
+  display: inline-block;
+  float: left;
+  font-weight: bolder;
+  font-size: 3em;
+  margin: 0 15px 0 50px;
+  padding: 35px 30px 45px;
+  text-shadow: 2px 2px 2px #000; }
+
+.firstline::first-line {
+  color: #D5C70F;
+  font-weight: bold;
+  font-size: 1.2em;
+  line-height: 1.2;
+  text-shadow: 2px 2px 2px #000; }
+
+p.selection::selection {
+  color: #D5C70F;
+  background: transparent;
+  text-shadow: 2px 2px 2px #000; }
+
+section.unix code {
+  color: #37FF37;
+  font-size: 1.5em; }
+
+section.unix img {
+  background: transparent;
+  border: none;
+  box-shadow: none; }
+
+section.term .marker {
+  color: #1A34FF; }
+
+section img.logo-node {
+  width: 800px;
+  border: none;
+  background: transparent;
+  box-shadow: none; }
+
+a img.logo-pkg {
+  width: 200px;
+  border: none;
+  background: transparent;
+  box-shadow: none; }
+
+.reveal section img {
+  background: transparent;
+  box-shadow: none;
+  border: none; }
+
+section img.logo-npm {
+  width: 300px;
+  border: none;
+  background: transparent;
+  box-shadow: none; }
+
+.reveal .slides p {
+  font-size: .8em;
+  text-align: center; }
+
+.reveal small {
+  display: block; }
+
 /*
 
 Zenburn style from voldmar.ru (c) Vladimir Epifanov <voldmar@voldmar.ru>
