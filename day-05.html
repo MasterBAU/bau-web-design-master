@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
+    <title>Introducción al HTML | Máster en Diseño Web | Módulo III Programación Frontend</title>
 
     <meta name="description" content="Máster en Diseño Web | Módulo III">
     <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
@@ -47,229 +47,755 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Git Avanzado</strong></h3>
+                <h3><strong>Introducción al HTML</strong></h3>
             </section>
 
             
 
 <section>
-  <section data-background="#66B9F2">
-    <img src="./img/slides/git/github-octocat.png" alt="" width="150">
-    <h2>Inicializando repositorios remotos</h2>
+  <section>
+    <h2>Clientes y servidores</h2>
   </section>
 
-  <section data-background="#66B9F2">
-    <img src="./img/slides/git/github-octocat.png" alt="" width="150">
-    <h3>Github</h3>
-    <img src="./img/slides/git/github-create-repo.png" width="600" alt="">
-    <br />
-    <a href="http://github.com" target="_blank">crea una cuenta en Github</a>
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">La web puede resumirse como una serie de interacciones entre dos tipos de sistemas: <em>Servidores</em> y <em>Clientes</em></p>
+    <img src="./img/slides/servers/client-server.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
   </section>
 
-  <section data-background="#66B9F2">
-    <h3>Git <span class="marker">clone</span> mediante HTTPS</h3>
-    <p>Creamos una copia de un repositorio remoto existente</p>
-    <pre><code data-trim contenteditable>
-      $ git clone https://github.com/user/repo.git
-    </code></pre>
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">Los <em>Clientes</em> son los encargados de solicitar y mostrar el contenido web.</p>
+    <img src="./img/slides/servers/clients.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
   </section>
 
-  <section data-background="#66B9F2">
-    <h3>URL's Git sobre HTTPS</h3>
-    <ul>
-      <li>Facilita el acceso a través de firewalls</li>
-      <li>No necesita configuración previa</li>
-      <li>Has de proporcionar tu login/pass para acceder a <span class="marker">origin</span></li>
-    </ul>
+  <section data-transition="fade">
+    <p style="margin-bottom: .5em;">Los <em>Servidores</em> son aplicaciones (software) encrgados de enviar contenido a los Clientes cuando este lo solicita.</p>
+    <img src="./img/slides/servers/servers.png" alt="" style="height: 65vh; border: 0; box-shadow: none;" >
   </section>
-
-  <section data-background="#66B9F2">
-    <h3>HTTPS + credential-osxkeychain</h3>
-    <p>Almacena user/pass en texto plano</p>
-    <pre><code data-trim contenteditable>
-      $ git config --global credential.helper osxkeychain // Mac OSX
-      $ git config --global credential.helper wincred // Windows
-    </code></pre>
-    <small>Más info en <a href="https://help.github.com/articles/caching-your-github-password-in-git/">Git Help</a></small>
-  </section>
-
-  <section data-background="#66B9F2">
-    <h3>URL's Git sobre Secure Shell (SSH)</h3>
-    <ul>
-      <li>Basado en clave pública/privada</li>
-      <li>Requiere de instalación de clave pública en <span class="marker">origin</span></li>
-    </ul>
-    <p></p>
-    <p></p>
-    <small>En la sección <span class="marker">/Settings/SSH Keys</span> de tu cuenta de Github</small>
-  </section>
-
-  <section data-background="#66B9F2">
-    <h3>Generando Claves SSH</h3>
-    <pre><code data-trim contenteditable>
-      $ ssh-keygen -t rsa -b 4096 -C "dave74@gmail.com"
-    </code></pre>
-    <small>Puedes añadir una <span class="marker">clave de seguridad</span> o dejarla en blanco.</small>
-  </section>
-
-  <section data-background="#66B9F2">
-    <h3>Añadir clave SSH a <span class="marker">ssh-agent</span></h3>
-    <pre><code data-trim contenteditable>
-      $ ssh-add ~/.ssh/id_rsa
-    </code></pre>
-    <small>Puedes añadir una <span class="marker">clave de seguridad</span> o dejarla en blanco.</small>
-  </section>
-
-  <section data-background="#66B9F2">
-    <h3>Copiar clave SSH al <span class="marker">portapapeles</span></h3>
-    <pre><code data-trim contenteditable>
-      $ pbcopy < ~/.ssh/id_rsa.pub
-    </code></pre>
-    <small>Podemos abrirla con <span class="marker">Sublime Text</span> y copiar el contenido.</small>
-  </section>
-
-  <section data-background="./img/slides/git/git-https-ssh.jpg">
-    <h3 style="color:black">HTTPS o SSH</h3>
-  </section>
-
 </section>
 
+<section>
+  <section>
+    <h2>Ciclo de una transacción web</h2>
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-1.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-2.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-3.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-4.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-5.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+
+  <section data-transition="fade">
+    <img src="./img/slides/servers/request-6.png" alt="" style="border: 0; box-shadow: none;" >
+  </section>
+</section>
+
+<!--
+<section>
+  <section>
+    <h2><strong>Alojamiento y servidores web</strong></h2>
+  </section>
+
+  <section>
+    <h2>Estructura cliente - servidor</h2>
+
+    <img src="./img/slides/servers/servidorWeb.jpg" alt="">
+    <p>
+      Esquema simplificado de conexión bidireccional a un servidor web.
+    </p>
+  </section>
+
+  <section>
+    <h2>Transacciones</h2>
+
+    <img src="./img/slides/servers/cliente-servidor.png" alt="">
+    <small>Pedimos una URL, se convierte a IP y el Servidor web retorna el contenido.</small>
+  </section>
+
+  <section>
+    <h2>Protocolos de comunicación</h2>
+    <ul>
+      <li>
+        <span class="marker">HTTP</span> - Hyper Text Transfer Protocol
+      </li>
+
+      <li>
+        <span class="marker">TCP/IP</span> - Transmission Control Protocol / Internet Protocol
+      </li>
+
+      <li>
+        <span class="marker">FTP</span> - File Transfer Protocol
+      </li>
+    </ul>
+  </section>
+</section>
+
+ -->
 
 
 <section>
   <section>
-    <img src="./img/slides/git/git-branch.png" alt="" width="100">
-    <h2>Ramas en Git</h2>
-    <small>$ git branch</small>
+    <h2 style="letter-spacing: .05em;">URL</h2>
+    <h3>(Uniform Resource Locator)</h3>
+    <hr>
+    <p style="text-align: center;">http://www.baued.es/es/estudios/workshops.html</p>
   </section>
 
   <section>
-    <h3>Git <span class="marker">branch</span></h3>
-    <p>Una rama nos permite aislar una nueva funcionalidad en nuestro código que después podremos añadir a la versión principal.</p>
-    <p><span class="marker">Para crear una nueva rama:</span></p>
-    <pre><code contenteditable>
-      $ git branch feature/sliderhome
-    </code></pre>
+    <p>Las <strong>URL</strong> son direcciones exclusivas que nos permiten localizar recursos dentro de internet.</p>
+    <p>Generalmente están compuestas de 3 partes principales:
+    </p>
+    <ul>
+      <li><span style="color: #27ae60;">el protocolo</span></li>
+      <li><span style="color: #d35400;">el nombre del sitio</span></li>
+      <li><span style="color: #8e44ad;">la ruta absoluta al recurso en concreto</span></li>
+    </ul>
+    <hr>
+    <p style="text-align: center;"><span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em;">http://</span><span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em;">www.baued.es</span><span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em;">/es/estudios/workshops.html</span></p>
   </section>
 
   <section>
-    <img src="./img/slides/git/git-merge.png" alt="" width="100">
-    <h3>Git <span class="marker">merge</span></h3>
-    <p>Git procura combinar los cambios automáticamente*.</p>
-    <p>Si no reconoce qué parte del código ha de quedarse y cual eliminar, hemos de editarlo manualmente.</p>
-    <small>*Recursive strategy</small>
+    <h3>Protocolo</h3>
+    <p>Los protocolos son lenguajes simples que permiten a diferentes ordenadores compartir información entre sí independientemente de la configuración, sistema operativo o software que utilicen.</p>
+    <hr>
+    <p style="text-align: center;"><span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em;">http://</span><span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">www.baued.es</span><span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">/es/estudios/workshops.html</span></p>
   </section>
 
   <section>
-    <img src="./img/slides/git/git-merge-conflict.png" alt="" width="100">
-    <h3>Git merge conflict</h3>
-    <p>Cuando Git no puede identificar qué cambios ha de mantener y cual eliminar lanzará el siguiente mensaje:</p>
-    <pre style="font-size: 1.2rem"><code contenteditable>
-  $ git merge iss53
-  Auto-merging index.html
-  CONFLICT (content): Merge conflict in index.html
-  Automatic merge failed; fix conflicts and then commit the result.
-    </code></pre>
+    <h3>The internet protocol suit</h3>
+    <p>Algunos protocolos comúnes en el entorno de internet: FTP, <span class="fragment highlight-blue">HTTP</span>, SMTP, TCP/IP, UPD.</p>
+    <p class="fragment">En concreto, el encargado de transferir datos a través de internet es el protocolo HTTP (HyperText Transfer Protocol)</p>
+    <hr>
+    <p style="text-align: center;"><span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em;">http://</span><span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">www.baued.es</span><span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">/es/estudios/workshops.html</span></p>
   </section>
 
   <section>
-    <h3>Fixing Merge conflict</h3>
-    <pre><code contenteditable>
-
-  Código sin conflicto
-
-  <<<<<<< HEAD
-  I love cats!
-  =======
-  Dogs are better
-  >>>>>>> Master (o SHA del commit)
-
-  Código sin conflicto
-
-    </code></pre>
+    <h3>Sitio Web</h3>
+    <p>El nombre del sitio web se compone a su vez de varias partes:
+    </p>
+    <ol style="font-size: .75em;">
+      <li><strong>Subdominio:</strong> Es una carpeta dentro del servidor donde está alojada la web (por defecto suele ser "www")</li>
+      <li><strong>Nombre del dominio:</strong> Es el nombre de nuestra web.</li>
+      <li><strong>Dominio de nivel superior (top level domain):</strong> Es el nombre que el cliente usa para encontrar el servidor correspondiente. Puede ser genérico o geográfico.</li>
+    </ol>
+    <hr>
+    <p style="text-align: center;">
+      <span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">http://</span>
+      <span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em;">
+        <span class="footnote" style="border: 1px solid rgba(255,255,255,.6); display: inline-block; padding: 0 .2em" data-content="1">www.</span>
+        <span class="footnote" style="border: 1px solid rgba(255,255,255,.6); display: inline-block; padding: 0 .2em" data-content="2">baued</span>
+        <span class="footnote" style="border: 1px solid rgba(255,255,255,.6); display: inline-block; padding: 0 .2em" data-content="3">.es</span>
+      </span>
+      <span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">/es/estudios/workshops.html</span>
+    </p>
   </section>
 
   <section>
-    <h3>Fixing Merge conflict</h3>
-    <img src="./img/slides/git/git-merge-schema.png" alt="">
+    <h3>Ruta del recurso</h3>
+    <p>Es la ruta dentro de la carpeta del dominio al recurso específico que el cliente HTTP está solicitando.</p>
+    <p>Si no se especifica en la URL, el cliente intentará encontrar el archivo que esté configurado para mostrarse por defecto (normalmente <code>index.html</code> o <code>default.html</code>) </p>
+    <hr>
+    <p style="text-align: center;"><span style="background: #27ae60; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2">http://</span><span style="background: #d35400; color: #fff; display: inline-block; padding: .2em .3em; opacity: .2;">www.baued.es</span><span style="background: #8e44ad; color: #fff; display: inline-block; padding: .2em .3em;;">/es/estudios/workshops.html</span></p>
   </section>
 </section>
 
 
+<section id="web-languages">
+  <section>
+    <h2>Los lenguajes de la web</h2>
+  </section>
+
+  <section>
+    <p class="ta-l fz-m">Hay 3 lenguajes encargados de crear un sitio web:</p>
+    <ul>
+      <li><strong><span class="u-marked">HTML</span></strong> (Hypertext Markup Language) - Estructura</li>
+      <li><strong><span class="u-marked">CSS</span></strong> (Cascading Style Sheets) - Presentación</li>
+      <li><strong><span class="u-marked">Javascript</span></strong> - Comportamiento</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="mb-0">HTML</h2>
+    <h3>(Hypertext Markup Language)</h3>
+    <p>Es el lenguaje que se utiliza para crear la estructura y el contenido de un documento web.</p>
+    <p>Se trata de un <strong>lenguaje de marcado</strong>, es decir un sistema para <i>identificar</i> y <i>describir</i> los diferentes elementos de una página</p>
+
+    <pre><code data-trim contenteditable class="hljs html">
+&#60;h1&#62;h1 - Titular de nivel 1&#60;/h1&#62;
+&#60;h2&#62;h2 - Titular de nivel 2&#60;/h2&#62;
+&#60;p&#62;Esto es un párrafo con un &#60;strong&#62;texto destacado&#60;/strong&#62;.&#60;/p&#62;
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>CSS</h2>
+    <h3 class="WebLangsCSS">(Cascading Style Sheets)</h3>
+    <p>Es un lenguaje creado para controlar la <i>presentación</i> (el estilo) de un documento HTML.</p>
+
+    <pre><code data-trim contenteditable class="hljs css">
+.subtitulo {
+  color: red;
+  font-family: 'Comic Sans MS';
+  font-size: xx-large;
+}
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Javascript</h2>
+    <p>Es un lenguaje de programación que se utiliza para agregar interactividad y comportamientos dinámicos a nuestras páginas.</p>
+    <pre><code data-trim contenteditable class="hljs js">
+(function(){
+    var hi_button = document.getElementById('hi-button'),
+    hi_container = document.getElementById('hi-container');
+
+    hi_button.onclick = function() {
+        hi_container.innerHTML = '&#60;h2 class="hi"&#62;Hola&#60;/h2&#62;';
+    }
+})();
+    </code></pre>
+
+    <p id="hi-container" class="fz-m">
+      <button id="hi-button" class="WebLangsJS-btn">Saludar</button>
+    </p>
+    <script>
+      (function(){
+        var hi_button    = document.getElementById('hi-button'),
+        hi_container = document.getElementById('hi-container');
+
+        hi_button.onclick = function() {
+          hi_container.innerHTML = '<h2 class="WebLangsJS-hi">Hola</h2>';
+        }
+      })();
+    </script>
+  </section>
+
+  <section>
+    <h2>Lenguajes server-side</h2>
+    <p class="ta-l">Son lenguajes que se ejecutan en el servidor. Se utilizan para crear sitios web con contenidos dinámicos y aplicaciones.</p>
+    <p class="ta-l">Algunos de estos lenguajes son:</p>
+    <ul class="fz-s">
+      <li>PHP</li>
+      <li>Python</li>
+      <li>Ruby</li>
+      <li>.NET</li>
+      <li>Java</li>
+      <li>Javascript (Node.js, Rhino, SpiderMonkey)</li>
+    </ul>
+  </section>
+</section>
 
 
 <section>
-  <section data-background="#66B9F2">
-    <img src="./img/slides/git/git-fork.png" alt="">
-    <h3>Pull Request</h3>
-    <img src="./img/slides/git/github-octocat.png" width="100" alt="">
-    <p>Github.com</p>
+    <h1 style="font-size: 3em">Introducción al HTML</h1>
+</section>
+
+<section class="text-left">
+  <section>
+    <h2>Sintáxis HTML</h2>
   </section>
 
-  <section data-background="#66B9F2">
-    <h3>Objetivo</h3>
-    <p>Aportar una mejora al software existente</p>
-    <p>Contribuir en un proyecto <span class="marker">Open Source</span></p>
+  <section>
+    <p>Los elementos son la estructura básica de HTML.</p>
+    <p>Para marcar un elemento solo necesitamos dos <em>etiquetas</em> o <i>tags</i> (escritas entre corchetes angulares: <,>), una de apertura y una de cierre, que se diferencia por llevar una &ldquo; / &rdquo; tras el primer corchete.</p>
+    <hr class="mb-l">
+    <p><code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em; margin-right: .25rem;">&#60;elemento&#62;</code>Contenido.<code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;  margin-left: .25rem;">&#60;&#47elemento&#62;</code></p>
   </section>
 
-  <section data-background="#66B9F2">
-    <h3>PR como colaborador</h3>
-    <p>Sólo disponible si tenemos permisos de escritura</p>
-    <ul>
-      <li>Clonamos el repo</li>
-      <li>Creamos rama <span class="marker">feature</span></li>
-      <li>Añadimos cambios a esa rama</li>
-      <li>La publicamos a <span class="marker">origin</span></li>
-      <li>Solicitamos la <span class="marker">Pull Request</span></li>
+  <section>
+    <p>Extisten también <em>elementos vacíos</em>, o sea, que no llevan contenido por lo que tampoco utilizan etiqueta de cierre</p>
+    <p><code>&#60;img&#62;</code>, <code>&#60;br&#62;</code> o <code>&#60;hr&#62;</code> son algunos ejemplos.</p>
+  </section>
+
+  <section>
+    <p>Los elementos pueden <em>anidarse unos dentro de otros</em> (con ciertas restricciones).</p>
+    <p>En ese caso debe cerrarse siempre primero el elemento hijo antes de cerrar el padre</p>
+    <pre><code data-trim contenteditable class="hljs html">
+&#60;body&#62;
+  &#60;h1&#62;Titular del contenido&#60;/h1&#62;
+  &#60;p&#62;Contenido de la página&#60;/p&#62;
+&#60;/body&#62;
+    </code></pre>
+  </section>
+
+  <section>
+    <p>Los elementos pueden contener <em>atributos</em>. Los atributos son instrucciones que modifican la forma en que se comporta el elemento.</p>
+    <p>Los atributos se componen de un <span style="color: rgb(39, 174, 96);">nombre</span> y un <span style="color: rgb(174, 39, 82);">valor</span>, escritos con la siguiente sintáxis:</p>
+    <hr>
+    <p style="text-align: center;"><code>&#60;a <span style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">href</span>=<span style="background: rgba(174, 39, 82, .7); color: #fff; display: inline-block; padding: .2em .3em;">"http://www.google.com"</span>&#62;Google&#60;/a&#62;</code></p>
+  </section>
+
+  <section>
+    <p>Podemos insertar comentarios en nuestro código para hacer anotaciones que consideremos necesarias para entenderlo mejor.</p>
+    <p>Todo lo que se escriba dentro de un comentario no será leido por el navegador.</p>
+    <pre><code data-trim contenteditable class="hljs html">
+&#60;!--
+  Esto texto no se verá en el navegador
+  porque es un comentario
+--&#62;
+
+&#60;p&#62;Esto texto si se mostrará&#60;/p&#62;
+    </code></pre>
+  </section>
+</section>
+
+
+<section class="text-left">
+  <section>
+    <h2>Estructura de una pagina web</h2>
+    <div>
+      <pre><code data-trim contenteditable class="hljs html">
+&#60;!DOCTYPE html&#62;
+&#60;html&#62;
+  &#60;head&#62;
+    &#60;meta charset ="utf-8"&#62;
+    &#60;title&#62;Titulo de la página&#60;/title&#62;
+  &#60;/head&#62;
+
+  &#60;body&#62;
+    &#60;h1&#62;Titular del contenido&#60;/h1&#62;
+    &#60;p&#62;Contenido de la página&#60;/p&#62;
+  &#60;/body&#62;
+&#60;/html&#62;
+      </code></pre>
+    </div>
+  </section>
+
+  <section>
+    <h3>Head</h3>
+    <p class="ta-l fz-s">El elemento <code><span class="u-marked">&#60;head&#62;</span></code> contiene información descriptiva del mismo documento.<br />
+    Su contenido <span class="u-marked">no</span> se mostrará en la ventana del navegador.</p>
+    <p class="ta-l fz-s">Algunos contenidos del <code><span class="marked">&#60;head&#62;</span></code> pueden ser:</p>
+    <ul class="fz-s">
+      <li>El título de la pagina <code>&#60;title&#62;</code>.</li>
+      <li>La codificación de caracteres.</li>
+      <li>Links a los estilos CSS.</li>
+      <li>Links a archivos javascript.</li>
+      <li>Etiqueta <code>&#60;meta viewport&#62;</code> para controlar la visualización en dispositivos móviles.</li>
+      <li>Información SEO.</li>
     </ul>
   </section>
 
-  <section data-background="#66B9F2">
-    <h3>PR como contribuidor</h3>
-    <p><strong>No</strong> tenemos permisos de escritura</p>
-    <ul>
-      <li>Hacemos un <span class="marker">fork</span> del proyecto</li>
-      <li>Creamos una rama con nuestra propuesta</li>
-      <li>Solicitamos una <span class="marker">Pull Request</span>...</li>
-      <li>El owner del proyecto puede <span style="color: #5F5">aceptarla</span> o <span style="color: #F55">denegarla</span></li>
-    </ul>
-    <img style="display:block; margin: 30px auto 0" class="fragment" src="./img/slides/git/github-pullrequest.jpg" width="200" alt="">
+  <section>
+    <pre style="margin: 0; width: 95%"><code data-trim contenteditable style="height: 60vh">
+&#60;head&#62;
+  &#60;meta charset="utf-8"&#62;
+
+  &#60;title&#62;Bau, Centro Universitario de Diseño de Barcelona&#60;/title&#62;
+
+  &#60;meta name="description" content="En Bau te formarás como profesional del
+  diseño web"&#62;
+
+  &#60;meta name="keywords" content="bau, bau diseño, bau escuela, escuela bau,
+  bau universidad, Centro Universitario de Diseño de Barcelona, bau master"&#62;
+
+  &#60;meta name="viewport" content="width=device-width, initial-scale=1"&#62;
+
+  &#60;link rel="stylesheet" href="css/styles.css"&#62;
+  &#60;script src="js/modernizr.js"&#62;&#60;/script&#62;
+  &#60;link rel="shortcut icon" href="favicon.ico" type="image/x-icon"&#62;
+&#60;/head&#62;
+    </code></pre>
   </section>
 
-  <section data-background="#66B9F2">
-    <img src="./img/slides/git/git-fork.png" alt="">
-    <h3>Ejemplo práctico de PR</h3>
+  <section>
+    <h3>Body</h3>
+    <p class="ta-l fz-m">El elemento <code><span class="u-marked">&#60;body&#62;</span></code> contiene todo aquello que se mostrará la ventana del navegador.</p>
+  </section>
+</section>
+
+
+<section>
+    <section>
+        <h2>Elementos de texto</h2>
     </section>
 
+    <section>
+        <table>
+            <thead>
+                <th>Etiqueta</th>
+                <th>Elemento que representa</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&#60;h1-h6&#062;</code></td>
+                    <td>Titulares. Tienen 6 niveles diferentes.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;p&#062;</code></td>
+                    <td>Párrfos de texto.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;ul&#062;</code></td>
+                    <td>Listas dónde el orden de sus elementos no es importante.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;ol&#062;</code></td>
+                    <td>Listas dónde sus elementos tienen un órden determinado.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;li&#062;</code></td>
+                    <td>Elemento de una lista. Siempre tienen que estar dentro de un &#60;ul&#062; o &#60;ol&#062;</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;blockquote&#062;</code></td>
+                    <td>Un bloque de texto que contiene un testimonio de otra fuente.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <table>
+            <thead>
+                <th>Etiqueta</th>
+                <th>Elemento que representa</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>&#60;a&#062;</code></td>
+                    <td>Un <a href="#">link</a>. La url a la que apunta se especifica con el atributo <code>href</code>.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;strong&#062;</code></td>
+                    <td>Un texto <strong>destacado</strong>. Por defecto se renderiza en negrita.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;em&#062;</code></td>
+                    <td>Un texto <em>enfatizado</em>. Por defecto se renderiza en itálica.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;u&#062;</code></td>
+                    <td>Un texto <u>subrayado</u>.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;mark&#062;</code></td>
+                    <td>Un texto <mark>resaltado</mark>.</td>
+                </tr>
+                <tr>
+                    <td><code>&#60;code&#062;</code></td>
+                    <td>Representa trozos de <code>código</code>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+</section>
+
+
+<section>
+    <h2>Ejercicio</h2>
+    <a href="files/exercises/cvs.zip">Descargar</a>
+</section>
+
+<section>
+    <h1 style="font-size: 3em">Introducción al CSS</h1>
+</section>
+
+
+<section>
+    <section>
+        <h1>CSS</h1>
+        <ul>
+            <li>Las siglas CSS corresponden a Cascade Style Sheet <em>Hojas de estilo en cascada</em></li>
+            <li>El <span class="marker">HTML</span> aporta estructura a la página.</li>
+            <li>El <span class="marker">CSS</span> es un conjunto de reglas de formato encargado de controlar la presentación del código HTML.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Componentes de una Web</h2>
+        <p>Una página web puede estar formada por 5 componentes principales:</p>
+        <img src="./img/slides/css-introduction/css-componentesWeb.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Componentes de una Web</h2>
+        <p>Para crear una página web estática sólo necesitaremos HTML para la estructura y CSS para la presentación:</p>
+        <img src="./img/slides/css-introduction/css-componentesWeb2.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Características del CSS</h2>
+        <ul class="fz-s">
+            <li>El CSS es un conjunto de reglas de formato más que un lenguaje de programación como el HTML o Javascript.</li>
+            <li>Generalmente se encuentran en archivos externos y se vinculan al encabezado de la web <code>&#060;head&#062;</code>.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Herencia</h2>
+        <p>Los elementos HTML heredarán algunos estilos de sus elementos contenedores (parent elements).</p>
+        <p>Por ejemplo si declaramos un color al elemento <body> el resto de elementos de la página tendrán el mismo color a menos que específiquemos lo contrario.</p>
+    </section>
+
+    <section>
+        <h2>Cascada</h2>
+         <p>La "cascada" a la que hace referencia la C de CSS explica la manera en la que el lenguaje resuelve los conflictos entre selectores.</p>
+        <p>El cliente web lee los estilos desde la primera línea del documento de manera descendente. Por esta razón si un selector aplica una regla ya exisitente en ese selector esta sera sobreescrita (siempre y cuando la especificidad sea la misma).</p>
+    </section>
+
+    <section>
+        <h2>Ventajas de usar CSS</h2>
+        <p>El carácter modular del CSS permite modificar el aspecto de una página por completo sin afectar al contenido.</p>
+        <img src="./img/slides/css-introduction/css-componentesWeb3.jpg" alt="">
+    </section>
+
+    <section>
+        <h2>Ventajas de usar CSS</h2>
+        <p>Mediante hojas de estilo específicas podemos optimizar contenidos para múltiples dispositivos.</p>
+        <img src="./img/slides/css-introduction/css-componentesWeb4.jpg" alt="">
+    </section>
+</section>
+
+
+
+<section>
+    <section>
+        <h2><strong>CSS por defecto</strong></h2>
+        <h3><span class="marker">Estilos CSS User Agent</span></h3>
+    </section>
+
+    <section>
+        <h3><strong>CSS del Navegador</strong></h3>
+        <ul>
+            <li>Un documento HTML siempre se representa con una hoja de estilos por defecto.</li>
+            <li>Cada navegador web dispone de sus propios estilos.</li>
+            <li>Para evitar inconsistencias aplicamos <span class="marker">Normalize</span></li>
+            <li><a href="https://github.com/necolas/normalize.css/blob/master/normalize.css">¿Qué es Normalize?</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h3><strong>¿Por qué Normalize?</strong></h3>
+        <ul>
+            <li>Los elementos de la página se representan con el mismo valor.</li>
+            <li>Sobreescribe los estilos por defecto del navegador web.</li>
+            <li>Nuestra hoja de estilo sobreescribirá los valores de Normalize.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3><strong>Estilos predefinidos</strong></h3>
+        <ul>
+            <li>Todos los navegadores web permiten al usuario establecer unos estilos por defecto.</li>
+            <li>Los estilos de usuario definen los valores por defecto.</li>
+            <li>El usuario puede omitir por completo la hoja de estilos del documento.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3><strong>Estilos predefinidos</strong></h3>
+        <img src="./img/slides/css-user-agent/css-chromePrefsDefault.png" alt=""><br />
+        <span class="marker">chrome://settings/</span>
+    </section>
+</section>
+
+
+<section>
+  <section>
+    <h2>Sintáxis CSS</h2>
+    <h3>Componentes de una regla CSS</h3>
+  </section>
+
+  <section>
+    <h3 style="color: #27ae60;">Selector</h3>
+    <p style="text-align: left;">Mediante el Selector indicamos al código el elemento al que queremos aplicar formato.</p>
+    <p style="text-align: left;">Una regla está formada por un selector</span> y una declaración o bloque de declaraciones</span>.</p>
+    <hr />
+    <pre style="box-shadow: none; font-size: 1em;">
+<span style="outline: 4px solid #27ae60; display: inline-block; padding: 0 .3em .2em;">p</span> {
+  color: red;
+  font-weight: bold;</span>
+}
+    </pre>
+  </section>
+
+  <section>
+    <h3 style="color: #d35400;">Declaración</h3>
+    <p style="text-align: left;">Es el código entre { } es la secuencia de estilos que aplicaremos al Selector.</p>
+    <hr />
+    <pre style="box-shadow: none; font-size: 1em;">
+p {
+  <span style="outline: 4px solid #d35400; display: inline-block; padding: 0 .3em .2em;">color: red;
+font-weight: bold;</span>
+}
+    </pre>
+  </section>
+
+  <section>
+    <h3 style="color: #4E4EB9">Propiedad</h3>
+    <p style="text-align: left;">Atributo del Selector que queremos modificar. Finaliza siempre en :</p>
+    <pre style="box-shadow: none; font-size: 1em;">
+p {
+  <span style="outline: 4px solid #4E4EB9; display: inline-block; padding: 0 .3em .2em;">color:</span> red;
+  <span style="outline: 4px solid #4E4EB9; display: inline-block; padding: 0 .3em .2em;">font-weight:</span> bold;
+    </pre>
+  </section>
+
+  <section>
+    <h3 style="color: #DC6ABC">Valor</h3>
+    <p style="text-align: left;">Modificando el Valor de una propiedad aplicamos un estilo al selector. <br />Finaliza siempre en ;</p>
+    <pre style="box-shadow: none; font-size: 1em;">
+p {
+  color: <span style="outline: 4px solid #DC6ABC; display: inline-block; padding: 0 .3em .2em;">red</span>;
+  font-weight: <span style="outline: 4px solid #DC6ABC; display: inline-block; padding: 0 .3em .2em;">bold</span>;
+    </pre>
+  </section>
+
+  <section>
+  <h3>Comentarios</h3>
+    <p>Al igual que con HTML, podemos insertar comentarios en nuestro código CSS. Para abrir un comentario escribiremos <code>/*</code> y para cerrarlo <code>*/</code></p>
+    <pre><code contenteditable>
+  p {
+    color: blue;
+  }
+
+  /* Este es un comentario de una sola linea */
+
+  /*
+    pero tambien
+    puede tener
+    varias
+    lineas
+  */
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Formato</h3>
+    <p>Los espacios en blanco y saltos de línea se utilizan para mejorar la legibilidad.</p>
+    <pre><code>
+  /* Esto: */
+  p {
+    color: red;
+    font-weight: bold;
+  }
+
+
+  /* Es lo mismo que esto: */
+  p { color: red; font-weight: bold; }
+  </code></pre>
+  </section>
+
+</section>
+
+
+ <section>
+    <section>
+        <h2>Asociar CSS al HTML</h2>
+    </section>
+
+    <section>
+        <p>Existen tres maneras de relacionar un CSS a un HTML en concreto:</p>
+        <ul>
+            <li>Estilo <i>inline</i>.</li>
+            <li>Estilos embebidos en documento HTML.</li>
+            <li>Hoja de estilos externa.</li>
+        </ul>
+    </section>
+
+    <section>
+        <p>Podemos asignar estilos CSS directamente en un elemento HTML mediante el atributo <code>style=""</code>.</p>
+        <p>Los estilos solo se aplicarán a ese elemento en concreto, por lo cual el selector no se utiliza en este caso.</p>
+        <pre><code data-trim contenteditable>&#60;p style="color: red"&#62;Esto es un párrafo rojo.&#60;/p&#62;</code></pre>
+    </section>
+    
+    <section>
+        <p>Otra forma de utilizar CSS es mediante un tag <code>&#60;style&#62;</code> en el <code>&#60;head&#62;</code> del documento.</p>
+        <p>Los estilos se aplicaran a todos los elementos de la página de acuerdo a los selectores utilizados.<p/>
+<pre><code >
+    &#60;head&#62;
+         &#60;style&#62;
+            p {
+                color: red;
+            }
+            h1 {
+                color : blue;
+            }
+        &#60;/style&#62;
+    &#60;/head&#62;
+
+</code></pre>
+    </section>
+
+    <section>
+        <p>La manera más eficiente de relacionar CSS y HTML es utilizando una hoja de estilo externa, lo que nos permite compartir un mismo CSS para todo nuestro sitio web.</p>
+        <p>Esta hoja es un archivo con extensión .css que se incluye en el <code>&#60;head&#62;</code> del HTML mediante un tag <code>&#60;link&#62;</code>.</p>
+<pre><code>
+    &#60;head&#62;
+        &#60;link rel="stylesheet" href="css/styles.css"&#62;
+    &#60;/head&#62;
+    
+</code></pre>
+    </section>
 </section>
 
 <section>
     <section>
-        <h2>Links relacionados</h2>
-        <ul style="font-size: 1.8rem">
-            <li style="margin-bottom: .4em;">
-                <strong>Free online Git Book</strong><i style="color: #999;"> &mdash; Scott Chacon and Ben Straub</i><br>
-                <a href="http://git-scm.com/book/en/v2" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://git-scm.com/book/en/v2</a>
+        <h2>Estilos de texto</h2>
+    </section>
+
+    <section>
+        <ul class="mb-m">
+            <li>
+                <strong>font-family</strong> - <i>&#060;family name, &hellip;&#062;</i> | <i>&#060;generic-family&#062;</i>
             </li>
-            <li style="margin-bottom: .4em;">
-                <strong>git - the simple guide</strong><i style="color: #999;"> &mdash; Roger Dudler</i><br>
-                <a href="http://rogerdudler.github.io/git-guide/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://rogerdudler.github.io/git-guide/</a>
+            <li>
+                <strong>font-size</strong> - <i>&#060;absolute-size&#062;</i> | <i>&#060;relative-size&#062;</i> | <i>&#060;length&#062;</i> | <i>&#060;percentage&#062;</i>
             </li>
-            <li style="margin-bottom: .4em;">
-                <strong>Try Github - Interactive git console</strong> <i style="color: #999;"> &mdash; Github & Code Academy</i><br>
-                <a href="https://try.github.io" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">https://try.github.io</a>
+            <li>
+                <strong>font-style</strong> - normal | italic | oblique
             </li>
-            <li style="margin-bottom: .4em;">
-                <strong>Bitbucket - Unlimited private code repositories</strong><br>
-                <a href="https://bitbucket.org/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">https://bitbucket.org/</a>
+            <li>
+                <strong>font-variant</strong> - normal | small-caps
             </li>
-            <li style="margin-bottom: .4em;">
-                <strong>Sourcetree - Opensource Git client</strong><br>
-                <a href="http://www.sourcetreeapp.com/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://www.sourcetreeapp.com/</a>
+            <li>
+                <strong>font-weight</strong> - normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
+            </li>
+            <li>
+                <strong>line-height</strong> - normal | <i>&#060;number&#062;</i> | <i>&#060;length&#062;</i> | <i>&#060;percentage&#062;</i>
+            </li>
+            <li>
+                <strong>text-align</strong> - left | right | center | justify
+            </li>
+            <li>
+                <strong>text-decoration</strong> - none | underline | overline | line-through
+            </li>
+            <li>
+                <strong>text-indent</strong> - <i>&#60;length&#62;</i> | <i>&#60;percentage&#62;</i>
+            </li>
+            <li>
+                <strong>text-shadow</strong> - none | <i>&#60;shadow&#62;</i>, <i>&#60;shadow&#62;</i>
+            </li>
+            <li>
+                <strong>text-transform</strong> - none | capitalize | uppercase | lowercase
+            </li>
+            <li>
+                <strong>letter-spacing</strong> - normal | <i>&#60;length&#62;</i>
+            </li>
+            <li>
+                <strong>word-spacing</strong> - normal | <i>&#60;length&#62;</i>
             </li>
         </ul>
+        <p class="ta-c fz-s">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts">MDN - CSS Fonts</a>
+        </p>
     </section>
 </section>
+
         </div>
     </div>
 
