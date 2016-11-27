@@ -4,10 +4,10 @@
   // BASE STYLES
   // --------------------------------------------------------------------------
     p, ul, ol, blockquote {
-        margin-top: 0;
-        text-align: left;
-        box-shadow: none;
-      }
+      box-shadow: none;
+      font-size: 2rem;
+      margin-top: 0;
+      text-align: left;
     }
 
     pre {
@@ -31,7 +31,7 @@
       font-size: .9em;
       width: 90%;
     }
-
+  }
 
   // HELPERS
   // --------------------------------------------------------------------------
@@ -100,6 +100,10 @@
 
       &-m {
         margin-bottom: 1rem !important;
+      }
+
+      &-l {
+        margin-bottom: 2rem !important;
       }
     }
 

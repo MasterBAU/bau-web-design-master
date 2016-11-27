@@ -23,20 +23,22 @@
 
     <section>
         <h2>Características del CSS</h2>
-        <ul>
+        <ul class="fz-s">
             <li>El CSS es un conjunto de reglas de formato más que un lenguaje de programación como el HTML o Javascript.</li>
-            <li>Generalmente se encuentran en archivos externos y se vinculan al encabezado de la web < head >.</li>
-            <li>El término <strong>“en cascada”</strong> hace referencia a cómo se aplican los estilos: Según el orden, un estilo prevalece sobre el otro</li>
+            <li>Generalmente se encuentran en archivos externos y se vinculan al encabezado de la web <code>&#060;head&#062;</code>.</li>
         </ul>
     </section>
 
     <section>
-        <h2>Estilos en cascada</h2>
-        <ul>
-            <li>Los estilos se aplican en función del orden en el que se encuentran en la página</li>
-            <li>Prevalecen los estilos aplicados en función de su <span class="marker">especificidad</span> y el orden en el que se aplican.</li>
-            <li>Aplicar un estilo significa <strong>seleccionar</strong> un elemento de la página y modificar sus atributos por defecto.</li>
-        </ul>
+        <h2>Herencia</h2>
+        <p>Los elementos HTML heredarán algunos estilos de sus elementos contenedores (parent elements).</p>
+        <p>Por ejemplo si declaramos un color al elemento <body> el resto de elementos de la página tendrán el mismo color a menos que específiquemos lo contrario.</p>
+    </section>
+
+    <section>
+        <h2>Cascada</h2>
+         <p>La "cascada" a la que hace referencia la C de CSS explica la manera en la que el lenguaje resuelve los conflictos entre selectores.</p>
+        <p>El cliente web lee los estilos desde la primera línea del documento de manera descendente. Por esta razón si un selector aplica una regla ya exisitente en ese selector esta sera sobreescrita (siempre y cuando la especificidad sea la misma).</p>
     </section>
 
     <section>

@@ -6,9 +6,8 @@
   <section>
     <p>Los elementos son la estructura básica de HTML.</p>
     <p>Para marcar un elemento solo necesitamos dos <em>etiquetas</em> o <i>tags</i> (escritas entre corchetes angulares: <,>), una de apertura y una de cierre, que se diferencia por llevar una &ldquo; / &rdquo; tras el primer corchete.</p>
-    <p></p>
-    <hr>
-    <p style="text-align: center;"><code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">&#60;elemento&#62;</code>Contenido.<code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;">&#60;&#47elemento&#62;</code></p>
+    <hr class="mb-l">
+    <p><code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em; margin-right: .25rem;">&#60;elemento&#62;</code>Contenido.<code style="background: rgba(39, 174, 96, .7); color: #fff; display: inline-block; padding: .2em .3em;  margin-left: .25rem;">&#60;&#47elemento&#62;</code></p>
   </section>
 
   <section>
@@ -19,7 +18,7 @@
   <section>
     <p>Los elementos pueden <em>anidarse unos dentro de otros</em> (con ciertas restricciones).</p>
     <p>En ese caso debe cerrarse siempre primero el elemento hijo antes de cerrar el padre</p>
-    <pre><code data-trim contenteditable>
+    <pre><code data-trim contenteditable class="hljs html">
 &#60;body&#62;
   &#60;h1&#62;Titular del contenido&#60;/h1&#62;
   &#60;p&#62;Contenido de la página&#60;/p&#62;
@@ -37,7 +36,7 @@
   <section>
     <p>Podemos insertar comentarios en nuestro código para hacer anotaciones que consideremos necesarias para entenderlo mejor.</p>
     <p>Todo lo que se escriba dentro de un comentario no será leido por el navegador.</p>
-    <pre><code data-trim contenteditable>
+    <pre><code data-trim contenteditable class="hljs html">
 &#60;!--
   Esto texto no se verá en el navegador
   porque es un comentario
