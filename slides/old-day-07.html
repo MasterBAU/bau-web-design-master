@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Layout I | Máster en Diseño Web | Módulo III Programación Frontend</title>
+    <title>Fundamentos CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
 
     <meta name="description" content="Máster en Diseño Web | Módulo III">
     <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
@@ -47,74 +47,32 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Layout I</strong></h3>
+                <h3><strong>Fundamentos CSS</strong></h3>
             </section>
 
-            <section  id="box-model">
+            <section class="text-left">
     <section>
-        <h2>Box-model &amp; display (repaso)</h2>
+        <h2>Sublime Text Tip</h2>
     </section>
 
     <section>
-        <h3>Box-model</h3>
-        <div class="BoxModelGraphic-margin mb-m">
-            <div class="BoxModelGraphic-padding">
-                <span class="BoxModelGraphic-content" contenteditable>contenido</span>
-            </div>
-        </div>
-        <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">Area de contenido</span> | <span class="c-yellow">Padding</span> | <span class="c-red">Border</span> | <span class="c-cyan">Margin</span></p>
+        <h3>Package Control</h3>
+        <p>El Package Control de Sublime Text es un gestor de paquetes que nos permite instalar muy facilmente cientos de plugins reailzados por diferentes desarrolladores.</p>
+        <p>Para instalarlo, debemos dirigirnos a la siguiente dirección:</p>
+        <p style="text-align: center;"><a href="https://sublime.wbond.net/installation">https://sublime.wbond.net/installation</a></p>
+        <p>Una vez allí copiamos el código correspondiente a nuestra versión y lo ejecutamos en la consola de nuestro programa.</p>
         <hr>
-        <pre><code data-trim contenteditable>
-.box {
-    width: 300px;
-    height: 50px;
-    border: 5px solid #d8cd00;
-    margin: 50px;
-    padding: 50px;
-}
-        </code></pre>
-    </section>
-
-    <section class="fz-s">
-        <h3>Display: inline</h3>
-        <ul class="fz-xs">
-            <li>Ignoran el <code>width</code> y el <code>height</code></li>
-            <li>Si se le aplican <code>paddings</code> verticales no afectaran la posición de los elementos que les rodean.</li>
-            <li>El background no cubrirá la altura total del alto de línea, sino que se ajustará al contenido.</li>
-        </ul>
-
-        <div style="margin: 3rem auto 0; width: 80%;">
-            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong class="u-highlighted">libero iure expedita</strong> minima labore magnam.</p>
-        </div>
+        <p style="text-align: center;"><code>Sublime Text > View > Show Console</code></p>
     </section>
 
     <section>
-        <h3>Display: block</h3>
-        <ul class="fz-s">
-            <li>Ocupan 100% del contenedor.</li>
-        </ul>
-        <div style="margin: 3rem auto 0; width: 80%;">
-            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-        </div>
-    </section>
-
-
-    <section>
-        <h3>Display: inline-block</h3>
-        <ul class="fz-s">
-            <li>Mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></li>
-        </ul>
-        <div style="margin: 3rem auto 0; width: 80%;">
-            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted" style="display: inline; padding: 20px 10px;">display: inline; padding: 20px 10px;</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium <strong class="u-highlighted" style="display: inline-block; padding: 20px 10px;">display: inline-block; padding: 20px 10px;</strong> minima labore magnam.</p>
-        </div>
-    </section>
-
-    <section>
-        <h3>Display: none</h3>
-        <p>El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
+        <p>Luego de ejecutado el código, reiniciaremos Sublime Text y ya podremos acceder al Package Control.</p>
+        <p>Para instalar un nuevo plugin, lo haremos a través de la Paleta de Comandos, donde escribiremos "Install Package" y luego el nombre del plugin a instalar.
+        <p>Accederemos a la paleta con:</p>
+        <p style="text-align: center;"><em><code>Cmd + Shift + P</code></em></p>
     </section>
 </section>
+
 
 
 <section id="float" class="text-left">
@@ -578,305 +536,27 @@
     </section>
 </section>
 
-<section>
-    <h2>Ejercicio</h2>
-    <a href="files/exercises/cvs.zip">Descargar</a>
-</section>
-
-<section>
-    <h1 style="font-size: 3em">Introducción al CSS</h1>
-</section>
 
 
 <section>
-    <section>
-        <h1>CSS</h1>
-        <ul>
-            <li>Las siglas CSS corresponden a Cascade Style Sheet <em>Hojas de estilo en cascada</em></li>
-            <li>El <span class="marker">HTML</span> aporta estructura a la página.</li>
-            <li>El <span class="marker">CSS</span> es un conjunto de reglas de formato encargado de controlar la presentación del código HTML.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Componentes de una Web</h2>
-        <p>Una página web puede estar formada por 5 componentes principales:</p>
-        <img src="./img/slides/css-introduction/css-componentesWeb.jpg" alt="">
-    </section>
-
-    <section>
-        <h2>Componentes de una Web</h2>
-        <p>Para crear una página web estática sólo necesitaremos HTML para la estructura y CSS para la presentación:</p>
-        <img src="./img/slides/css-introduction/css-componentesWeb2.jpg" alt="">
-    </section>
-
-    <section>
-        <h2>Características del CSS</h2>
-        <ul class="fz-s">
-            <li>El CSS es un conjunto de reglas de formato más que un lenguaje de programación como el HTML o Javascript.</li>
-            <li>Generalmente se encuentran en archivos externos y se vinculan al encabezado de la web <code>&#060;head&#062;</code>.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Herencia</h2>
-        <p>Los elementos HTML heredarán algunos estilos de sus elementos contenedores (parent elements).</p>
-        <p>Por ejemplo si declaramos un color al elemento <body> el resto de elementos de la página tendrán el mismo color a menos que específiquemos lo contrario.</p>
-    </section>
-
-    <section>
-        <h2>Cascada</h2>
-         <p>La "cascada" a la que hace referencia la C de CSS explica la manera en la que el lenguaje resuelve los conflictos entre selectores.</p>
-        <p>El cliente web lee los estilos desde la primera línea del documento de manera descendente. Por esta razón si un selector aplica una regla ya exisitente en ese selector esta sera sobreescrita (siempre y cuando la especificidad sea la misma).</p>
-    </section>
-
-    <section>
-        <h2>Ventajas de usar CSS</h2>
-        <p>El carácter modular del CSS permite modificar el aspecto de una página por completo sin afectar al contenido.</p>
-        <img src="./img/slides/css-introduction/css-componentesWeb3.jpg" alt="">
-    </section>
-
-    <section>
-        <h2>Ventajas de usar CSS</h2>
-        <p>Mediante hojas de estilo específicas podemos optimizar contenidos para múltiples dispositivos.</p>
-        <img src="./img/slides/css-introduction/css-componentesWeb4.jpg" alt="">
-    </section>
-</section>
-
-
-
-<section>
-    <section>
-        <h2><strong>CSS por defecto</strong></h2>
-        <h3><span class="marker">Estilos CSS User Agent</span></h3>
-    </section>
-
-    <section>
-        <h3><strong>CSS del Navegador</strong></h3>
-        <ul>
-            <li>Un documento HTML siempre se representa con una hoja de estilos por defecto.</li>
-            <li>Cada navegador web dispone de sus propios estilos.</li>
-            <li>Para evitar inconsistencias aplicamos <span class="marker">Normalize</span></li>
-            <li><a href="https://github.com/necolas/normalize.css/blob/master/normalize.css">¿Qué es Normalize?</a></li>
-        </ul>
-    </section>
-
-    <section>
-        <h3><strong>¿Por qué Normalize?</strong></h3>
-        <ul>
-            <li>Los elementos de la página se representan con el mismo valor.</li>
-            <li>Sobreescribe los estilos por defecto del navegador web.</li>
-            <li>Nuestra hoja de estilo sobreescribirá los valores de Normalize.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3><strong>Estilos predefinidos</strong></h3>
-        <ul>
-            <li>Todos los navegadores web permiten al usuario establecer unos estilos por defecto.</li>
-            <li>Los estilos de usuario definen los valores por defecto.</li>
-            <li>El usuario puede omitir por completo la hoja de estilos del documento.</li>
-        </ul>
-    </section>
-
-    <section>
-        <h3><strong>Estilos predefinidos</strong></h3>
-        <img src="./img/slides/css-user-agent/css-chromePrefsDefault.png" alt=""><br />
-        <span class="marker">chrome://settings/</span>
-    </section>
-</section>
-
-
-<section>
-  <section>
-    <h2>Sintáxis CSS</h2>
-    <h3>Componentes de una regla CSS</h3>
-  </section>
-
-  <section>
-    <h3 style="color: #27ae60;">Selector</h3>
-    <p style="text-align: left;">Mediante el Selector indicamos al código el elemento al que queremos aplicar formato.</p>
-    <p style="text-align: left;">Una regla está formada por un selector</span> y una declaración o bloque de declaraciones</span>.</p>
-    <hr />
-    <pre style="box-shadow: none; font-size: 1em;">
-<span style="outline: 4px solid #27ae60; display: inline-block; padding: 0 .3em .2em;">p</span> {
-  color: red;
-  font-weight: bold;</span>
-}
-    </pre>
-  </section>
-
-  <section>
-    <h3 style="color: #d35400;">Declaración</h3>
-    <p style="text-align: left;">Es el código entre { } es la secuencia de estilos que aplicaremos al Selector.</p>
-    <hr />
-    <pre style="box-shadow: none; font-size: 1em;">
-p {
-  <span style="outline: 4px solid #d35400; display: inline-block; padding: 0 .3em .2em;">color: red;
-font-weight: bold;</span>
-}
-    </pre>
-  </section>
-
-  <section>
-    <h3 style="color: #4E4EB9">Propiedad</h3>
-    <p style="text-align: left;">Atributo del Selector que queremos modificar. Finaliza siempre en :</p>
-    <pre style="box-shadow: none; font-size: 1em;">
-p {
-  <span style="outline: 4px solid #4E4EB9; display: inline-block; padding: 0 .3em .2em;">color:</span> red;
-  <span style="outline: 4px solid #4E4EB9; display: inline-block; padding: 0 .3em .2em;">font-weight:</span> bold;
-    </pre>
-  </section>
-
-  <section>
-    <h3 style="color: #DC6ABC">Valor</h3>
-    <p style="text-align: left;">Modificando el Valor de una propiedad aplicamos un estilo al selector. <br />Finaliza siempre en ;</p>
-    <pre style="box-shadow: none; font-size: 1em;">
-p {
-  color: <span style="outline: 4px solid #DC6ABC; display: inline-block; padding: 0 .3em .2em;">red</span>;
-  font-weight: <span style="outline: 4px solid #DC6ABC; display: inline-block; padding: 0 .3em .2em;">bold</span>;
-    </pre>
-  </section>
-
-  <section>
-  <h3>Comentarios</h3>
-    <p>Al igual que con HTML, podemos insertar comentarios en nuestro código CSS. Para abrir un comentario escribiremos <code>/*</code> y para cerrarlo <code>*/</code></p>
-    <pre><code contenteditable>
-  p {
-    color: blue;
-  }
-
-  /* Este es un comentario de una sola linea */
-
-  /*
-    pero tambien
-    puede tener
-    varias
-    lineas
-  */
-    </code></pre>
-  </section>
-
-  <section>
-    <h3>Formato</h3>
-    <p>Los espacios en blanco y saltos de línea se utilizan para mejorar la legibilidad.</p>
-    <pre><code>
-  /* Esto: */
-  p {
-    color: red;
-    font-weight: bold;
-  }
-
-
-  /* Es lo mismo que esto: */
-  p { color: red; font-weight: bold; }
-  </code></pre>
-  </section>
-
-</section>
-
-
- <section>
-    <section>
-        <h2>Asociar CSS al HTML</h2>
-    </section>
-
-    <section>
-        <p>Existen tres maneras de relacionar un CSS a un HTML en concreto:</p>
-        <ul>
-            <li>Estilo <i>inline</i>.</li>
-            <li>Estilos embebidos en documento HTML.</li>
-            <li>Hoja de estilos externa.</li>
-        </ul>
-    </section>
-
-    <section>
-        <p>Podemos asignar estilos CSS directamente en un elemento HTML mediante el atributo <code>style=""</code>.</p>
-        <p>Los estilos solo se aplicarán a ese elemento en concreto, por lo cual el selector no se utiliza en este caso.</p>
-        <pre><code data-trim contenteditable>&#60;p style="color: red"&#62;Esto es un párrafo rojo.&#60;/p&#62;</code></pre>
-    </section>
-    
-    <section>
-        <p>Otra forma de utilizar CSS es mediante un tag <code>&#60;style&#62;</code> en el <code>&#60;head&#62;</code> del documento.</p>
-        <p>Los estilos se aplicaran a todos los elementos de la página de acuerdo a los selectores utilizados.<p/>
-<pre><code >
-    &#60;head&#62;
-         &#60;style&#62;
-            p {
-                color: red;
-            }
-            h1 {
-                color : blue;
-            }
-        &#60;/style&#62;
-    &#60;/head&#62;
-
-</code></pre>
-    </section>
-
-    <section>
-        <p>La manera más eficiente de relacionar CSS y HTML es utilizando una hoja de estilo externa, lo que nos permite compartir un mismo CSS para todo nuestro sitio web.</p>
-        <p>Esta hoja es un archivo con extensión .css que se incluye en el <code>&#60;head&#62;</code> del HTML mediante un tag <code>&#60;link&#62;</code>.</p>
-<pre><code>
-    &#60;head&#62;
-        &#60;link rel="stylesheet" href="css/styles.css"&#62;
-    &#60;/head&#62;
-    
-</code></pre>
-    </section>
-</section>
-
-<section>
-    <section>
-        <h2>Estilos de texto</h2>
-    </section>
-
-    <section>
-        <ul class="mb-m">
-            <li>
-                <strong>font-family</strong> - <i>&#060;family name, &hellip;&#062;</i> | <i>&#060;generic-family&#062;</i>
-            </li>
-            <li>
-                <strong>font-size</strong> - <i>&#060;absolute-size&#062;</i> | <i>&#060;relative-size&#062;</i> | <i>&#060;length&#062;</i> | <i>&#060;percentage&#062;</i>
-            </li>
-            <li>
-                <strong>font-style</strong> - normal | italic | oblique
-            </li>
-            <li>
-                <strong>font-variant</strong> - normal | small-caps
-            </li>
-            <li>
-                <strong>font-weight</strong> - normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900
-            </li>
-            <li>
-                <strong>line-height</strong> - normal | <i>&#060;number&#062;</i> | <i>&#060;length&#062;</i> | <i>&#060;percentage&#062;</i>
-            </li>
-            <li>
-                <strong>text-align</strong> - left | right | center | justify
-            </li>
-            <li>
-                <strong>text-decoration</strong> - none | underline | overline | line-through
-            </li>
-            <li>
-                <strong>text-indent</strong> - <i>&#60;length&#62;</i> | <i>&#60;percentage&#62;</i>
-            </li>
-            <li>
-                <strong>text-shadow</strong> - none | <i>&#60;shadow&#62;</i>, <i>&#60;shadow&#62;</i>
-            </li>
-            <li>
-                <strong>text-transform</strong> - none | capitalize | uppercase | lowercase
-            </li>
-            <li>
-                <strong>letter-spacing</strong> - normal | <i>&#60;length&#62;</i>
-            </li>
-            <li>
-                <strong>word-spacing</strong> - normal | <i>&#60;length&#62;</i>
-            </li>
-        </ul>
-        <p class="ta-c fz-s">
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts">MDN - CSS Fonts</a>
-        </p>
-    </section>
+    <h3>Links relacionados</h3>
+    <ul>
+        <li style="margin-bottom: .8em;">
+            <strong>CSS Tricks</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
+            <br>
+            <a href="http://css-tricks.com/all-about-floats/">All about Floats</a>
+        </li>
+        <li style="margin-bottom: .8em;">
+            <strong>MDN Float</strong> <i style="color: #999;"> &mdash; Mozilla Developer Network</i>
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float/">CSS Reference</a>
+        </li>
+        <li style="margin-bottom: .8em;">
+            <strong>Micro Clearfix</strong> <i style="color: #999;"> &mdash; Nicolas Gallagher</i>
+            <br>
+            <a href="http://nicolasgallagher.com/micro-clearfix-hack/">A new micro clearfix hack</a>
+        </li>
+    </ul>
 </section>
 
         </div>

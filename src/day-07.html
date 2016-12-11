@@ -1,13 +1,78 @@
 ---
 
 layout: slides
-title: 'Fundamentos CSS'
+title: 'Layout I'
 
-lesson_title: 'Fundamentos CSS'
+lesson_title: 'Layout I'
 
 ---
 
-{% include slides/sublime-tips/sublime-tip-packages.html %}
+
+<section  id="box-model">
+    <section>
+        <h2>Box-model &amp; display (repaso)</h2>
+    </section>
+
+    <section>
+        <h3>Box-model</h3>
+        <div class="BoxModelGraphic-margin mb-m">
+            <div class="BoxModelGraphic-padding">
+                <span class="BoxModelGraphic-content" contenteditable>contenido</span>
+            </div>
+        </div>
+        <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">Area de contenido</span> | <span class="c-yellow">Padding</span> | <span class="c-red">Border</span> | <span class="c-cyan">Margin</span></p>
+        <hr>
+        <pre><code data-trim contenteditable>
+.box {
+    width: 300px;
+    height: 50px;
+    border: 5px solid #d8cd00;
+    margin: 50px;
+    padding: 50px;
+}
+        </code></pre>
+    </section>
+
+    <section class="fz-s">
+        <h3>Display: inline</h3>
+        <ul class="fz-xs">
+            <li>Ignoran el <code>width</code> y el <code>height</code></li>
+            <li>Si se le aplican <code>paddings</code> verticales no afectaran la posición de los elementos que les rodean.</li>
+            <li>El background no cubrirá la altura total del alto de línea, sino que se ajustará al contenido.</li>
+        </ul>
+
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong class="u-highlighted">libero iure expedita</strong> minima labore magnam.</p>
+        </div>
+    </section>
+
+    <section>
+        <h3>Display: block</h3>
+        <ul class="fz-s">
+            <li>Ocupan 100% del contenedor.</li>
+        </ul>
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <h3>Display: inline-block</h3>
+        <ul class="fz-s">
+            <li>Mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></li>
+        </ul>
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted" style="display: inline; padding: 20px 10px;">display: inline; padding: 20px 10px;</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium <strong class="u-highlighted" style="display: inline-block; padding: 20px 10px;">display: inline-block; padding: 20px 10px;</strong> minima labore magnam.</p>
+        </div>
+    </section>
+
+    <section>
+        <h3>Display: none</h3>
+        <p>El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
+    </section>
+</section>
 
 {% include slides/css/css-float.html %}
 
@@ -17,25 +82,21 @@ lesson_title: 'Fundamentos CSS'
 
 {% include slides/css/css-zindex.html %}
 
-
+<section>
+    <h2>Ejercicio</h2>
+    <a href="files/exercises/cvs.zip">Descargar</a>
+</section>
 
 <section>
-    <h3>Links relacionados</h3>
-    <ul>
-        <li style="margin-bottom: .8em;">
-            <strong>CSS Tricks</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
-            <br>
-            <a href="http://css-tricks.com/all-about-floats/">All about Floats</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>MDN Float</strong> <i style="color: #999;"> &mdash; Mozilla Developer Network</i>
-            <br>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float/">CSS Reference</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>Micro Clearfix</strong> <i style="color: #999;"> &mdash; Nicolas Gallagher</i>
-            <br>
-            <a href="http://nicolasgallagher.com/micro-clearfix-hack/">A new micro clearfix hack</a>
-        </li>
-    </ul>
+    <h1 style="font-size: 3em">Introducción al CSS</h1>
 </section>
+
+{% include slides/css/css-introduction.html %}
+
+{% include slides/css/css-user-agent.html %}
+
+{% include slides/css/css-syntax.html %}
+
+{% include slides/css/css-link-to-html.html %}
+
+{% include slides/css/css-text-styles.html %}

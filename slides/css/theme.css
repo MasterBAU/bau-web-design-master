@@ -533,6 +533,56 @@ body {
   #borders .BordersExample--dotted {
     border-style: dotted; }
 
+#float .float-wrap {
+  border: 1px dotted #333;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 auto 1em;
+  overflow: auto;
+  width: 352px; }
+
+#float .float-box {
+  background: gold;
+  border: 2px solid orange;
+  margin: .25em;
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100px;
+  color: black;
+  padding: 20px 0; }
+
+#float .float-left {
+  float: left; }
+
+#float .float-right {
+  float: right; }
+
+#float .float-example-02 .float-wrap,
+#float .float-example-03 .float-wrap {
+  overflow: visible;
+  width: 450px; }
+
+#float .float-example-02 .float-wrap {
+  padding: .5em; }
+
+#float .float-example-03 .float-wrap {
+  background: transparent;
+  border-color: rgba(0, 0, 0, 0.4);
+  padding: .25em; }
+
+#float .float-example-03 p {
+  font-size: 1.5rem; }
+
+#float .float-clear {
+  clear: both;
+  background: rgba(51, 153, 204, 0.3);
+  font-size: 1.3rem;
+  line-height: 1;
+  padding: .5em;
+  text-align: center; }
+
+#float .float-example-02 .float-cleared {
+  overflow: auto; }
+
 #specificity .specificity {
   color: #333;
   font-family: "Oswald", Impact, sans-serif;
@@ -751,56 +801,6 @@ p.selection::selection {
   margin: 1.5rem auto;
   width: 60%;
   height: 300px; }
-
-.float-wrap {
-  border: 1px dotted #333;
-  background: rgba(255, 255, 255, 0.1);
-  margin: 0 auto 1em;
-  overflow: auto;
-  width: 352px; }
-
-.float-box {
-  background: gold;
-  border: 2px solid orange;
-  margin: .25em;
-  font-size: 1.5rem;
-  font-weight: bold;
-  width: 100px;
-  color: black;
-  padding: 20px 0; }
-
-.float-left {
-  float: left; }
-
-.float-right {
-  float: right; }
-
-.float-example-02 .float-wrap,
-.float-example-03 .float-wrap {
-  overflow: visible;
-  width: 450px; }
-
-.float-example-02 .float-wrap {
-  padding: .5em; }
-
-.float-example-03 .float-wrap {
-  background: transparent;
-  border-color: rgba(0, 0, 0, 0.4);
-  padding: .25em; }
-
-.float-example-03 p {
-  font-size: 1.5rem; }
-
-.float-clear {
-  clear: both;
-  background: rgba(51, 153, 204, 0.3);
-  font-size: 1.3rem;
-  line-height: 1;
-  padding: .5em;
-  text-align: center; }
-
-.float-example-02 .float-cleared {
-  overflow: auto; }
 
 .hidden-link {
   display: block;
