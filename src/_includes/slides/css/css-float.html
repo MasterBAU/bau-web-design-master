@@ -7,16 +7,18 @@
     </section>
 
     <section>
-        <p>La propiedad <code>float</code> modifica el flujo natural del elemento y lo "flota" situándolo a la izquierda o derecha de su contenedor permitiendo al resto de elementos <span class="marker">inline</span> ocupar el espacio colindante.</p>
-
-        <p>La porpiedad <code class="u-marked">float</code> nos permitie remover a un elemento de su posición natural en el flow de la página y posicionarlo contra uno de los lados de su elemento contenedor. Los elementos que están a continuación suyo se limitarán a rodearlo.
+        <p>La porpiedad <code class="u-marked">float</code> nos permitie remover a un elemento de su posición natural en el flow de la página y <strong>posicionarlo contra uno de los lados de su elemento contenedor</strong>. Los elementos que están a continuación suyo se limitarán a rodearlo.
         </p>
     </section>
 
     <section>
-        <p>Inicialmente se creó para posicionar imágenes dentro de un bloque de texto pero con el tiempo acabo por ser una de las herramientas CSS más usadas para generar layouts.</p>
-        <hr>
-        <span><a href="exercise01.html">exercise01.html</a></span>
+        <p class="mb-l">Inicialmente se creó para posicionar imágenes dentro de un bloque de texto pero con el tiempo acabo por ser una de las herramientas CSS más usadas para generar layouts.</p>
+        <hr class="mb-l">
+        <div class="fz-xxs" style="width: 70%; margin: 0 auto;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="https://4.bp.blogspot.com/-B70oaS-ZUiU/UXu4f5gG-xI/AAAAAAAALeM/JDAWfEAm1Hw/s1600/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
+        </div>
     </section>
 
     <section>
@@ -29,56 +31,56 @@
         </p>
     </section>
 
-    <section class="float-example">
+    <section>
         <h2>Float NONE</h2>
         <pre><code data-trim contenteditable>div { float: none; }</code></pre>
-        <div class="float-wrap">
-            <div class="float-box">1</div>
-            <div class="float-box">2</div>
-            <div class="float-box">3</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box">1</div>
+            <div class="FloatGraphic-box">2</div>
+            <div class="FloatGraphic-box">3</div>
         </div>
     </section>
 
     <section>
         <h2>Float LEFT</h2>
         <pre><code data-trim contenteditable>div { float: left; }</code></pre>
-        <div class="float-wrap">
-            <div class="float-box float-left">1</div>
-            <div class="float-box float-left">2</div>
-            <div class="float-box float-left">3</div>
-            <div class="float-box float-left">4</div>
-            <div class="float-box float-left">5</div>
-            <div class="float-box float-left">6</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box FloatGraphic-box--left">1</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">2</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">3</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">4</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">5</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">6</div>
         </div>
     </section>
 
     <section>
         <h2>Float Right</h2>
         <pre><code data-trim contenteditable>div { float: right; }</code></pre>
-        <div class="float-wrap">
-            <div class="float-box float-right">1</div>
-            <div class="float-box float-right">2</div>
-            <div class="float-box float-right">3</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box FloatGraphic-box--right">1</div>
+            <div class="FloatGraphic-box FloatGraphic-box--right">2</div>
+            <div class="FloatGraphic-box FloatGraphic-box--right">3</div>
         </div>
     </section>
 
     <section>
         <h2>La propiedad clear</h2>
-        <p>Omite el <span class="marker">float</span> del elemento anterior.</p>
-        <p><code class="marker">clear</code> soporta 4 valores:</p>
+        <p>Omite el <code>float</code> del elemento anterior.</p>
+        <p><code class="u-marked">clear</code> soporta 4 valores:</p>
         <ul>
-            <li><em><code>none</code></em>: el elemento se verá afectado normalmente por un float.</li>
-            <li><em><code>left</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: left</code>.</li>
-            <li><em><code>right</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: right</code>.</li>
-            <li><em><code>both</code></em>: el elemento se desplazará abajo ante cualquier <code>float</code>.</li>
+            <li><code class="u-marked">none</code>: el elemento se verá afectado normalmente por un float.</li>
+            <li><code class="u-marked">left</code>: el elemento se desplazará abajo cuando se encuentre con un <code>float: left</code>.</li>
+            <li><code class="u-marked">right</code>: el elemento se desplazará abajo cuando se encuentre con un <code>float: right</code>.</li>
+            <li><code class="u-marked">both</code>: el elemento se desplazará abajo ante cualquier <code>float</code>.</li>
         </ul>
     </section>
 
     <section>
-        <div style="font-size: 1.5rem; width: 70%; margin: 0 auto; border: 1px dotted #666; padding: 1em;">
+        <div class="ClearExample-wrap fz-xxs">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="{{ img_path }}/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta.</p>
-            <p style="clear: both; background: hsla(18, 97%, 49%, 0.8)">cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph</p>
+            <p class="ClearExample-clear u-highlighted">cleared paragraph</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
         </div>
     </section>
