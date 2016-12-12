@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Layout I | Máster en Diseño Web | Módulo III Programación Frontend</title>
+    <title>Fundamentos CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
 
     <meta name="description" content="Máster en Diseño Web | Módulo III">
     <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
@@ -47,79 +47,32 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Layout I</strong></h3>
+                <h3><strong>Fundamentos CSS</strong></h3>
             </section>
 
-            <section  id="box-model">
+            <section class="text-left">
     <section>
-        <h2>Box-model &amp; display (repaso)</h2>
+        <h2>Sublime Text Tip</h2>
     </section>
 
     <section>
-        <h3>Box-model</h3>
-        <div class="BoxModelGraphic-margin mb-m">
-            <div class="BoxModelGraphic-padding">
-                <span class="BoxModelGraphic-content" contenteditable>contenido</span>
-            </div>
-        </div>
-        <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">Area de contenido</span> | <span class="c-yellow">Padding</span> | <span class="c-red">Border</span> | <span class="c-cyan">Margin</span></p>
+        <h3>Package Control</h3>
+        <p>El Package Control de Sublime Text es un gestor de paquetes que nos permite instalar muy facilmente cientos de plugins reailzados por diferentes desarrolladores.</p>
+        <p>Para instalarlo, debemos dirigirnos a la siguiente dirección:</p>
+        <p style="text-align: center;"><a href="https://sublime.wbond.net/installation">https://sublime.wbond.net/installation</a></p>
+        <p>Una vez allí copiamos el código correspondiente a nuestra versión y lo ejecutamos en la consola de nuestro programa.</p>
         <hr>
-        <pre><code data-trim contenteditable>
-.box {
-    width: 300px;
-    height: 50px;
-    border: 5px solid #d8cd00;
-    margin: 50px;
-    padding: 50px;
-}
-        </code></pre>
-    </section>
-
-    <section class="fz-s">
-        <h3>Display: inline</h3>
-        <ul class="fz-xs">
-            <li>Ignoran el <code>width</code> y el <code>height</code></li>
-            <li>Si se le aplican <code>paddings</code> verticales no afectaran la posición de los elementos que les rodean.</li>
-            <li>El background no cubrirá la altura total del alto de línea, sino que se ajustará al contenido.</li>
-        </ul>
-
-        <div style="margin: 3rem auto 0; width: 80%;">
-            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong class="u-highlighted">libero iure expedita</strong> minima labore magnam.</p>
-        </div>
+        <p style="text-align: center;"><code>Sublime Text > View > Show Console</code></p>
     </section>
 
     <section>
-        <h3>Display: block</h3>
-        <ul class="fz-s">
-            <li>Ocupan 100% del contenedor.</li>
-        </ul>
-        <div style="margin: 3rem auto 0; width: 80%;">
-            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-        </div>
-    </section>
-
-
-    <section>
-        <h3>Display: inline-block</h3>
-        <ul class="fz-s">
-            <li>Mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></li>
-        </ul>
-        <div style="margin: 3rem auto 0; width: 80%;">
-            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted" style="display: inline; padding: 20px 10px;">display: inline; padding: 20px 10px;</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium <strong class="u-highlighted" style="display: inline-block; padding: 20px 10px;">display: inline-block; padding: 20px 10px;</strong> minima labore magnam.</p>
-        </div>
-    </section>
-
-    <section>
-        <h3>Display: none</h3>
-        <p>El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
+        <p>Luego de ejecutado el código, reiniciaremos Sublime Text y ya podremos acceder al Package Control.</p>
+        <p>Para instalar un nuevo plugin, lo haremos a través de la Paleta de Comandos, donde escribiremos "Install Package" y luego el nombre del plugin a instalar.
+        <p>Accederemos a la paleta con:</p>
+        <p style="text-align: center;"><em><code>Cmd + Shift + P</code></em></p>
     </section>
 </section>
 
-<section>
-    <h2>Práctica</h2>
-    <a href="https://codepen.io/nahuelsotelo/pen/GNXJoE">https://codepen.io/nahuelsotelo/pen/GNXJoE</a>
-</section>
 
 
 <section id="float" class="text-left">
@@ -325,11 +278,6 @@
 &#60;/div&#62;
         </code></pre>
     </section>
-</section>
-
-<section>
-    <h2>Práctica</h2>
-    <a href="https://codepen.io/nahuelsotelo/pen/xRaGdZ">https://codepen.io/nahuelsotelo/pen/xRaGdZ</a>
 </section>
 
 
@@ -608,6 +556,28 @@
     </section>
 </section>
 
+
+
+<section>
+    <h3>Links relacionados</h3>
+    <ul>
+        <li style="margin-bottom: .8em;">
+            <strong>CSS Tricks</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
+            <br>
+            <a href="http://css-tricks.com/all-about-floats/">All about Floats</a>
+        </li>
+        <li style="margin-bottom: .8em;">
+            <strong>MDN Float</strong> <i style="color: #999;"> &mdash; Mozilla Developer Network</i>
+            <br>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float/">CSS Reference</a>
+        </li>
+        <li style="margin-bottom: .8em;">
+            <strong>Micro Clearfix</strong> <i style="color: #999;"> &mdash; Nicolas Gallagher</i>
+            <br>
+            <a href="http://nicolasgallagher.com/micro-clearfix-hack/">A new micro clearfix hack</a>
+        </li>
+    </ul>
+</section>
 
         </div>
     </div>
