@@ -1,0 +1,22 @@
+
+.container {
+  display: flex;
+  
+
+  /*
+    flex-direction
+    
+    Determina la direccion del main-axis del container.
+    Los items se colocarán de principio a fin siguiendo
+    la direccion establecida. 
+  */
+  /*flex-direction: row;*/
+  /*flex-direction: column;*/
+  /*flex-direction: row-reverse;*/
+  /*flex-direction: column-reverse;*/
+  
+
+  
+  /*width: 700px;*/
+  /*height: 400px;*/
+}
