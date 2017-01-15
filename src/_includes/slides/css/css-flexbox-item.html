@@ -1,0 +1,63 @@
+{% assign img_path = './img/slides/css-flexbox' %}
+<section id="">
+    <section>
+        <h2>Flexbox Item</h2>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">order</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  order: &#60;integer&#62;;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="{{ img_path }}/order.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-grow</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-grow: &#60;number&#62;;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="{{ img_path }}/flex-grow.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-shrink</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-shrink: &#60;number&#62;;
+}
+        </code></pre>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-basis</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-basis: &#060;length&#062; | auto;
+}
+        </code></pre>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-self</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="{{ img_path }}/align-self.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+</section>

@@ -1,0 +1,86 @@
+{% assign img_path = './img/slides/css-flexbox' %}
+<section id="">
+    <section>
+        <h2>Flexbox</h2>
+    </section>
+
+    <section>
+        <ul>
+            <li>Permite que que los elementos ajusten su tamaño para ocupar todo el espacio disponible.</li>
+            <li>Permite controlar la distribución del espacio entre elementos.</li>
+            <li>Permite reordenar los elementos.</li>
+            <li>Facilita la alineación de elementos en cualquier dirección.</li>
+        </ul>
+    </section>
+
+    <section> 
+        <h3>Flexbox Syntax</h3> 
+        <p class="ta-c">
+            <img src="{{ img_path }}/flex-terms.png" alt="" >
+        </p>
+    </section>
+
+    <section>
+        <div class="d-flx d-flx--2">
+            <div style="padding: .5rem 1rem;">
+                <h4 class="ta-l">Propiedades del container</h4>
+                <ul class="fz-xs">
+                    <li>
+                        <p class="mb-0"><strong><code>flex-direction</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">row</span> | row-reverse | column | column-reverse</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-wrap</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">nowrap</span> | wrap | wrap-reverse</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-flow</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;flex-direction&#62; || &#60;flex-wrap&#62;</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>justify-content</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">flex-start</span> | flex-end | center | space-between | space-around</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-items</code></strong></p>
+                        <p class="fz-xxxs"><code>flex-start | flex-end | center | baseline | <span class="u-marked">stretch</span></code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-content</code></strong></p>
+                        <p class="fz-xxxs"><code>flex-start | flex-end | center | space-between | space-around | <span class="u-marked">stretch</span></code></p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="background: rgba(0,0,0,.1); padding: .5rem .75rem;">
+                <h4 class="ta-l">Propiedades de los items</h4>
+                <ul class="fz-xs">
+                    <li>
+                        <p class="mb-0"><strong><code>order</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;integer&#62;</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-grow</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;number&#62; (<span class="u-marked">0</span>)</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-shrink</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;number&#62; (<span class="u-marked">1</span>)</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-basis</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;length&#62; | <span class="u-marked">auto</span></code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex</code></strong></p>
+                        <p class="fz-xxxs"><code>none | [ &#60;'flex-grow'&#62; &#60;'flex-shrink'&#62;? || &#60;'flex-basis'&#62; ]</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-self</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">auto</span> | flex-start | flex-end | center | baseline | stretch</code></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>

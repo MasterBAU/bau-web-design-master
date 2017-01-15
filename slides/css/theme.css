@@ -309,6 +309,12 @@ body {
   font-size: .9em;
   width: 90%; }
 
+.reveal .fz-xxxs {
+  font-size: 1rem !important; }
+
+.reveal .fz-xxxs p, .reveal .fz-xxxs ul, .reveal .fz-xxxs ol {
+  font-size: 1rem; }
+
 .reveal .fz-xxs {
   font-size: 1.25rem !important; }
 
@@ -434,6 +440,21 @@ body {
 
 .reveal .bdc-red {
   border-color: #e11d24 !important; }
+
+.reveal .d-flx {
+  display: flex; }
+  .reveal .d-flx > * {
+    width: 100%; }
+  .reveal .d-flx--1 > * {
+    width: 100%; }
+  .reveal .d-flx--2 > * {
+    width: 50%; }
+  .reveal .d-flx--3 > * {
+    width: 33.33333%; }
+  .reveal .d-flx--4 > * {
+    width: 25%; }
+  .reveal .d-flx--5 > * {
+    width: 20%; }
 
 .reveal .u-highlighted {
   background-color: rgba(126, 169, 195, 0.4); }

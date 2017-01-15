@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Layout II | Máster en Diseño Web | Módulo III Programación Frontend</title>
+
+    <meta name="description" content="Máster en Diseño Web | Módulo III">
+    <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="topheader">
+    <a href="./index.html"><img src="./img/logo-bau-es.svg"></a>
+    <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
+</div>
+
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Módulo III <br />
+                    <span class="marker">Programación Frontend</span>
+                </h3>
+                <h3><strong>Layout II</strong></h3>
+            </section>
+
+            
+<section id="">
+    <section>
+        <h2>Flexbox</h2>
+    </section>
+
+    <section>
+        <ul>
+            <li>Permite que que los elementos ajusten su tamaño para ocupar todo el espacio disponible.</li>
+            <li>Permite controlar la distribución del espacio entre elementos.</li>
+            <li>Permite reordenar los elementos.</li>
+            <li>Facilita la alineación de elementos en cualquier dirección.</li>
+        </ul>
+    </section>
+
+    <section> 
+        <h3>Flexbox Syntax</h3> 
+        <p class="ta-c">
+            <img src="./img/slides/css-flexbox/flex-terms.png" alt="" >
+        </p>
+    </section>
+
+    <section>
+        <div class="d-flx d-flx--2">
+            <div style="padding: .5rem 1rem;">
+                <h4 class="ta-l">Propiedades del container</h4>
+                <ul class="fz-xs">
+                    <li>
+                        <p class="mb-0"><strong><code>flex-direction</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">row</span> | row-reverse | column | column-reverse</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-wrap</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">nowrap</span> | wrap | wrap-reverse</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-flow</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;flex-direction&#62; || &#60;flex-wrap&#62;</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>justify-content</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">flex-start</span> | flex-end | center | space-between | space-around</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-items</code></strong></p>
+                        <p class="fz-xxxs"><code>flex-start | flex-end | center | baseline | <span class="u-marked">stretch</span></code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-content</code></strong></p>
+                        <p class="fz-xxxs"><code>flex-start | flex-end | center | space-between | space-around | <span class="u-marked">stretch</span></code></p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="background: rgba(0,0,0,.1); padding: .5rem .75rem;">
+                <h4 class="ta-l">Propiedades de los items</h4>
+                <ul class="fz-xs">
+                    <li>
+                        <p class="mb-0"><strong><code>order</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;integer&#62;</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-grow</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;number&#62; (<span class="u-marked">0</span>)</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-shrink</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;number&#62; (<span class="u-marked">1</span>)</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-basis</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;length&#62; | <span class="u-marked">auto</span></code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex</code></strong></p>
+                        <p class="fz-xxxs"><code>none | [ &#60;'flex-grow'&#62; &#60;'flex-shrink'&#62;? || &#60;'flex-basis'&#62; ]</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-self</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">auto</span> | flex-start | flex-end | center | baseline | stretch</code></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</section>
+
+<section id="">
+    <section>
+        <h2>Flexbox Container</h2>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-direction</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/flex-direction.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-wrap</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/flex-wrap.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">justify-content</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/justify-content.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-items</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/align-items.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-content</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/align-content.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+</section>
+
+<section id="">
+    <section>
+        <h2>Flexbox Item</h2>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">order</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  order: &#60;integer&#62;;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/order.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-grow</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-grow: &#60;number&#62;;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/flex-grow.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-shrink</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-shrink: &#60;number&#62;;
+}
+        </code></pre>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-basis</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-basis: &#060;length&#062; | auto;
+}
+        </code></pre>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-self</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/align-self.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+</section>
+        </div>
+    </div>
+
+    <script src="js/reveal/head.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'js/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+</script>
+</body>
+</html>

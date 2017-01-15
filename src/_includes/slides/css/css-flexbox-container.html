@@ -1,0 +1,71 @@
+{% assign img_path = './img/slides/css-flexbox' %}
+<section id="">
+    <section>
+        <h2>Flexbox Container</h2>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-direction</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="{{ img_path }}/flex-direction.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-wrap</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="{{ img_path }}/flex-wrap.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">justify-content</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="{{ img_path }}/justify-content.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-items</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="{{ img_path }}/align-items.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-content</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="{{ img_path }}/align-content.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+</section>
