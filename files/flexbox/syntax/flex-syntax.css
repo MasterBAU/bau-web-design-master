@@ -5,18 +5,98 @@
 
   /*
     flex-direction
-    
+  
     Determina la direccion del main-axis del container.
     Los items se colocarán de principio a fin siguiendo
-    la direccion establecida. 
+    la direccion establecida.
   */
   /*flex-direction: row;*/
   /*flex-direction: column;*/
   /*flex-direction: row-reverse;*/
   /*flex-direction: column-reverse;*/
-  
 
-  
+
+  /*
+    flex-wrap
+    
+    Determina si los items saltarán a una nueva linea en
+    caso de ocupar más que el contenedor.
+    También determina la dirección en la que irán colocándose.
+  */
+  /*flex-wrap: nowrap;*/
+  /*flex-wrap: wrap;*/
+  /*flex-wrap: wrap-reverse;*/
+
+
+  /*
+    justify-content
+
+    Determina la alineación de los items sobre el main axis y
+    cómo se reparte el espacio sobrante.
+  */
+  /*justify-content: flex-start;*/
+  /*justify-content: flex-end;*/
+  /*justify-content: center;*/
+  /*justify-content: space-between;*/
+  /*justify-content: space-around;*/
+
+
+  /*
+    align-items
+
+    Determina la alineación de los items sobre el cross axis.
+  */
+  /*align-items: flex-start;*/
+  /*align-items: flex-end;*/
+  /*align-items: center;*/
+  /*align-items: baseline;*/
+  /*align-items: stretch;*/
+
+
   /*width: 700px;*/
   /*height: 400px;*/
 }
+
+
+.item-1 {
+  /*
+    order
+
+    Permite ordenar los items.
+  */
+  /*order: 2;*/
+
+  /*
+    flex-grow
+
+    Determina la capacidad de un item para crecer ocupando el espacio
+    sobrante en el container de haberlo.
+  */
+  /*flex-grow: 1;*/
+
+  /*
+    flex-shrink
+
+    Determina la proporción en que un item se encogerá con respecto al
+    resto cuando el espacio sobrante es negativo.
+  */
+  /*flex-shrink: 2;*/
+
+
+  /*
+    flex-shrink
+
+    Determina la dimensión inicial de un item en el main axis antes
+    de calcular la distribución del espacio sobrante.
+  */
+  /*flex-basis: 300px;*/
+
+  /*
+    align-self
+
+    Permite sobreescribir la propiedad align-items del container para
+    un elemento individualmente.
+  */
+  /*align-self: stretch;*/
+}
+

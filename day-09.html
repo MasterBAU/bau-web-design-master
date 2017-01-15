@@ -50,18 +50,258 @@
                 <h3><strong>Layout II</strong></h3>
             </section>
 
-            <section  id="box-model">
+            
+<section id="">
     <section>
-    <section>
-        <h2>Flexbox Syntax</h2>
+        <h2>Flexbox</h2>
     </section>
 
     <section>
+        <ul>
+            <li>Permite que que los elementos ajusten su tamaño para ocupar todo el espacio disponible.</li>
+            <li>Permite controlar la distribución del espacio entre elementos.</li>
+            <li>Permite reordenar los elementos.</li>
+            <li>Facilita la alineación de elementos en cualquier dirección.</li>
+        </ul>
+    </section>
 
+    <section> 
+        <h3>Flexbox Syntax</h3> 
+        <p class="ta-c">
+            <img src="./img/slides/css-flexbox/flex-terms.png" alt="" >
+        </p>
+    </section>
+
+    <section>
+        <div class="d-flx d-flx--2">
+            <div style="padding: .5rem 1rem;">
+                <h4 class="ta-l">Propiedades del container</h4>
+                <ul class="fz-xs">
+                    <li>
+                        <p class="mb-0"><strong><code>flex-direction</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">row</span> | row-reverse | column | column-reverse</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-wrap</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">nowrap</span> | wrap | wrap-reverse</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-flow</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;flex-direction&#62; || &#60;flex-wrap&#62;</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>justify-content</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">flex-start</span> | flex-end | center | space-between | space-around</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-items</code></strong></p>
+                        <p class="fz-xxxs"><code>flex-start | flex-end | center | baseline | <span class="u-marked">stretch</span></code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-content</code></strong></p>
+                        <p class="fz-xxxs"><code>flex-start | flex-end | center | space-between | space-around | <span class="u-marked">stretch</span></code></p>
+                    </li>
+                </ul>
+            </div>
+            
+            <div style="background: rgba(0,0,0,.1); padding: .5rem .75rem;">
+                <h4 class="ta-l">Propiedades de los items</h4>
+                <ul class="fz-xs">
+                    <li>
+                        <p class="mb-0"><strong><code>order</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;integer&#62;</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-grow</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;number&#62; (<span class="u-marked">0</span>)</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-shrink</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;number&#62; (<span class="u-marked">1</span>)</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex-basis</code></strong></p>
+                        <p class="fz-xxxs"><code>&#60;length&#62; | <span class="u-marked">auto</span></code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>flex</code></strong></p>
+                        <p class="fz-xxxs"><code>none | [ &#60;'flex-grow'&#62; &#60;'flex-shrink'&#62;? || &#60;'flex-basis'&#62; ]</code></p>
+                    </li>
+                    <li>
+                        <p class="mb-0"><strong><code>align-self</code></strong></p>
+                        <p class="fz-xxxs"><code><span class="u-marked">auto</span> | flex-start | flex-end | center | baseline | stretch</code></p>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 </section>
 
+<section id="">
+    <section>
+        <h2>Flexbox Container</h2>
+    </section>
 
+    <section class="ta-c">
+        <p class="fz-l">flex-direction</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  flex-direction: row | row-reverse | column | column-reverse;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/flex-direction.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-wrap</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  flex-wrap: nowrap | wrap | wrap-reverse;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/flex-wrap.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">justify-content</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  justify-content: flex-start | flex-end | center | space-between | space-around;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/justify-content.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-items</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  align-items: flex-start | flex-end | center | baseline | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/align-items.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-content</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.container {
+  align-content: flex-start | flex-end | center | space-between | space-around | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/align-content.svg" alt="" style="height: 380px;">
+        </p>
+    </section>
+</section>
+
+<section id="">
+    <section>
+        <h2>Flexbox Item</h2>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">order</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  order: &#60;integer&#62;;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/order.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-grow</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-grow: &#60;number&#62;;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/flex-grow.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-shrink</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-shrink: &#60;number&#62;;
+}
+        </code></pre>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">flex-basis</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  flex-basis: &#060;length&#062; | auto;
+}
+        </code></pre>
+    </section>
+
+    <section class="ta-c">
+        <p class="fz-l">align-self</p> 
+        <pre><code data-trim contenteditable class="hljs css">
+.item {
+  align-self: auto | flex-start | flex-end | center | baseline | stretch;
+}
+        </code></pre>
+        <hr>
+        <p>
+            <img src="./img/slides/css-flexbox/align-self.svg" alt="" style="width: 500px;">
+        </p>
+    </section>
+</section>
+<section>
+    <section>
+        <h2>Calculando medidas</h2>
+    </section>
+
+    <section>
+        <p><strong>Available space</strong> = (container size - suma de flex-basis de los items)</p>
+        <p><strong>Grow unit</strong> = (Available space / suma de flex-grow de los items)</p>
+        <p><strong>Flex item size</strong> = (Flex basis + (Grow Unit * flex-grow))</p>
+        <p><a href="https://chriswrightdesign.com/experiments/flexbox-adventures/">Flexbox adventures</a></p>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Ejercicio</h2>
+    </section>
+
+    <section class="ta-c">
+        <p>
+            Reproducir este menu 3 veces: con floats, con inline-block y con flexbox
+        </p>
+        <p>
+            <img src="./img/slides/css-flexbox/ex1_1.png" alt="" style="width: 400px;">
+        </p>
+        <p>
+            <img src="./img/slides/css-flexbox/ex1_2.png" alt="" style="width: 600px;">
+        </p>
+        <p>
+            <img src="./img/slides/css-flexbox/ex1_3.png" alt="" style="width: 800px;">
+        </p>
+    </section>
 </section>
         </div>
     </div>
