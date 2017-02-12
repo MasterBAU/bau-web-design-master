@@ -878,9 +878,10 @@ p.selection::selection {
 #bg-clip .is--tripi,
 #bg-origin .is--tripi,
 #bg-size .is--tripi {
-  background-image: url(../img/slides/css-background/background-clip2.gif);
+  background-image: url(../img/slides/css-background/background-repeat.gif);
   background-position: center;
   background-repeat: no-repeat;
+  background-size: cover;
   border: 20px solid rgba(0, 0, 0, 0.4);
   color: #fff;
   padding: 50px;
@@ -1215,7 +1216,7 @@ body {
   max-width: 69rem;
   margin: 0 auto; }
   .reveal .class-list .index-block {
-    flex-basis: 25%;
+    flex-basis: 33.33%;
     flex-grow: 1;
     flex-shrink: 0;
     max-width: 19rem;
