@@ -527,9 +527,10 @@
   .is--dalek { background-image: url(../img/slides/css-background/dalek.png); }
   .is--megaman { background-image: url(../img/slides/css-background/megaman.png); }
   .is--tripi {
-    background-image: url(../img/slides/css-background/background-clip2.gif);
+    background-image: url(../img/slides/css-background/background-repeat.gif);
     background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
     border: 20px solid rgba(0,0,0, .4);
     color: #fff;
     padding: 50px;
