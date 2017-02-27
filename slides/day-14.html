@@ -47,285 +47,385 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Background &amp; Gradients</strong></h3>
+                <h3><strong>Sass Intro</strong></h3>
             </section>
 
-            <section id="gradient-linear">
-  <section>
-    <h2>Degradado linear</h2>
-  </section>
+            <section class="text-left">
+    <section>
+        <h2>Unidades de medida en CSS</h2>
+    </section>
 
-  <section>
-    <p>CSS nos facilita varias opciones para poder crear todo tipo de degradados utilizando la propiedad <em><code>background-image</code></em> </p>
-    <p>Un ejemplo de la sintáxis para crear un degrado linear simple sería:</p>
-    <p><code>background-image: linear-gradient(180deg, HotPink, SkyBlue)</code></p>
-  </section>
+    <section>
+        <p>Las unidades de medida en CSS pueden dividirse en <strong>dos grandes grupos</strong>: <em>unidades absolutas</em> y <em>unidades relativas</em></p>
+        <p>La sintaxis para declarar una medida siempre será igual: un número seguido de la unidad correspondiente. Algunas propiedades CSS aceptan <strong>valores negativos</strong>.</p>
+    </section>
 
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(45deg, HotPink, SkyBlue);
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: linear-gradient(45deg, HotPink, SkyBlue)">
-  </div>
-</section>
+                <section>
+                    <h3>Unidades absolutas</h3>
+                    <p>Las unidades absolutas son las más directas, están relacionadas a una medida física. La más utilizada es el pixel pero hay varias más:</p>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>px</code> <span style="font-size: 1.6rem;">(píxel)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>mm</code> <span style="font-size: 1.6rem;">(milimetro)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>cm</code> <span style="font-size: 1.6rem;">(centímetro, 10 millimeters)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>in</code> <span style="font-size: 1.6rem;">(pulgada, 2.54 centímetros)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>pt</code> <span style="font-size: 1.6rem;">(punto, 1/72 de pulgada)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>pc</code> <span style="font-size: 1.6rem;">(pica, 12 puntos)</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Unidades relativas</h3>
+                    <p>Las unidades relativas son un poco más complicadas ya que su valor no es fijo sino que dependen de la medida de otro elemento. También pueden dividirse en tres grupos más pequeños: <em>unidades relativas al tamaño de fuente</em>, <em>unidades relativas al viewport</em> y <em>porcentajes</em>.</p>
+                </section>
 
-<section>
-  <p>Ademas de la unidad <code>deg</code> para controlar la rotación de nuestro degradado, CSS nos permite utilizar otras <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/angle">unidades de medida</a> además de palabras clave.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to bottom right, HotPink, SkyBlue);
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to bottom right, HotPink, SkyBlue)"></div>
-</section>
+                <section>
+                    <h3>Relativas al tamaño de fuente</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>em</code></p>
+                            <p style="font-size: 1.5rem;">Es un número relativo al <code>font-size</code> del elemento. Si se aplica a la misma propiedad <code>font-size</code> se calculará en base al <code>font-size</code> heredado.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>rem</code></p>
+                            <p style="font-size: 1.5rem;">Hace referencia al <code>font-size</code> del elemento root (normalmente el <code>&#60;html&#62;</code>). Si se aplica sobre este usara de base su valor inicial.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>ex</code></p>
+                            <p style="font-size: 1.5rem;">Representa la <i>x-height</i> del elemento fuente, normalmente la altura del caracter "x" en minúsculas.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>ch</code></p>
+                            <p style="font-size: 1.5rem;">Representa el ancho del carácter "0".</p>
+                        </li>
+                    </ul>
+                </section>
 
-<section>
-  <p>También podemos variar el punto en que los colores comienzan a fundirse especificando un <i>color stop</i> con un valor (normalmente un porcentaje) detrás del color que queramos afectar.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink 80%, SkyBlue);
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink 70%, SkyBlue)"></div>
-</section>
+                <section>
+                    <h3>Relativas al viewport</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>vh</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del alto del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vw</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del ancho del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vmin</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del valor más bajo entre el alto y ancho del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vmax</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del valor más alto entre el alto y ancho del viewport.</p>
+                        </li>
+                    </ul>
+                </section>
 
-<section>
-  <div>
-    <p>Si hacemos coincidir los cambios de color podemos simular transiciones entre dos colores planos.</p>
-
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink 50%, SkyBlue 50%);
-}
-    </code></pre>
-  </div>
-  <div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink 50%, SkyBlue 50%)"></div>
-</section>
-
-<section>
-  <p>Por supuesto podemos hacer degradados con múltiples colores simplemente agregando más al final de la lista.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink, SkyBlue, lime);
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink, SkyBlue, lime)"></div>
-</section>
-
-
-<section>
-  <div>
-    <p>Para conseguir el efecto de bordes planos con más de dos colores es necesario repetir los colores intermedios, o sea, que delimitan con más de un color.</p>
-
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, LightSkyBlue 30%,
-  white 30%, white 70%, LightSkyBlue 70%);
-}
-  </code></pre></div>
-  <div class="gradient-wrap" style="background-image: linear-gradient(to top, LightSkyBlue 33%, white 33%, white 66%, LightSkyBlue 66%)"></div>
-</section>
-
-</section>
-
-
-<section id="gradient-radial">
-  <section>
-    <h2>Degradado radial</h2>
-  </section>
-
-  <section>
-    <p>La sintáxis básica para conseguir un degradado radial es muy similar a la del degradado linear pero,  en lugar de <code>linear-gradient</code>, utilizaremos: <em><code>radial-gradient</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient(HotPink, RoyalBlue);
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section>
-    <p>Podemos forzar que el degradado sea un círculo en lugar de que adopte las proporciones del contenedor con el keyword <em><code>circle</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient(circle, HotPink, RoyalBlue);
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle, HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section class="fz-s">
-    <p>Si quisieramos que el cículo quedase contenido en su totalidad dentro del elemento usaríamos <em><code>circle closest-side</code></em>.</p>
-    <p>Otros posibles valores son <em><code>closest-corner</code></em>, <em><code>farthest-corner</code></em>, <em><code>farthest-side</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient( circle closest-side, HotPink,
-  RoyalBlue);
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle closest-side, HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section>
-    <p>Podemos posicionar el gradiente a partir de las <strong>coordenadas de su centro</strong>, tanto usando unidades como palabras clave.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle at top right,
-      HotPink,
-      RoyalBlue
-    );
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle at top right, HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle at 20% 60%,
-      HotPink,
-      RoyalBlue
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: radial-gradient(circle at 20% 60%, HotPink, RoyalBlue)"></div>
-  </section>
-</section>
+                <section>
+                     <h3>Porcentajes</h3>
+                     <p>Podemos asignar una unidad de medida porcentual con un <em>valor seguido del signo "%"</em> (ej: 50%). El contexto que se utilizará para calcular el porcentaje variará dependiendo a que propiedad se aplique.</p>
+                     <p>Si se aplica al <code>font-size</code>, el porcentaje será relativo al <code>font-size</code> del elemento padre.</p>
+                     <p>Si se aplica al <code>width</code>, <code>margin</code> o <code>padding</code>, será relativo a las medidas de su contenedor.</p>
+                </section>
+            </section>
 
 
-<section id="gradient-repeat">
-  <section>
-    <h2>Repeating background</h2>
-  </section>
-
-  <section>
-    <p class="fz-xs">Las propiedades <em><code>repeating-linear-gradient</code></em> y <em><code>repeating-radial-gradient</code></em> nos permiten repetir el degadado como si de un patrón se tratara. El tamaño del degradado lo definirá el último <i>color-stop</i>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    repeating-linear-gradient(
-      HotPink,
-      SkyBlue 30px
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: repeating-linear-gradient(HotPink, SkyBlue 30px);"></div>
-</section>
-
-<section>
- <pre><code data-trim contenteditable>
-div {
-  background-image:
-    repeating-radial-gradient(
-      circle,
-      HotPink,
-      HotPink 20px,
-      SkyBlue 20px,
-      SkyBlue 50px
-    );
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: repeating-radial-gradient(circle, HotPink, HotPink 20px, SkyBlue 20px, SkyBlue 50px);"></div>
-</section>
-</section>
-
-
-<section id="gradient-multiple">
-  <section>
-    <h2>Combinando degradados</h2>
-  </section>
-
-  <section>
-    <p>Podemos utilizar múltiples degradados de la misma manera que utilizábamos múltiples imágenes, separándolos con una coma dentro de la propiedad <code>background-image</code>.</p>
-    <p>Para que los degradados de debajo se vean tendremos que utilizar colores con transparencia.</p>
-  </section>
-
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle closest-side, HotPink, rgba(65, 105, 225, .2)
-    ),
-    linear-gradient(
-      orange,olive
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: radial-gradient(circle closest-side, HotPink, rgba(65, 105, 225, .2)), linear-gradient(orange, olive)"></div>
-</section>
-
-<section>
-  <pre><code data-trim contenteditable style="font-size: 1.1rem; line-height: 1.2;">
-div {
-  background-image:
-    radial-gradient(
-    circle,
-    gold, gold 35px,
-    rgba(0,0,0,0) 35px, rgba(0,0,0,0)
-  ),
-  linear-gradient(
-    to top,
-    LightSkyBlue 33%,
-    white 33%, white 66%,
-    LightSkyBlue 66%
-  );
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: radial-gradient(circle, gold, gold 35px, rgba(0,0,0,0) 35px, rgba(0,0,0,0)), linear-gradient(to top, LightSkyBlue 33%, white 33%, white 66%, LightSkyBlue 66%)"></div>
-</section>
-
-<section>
-  <p>Las posibilidades son muchísimas y seguirán aumentando cuando los <i>blend-modes</i> propuestos por Adobe tengan soporte completo en todos los navegadores.</p>
-  <ul>
-    <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a></li>
-    <li><a href="http://bennettfeely.com/gradients/">New CSS gradient possibilities with the background-blend-mode property</a></li>
-  </ul>
-</section>
-</section>
 
 
 <section>
-    <h3>Ejercicios</h3>
-    <ul>
-        <li><a href="http://lea.verou.me/css-workshop/#slide22">Ejercicio 03</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide23">Ejercicio 04</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide24">Ejercicio 05</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide26">Ejercicio 06</a></li>
-    </ul>
+    <section>
+        <img src="./img/slides/sass/sass.png" alt="" style="background:none; box-shadow:none; border: none; width: 250px; ">
+        <h3 style="text-transform: capitalize;">
+            <span class="marker">S</span>yntactically <span class="marker">A</span>wesome <span class="marker">S</span>tyle<span class="marker">S</span>heets</h3>
+    </section>
+
+    <section>
+        <h3>¿Por qué he de utilizar SASS?</h3>
+        <p>SASS nos permite añadir funcionalidades que no existen en CSS y que amplian enormemente sus posibilidades.</p>
+    </section>
+
+    <section>
+        <h3>Algunas de las mejoras de SASS son:</h3>
+        <ul>
+            <li>Variables</li>
+            <li>Anidación de clases y selectores</li>
+            <li>Imports</li>
+            <li>Extensiones de clases</li>
+            <li>Funciones - (Mixins)</li>
+            <li>Operaciones aritméticas</li>
+        </ul>
+    </section>
+<!--
+    <section>
+        <h3>Pero lo más importante: Si usas SASS...</h3>
+        <img src="./img/slides/sass/cool-cat.gif" alt="" style="background:none; box-shadow:none; border: none; width: 550px; ">
+        <p>...eres más cool :)</p>
+    </section>-->
+
 </section>
+
 
 
 <section>
-    <h2>Links relacionados</h2>
-    <ul>
-        <li style="margin-bottom: .8em;">
-            <strong>CSS Gradients</strong> <i style="color: #999;"> &mdash; Chris Coyier</i><br>
-            <a href="http://css-tricks.com/css3-gradients/">http://css-tricks.com/css3-gradients/</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>Ultimate CSS Gradient Generator</strong>
-            <br>
-            <a href="http://www.colorzilla.com/gradient-editor/">http://www.colorzilla.com/gradient-editor/</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>What are the Vendor Prefixes?</strong> <i style="color: #999;"> &mdash; David Walsh</i>
-            <br>
-            <a href="http://davidwalsh.name/vendor-prefixes">http://davidwalsh.name/vendor-prefixes</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>How To Deal With Vendor Prefixes</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
-            <br>
-            <a href="http://css-tricks.com/how-to-deal-with-vendor-prefixes/">http://css-tricks.com/how-to-deal-with-vendor-prefixes/</a>
-        </li>
-    </ul>
+    <section>
+        <img src="./img/slides/sass/sass.png" alt="" width="250">
+        <h4>(Primera parte)</h4>
+    </section>
 </section>
+
+<section>
+    <section>
+        <h2>Variables</h2>
+    </section>
+    
+    <section>
+        <h3>Declarando Variables</h3>
+        <p>Una variable es un registro donde guardamos un dato que necesitaremos aplicar en diferentes partes de nuestro código.</p>
+        <p>Para poder utilizar una variable primero hemos de crearla y asignarle un valor. A este proceso se le denomina <span class="u-marked">declaración de variables</span></p>
+        <hr>
+        <pre><code data-trim contenteditable class="hljs scss">
+$primaryColor: red;
+$secondaryColor: blue;
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Utilizando Variables</h3>
+        <p>Una vez declarada, podemos reutilizar las variables en tantos lugares de nuestro código como necesitemos.</p>
+        <hr>
+        <pre><code data-trim contenteditable class="hljs scss">
+h1 {
+    color: $primaryColor;
+}
+
+h2 {
+    color: $secondaryColor;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+$primaryColor: red;
+
+h1 {
+    color: $primaryColor;
+}
+        </code></pre>
+        <hr>
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+h1 {
+    color: red;
+}
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Anidación (nesting)</h2>
+    </section>
+    
+    <section>
+        <p>SASS permite anidar uno o varios selectores CSS dentro de otro.</p>
+        <p>Esto nos permitirá tener nuestro código más organizado y realizar cambios con mayor facilidad.</p>
+        <p>Podemos utilizar <code class="u-marked">&amp;</code> para hacer referencia al elemento padre y de esa manera lograr selectores más complejos.</p>
+    </section>
+
+    <section>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+.slider-container {
+    float: left;
+
+    img {
+        border: none;
+        display: block;
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+.slider-container {
+    float: left;
+}
+.slider-container img {
+    border: none;
+    display: block;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+.logo {
+    color: red;
+
+    header & {
+        color: orange;
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+.logo { color: red; }
+
+header .logo { color: orange; }
+        </code></pre>
+    </section>
+
+    <section>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+.tab {
+    color: red;
+
+    &.selected {
+        color: orange;
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+.tab { color: red; }
+
+.tab.selected { color: orange; }
+        </code></pre>
+    </section>
+
+    <section>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+a {
+    color: red;
+
+    &:hover {
+        color: orange;
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+a { color: red; }
+
+a:hover { color: orange; }
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>BEM Nesting</h3>
+        <p>Una práctica habitual si trabajamos con un sistema de nomenclatura de componentes (como BEM), es hacer uso de la anidación de Sass para organizar los mismos.</p>
+    </section>
+
+    <section>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+.block {
+    color: red;
+
+    &__element {
+        color: orange;
+
+        &--modifier {
+            color: lime;
+        }
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+.block { color: red; }
+.block__element { color: orange; }
+.block__element--modifier { color: lime; }
+        </code></pre>
+    </section>
+</section>
+    
+<section>
+    <section>
+        <h2>Importar archivos</h2>
+    </section>
+
+    <section>
+        <p>Para agilizar el proceso de edición y depuración de errores evitaremos trabajar con un único archivo CSS. En lugar de eso crearemos diferentes archivos SASS que separarán en módulos nuestro código.</p>
+        <p>Finalmente, todos los archivos SASS los combinaremos en un sólo CSS para evitar realizar múltiples llamadas HTTP que ralentizen la carga de nuestro site.</p>
+    </section>
+
+    <section>
+        <p>Para crear esa estructura modularizada utilizaremos <code class="u-marked">@import</code> en nuestro archivo style.scss.</p>
+        <p>El resultado será un style.css con <strong>todo el código importado.</strong></p>
+        <pre><code data-trim contenteditable>
+// Contenido de style.scss
+
+@import "base/header";
+@import "base/layout";
+@import "base/footer";
+@import "tipography/headings";
+@import "components/buttons";
+@import "components/boxes";
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Nombres de archivos</h3>
+        <p>Para indicar en SASS que un archivo .scss concreto no debe generar un .css correspondiente, le añadimos un "_" delante del nombre.</p>
+        <p>De esta forma el contenido de este fichero solo se procesará cuando sea importado por otro.</p>
+    </section>
+
+    <section>
+        <p>La estructura de archivos quedaría así:</p>
+        <img src="./img/slides/sass/estructura-sass.png" alt="" style="margin: -20px 0 0 0;">
+    </section>
+
+    <section>
+        <p>La importancia de modularizar con @import</p>
+        <p>Un proyecto web se compone de múltiples elementos. Creando un archivo SASS para cada uno facilitamos el mantenimiento y el debug de errores.</p>
+        <p class="marker"><strong>Una propuesta de estructura sería:</strong></p>
+        <ul>
+            <li><span class="marker">styles.scss</span>=> Relizamos todos los imports</li>
+            <li><span class="marker">settings.scss</span>=> Declaramos las variables de entorno</li>
+            <li><span class="marker">/helpers</span>=> Carpeta donde incluimos: normalize, clearfix, etc...</li>
+            <li><span class="marker">/grid</span>=> Carpeta donde incluimos el framework o grid</li>
+            <li><span class="marker">/layout</span>=> Carpeta de archivos que dan estructura al site</li>
+            <li><span class="marker">/components</span>=> Carpeta de elementos reutilizables</li>
+            <li><span class="marker">/theme</span>=> Carpeta en la que definimos la presentación</li>
+        </ul>
+    </section>
+
+
+</section>
+
+
+
+<section data-background="#66CEFF">
+
+    <h3 style="color: #444; text-shadow: none; font-weight: bold">Ejercicio</h3>
+    <p style="color: #444; text-shadow: none;">Refactoriza tu proyecto en SASS y sube los cambios a Git</p>
+    <p style="color: #444; text-shadow: none;">Deberás de modularizar la estructura CSS actual de tu proyecto en  módulos SASS separados según tipología.</p>
+
+    <img src="./img/slides/sass/loading-cat.gif" alt="" width="500" style="border: none; box-shadow: none">
+    <!-- <small style="margin-top:-10px">meowww</small> -->
+</section>
+
 
         </div>
     </div>

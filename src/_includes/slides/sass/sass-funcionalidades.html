@@ -1,32 +1,33 @@
 {% assign img_path = './img/slides/sass' %}
 
-<section class="unix">
-
+<section>
     <section>
         <img src="{{ img_path }}/sass.png" alt="" width="250">
-        <h4>Programación en SASS<br /> (Primera parte)</h4>
+        <h4>(Primera parte)</h4>
     </section>
+</section>
 
+<section>
+    <section>
+        <h2>Variables</h2>
+    </section>
+    
     <section>
         <h3>Declarando Variables</h3>
-        <p class="marker">Una variable es un registro donde guardamos un dato que necesitaremos aplicar en diferentes partes de nuestro código.</p>
-        <p>Para poder utilizar una variable primero hemos de crearla y asignarle un valor. <br />A este proceso se le denomina <span class="marker">declaración de variables</span></p>
-        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
-Sintaxis
-
-// Color Variables
-$primaryColor: rgba(255,0,0,.5);
-$secondaryColor: rgba(255,100,100,.5);
-
+        <p>Una variable es un registro donde guardamos un dato que necesitaremos aplicar en diferentes partes de nuestro código.</p>
+        <p>Para poder utilizar una variable primero hemos de crearla y asignarle un valor. A este proceso se le denomina <span class="u-marked">declaración de variables</span></p>
+        <hr>
+        <pre><code data-trim contenteditable class="hljs scss">
+$primaryColor: red;
+$secondaryColor: blue;
         </code></pre>
-        <p>Podemos almacenar, colores, valores en píxeles o en %, tipografías, etc...</p>
     </section>
 
     <section>
         <h3>Utilizando Variables</h3>
         <p>Una vez declarada, podemos reutilizar las variables en tantos lugares de nuestro código como necesitemos.</p>
-        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
-// Aplying color
+        <hr>
+        <pre><code data-trim contenteditable class="hljs scss">
 h1 {
     color: $primaryColor;
 }
@@ -34,70 +35,173 @@ h1 {
 h2 {
     color: $secondaryColor;
 }
-
         </code></pre>
     </section>
 
     <section>
-        <h3>CSS resultante</h3>
-        <p>Al aplicar las variables <code style="font-size: .9em;">$prymaryColor</code> y <code style="font-size: .9em;">$secondaryColor</code> a los h1 y h2 respectivamente SASS nos genera el siguiente CSS:</p>
-        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
-// Preprocessed CSS result
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+$primaryColor: red;
+
 h1 {
-    color: rgba(255,0,0,.5);
+    color: $primaryColor;
 }
-
-h2 {
-    color: rgba(255,100,100,.5);
-}
-
         </code></pre>
+        <hr>
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+h1 {
+    color: red;
+}
+        </code></pre>
+    </section>
+</section>
+
+<section>
+    <section>
+        <h2>Anidación (nesting)</h2>
+    </section>
+    
+    <section>
+        <p>SASS permite anidar uno o varios selectores CSS dentro de otro.</p>
+        <p>Esto nos permitirá tener nuestro código más organizado y realizar cambios con mayor facilidad.</p>
+        <p>Podemos utilizar <code class="u-marked">&amp;</code> para hacer referencia al elemento padre y de esa manera lograr selectores más complejos.</p>
     </section>
 
     <section>
-        <h3>Anidación</h3>
-        <p>SASS permite anidar un selector CSS dentro de otro para obtener una mayor versatilidad:</p>
-        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
 .slider-container {
-    float:left;
-    max-width: $inner-width;
-    
+    float: left;
+
     img {
-            border: none;
-            display: block;
-            margin: $gutter;
-        }
+        border: none;
+        display: block;
+    }
 }
         </code></pre>
-    </section>
+        <hr>
 
-    <section>
-        <h3>Resultado de Anidación</h3>
-        <p>En la anidación anterior el CSS resultante será:</p>
-        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
-.slider-container  {
-    float:left;
-    max-width: 768px;
-} 
-    
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+.slider-container {
+    float: left;
+}
 .slider-container img {
     border: none;
     display: block;
-    margin: 20px;
 }
         </code></pre>
     </section>
 
     <section>
-        <h3>Diversificar archivos SASS</h3>
-        <p>Para agilizar el proceso de edición y depuración de errores evitaremos trabajar con un único archivo CSS. En lugar de eso crearemos diferentes archivos SASS que separarán en módulos nuestro código.</p>
-        <p class="marker">Finalmente, todos los archivos SASS los combinaremos en un sólo CSS para evitar realizar múltiples llamadas HTTP que ralentizen la carga de nuestro site.</p>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+.logo {
+    color: red;
+
+    header & {
+        color: orange;
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+.logo { color: red; }
+
+header .logo { color: orange; }
+        </code></pre>
     </section>
 
     <section>
-        <h3>Importando archivos SASS</h3>
-        <p>Para crear esa estructura modularizada utilizaremos <span class="marker">@import</span> en nuestro archivo style.scss. <span class="marker">El resultado será un style.css con <strong>todo el código importado.</strong></span></p>
-        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+.tab {
+    color: red;
+
+    &.selected {
+        color: orange;
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+.tab { color: red; }
+
+.tab.selected { color: orange; }
+        </code></pre>
+    </section>
+
+    <section>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+a {
+    color: red;
+
+    &:hover {
+        color: orange;
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+a { color: red; }
+
+a:hover { color: orange; }
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>BEM Nesting</h3>
+        <p>Una práctica habitual si trabajamos con un sistema de nomenclatura de componentes (como BEM), es hacer uso de la anidación de Sass para organizar los mismos.</p>
+    </section>
+
+    <section>
+        <p><code>scss</code></p>
+        <pre><code data-trim contenteditable>
+.block {
+    color: red;
+
+    &__element {
+        color: orange;
+
+        &--modifier {
+            color: lime;
+        }
+    }
+}
+        </code></pre>
+        <hr>
+
+        <p><code>css</code></p>
+        <pre><code data-trim contenteditable>
+.block { color: red; }
+.block__element { color: orange; }
+.block__element--modifier { color: lime; }
+        </code></pre>
+    </section>
+</section>
+    
+<section>
+    <section>
+        <h2>Importar archivos</h2>
+    </section>
+
+    <section>
+        <p>Para agilizar el proceso de edición y depuración de errores evitaremos trabajar con un único archivo CSS. En lugar de eso crearemos diferentes archivos SASS que separarán en módulos nuestro código.</p>
+        <p>Finalmente, todos los archivos SASS los combinaremos en un sólo CSS para evitar realizar múltiples llamadas HTTP que ralentizen la carga de nuestro site.</p>
+    </section>
+
+    <section>
+        <p>Para crear esa estructura modularizada utilizaremos <code class="u-marked">@import</code> en nuestro archivo style.scss.</p>
+        <p>El resultado será un style.css con <strong>todo el código importado.</strong></p>
+        <pre><code data-trim contenteditable>
 // Contenido de style.scss
 
 @import "base/header";
@@ -111,21 +215,8 @@ h2 {
 
     <section>
         <h3>Nombres de archivos</h3>
-        <p>Para indicar en SASS que un archivo concreto es un módulo le añadimos un "_" delante del nombre. De esta forma no crearemos un archivo CSS más sino que formará parte del @import</p>
-
-        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
-// Nombres de los módulos SASS
-
-base/_header.scss
-base/_layout.scss
-base/_footer.scss
-tipography/_headings.scss
-components/_buttons.scss
-components/_boxes.scss
-
-// Archivo SASS
-style.scss
-        </code></pre>
+        <p>Para indicar en SASS que un archivo .scss concreto no debe generar un .css correspondiente, le añadimos un "_" delante del nombre.</p>
+        <p>De esta forma el contenido de este fichero solo se procesará cuando sea importado por otro.</p>
     </section>
 
     <section>
