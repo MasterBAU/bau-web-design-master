@@ -1,0 +1,23 @@
+<section>
+    <section>
+        <h2>&#060;meta name="viewport"&#062;</h2>
+    </section>
+
+    <section>
+        <p>Cuando los smartphones empezaron a poder reproducir sitios web con todas sus funcionalidades, el mercado aún no estaba preparado para este tipo de dispositivos por lo que las páginas web se diseñaban para el ancho de un monitor estándar (alrededor de los 980px).</p>
+        <p>Por esta razón los móviles empezaron a simular un ancho similar sobre el que luego el usuario podía hacer un zoom manualmente.</p>
+    </section>
+
+    <section>
+        <p>Si estamos trabajando con un diseño responsive, que se adaptará al ancho de cada dispositivo, querremos que los navegadores visualicen nuestra web usando sus proporciones reales.</p>
+        <p>Aquí es donde entra el <code>&#060;meta name="viewport"&#062;</code>, con el le indicaremos al navegador como tiene que abrir nuestra página web.</p>
+    </section>
+
+    <section>
+        <pre><code contenteditable>
+&#060;meta name="viewport" content="width=device-width, initial-scale=1.0"&#062;
+        </code></pre>
+        <p>Colocando esta etiqueta en el <code>&#060;head&#062;</code> le estaremos diciendo al navegador que tiene que abrir la página utilizando el ancho en pixels del dispositivo ya que nuestra web se adaptará.</p>
+        <p>Hay que tener cuidad con <strong>no usar esta etiqueta innecesariamente</strong>, si nuestra web no es responsive, ya que de hacerlo los móviles abrirán la página focalizados en la esquina superior izquierda obligando al usuario hacer un <i>zoom out</i>.</p>
+    </section>
+</section>

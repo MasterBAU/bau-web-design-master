@@ -1,0 +1,46 @@
+<section>
+    <section>
+        <h2>Color</h2>
+    </section>
+
+    <section>
+        <div style="float: left; font-size: .9em; width: 43%">
+            <p>Las pantallas de los dispositivos por los cuales accedemos a la web, generan todos los colores combinando únicamente luz de tres colores: <strong style="color:red;">rojo</strong>, <strong style="color: green;">verde</strong> y <strong style="color:blue;">azul</strong>. Esto se conoce cómo el modelo de color RGB (<strong style="color:red;">red</strong>, <strong style="color:green;">green</strong>, <strong style="color:blue;">blue</strong>).</p>
+            <p>Los 3 colores en su máxima intensidad resultarán en luz <strong style="background: white;">blanca</strong>, mientras que su ausencia total equivaldrá a <strong style="background: black; color:white;">negro</strong>.</p>
+        </div>
+        <div style="float: right; width: 52%">
+            <img src="https://2.bp.blogspot.com/-YjTd-w4OjAM/T2ItlMeGX-I/AAAAAAAAAGw/E6hK3ZhM4tM/s1600/RGB+3.jpg" alt="">
+        </div>
+    </section>
+
+    <section>
+        <p>CSS pone a nuestra disposición varias maneras de asignar colores.</p>
+        <p>La más sencilla, es a través de palabras clave que representan hasta un total de 140 colores en CSS3</p>
+        <hr />
+        <p><a href="https://en.wikipedia.org/wiki/Web_colors#X11_color_names">https://en.wikipedia.org/wiki/Web_colors#X11_color_names</a></p>
+    </section>
+
+    <section>
+        <p>Si queremos más control sobre los colores que queremos utilizar tendremos que recurrir a alguno de los 3 formatos numéricos que nos proporciona CSS: Colores Hexadecimales, RGB o HSL</p>
+        <pre><code data-trim contenteditable>
+p {
+    color: red;
+    color: #ff0000;
+    color: rgb(255, 0, 0);
+    color: hsl(0, 100%, 50%);
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <p>Los formatos RGB y HSL tienen una version que incluye un canal alpha, RGBa y HSLa respectivamente,  lo que nos permitirá añadir transparencia al color elegido.</p>
+        <p>El canal alpha se moverá en una escala de 0 (completamente transparente) a 1 (completamente opaco)</p>
+        <hr />
+        <pre><code data-trim contenteditable>
+p {
+    color: rgba(255, 0, 0, .5);
+    color: hsla(0, 100%, 50%, .5);
+}
+        </code></pre>
+    </section>
+</section>

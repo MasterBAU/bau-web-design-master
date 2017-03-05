@@ -1,0 +1,68 @@
+<section>
+        <section>
+        <h2>Media queries</h2>
+    </section>
+
+    <section class="test-mq">
+        <p>Los <em>media queries</em> son una herramienta CSS que nos permite <strong>asignar diferentes estilos dependiendo de ciertas características del cliente</strong> que esté procesando nuestro código.</p>
+        <p>Algunas de las caracterísitcas del cliente que podemos utilizar para determinar que estilos se aplican son las dimensiones del cliente, su resolución, cuantos colores soporta o la orientación del dispositivo.</p>
+    </section>
+
+    <section>
+        <p>La sintáxis de un media query se compone de un <i>media type</i> que contiene una o más comprobaciones que se resolverán como verdaderas o falsas, seguido de un bloque de declaraciones CSS.</p>
+        <p>Si todas ellas se cumplen, los estilos que contenga el bloque se aplicarán a la página.</p>
+        <hr>
+        <p style="text-align: center;"><code>@media (min-width: 900px) { ... }</code></p>
+    </section>
+
+    <section class="mq">
+        <p style="font-size: 1.8rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ducimus animi quam, eos neque magnam omnis cupiditate, nam ipsa est, excepturi rem illum praesentium et nihil ex debitis iure. Non.</p>
+        <hr>
+        <pre><code data-trim contenteditable>
+p { color: red; }
+
+@media (max-width: 1000px) {
+    p {
+        color: blue;
+    }
+}
+        </code></pre>
+        <p style="color: #333; text-align: center; margin-bottom:0">=</p>
+        <pre style="margin-top:15px"><code data-trim contenteditable>
+p { color: blue; }
+
+@media (min-width: 1000px) {
+    p {
+        color: red;
+    }
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <p>Podemos comprobar más de una condición separándola con un <code>and</code>. Para que los estilos del media query se apliquen todas ellas deben cumplirse.</p>
+        <pre><code data-trim contenteditable>
+@media screen and (max-width: 1000px) and (min-color-index: 256) {
+    p {
+        color: blue;
+    }
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <p>Si en lugar de utilizar un <code>and</code>, separamos las condiciones con una coma, con cumplir solo una de las condiciones de la lista será suficiente para que los estilos se apliquen..</p>
+        <pre><code data-trim contenteditable>
+@media (min-width: 800px),  handheld and (orientation: landscape) {
+    p {
+        color: blue;
+    }
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <p>Hay varias comprobaciones que podemos realizar pero las que utilizaremos la gran mayoría de las veces serán <code>min-width</code> y <code>max-width</code>, para aplicar estilos de acuerdo al ancho del cliente que está reproduciendo nuestra página.</p>
+        <p>De esta manera podremos ir haciendo ajustes en el código en los puntos que el diseño se rompa o presente algún problema.</p>
+    </section>
+</section>

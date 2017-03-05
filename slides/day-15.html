@@ -47,286 +47,228 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Background &amp; Gradients</strong></h3>
+                <h3><strong>Responsive web design</strong></h3>
             </section>
 
-            <section id="gradient-linear">
-  <section>
-    <h2>Degradado linear</h2>
-  </section>
+            <section>
+    <section>
+        <h2>Color</h2>
+    </section>
 
-  <section>
-    <p>CSS nos facilita varias opciones para poder crear todo tipo de degradados utilizando la propiedad <em><code>background-image</code></em> </p>
-    <p>Un ejemplo de la sintáxis para crear un degrado linear simple sería:</p>
-    <p><code>background-image: linear-gradient(180deg, HotPink, SkyBlue)</code></p>
-  </section>
+    <section>
+        <div style="float: left; font-size: .9em; width: 43%">
+            <p>Las pantallas de los dispositivos por los cuales accedemos a la web, generan todos los colores combinando únicamente luz de tres colores: <strong style="color:red;">rojo</strong>, <strong style="color: green;">verde</strong> y <strong style="color:blue;">azul</strong>. Esto se conoce cómo el modelo de color RGB (<strong style="color:red;">red</strong>, <strong style="color:green;">green</strong>, <strong style="color:blue;">blue</strong>).</p>
+            <p>Los 3 colores en su máxima intensidad resultarán en luz <strong style="background: white;">blanca</strong>, mientras que su ausencia total equivaldrá a <strong style="background: black; color:white;">negro</strong>.</p>
+        </div>
+        <div style="float: right; width: 52%">
+            <img src="https://2.bp.blogspot.com/-YjTd-w4OjAM/T2ItlMeGX-I/AAAAAAAAAGw/E6hK3ZhM4tM/s1600/RGB+3.jpg" alt="">
+        </div>
+    </section>
 
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(45deg, HotPink, SkyBlue);
+    <section>
+        <p>CSS pone a nuestra disposición varias maneras de asignar colores.</p>
+        <p>La más sencilla, es a través de palabras clave que representan hasta un total de 140 colores en CSS3</p>
+        <hr />
+        <p><a href="https://en.wikipedia.org/wiki/Web_colors#X11_color_names">https://en.wikipedia.org/wiki/Web_colors#X11_color_names</a></p>
+    </section>
+
+    <section>
+        <p>Si queremos más control sobre los colores que queremos utilizar tendremos que recurrir a alguno de los 3 formatos numéricos que nos proporciona CSS: Colores Hexadecimales, RGB o HSL</p>
+        <pre><code data-trim contenteditable>
+p {
+    color: red;
+    color: #ff0000;
+    color: rgb(255, 0, 0);
+    color: hsl(0, 100%, 50%);
 }
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: linear-gradient(45deg, HotPink, SkyBlue)">
-  </div>
-</section>
+        </code></pre>
+    </section>
 
+    <section>
+        <p>Los formatos RGB y HSL tienen una version que incluye un canal alpha, RGBa y HSLa respectivamente,  lo que nos permitirá añadir transparencia al color elegido.</p>
+        <p>El canal alpha se moverá en una escala de 0 (completamente transparente) a 1 (completamente opaco)</p>
+        <hr />
+        <pre><code data-trim contenteditable>
+p {
+    color: rgba(255, 0, 0, .5);
+    color: hsla(0, 100%, 50%, .5);
+}
+        </code></pre>
+    </section>
+</section>
 <section>
-  <p>Ademas de la unidad <code>deg</code> para controlar la rotación de nuestro degradado, CSS nos permite utilizar otras <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/angle">unidades de medida</a> además de palabras clave.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to bottom right, HotPink, SkyBlue);
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to bottom right, HotPink, SkyBlue)"></div>
-</section>
+    <section>
+        <h2>Responsive web design</h2>
+    </section>
 
+    <section>
+        <p>Reponsive web design es una metodología a la hora de afrontar el diseño y desarrollo de una web que procura solventar el problema que genera la inmensa variedad de dispositivos del mercado actual.</p>
+        <p>Su objetivo es conseguir que nuestro contenido se represente bien <strong>independientemente de las características del cliente que lo reproduzca</strong>.</p>
+    </section>
+
+    <section>
+        <p>Cómo alcanzar este objetivo puede variar mucho dependiendo el diseño particular de nuestra web pero hay algunos puntos y técnicas que nos serán imprescindibles.</p>
+    </section>
+</section>
 <section>
-  <p>También podemos variar el punto en que los colores comienzan a fundirse especificando un <i>color stop</i> con un valor (normalmente un porcentaje) detrás del color que queramos afectar.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink 80%, SkyBlue);
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink 70%, SkyBlue)"></div>
-</section>
+    <section>
+        <h2>&#060;meta name="viewport"&#062;</h2>
+    </section>
 
+    <section>
+        <p>Cuando los smartphones empezaron a poder reproducir sitios web con todas sus funcionalidades, el mercado aún no estaba preparado para este tipo de dispositivos por lo que las páginas web se diseñaban para el ancho de un monitor estándar (alrededor de los 980px).</p>
+        <p>Por esta razón los móviles empezaron a simular un ancho similar sobre el que luego el usuario podía hacer un zoom manualmente.</p>
+    </section>
+
+    <section>
+        <p>Si estamos trabajando con un diseño responsive, que se adaptará al ancho de cada dispositivo, querremos que los navegadores visualicen nuestra web usando sus proporciones reales.</p>
+        <p>Aquí es donde entra el <code>&#060;meta name="viewport"&#062;</code>, con el le indicaremos al navegador como tiene que abrir nuestra página web.</p>
+    </section>
+
+    <section>
+        <pre><code contenteditable>
+&#060;meta name="viewport" content="width=device-width, initial-scale=1.0"&#062;
+        </code></pre>
+        <p>Colocando esta etiqueta en el <code>&#060;head&#062;</code> le estaremos diciendo al navegador que tiene que abrir la página utilizando el ancho en pixels del dispositivo ya que nuestra web se adaptará.</p>
+        <p>Hay que tener cuidad con <strong>no usar esta etiqueta innecesariamente</strong>, si nuestra web no es responsive, ya que de hacerlo los móviles abrirán la página focalizados en la esquina superior izquierda obligando al usuario hacer un <i>zoom out</i>.</p>
+    </section>
+</section>
 <section>
-  <div>
-    <p>Si hacemos coincidir los cambios de color podemos simular transiciones entre dos colores planos.</p>
+    <section>
+        <h2>Layout fluido</h2>
+    </section>
 
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink 50%, SkyBlue 50%);
+    <section>
+        <p>Para que nuestros diseños se adapten a cualquier dispositivo es imprescindible que trabajemos con layouts fluidos.</p>
+        <p>Para conseguir esto <strong>utilizaremos porcentajes a la hora de determinar los anchos</strong> de nuestros elementos en lugar de medidas absolutas como los pixeles.</p>
+        <p>Hay que recordar que, por defecto, HTML es un medio fluido, somos nosotros los que tendemos a imponer limites al contenido.</p>
+    </section>
+
+    <section>
+        <p>Para convertir nuestros anchos en pixels a porcentajes solamente tenemos que aplicar una regla de tres simple: <em><code>(objetivo / contexto) * 100</code></em></p>
+
+        <pre><code data-trim contenteditable>
+.container {
+    width: 980px
 }
-    </code></pre>
-  </div>
-  <div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink 50%, SkyBlue 50%)"></div>
-</section>
+.box {
+    width: 250px; /* (250/980)*100 */
+    width: 25.51%
+}
+        </code></pre>
+    </section>
 
+    <section>
+        <h3>Imágenes fluidas</h3>
+        <p>Si queremos que nuestras imágenes también se adapten al contenido pero que al mismo tiempo nunca sean más grande que su tamaño real para evitar que se pixelen, podemos utilizar el siguiente código a nivel global:</p>
+        <pre><code data-trim contenteditable>
+img {
+    max-width: 100%;
+    height: auto; /* para forzar el aspect ratio correcto */
+    -ms-interpolation-mode: bicubic;  /* proporciona un mejor escalado
+                                         en IE7 */
+}
+        </code></pre>
+    </section>
+</section>
 <section>
-  <p>Por supuesto podemos hacer degradados con múltiples colores simplemente agregando más al final de la lista.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink, SkyBlue, lime);
+        <section>
+        <h2>Media queries</h2>
+    </section>
+
+    <section class="test-mq">
+        <p>Los <em>media queries</em> son una herramienta CSS que nos permite <strong>asignar diferentes estilos dependiendo de ciertas características del cliente</strong> que esté procesando nuestro código.</p>
+        <p>Algunas de las caracterísitcas del cliente que podemos utilizar para determinar que estilos se aplican son las dimensiones del cliente, su resolución, cuantos colores soporta o la orientación del dispositivo.</p>
+    </section>
+
+    <section>
+        <p>La sintáxis de un media query se compone de un <i>media type</i> que contiene una o más comprobaciones que se resolverán como verdaderas o falsas, seguido de un bloque de declaraciones CSS.</p>
+        <p>Si todas ellas se cumplen, los estilos que contenga el bloque se aplicarán a la página.</p>
+        <hr>
+        <p style="text-align: center;"><code>@media (min-width: 900px) { ... }</code></p>
+    </section>
+
+    <section class="mq">
+        <p style="font-size: 1.8rem">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ducimus animi quam, eos neque magnam omnis cupiditate, nam ipsa est, excepturi rem illum praesentium et nihil ex debitis iure. Non.</p>
+        <hr>
+        <pre><code data-trim contenteditable>
+p { color: red; }
+
+@media (max-width: 1000px) {
+    p {
+        color: blue;
+    }
 }
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink, SkyBlue, lime)"></div>
-</section>
+        </code></pre>
+        <p style="color: #333; text-align: center; margin-bottom:0">=</p>
+        <pre style="margin-top:15px"><code data-trim contenteditable>
+p { color: blue; }
 
-
-<section>
-  <div>
-    <p>Para conseguir el efecto de bordes planos con más de dos colores es necesario repetir los colores intermedios, o sea, que delimitan con más de un color.</p>
-
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, LightSkyBlue 30%,
-  white 30%, white 70%, LightSkyBlue 70%);
+@media (min-width: 1000px) {
+    p {
+        color: red;
+    }
 }
-  </code></pre></div>
-  <div class="gradient-wrap" style="background-image: linear-gradient(to top, LightSkyBlue 33%, white 33%, white 66%, LightSkyBlue 66%)"></div>
-</section>
+        </code></pre>
+    </section>
 
-</section>
-
-
-<section id="gradient-radial">
-  <section>
-    <h2>Degradado radial</h2>
-  </section>
-
-  <section>
-    <p>La sintáxis básica para conseguir un degradado radial es muy similar a la del degradado linear pero,  en lugar de <code>linear-gradient</code>, utilizaremos: <em><code>radial-gradient</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient(HotPink, RoyalBlue);
+    <section>
+        <p>Podemos comprobar más de una condición separándola con un <code>and</code>. Para que los estilos del media query se apliquen todas ellas deben cumplirse.</p>
+        <pre><code data-trim contenteditable>
+@media screen and (max-width: 1000px) and (min-color-index: 256) {
+    p {
+        color: blue;
+    }
 }
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(HotPink, RoyalBlue)"></div>
-  </section>
+        </code></pre>
+    </section>
 
-  <section>
-    <p>Podemos forzar que el degradado sea un círculo en lugar de que adopte las proporciones del contenedor con el keyword <em><code>circle</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient(circle, HotPink, RoyalBlue);
+    <section>
+        <p>Si en lugar de utilizar un <code>and</code>, separamos las condiciones con una coma, con cumplir solo una de las condiciones de la lista será suficiente para que los estilos se apliquen..</p>
+        <pre><code data-trim contenteditable>
+@media (min-width: 800px),  handheld and (orientation: landscape) {
+    p {
+        color: blue;
+    }
 }
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle, HotPink, RoyalBlue)"></div>
-  </section>
+        </code></pre>
+    </section>
 
-  <section class="fz-s">
-    <p>Si quisieramos que el cículo quedase contenido en su totalidad dentro del elemento usaríamos <em><code>circle closest-side</code></em>.</p>
-    <p>Otros posibles valores son <em><code>closest-corner</code></em>, <em><code>farthest-corner</code></em>, <em><code>farthest-side</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient( circle closest-side, HotPink,
-  RoyalBlue);
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle closest-side, HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section>
-    <p>Podemos posicionar el gradiente a partir de las <strong>coordenadas de su centro</strong>, tanto usando unidades como palabras clave.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle at top right,
-      HotPink,
-      RoyalBlue
-    );
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle at top right, HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle at 20% 60%,
-      HotPink,
-      RoyalBlue
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: radial-gradient(circle at 20% 60%, HotPink, RoyalBlue)"></div>
-  </section>
+    <section>
+        <p>Hay varias comprobaciones que podemos realizar pero las que utilizaremos la gran mayoría de las veces serán <code>min-width</code> y <code>max-width</code>, para aplicar estilos de acuerdo al ancho del cliente que está reproduciendo nuestra página.</p>
+        <p>De esta manera podremos ir haciendo ajustes en el código en los puntos que el diseño se rompa o presente algún problema.</p>
+    </section>
 </section>
-
-
-<section id="gradient-repeat">
-  <section>
-    <h2>Repeating background</h2>
-  </section>
-
-  <section>
-    <p class="fz-xs">Las propiedades <em><code>repeating-linear-gradient</code></em> y <em><code>repeating-radial-gradient</code></em> nos permiten repetir el degadado como si de un patrón se tratara. El tamaño del degradado lo definirá el último <i>color-stop</i>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    repeating-linear-gradient(
-      HotPink,
-      SkyBlue 30px
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: repeating-linear-gradient(HotPink, SkyBlue 30px);"></div>
-</section>
-
-<section>
- <pre><code data-trim contenteditable>
-div {
-  background-image:
-    repeating-radial-gradient(
-      circle,
-      HotPink,
-      HotPink 20px,
-      SkyBlue 20px,
-      SkyBlue 50px
-    );
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: repeating-radial-gradient(circle, HotPink, HotPink 20px, SkyBlue 20px, SkyBlue 50px);"></div>
-</section>
-</section>
-
-
-<section id="gradient-multiple">
-  <section>
-    <h2>Combinando degradados</h2>
-  </section>
-
-  <section>
-    <p>Podemos utilizar múltiples degradados de la misma manera que utilizábamos múltiples imágenes, separándolos con una coma dentro de la propiedad <code>background-image</code>.</p>
-    <p>Para que los degradados de debajo se vean tendremos que utilizar colores con transparencia.</p>
-  </section>
-
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle closest-side, HotPink, rgba(65, 105, 225, .2)
-    ),
-    linear-gradient(
-      orange,olive
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: radial-gradient(circle closest-side, HotPink, rgba(65, 105, 225, .2)), linear-gradient(orange, olive)"></div>
-</section>
-
-<section>
-  <pre><code data-trim contenteditable style="font-size: 1.1rem; line-height: 1.2;">
-div {
-  background-image:
-    radial-gradient(
-    circle,
-    gold, gold 35px,
-    rgba(0,0,0,0) 35px, rgba(0,0,0,0)
-  ),
-  linear-gradient(
-    to top,
-    LightSkyBlue 33%,
-    white 33%, white 66%,
-    LightSkyBlue 66%
-  );
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: radial-gradient(circle, gold, gold 35px, rgba(0,0,0,0) 35px, rgba(0,0,0,0)), linear-gradient(to top, LightSkyBlue 33%, white 33%, white 66%, LightSkyBlue 66%)"></div>
-</section>
-
-<section>
-  <p>Las posibilidades son muchísimas y seguirán aumentando cuando los <i>blend-modes</i> propuestos por Adobe tengan soporte completo en todos los navegadores.</p>
-  <ul>
-    <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a></li>
-    <li><a href="http://bennettfeely.com/gradients/">New CSS gradient possibilities with the background-blend-mode property</a></li>
-  </ul>
-</section>
-</section>
-
-
-<section>
-    <h3>Ejercicios</h3>
-    <ul>
-        <li><a href="http://lea.verou.me/css-workshop/#slide22">Ejercicio 03</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide23">Ejercicio 04</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide24">Ejercicio 05</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide26">Ejercicio 06</a></li>
-    </ul>
-</section>
-
 
 <section>
     <h2>Links relacionados</h2>
-    <ul>
-        <li style="margin-bottom: .8em;">
-            <strong>CSS Gradients</strong> <i style="color: #999;"> &mdash; Chris Coyier</i><br>
-            <a href="http://css-tricks.com/css3-gradients/">http://css-tricks.com/css3-gradients/</a>
+    <ul style="font-size: 1.8rem">
+        <li style="margin-bottom: .4em;">
+            <strong>Responsive Web Design</strong> <i style="color: #999;"> &mdash; Ethan Marcotte</i><br>
+            <a href="http://alistapart.com/article/responsive-web-design/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://alistapart.com/article/responsive-web-design/</a>
         </li>
-        <li style="margin-bottom: .8em;">
-            <strong>Ultimate CSS Gradient Generator</strong>
-            <br>
-            <a href="http://www.colorzilla.com/gradient-editor/">http://www.colorzilla.com/gradient-editor/</a>
+        <li style="margin-bottom: .4em;">
+            <strong>Stop using the viewport meta tag (until you know how to use it)</strong> <i style="color: #999;"> &mdash; Javier Usobiaga</i><br>
+            <a href="http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho" style="font-size: .8em; margin-top: -.5rem; display:block;">http://blog.javierusobiaga.com/stop-using-the-viewport-tag-until-you-know-ho</a>
         </li>
-        <li style="margin-bottom: .8em;">
-            <strong>What are the Vendor Prefixes?</strong> <i style="color: #999;"> &mdash; David Walsh</i>
-            <br>
-            <a href="http://davidwalsh.name/vendor-prefixes">http://davidwalsh.name/vendor-prefixes</a>
+        <li style="margin-bottom: .4em;">
+            <strong>This Is Responsive</strong><br>
+            <a href="https://bradfrost.github.io/this-is-responsive/" style="font-size: .8em; margin-top: -.5rem; display:block;">https://bradfrost.github.io/this-is-responsive/</a>
         </li>
-        <li style="margin-bottom: .8em;">
-            <strong>How To Deal With Vendor Prefixes</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
-            <br>
-            <a href="http://css-tricks.com/how-to-deal-with-vendor-prefixes/">http://css-tricks.com/how-to-deal-with-vendor-prefixes/</a>
+        <li style="margin-bottom: .4em;">
+            <strong>Rundown of Handling Flexible Media</strong> <i style="color: #999;"> &mdash; Chris Coyier</i><br>
+            <a href="http://css-tricks.com/rundown-of-handling-flexible-media/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://css-tricks.com/rundown-of-handling-flexible-media/</a>
+        </li>
+        <li style="margin-bottom: .4em;">
+            <strong>Embed Responsively</strong><br>
+            <a href="http://embedresponsively.com/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://embedresponsively.com/</a>
+        </li>
+        <li style="margin-bottom: .4em;">
+            <strong>7 Habits of Highly Effective Media Queries</strong> <i style="color: #999;"> &mdash; Brad Frost</i><br>
+            <a href="http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/" style="font-size: .8em; margin-top: -.5rem; display:block;">http://bradfrostweb.com/blog/post/7-habits-of-highly-effective-media-queries/</a>
         </li>
     </ul>
 </section>
-
         </div>
     </div>
 

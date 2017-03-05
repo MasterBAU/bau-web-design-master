@@ -1,0 +1,38 @@
+<section>
+    <section>
+        <h2>Layout fluido</h2>
+    </section>
+
+    <section>
+        <p>Para que nuestros diseños se adapten a cualquier dispositivo es imprescindible que trabajemos con layouts fluidos.</p>
+        <p>Para conseguir esto <strong>utilizaremos porcentajes a la hora de determinar los anchos</strong> de nuestros elementos en lugar de medidas absolutas como los pixeles.</p>
+        <p>Hay que recordar que, por defecto, HTML es un medio fluido, somos nosotros los que tendemos a imponer limites al contenido.</p>
+    </section>
+
+    <section>
+        <p>Para convertir nuestros anchos en pixels a porcentajes solamente tenemos que aplicar una regla de tres simple: <em><code>(objetivo / contexto) * 100</code></em></p>
+
+        <pre><code data-trim contenteditable>
+.container {
+    width: 980px
+}
+.box {
+    width: 250px; /* (250/980)*100 */
+    width: 25.51%
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Imágenes fluidas</h3>
+        <p>Si queremos que nuestras imágenes también se adapten al contenido pero que al mismo tiempo nunca sean más grande que su tamaño real para evitar que se pixelen, podemos utilizar el siguiente código a nivel global:</p>
+        <pre><code data-trim contenteditable>
+img {
+    max-width: 100%;
+    height: auto; /* para forzar el aspect ratio correcto */
+    -ms-interpolation-mode: bicubic;  /* proporciona un mejor escalado
+                                         en IE7 */
+}
+        </code></pre>
+    </section>
+</section>
