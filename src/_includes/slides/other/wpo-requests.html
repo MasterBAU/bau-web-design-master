@@ -44,44 +44,100 @@
     </section>
 
     <section>
-        <h3>Combinar imágenes (spriting)</h3>
-        <p>La técnica de sprites consiste en combinar varias imágenes en un sólo archivo y luego mediante Css mostrar únicamente la que necesitasmos.</p>
-        <p style="text-align: center;">
-            <img src="{{ img_path }}/sprite-demo.png" alt="" width="300" style="border: 0; box-shadow: none;" >
-        </p>
+        <p>La técnica de <i lang="en">sprites</i> proviene de la industria del videojuego y consiste en combinar diferentes imágenes en una sóla para luego acceder solo al fragmento de imágen que necesitamos en cada caso.</p>
 
+        <p>En web, esto nos permite tener una sola llamada al servidor en lugar de una por cada imágen.</p>
 
+        <p class="ta-c"><img src="{{ img_path }}/sprite-megaman.png" alt="" style="box-shadow: none;"></p>
     </section>
 
     <section>
-        <div class="sprite"></div>
-        <hr>
-        <pre><code>
+        <h3>Sprites por imágen</h3>
+        <div style="display: flex;">
+            <div style="flex-grow: 1;">
+                <pre><code class="hljs css">
 .icon {
-    background-image: url(../img/sprite.png);
-    background-repeat: none;
-    width: 64px;
-    height: 64px;
+    background-image: url('img/sprite.png');
+    background-repeat: no-repeat;
+    width: 24px;
+    height: 24px;
 }
-.icon-fb { background-position: 0 0; }
-.icon-tw { background-position: -64px 0; }
-.icon-ig { background-position: -128px 0; }
+
+.icon--alert    { background-position: 0px 0px; }
+.icon--favorite { background-position: 0px -24px; }
+.icon--share    { background-position: -48px -24x; }
+.icon--mail     { background-position: 0 -48px; }
+...
+                </code></pre>
+            </div>
+
+            <div style="flex-shrink: 0; order: -1; margin-right: 2rem;">
+                <img src="{{ img_path }}/sprite.png" alt="" style=" border: 1px solid rgba(0,0,0,.2); box-shadow: none; padding: 1rem; height: 30rem;">
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Sprites por css</h3>
+
+        <pre><code class="hljs css">
+[class^=icon-] {
+    background-repeat: no-repeat;
+}
+
+.icon-github {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANS...');
+}
+
+.icon-twitter {
+    background-image: url('data:image/png;base64,OP444iVBORve=w0KG...');
+}
+
+.icon-facebook {
+    background-image: url('data:image/png;base64,AAff33VBORw0Kojij...');
+}
+        </code></pre>
+
+        <p class="fz-xxs" style="text-align: center;">Bad practice? (<a href="http://www.mobify.com/blog/data-uris-are-slow-on-mobile/">“On Mobile, Data URIs are 6x Slower than Source Linking”</a>)</p>
+    </section>
+
+    <section>
+        <h3>Sprites SVG mediante <code>&#060;symbol&#062;</code></h3>
+
+        <p class="fz-xs mb-s">Definición del SVG:</p>
+        <pre class="mb-l" style="margin: 0;"><code class="hljs html" style="padding: 0.75rem 1rem" data-trim>
+&#060;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&#062;
+    &#060;symbol id="icon-twitter" viewBox="214.7 0 182.6 792"&#062;
+        &#060;!-- contenido del svg --&#062;
+    &#060;/symbol&#062;
+    &#060;symbol id="icon-facebook" viewBox="0 26 100 48"&#062;
+        &#060;!-- contenido del svg --&#062;
+    &#060;/symbol&#062;
+&#060;/svg&#062;
+        </code></pre>
+
+        <p class="fz-xs mb-s">Uso con el svg inline en el HTML:</p>
+        <pre class="mb-l" style="margin: 0;"><code class="hljs html" style="padding: 0.75rem 1rem" data-trim>
+&#060;svg class="twitter-icon"&#062;
+  &#060;use xlink:href="#icon-twitter"&#062;&#060;/use&#062;
+&#060;svg&#062;
+        </code></pre>
+
+        <p class="fz-xs mb-s">Uso con el svg en un archivo externo:</p>
+        <pre class="mb-l" style="margin: 0;"><code class="hljs html" style="padding: 0.75rem 1rem" data-trim>
+&#060;svg class="twitter-icon"&#062;
+  &#060;use xlink:href="ruta/externa/icons.svg#icon-twitter"&#062;&#060;/use&#062;
+&#060;svg&#062;
         </code></pre>
     </section>
 
     <section>
-        <p>Otra variante de spriting es la de incluir todas las imágenes en base 64 en una hoja de estilo asociadas a una class.</p>
-
-        <pre><code>
-.icon {
-    background-position: ceter center;
-    background-repeat: none;
-    width: 32px;
-    height: 32px;
-}
-.icon-fb { background-image: url(base64:); }
-.icon-tw { background-image: url(base64:); }
-.icon-ig { background-image: url(base64:); }
-        </code></pre>
+        <h2>Herramientas de spriting</h2>
+        <ul class="ta-l">
+            <li><a href="https://github.com/jkphl/svg-sprite">svg-sprite</a></li>
+            <li><a href="https://github.com/domenic/svg2png">svg2png</a></li>
+            <li><a href="https://github.com/aslansky/css-sprite">css-sprite</a></li>
+            <li><a href="http://www.grumpicon.com/">Grumpicon</a></li>
+        </ul>
     </section>
 </section>

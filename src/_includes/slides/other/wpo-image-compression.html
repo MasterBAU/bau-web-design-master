@@ -1,0 +1,83 @@
+{% assign img_path = './img/slides/wpo' %}
+<section>
+    <section>
+        <h2>Optimización de imágenes manual</h2>
+    </section>
+
+    <section>
+        <h3>Guardar para web en Photoshop</h3>
+        <p>
+            <img src="{{ img_path }}/photoshop.png" alt="" style="height: 32rem;">
+        </p>
+    </section>
+
+    <section class="ta-l">
+        <ol>
+            <li>Elegir el formato adecuado</li>
+            <li>Recortar la imágen al tamaño de final</li>
+            <li>JPG: Elegir el nivel de compresion (75-70 óptimo)</li>
+            <li>PNG: Limitar la paleta de colores</li>
+            <li>Opcional: Activar la opción de descarga progresiva (JPG) / entrelazada (PNG)</li>
+            <li>Quitar la metadata (sino la necesitamos)</li>
+        </ol>
+    </section>
+
+    <section>
+        <h3 class="mb-l">Aplicaciones de optimización</h3>
+        <img src="{{ img_path }}/ImageOptimIcon.png" alt="" style="box-shadow: none; float: left; margin-right: 5rem; width: 16rem;">
+        <ul class="ta-l" style="float: left;">
+            <li><a href="https://imageoptim.com/es.html">ImgOptim</a></li>
+            <li><a href="https://pngmini.com/">ImageAlpha</a></li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Guardar SVG desde Illustrator</h3>
+        <p class="ta-c">
+            <img src="{{ img_path }}/svg-options-panel-01.png" alt="" style="height: 16rem;">
+        </p>
+
+        <ul class="fz-xs">
+            <li class="mb-m"><strong>SVG Profiles: SVG 1.1</strong> - Es una versión con <a href="http://caniuse.com/#feat=svg">buen soporte</a>. Versiones anteriores no soportan algunas características como la transparencia.</li>
+            <li class="mb-m"><strong>Fonts Type: SVG</strong> - También podemos trazar el texto a outlines.</li>
+            <li class="mb-m"><strong>Subsetting: None (Use System Fonts)</strong> - Esta opción utilizará las fuentes del sistema ya que las fuentes SVG tienen problemas en algunos navegadores (FF & IE).</li>
+            <li class="mb-m"><strong>Images: Link</strong> - De esta manera mantendremos control sobre la compresión de los bitmap, aunque tendremos que cambiar la ruta a mano ya que Illustrator la apuntará a nuestro disco.</li>
+        </ul>
+    </section>
+
+    <section>
+        <p class="ta-c">
+            <img src="{{ img_path }}/svg-options-panel-02.png" alt="" style="height: 22rem;">
+        </p>
+
+        <ul class="fz-xs">
+            <li class="mb-m"><strong>Uncheck 'Preserve Illustrator Editing Capabilities'</strong>.</li>
+            <li class="mb-m"><strong>Decimal places: 1</strong> - Define los decimales que definen cada punto. Reducir el valor por defecto de 3 a 1 <a href="http://creativedroplets.com/samples/svg/decimal/_EdgeReflow%20napoleon%20decimal_preview.html">no produce ningun cambio visual</a> pero reduce el tamaño del archivo considerablemente.</li>
+            <li class="mb-m"><strong>CSS Properties: Style Elements</strong> - Esta opción colocará los estilos dentro de un tag <code>&#060;style&#062;</code> al comienzo del svg.</li>
+            <li class="mb-m">El resto de las opciones las dejaremos como vienen por defecto.</li>
+        </ul>
+    </section>
+
+     <section>
+        <h2>Optimización automática de imágenes</h2>
+    </section>
+
+    <section>
+        <h2>JPG / GIF / PNG</h2>
+        <ul class="ta-l">
+            <li>
+                <a href="http://jamiemason.github.io/ImageOptim-CLI/">ImageOptim-CLI</a>
+            </li>
+            <li>
+                <a href="https://github.com/imagemin/imagemin">Imagemin</a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>SVG</h2>
+        <ul class="ta-l">
+            <li><a href="https://github.com/svg/svgo">Svgo</a></li>
+        </ul>
+    </section>
+</section>
