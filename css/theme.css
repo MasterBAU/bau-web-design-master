@@ -441,6 +441,9 @@ body {
 .reveal .bdc-red {
   border-color: #e11d24 !important; }
 
+.reveal .d-b {
+  display: block !important; }
+
 .reveal .d-flx {
   display: flex; }
   .reveal .d-flx > * {
@@ -897,6 +900,95 @@ p.selection::selection {
   margin: 1.5rem auto;
   width: 60%;
   height: 300px; }
+
+#forms-intro form,
+#forms-intro .FormWrap,
+#forms-input form,
+#forms-input .FormWrap,
+#forms-html5 form,
+#forms-html5 .FormWrap,
+#forms-other form,
+#forms-other .FormWrap {
+  text-align: left;
+  margin: 0 auto;
+  max-width: 500px; }
+
+#forms-intro label,
+#forms-input label,
+#forms-html5 label,
+#forms-other label {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-bottom: .5rem; }
+
+#forms-intro input[type="text"], #forms-intro input[type="password"], #forms-intro input[type="email"], #forms-intro input[type="number"],
+#forms-input input[type="text"],
+#forms-input input[type="password"],
+#forms-input input[type="email"],
+#forms-input input[type="number"],
+#forms-html5 input[type="text"],
+#forms-html5 input[type="password"],
+#forms-html5 input[type="email"],
+#forms-html5 input[type="number"],
+#forms-other input[type="text"],
+#forms-other input[type="password"],
+#forms-other input[type="email"],
+#forms-other input[type="number"] {
+  display: block;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: .5rem;
+  width: 100%; }
+
+#forms-intro input[type="checkbox"], #forms-intro input[type="radio"],
+#forms-input input[type="checkbox"],
+#forms-input input[type="radio"],
+#forms-html5 input[type="checkbox"],
+#forms-html5 input[type="radio"],
+#forms-other input[type="checkbox"],
+#forms-other input[type="radio"] {
+  margin-right: .5rem;
+  vertical-align: middle; }
+
+#forms-intro button,
+#forms-input button,
+#forms-html5 button,
+#forms-other button {
+  background: #7ea9c3;
+  border: 1px solid;
+  border-radius: .5rem;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.25rem;
+  padding: .5rem 1rem; }
+  #forms-intro button:hover,
+  #forms-input button:hover,
+  #forms-html5 button:hover,
+  #forms-other button:hover {
+    background: #5b92b3; }
+
+#forms-intro select,
+#forms-input select,
+#forms-html5 select,
+#forms-other select {
+  transform: scale(1.5); }
+
+#forms-intro input.InputColor-result,
+#forms-input input.InputColor-result,
+#forms-html5 input.InputColor-result,
+#forms-other input.InputColor-result {
+  display: inline-block;
+  width: auto; }
+
+#forms-intro textarea,
+#forms-input textarea,
+#forms-html5 textarea,
+#forms-other textarea {
+  display: block;
+  font-size: 1.25rem;
+  padding: .5rem;
+  text-align: left;
+  width: 100%; }
 
 .hidden-link {
   display: block;

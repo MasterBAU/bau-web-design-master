@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Fundamentos CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
+
+    <meta name="description" content="Máster en Diseño Web | Módulo III">
+    <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme.css" id="theme">
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+    <script>
+        if( window.location.search.match( /print-pdf/gi ) ) {
+            var link = document.createElement( 'link' );
+            link.rel = 'stylesheet';
+            link.type = 'text/css';
+            link.href = 'css/print/pdf.css';
+            document.getElementsByTagName( 'head' )[0].appendChild( link );
+        }
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="topheader">
+    <a href="./index.html"><img src="./img/logo-bau-es.svg"></a>
+    <h2>Máster en Diseño Web | Módulo III | Introducción I</h2>
+</div>
+
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h3>Módulo III <br />
+                    <span class="marker">Programación Frontend</span>
+                </h3>
+                <h3><strong>Web Performance</strong></h3>
+            </section>
+
+            <section>
+    <h1>Elementos de formulario</h1>
+    <p class="ta-c"><a href="files/html-forms/form.zip">Ejemplo</a></p>
+</section>
+<section id="forms-intro">
+    <section>
+        <p>Los formularios nos permiten obtener información del usuario. <br />El resultado puede ser una búsqueda en una base de datos o el envío del contenido por e-mail.</p>
+        <img src="img/slides/html-forms/forms-example01.jpg" alt="">
+    </section>
+
+    <section>
+        <h3>Estructura básica</h3>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#060;form&#062;
+    &#060;label for="nombre"&#062;Nombre&#060;/label&#062;
+    &#060;input type="text" id="nombre" placeholder="Introduce tu nombre"&#062;
+    &#060;button>Enviar&#060;/button&#062;
+&#060;/form&#062;
+        </code></pre>
+        <hr class="mb-l">
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Introduce tu nombre">
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;form&gt;</h3>
+        <p class="mb-xs">La etiqueta Form se utiliza para crear un formulario.</p>
+        <p class="mb-xs">Puede contener los siguientes atributos que nos van a permitir definir su comportamiento:</p>
+        <ul>
+        <li><code class="u-marked">action="send.php"</code>: Permite indicar la URL a la que se enviarán los datos.</li>
+        <li><code class="u-marked">name="MiForm"</code>: Especificamos el nombre del formulario.</li>
+        <li><code class="u-marked">autocomplete="on/off"</code>: Autocompletar campos de forma automática</li>
+        <li><code class="u-marked">method="get/post"</code>: Define como enviará los datos.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>&lt;label&gt;</h3>
+
+        <p>Representa la etiqueta de un elemento de formulario.</p>
+        <p>Siempre debemos asociarlo al control al que corresponde. Podemo hacerlo mediante la el atributo <code>for</code> (que tiene que ser idéntico al <code>id</code> del elemento que queremos etiquetar, o ubicando el elemento dentro del <code>label</code></p>
+
+        <pre class="mb-l"><code data-trim contenteditable>
+&#060;form&#062;
+/* Asociacion por atributo for */
+    &#060;label for="nombre"&#062;Nombre:&#060;/label&#062;
+    &#060;input type="text" id="nombre" &#062;
+
+/* Asociacion por anidación */
+    &#060;label&#062;
+        Nombre:
+        &#060;input type="text" id="nombre" &#062;
+    &#060;/label&#062;
+&#060;/form&#062;
+        </code></pre>
+    </section>
+</section>
+
+<section id="forms-input">
+    <section>
+        <h2>Elemento &lt;input&gt;</h2>
+    </section>
+
+    <section>
+        <h3>&lt;input&gt;</h3>
+        <p class="mb-xs">Es el elemento básico de un formulario.</p>
+        <p class="mb-xs">Su funcionalidad varía dependiendo del valor de su atributo "<code class="u-marked">type</code>".</p>
+        <p class="mb-xs">Si omitimos el valor de "type" por defecto es "<code class="u-marked">text</code>".</p>
+        
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+  &#60;input type="text" value="nombre"/&#62;
+&#60;/form&#62;
+        </code></pre>
+        
+        <hr class="mb-l">
+        <form>
+           <input type="text" value="nombre" />
+        </form>
+    </section>
+
+    <section>
+        <h3>Atributo placeholder</h3>
+        <p class="mb-xs">El elemento <code>&#060;input type="text"&#062;</code> puede disponer de otros atributos como por ejemplo <span class="marker">placeholder</span>.</p>
+        <p class="mb-xs">En este caso nos permite añadir un contenido predefinido.</p>
+        <p class="mb-xs">Este atributo sólo puede contener texto.</p>
+        
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="text" placeholder="Introduce tu nombre" /&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <p class="fz-xs">Podemos cambiar el estilo de <code>placeholder</code> mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</p>
+        <form>
+            <input type="text" name="nombre" placeholder="Introduce tu nombre" />
+        </form>
+    </section>
+
+    <section>
+        <h3>Atributo autofocus</h3>
+        <p>Mediante <code class="u-marked">autofocus</code> el cursor se situa de forma automática en el elemento <code>input</code> al cargar la página.</p>
+        
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="text" autofocus/&#62;
+&#60;/form&#62;
+        </code></pre>
+        
+        <hr class="mb-l">
+        
+        <p class="fz-xs"><a href="http://diveintohtml5.info/examples/input-autofocus-with-fallback.html" target="_blank">Ejemplo</a> de autofocus con jQuery fallBack.</p>
+        <form>
+            <input type="text" name="nombre" />
+        </form>
+    </section>
+
+
+
+    <section>
+        <h3>Atributo required</h3>
+        <p>Con <code class="u-marked">required</code> obligamos al usuario a introducir un valor en este campo.</p>
+        
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="text" placeholder="Introduce tu nombre" required/&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        
+        <p class="fz-xs">Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</p>
+        <form action="#">
+            <form>
+                <input type="text" required name="nombre" placeholder="* campo obligatorio" />
+                <button>Enviar</button>
+            </form>
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;input type="password"&gt;</h3>
+        <p>Oculta el valor del campo contraseña mientras se escribe</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="password" /&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form>
+            <label for="password">Introduce password:</label>
+            <input type="password" id="password" />
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;input type="file"&gt;</h3>
+        <p>Permite especificar un tipo de archivo concreto para adjuntar en el envío del formulario.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="file" name="imagen" accept="image/*"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form>
+            <input type="file" name="imagen" accept="image/*" style="transform: scale(1.5);">
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;input type="submit"&gt;</h3>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="submit" value="enviar"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <input type="submit" value="enviar" style="transform: scale(1.5);" />
+    </section>
+
+    <section>
+        <h3>&lt;input type="checkbox"&gt;</h3>
+        <p>Este elemento permite 2 estados: Marcado/desmarcado (true/false)</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;label&#62;
+        &#60;input type="checkbox" /&#62;
+        Opción 1
+    &#60;/label&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form class="mb-l">
+            <div>
+                <label>
+                    <input type="checkbox"/>
+                    Opción 1
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox"/>
+                    Opción 2
+                </label>
+            </div>
+        </form>
+        <p class="fz-xs">Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</p>
+    </section>
+
+    <section>
+        <h3>&lt;input type="radio"&gt;</h3>
+        <p>Este elemento permite 2 estados Marcado/desmarcado (true/false) pero limita al usuario a escoger entre un número limitado de opciones:</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="radio" name="sistemaOperativo" value="macosx"/&#62;
+    &#60;input type="radio" name="sistemaOperativo" value="linux"/&#62;
+    &#60;input type="radio" name="sistemaOperativo" value="windows"/&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form class="mb-l">
+            <div>
+                <label>
+                    <input type="radio" name="sistemaOperativo" value="macosx"/>
+                    MacOSX
+                </label>
+                </div>
+            <div>
+                <label>
+                    <input type="radio" name="sistemaOperativo" value="linux"/>
+                    GNU/Linux
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="sistemaOperativo" value="windows"/>
+                    Windows
+                </label>
+            </div>
+        </form>
+
+        <p class="fz-xs">Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</p>
+    </section>
+</section>
+<section id="forms-html5">
+    <section>
+        <h2><span class="d-b fz-l">Nuevos elementos incluidos en</span> HTML5</h2>
+    </section>
+
+    <section>
+        <h3>&lt;input type="color"&gt;</h3>
+        <p>Permite especificar un color.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="color" value="#c0ffee"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <p class="mb-m">
+            <label for="background-color">Selecciona un color:</label>
+            <input id="background-color" class="InputColor" type="color" value="#c0ffee" onchange="javascript:document.getElementById('color-elegido').value = document.getElementById('background-color').value;">
+        </p>
+        <p>
+            <label for="color-elegido">El color seleccionado es:</label>
+            <input id="color-elegido" class="InputColor-result" type="text" readonly="" value="#c0ffee">
+        </p>
+    </section>
+
+    <section>
+        <h3>&lt;input type="date"&gt;</h3>
+        <p> Permite especificar una fecha con un calendario desplegable.<br />
+        Además podemos restringir valores máximos y mínimos para una fecha concreta.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="date" name="fechaSalida" step="1"
+    min="2015-01-26" max="2015-12-31" value="2015-01-26"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form>
+            <input type="date" name="fechaSalida" step="1"min="2015-01-26" max="2015-12-31" value="2015-01-26" style="transform: scale(1.5);">
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;input type="email"&gt;</h3>
+        <p> Validación automática de formato e-mail.<br />
+        En dispositivos móviles el teclado muestra la @.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="email" name="userEmail"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form action="#">
+            <input type="email" name="userEmail" required placeholder="Escribe una direccion de correo váilda">
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;input type="number"&gt;</h3>
+        <p> Especificamos campos para introducir exclusivamente valores numéricos.</p>
+        <p>Podemos realizar operaciones aritméticas.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="number" name="dividendo"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form class="mb-l">
+            <input type="number">
+        </form>
+        <p class="fz-xs"><a href="files/forms/numbers.html" target="_blank">Ejemplo de operaciones aritméticas con "number"</a></p>
+    </section>
+
+    <section>
+        <h3>&lt;input type="range"&gt;</h3>
+        <p>Permite al usuario seleccionar un valor numérico deslizando un control.</p>
+        <p>Podemos definir un valor mínimo, otro máximo y el valor de cada incremento.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input id="slider" type="range" min="100" max="500" step="10" /&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <input id="slider1" type="range" min="100" max="500" step="10" style="transform: scale(2)">
+    </section>
+</section>
+<section id="forms-other">
+    <section>
+        <h2>Otros elementos de formulario</h2>
+    </section>
+
+    <section>
+        <h3>&lt;select&gt;</h3>
+        <p> Especificamos el valor inicial del elemento.<br />
+        Normalmente asignamos un valor con este atributo para elementos que no son editables por el usuario:</p>
+
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;select name="text"&#62;
+        &#60;option value="MacOSX"&#62;Sistema operativo Mac&#60;/option&#62;
+        &#60;option value="Linux"&#62;Sistema operativo Linux&#60;/option&#62;
+        &#60;option value="Windows"&#62;Sistema operativo Windows&#60;/option&#62;
+    &#60;/select&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form>
+            <select name="text">
+                <option value="MacOSX">Sistema operativo Mac</option>
+                <option value="Linux">Sistema operativo Linux</option>
+                <option value="Windows">Sistema operativo Windows</option>
+            </select>
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;textarea&gt;</h3>
+        <p> Definimos un area con una anchura y altura determinada para que el usuario pueda introducir sus comentarios.</p>
+
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;textarea name="message" rows="10" cols="30"&#62;
+&#60;/textarea&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form action="">
+            <label>Introduce tu comentario:</label>
+            <textarea name="message" rows="3" cols="30">
+            </textarea>
+        </form>
+    </section>
+
+    <section class="ta-l">
+    <h3>&lt;button&gt;</h3>
+        <p> Elemento diseñado específicamente para enviar los datos del formulario de la misma forma que hacía anteriormente <code>input type="submit"</code>.</p>
+        <p>La ventaja principal es que permite contener elementos HTML.</p>
+
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;button type="button"&#62; No lo hagas..&#60;/button&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form action="">
+            <p class="fz-s">No clicar!!!</p>
+            <button type="button" onclick="window.location.href ='http://www.nyan.cat/'" class="fz-s">No lo hagas..</button>
+        </form>
+    </section>
+</section>
+
+<section>
+    <h1>Tablas</h1>
+</section>
+
+
+<section>
+    
+    <section>
+        <h2>Características del elemento <span class="marker">table</span></h2>
+    </section>
+    
+    <section>
+    <ul>
+        <li>Una tabla está formada por una sucesión de celdas dispuestas de forma ordenada en filas y columnas.</li>
+        <li>Su función principal es la de tabular datos de forma sencilla.</li>
+    </ul>
+        <pre><code data-trim>
+
+<table>
+    <tr>
+        <td>Celda 1</td>
+        <td>Celda 2</td>
+        <td>Celda 3</td>
+    </tr>        
+</table>
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Renderizado</h3>
+        <p class="marker">El código del ejemplo anterior tendría la siguiente estructura:</p>
+        <img src="./img/slides/html-tables/table.png" alt="">
+    </section>
+
+    <section>
+        <h3>Elementos de una tabla</h3>
+        <ul>
+            <li><span class="marker">TABLE</span> - Define las características genéricas de la tabla. (borde, ancho, etc)</li>
+            <li><span class="marker">THEAD</span> - Aportamos semántica al encabezado de la tabla.</li>
+            <li><span class="marker">TBODY</span> - Define el contenido principal de la tabla.</li>
+            <li><span class="marker">TFOOT</span> - Aportamos semántica al pie de la tabla.</li></li>
+            <li><span class="marker">TR</span> - Contenedor de celdas que definen una fila.</li>
+            <li><span class="marker">TH</span> - Celdas contenidas dentro de un THEAD.</li>
+            <li><span class="marker">TD</span> - Celdas contenidas dentro de un TBODY.</li>
+            <li><span class="marker">CAPTION</span> - Elemento designado para aportar una descripción semántica a la tabla.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Estructura HTML</h3>
+        <p>En el siguiente ejemplo se pueden ver los diferentes elementos que componen una tabla:</p>
+
+        <p><a href="files/tables/index.html" target="_blank">ejemplo table</a></p>
+    </section>
+
+    <section>
+        <h3>Elementos Col & Colgroup</h3>
+        <p>Se trata de elementos "no contenedores" que permiten designar un conjunto de atributos comunes a todas las celdas que pertenezcan a una columna.</p>
+
+        <pre><code data-trim>
+
+<table>
+    <colgroup>
+        <col class="monday">
+        <col class="tuesday">
+        <col class="wednesday">
+    </colgroup>        
+</table>
+
+        </code></pre>
+        
+    </section>
+
+</section>
+<section>
+	<section>
+		<h2>Combinando celdas y columnas</h2>
+	</section>
+	<section>
+        <h3>Atributo <span class="marker">colspan</span></h3>
+        <p>Una celda puede ser "extendida" en columnas mediante el atributo <span class="marker">colspan</span>. De esta forma podemos combinarlas según nos interese.</p>
+            <pre><code data-trim>
+
+<table>
+    <caption>Celda 1 extendida en 2 columnas</caption>
+    <tr>
+        <td colspan="2">Celda 1</td>
+        <td>Celda 3</td>
+    </tr>        
+</table>
+
+        </code></pre>
+        <p><a href="files/tables/colspan.html" target="_blank">ejemplo colspan</a></p>
+    </section>
+
+    <section>
+        <h3>Atributo <span class="marker">rowspan</span></h3>
+        <p>De la misma manera, una celda también puede ser "extendida" en filas mediante <span class="marker">rowspan</span>.</p>
+            <pre><code data-trim>
+
+<table>
+    <caption>Celda 1 extendida en 2 filas</caption>
+    <tr>
+        <td rowspan="2">Celda 1</td>
+        <td>Celda 2</td>
+    </tr> 
+    <tr>
+        <td>Celda 4</td>
+    </tr> 
+</table>
+
+        </code></pre>
+        <p><a href="files/tables/rowspan.html" target="_blank">ejemplo rowspan</a></p>
+    </section>
+	
+	<section>
+        <h3>Anidación de tablas</h3>
+        <p>Las tablas pueden ser anidadas las unas dentro de las otras para representar estructuras de datos más complejas.</p>
+        
+        <p><a href="files/tables/anidacion.html" target="_blank">ejemplo anidación</a></p>
+    </section>
+</section>
+<section>
+    <section>
+        <h2>Formateado CSS</h2>
+        <ul>
+            <li>Por defecto una tabla ocupa sólo el espacio mínimo de los elementos que contiene</li>
+            <li>Tiene su propio tipo de <span class="marker">display:table</span></li>
+            <li>Las celdas permiten <span class="marker">alineación vertical</span></li>
+            <li>Esta característica permitió utilizar tablas como layout cuendo la especificación CSS no estaba ampliamente extendida entre los diferentes navegadores.</li>
+        </ul>
+    </section>
+
+    <section>
+    	<h3>Display: <span class="marker">table</span></h3>
+    	<ul>
+    		<li>Podemos asignar esta propiedad a un elemento de bloque para que se comporte como una tabla.</li>
+    		<li>El comportamiento de una tabla es similar a un elemento de bloque pero solo ocupa el ancho que necesita.</li>
+    	</ul>
+        <p><a href="files/tables/display-table.html" target="_blank">ejemplo display:table</a></p>
+    </section>
+
+    <section>
+    	<h3>Vertical align</h3>
+		<p>Fijando una altura a una celda podemos utilizar la propiedad<br />
+        <span class="marker">vertical-align</span> para alinear verticalmente el contenido</p>
+
+        <p><a href="files/tables/vertical-align.html" target="_blank">ejemplo vertical align</a></p>
+    </section>
+</section>
+<section>
+	<section>
+		<h2>Tables en layouts</h2>
+	</section>
+
+	<section>
+		<p>A pesar de que las tablas son consistentes e intuitivas no se recomienda utilizarlas como elementos de layout ya que trata a cualquier tipo de contenido como <span class="marker">tabular data</span></p>
+		<br />
+		<p>Si necesitamos alguna característica exclusiva de tablas podemos crear la siguiente estructura que aporta el comportamiento de la tabla más la semántica del HTML:</p>
+
+		<pre><code data-trim>
+<article style="display: table;">
+  	<div style="display: table-row;">
+	    	<div style="display: table-cell;"></div>
+	    	<div style="display: table-cell;"></div>
+	    	<div style="display: table-cell;"></div>
+  	</div>
+</article>
+
+        </code></pre>
+        <p><a href="http://codepen.io/Wakkos/full/KyAEa" target="_blank">ejemplo</a> que muestra una de las ventajas de usar display:table</p>
+	</section>
+
+	<section>
+		<h3>Tablas en email marketing</h3>
+		<p>El único lugar en el que todavía se utilizan las tablas para crear layout es en e-mail marketing. El hecho de que los clientes de correo no hayan evolucionado al mismo ritmo que los navegadores web ha provocado que el único formato consistente entre los diferentes clientes de correo sea el formato tabla.</p>
+	</section>
+
+
+</section>
+
+<section>
+    <h3>Tables &amp; Email marketing tools</h3>
+    <ul style="font-size: 1.8rem">
+         <li style="margin-bottom: .8em;">
+            <strong>A complete guide to Table element</strong> <i style="color: #999;"> &mdash; CSS Tricks</i><br />
+            <a href="https://css-tricks.com/complete-guide-table-element/" style="font-size: .8em;">https://css-tricks.com/complete-guide-table-element/</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Ink - Email marketing templates</strong> <i style="color: #999;"> &mdash; Zurb Foundation</i><br />
+            <a href="http://zurb.com/ink/" style="font-size: .8em;">http://zurb.com/ink/</a>
+        </li>
+
+         <li style="margin-bottom: .8em;">
+            <strong>Litmus</strong> <i style="color: #999;"> &mdash; Premium e-mail marketing testing tool</i><br />
+            <a href="http://litmus.com/" style="font-size: .8em;">http://litmus.com/</a>
+        </li>
+    </ul>
+</section>
+        </div>
+    </div>
+
+    <script src="js/reveal/head.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
+
+<script>
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Parallax scrolling
+        // parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+        // parallaxBackgroundSize: '2100px 900px',
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'js/reveal/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+        ]
+    });
+</script>
+</body>
+</html>
