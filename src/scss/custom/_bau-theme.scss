@@ -149,17 +149,23 @@
 
   // HIVE HELPERS
   // --------------------------------------------------------
-  .d-flx {
-    display: flex;
-    > * {
-      width: 100%;
+  .d {
+    &-b {
+      display: block !important;
     }
+    
+    &-flx {
+      display: flex;
+      > * {
+        width: 100%;
+      }
 
-    @for $i from 1 through 5 {
-      &--#{$i} {
-        > * {
-          // flex-basis: 100% / $i;
-          width: 100% / $i;
+      @for $i from 1 through 5 {
+        &--#{$i} {
+          > * {
+            // flex-basis: 100% / $i;
+            width: 100% / $i;
+          }
         }
       }
     }

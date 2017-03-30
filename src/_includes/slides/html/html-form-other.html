@@ -1,0 +1,63 @@
+<section id="forms-other">
+    <section>
+        <h2>Otros elementos de formulario</h2>
+    </section>
+
+    <section>
+        <h3>&lt;select&gt;</h3>
+        <p> Especificamos el valor inicial del elemento.<br />
+        Normalmente asignamos un valor con este atributo para elementos que no son editables por el usuario:</p>
+
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;select name="text"&#62;
+        &#60;option value="MacOSX"&#62;Sistema operativo Mac&#60;/option&#62;
+        &#60;option value="Linux"&#62;Sistema operativo Linux&#60;/option&#62;
+        &#60;option value="Windows"&#62;Sistema operativo Windows&#60;/option&#62;
+    &#60;/select&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form>
+            <select name="text">
+                <option value="MacOSX">Sistema operativo Mac</option>
+                <option value="Linux">Sistema operativo Linux</option>
+                <option value="Windows">Sistema operativo Windows</option>
+            </select>
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;textarea&gt;</h3>
+        <p> Definimos un area con una anchura y altura determinada para que el usuario pueda introducir sus comentarios.</p>
+
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;textarea name="message" rows="10" cols="30"&#62;
+&#60;/textarea&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form action="">
+            <label>Introduce tu comentario:</label>
+            <textarea name="message" rows="3" cols="30">
+            </textarea>
+        </form>
+    </section>
+
+    <section class="ta-l">
+    <h3>&lt;button&gt;</h3>
+        <p> Elemento diseñado específicamente para enviar los datos del formulario de la misma forma que hacía anteriormente <code>input type="submit"</code>.</p>
+        <p>La ventaja principal es que permite contener elementos HTML.</p>
+
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;button type="button"&#62; No lo hagas..&#60;/button&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form action="">
+            <p class="fz-s">No clicar!!!</p>
+            <button type="button" onclick="window.location.href ='http://www.nyan.cat/'" class="fz-s">No lo hagas..</button>
+        </form>
+    </section>
+</section>

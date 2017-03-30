@@ -1,0 +1,56 @@
+<section id="forms-intro">
+    <section>
+        <p>Los formularios nos permiten obtener información del usuario. <br />El resultado puede ser una búsqueda en una base de datos o el envío del contenido por e-mail.</p>
+        <img src="img/slides/html-forms/forms-example01.jpg" alt="">
+    </section>
+
+    <section>
+        <h3>Estructura básica</h3>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#060;form&#062;
+    &#060;label for="nombre"&#062;Nombre&#060;/label&#062;
+    &#060;input type="text" id="nombre" placeholder="Introduce tu nombre"&#062;
+    &#060;button>Enviar&#060;/button&#062;
+&#060;/form&#062;
+        </code></pre>
+        <hr class="mb-l">
+        <form>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" placeholder="Introduce tu nombre">
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;form&gt;</h3>
+        <p class="mb-xs">La etiqueta Form se utiliza para crear un formulario.</p>
+        <p class="mb-xs">Puede contener los siguientes atributos que nos van a permitir definir su comportamiento:</p>
+        <ul>
+        <li><code class="u-marked">action="send.php"</code>: Permite indicar la URL a la que se enviarán los datos.</li>
+        <li><code class="u-marked">name="MiForm"</code>: Especificamos el nombre del formulario.</li>
+        <li><code class="u-marked">autocomplete="on/off"</code>: Autocompletar campos de forma automática</li>
+        <li><code class="u-marked">method="get/post"</code>: Define como enviará los datos.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>&lt;label&gt;</h3>
+
+        <p>Representa la etiqueta de un elemento de formulario.</p>
+        <p>Siempre debemos asociarlo al control al que corresponde. Podemo hacerlo mediante la el atributo <code>for</code> (que tiene que ser idéntico al <code>id</code> del elemento que queremos etiquetar, o ubicando el elemento dentro del <code>label</code></p>
+
+        <pre class="mb-l"><code data-trim contenteditable>
+&#060;form&#062;
+/* Asociacion por atributo for */
+    &#060;label for="nombre"&#062;Nombre:&#060;/label&#062;
+    &#060;input type="text" id="nombre" &#062;
+
+/* Asociacion por anidación */
+    &#060;label&#062;
+        Nombre:
+        &#060;input type="text" id="nombre" &#062;
+    &#060;/label&#062;
+&#060;/form&#062;
+        </code></pre>
+    </section>
+</section>

@@ -1,0 +1,90 @@
+<section id="forms-html5">
+    <section>
+        <h2><span class="d-b fz-l">Nuevos elementos incluidos en</span> HTML5</h2>
+    </section>
+
+    <section>
+        <h3>&lt;input type="color"&gt;</h3>
+        <p>Permite especificar un color.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="color" value="#c0ffee"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <p class="mb-m">
+            <label for="background-color">Selecciona un color:</label>
+            <input id="background-color" class="InputColor" type="color" value="#c0ffee" onchange="javascript:document.getElementById('color-elegido').value = document.getElementById('background-color').value;">
+        </p>
+        <p>
+            <label for="color-elegido">El color seleccionado es:</label>
+            <input id="color-elegido" class="InputColor-result" type="text" readonly="" value="#c0ffee">
+        </p>
+    </section>
+
+    <section>
+        <h3>&lt;input type="date"&gt;</h3>
+        <p> Permite especificar una fecha con un calendario desplegable.<br />
+        Además podemos restringir valores máximos y mínimos para una fecha concreta.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="date" name="fechaSalida" step="1"
+    min="2015-01-26" max="2015-12-31" value="2015-01-26"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form>
+            <input type="date" name="fechaSalida" step="1"min="2015-01-26" max="2015-12-31" value="2015-01-26" style="transform: scale(1.5);">
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;input type="email"&gt;</h3>
+        <p> Validación automática de formato e-mail.<br />
+        En dispositivos móviles el teclado muestra la @.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="email" name="userEmail"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form action="#">
+            <input type="email" name="userEmail" required placeholder="Escribe una direccion de correo váilda">
+            <button>Enviar</button>
+        </form>
+    </section>
+
+    <section>
+        <h3>&lt;input type="number"&gt;</h3>
+        <p> Especificamos campos para introducir exclusivamente valores numéricos.</p>
+        <p>Podemos realizar operaciones aritméticas.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="number" name="dividendo"&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <form class="mb-l">
+            <input type="number">
+        </form>
+        <p class="fz-xs"><a href="files/forms/numbers.html" target="_blank">Ejemplo de operaciones aritméticas con "number"</a></p>
+    </section>
+
+    <section>
+        <h3>&lt;input type="range"&gt;</h3>
+        <p>Permite al usuario seleccionar un valor numérico deslizando un control.</p>
+        <p>Podemos definir un valor mínimo, otro máximo y el valor de cada incremento.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input id="slider" type="range" min="100" max="500" step="10" /&#62;
+&#60;/form&#62;
+        </code></pre>
+
+        <hr class="mb-l">
+        <input id="slider1" type="range" min="100" max="500" step="10" style="transform: scale(2)">
+    </section>
+</section>

@@ -1,225 +1,192 @@
-<section>
-  <section>
-    <h3>&lt;input&gt;</h3>
-    <p> Es el elemento básico de un formulario.<br />
-      Su funcionalidad varía dependiendo del valor de su atributo "type".<br />
-      Si omitimos el valor de "type" por defecto es "text".</p>
-    <pre><code data-trim contenteditable>
-<form>
-  <input type="text" value="nombre"/>
-</form>
-    </code></pre>
-    <p>
-      <input type="text" style="width: 550px; font-size: 1em; margin:0 30px; display: inline-block"/>
-    </p>
-  </section>
+<section id="forms-input">
+    <section>
+        <h2>Elemento &lt;input&gt;</h2>
+    </section>
 
-  <section>
-    <h4>Atributo placeholder</h4>
-    <p>El elemento <code>&#060;input type="text"&#062;</code> puede disponer de otros atributos como por ejemplo <span class="marker">placeholder</span>. En este caso nos permite añadir un contenido predefinido.</p>
-    <p>Este atributo sólo puede contener texto.</p>
-    <pre><code data-trim contenteditable>
-<form>
-  <input type="text" placeholder="Introduce tu nombre"/>
-</form>
-    </code></pre>
+    <section>
+        <h3>&lt;input&gt;</h3>
+        <p class="mb-xs">Es el elemento básico de un formulario.</p>
+        <p class="mb-xs">Su funcionalidad varía dependiendo del valor de su atributo "<code class="u-marked">type</code>".</p>
+        <p class="mb-xs">Si omitimos el valor de "type" por defecto es "<code class="u-marked">text</code>".</p>
+        
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+  &#60;input type="text" value="nombre"/&#62;
+&#60;/form&#62;
+        </code></pre>
+        
+        <hr class="mb-l">
+        <form>
+           <input type="text" value="nombre" />
+        </form>
+    </section>
 
-    <p class="fz-xs">Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</p>
-    <p><input type="text" name="nombre" placeholder="Introduce tu nombre" /></p>
-  </section>
+    <section>
+        <h3>Atributo placeholder</h3>
+        <p class="mb-xs">El elemento <code>&#060;input type="text"&#062;</code> puede disponer de otros atributos como por ejemplo <span class="marker">placeholder</span>.</p>
+        <p class="mb-xs">En este caso nos permite añadir un contenido predefinido.</p>
+        <p class="mb-xs">Este atributo sólo puede contener texto.</p>
+        
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="text" placeholder="Introduce tu nombre" /&#62;
+&#60;/form&#62;
+        </code></pre>
 
-  <section>
-    <h4>Atributo autofocus</h4>
-    <p>Mediante <span class="marker">autofocus</span> el cursor se situa de forma automática en el elemento INPUT al cargar la página.</p>
-    <pre><code data-trim contenteditable>
-<form>
-  <input type="text" autofocus/>
-</form>
-    </code></pre>
-    <p><a href="http://diveintohtml5.info/examples/input-autofocus-with-fallback.html" target="_blank">Ejemplo</a> de autofocus con jQuery fallBack.</p>
-    <p><input type="text" name="nombre"/></p>
-  </section>
+        <hr class="mb-l">
+        <p class="fz-xs">Podemos cambiar el estilo de <code>placeholder</code> mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</p>
+        <form>
+            <input type="text" name="nombre" placeholder="Introduce tu nombre" />
+        </form>
+    </section>
 
-  <section>
-    <h4>Atributo required</h4>
-    <p>Con <span class="marker">required</span> obligamos al usuario a introducir un valor en este campo.</p>
-    <pre><code data-trim contenteditable>
-<form>
-  <input type="text" placeholder="Introduce tu nombre" required/>
-</form>
-    </code></pre>
+    <section>
+        <h3>Atributo autofocus</h3>
+        <p>Mediante <code class="u-marked">autofocus</code> el cursor se situa de forma automática en el elemento <code>input</code> al cargar la página.</p>
+        
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="text" autofocus/&#62;
+&#60;/form&#62;
+        </code></pre>
+        
+        <hr class="mb-l">
+        
+        <p class="fz-xs"><a href="http://diveintohtml5.info/examples/input-autofocus-with-fallback.html" target="_blank">Ejemplo</a> de autofocus con jQuery fallBack.</p>
+        <form>
+            <input type="text" name="nombre" />
+        </form>
+    </section>
 
-<form action="#">
-  <p><small>Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</small></p>
-  <p><input type="text" required name="nombre" placeholder="* campo obligatorio" style="font-size: 1em;"/></p>
-  <input type="submit" value="enviar" style="transform: scale(1.5);" />
-</form>
-  </section>
 
-  <section>
-    <h4>&lt;input type="password"&gt;</h4>
-    <p>Oculta el valor del campo contraseña mientras se escribe</p>
-    <pre><code data-trim contenteditable>
-<form>
-  <input type="password" />
-</form>
-    </code></pre>
 
-    <p>Introduce password: <input type="password" style="width: 550px; margin:0 30px; display: inline-block"/></p>
-  </section>
+    <section>
+        <h3>Atributo required</h3>
+        <p>Con <code class="u-marked">required</code> obligamos al usuario a introducir un valor en este campo.</p>
+        
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="text" placeholder="Introduce tu nombre" required/&#62;
+&#60;/form&#62;
+        </code></pre>
 
-  <section>
-    <h4>&lt;input type="file"&gt;</h4>
-    <p>Permite especificar un tipo de archivo concreto para adjuntar en el envío del formulario.</p>
-    <pre><code data-trim contenteditable>
-<form>
-  <p><input type="file" name="imagen" accept="image/*"></p>
-</form>
-    </code></pre>
-    <p><input type="file" name="imagen" accept="image/*" style="transform: scale(1.5);"></p>
-  </section>
-
-  <section>
-    <h4>&lt;input type="submit"&gt;</h4>
-    <pre><code data-trim contenteditable>
-<form>
-  <input type="submit" value="enviar">
-</form>
-    </code></pre>
-    <p><input type="submit" value="enviar" style="transform: scale(1.5);" /></p>
-  </section>
-
-        <section>
-          <h4>&lt;input type="checkbox"&gt;</h4>
-          <p>Este elemento permite 2 estados: Marcado/desmarcado (true/false)</p>
-          <pre><code data-trim contenteditable>
+        <hr class="mb-l">
+        
+        <p class="fz-xs">Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</p>
+        <form action="#">
             <form>
-              <input type="checkbox" />
+                <input type="text" required name="nombre" placeholder="* campo obligatorio" />
+                <button>Enviar</button>
             </form>
-          </code></pre>
-          <br />
+        </form>
+    </section>
 
-          <p style="font-size: .8em;"><input type="checkbox" style="font-size: 110%; display: inline;"/>Opción 1</p>
-          <p style="font-size: .8em;"><input type="checkbox" style="font-size: 110%; display: inline;"/>Opción 2</p>
+    <section>
+        <h3>&lt;input type="password"&gt;</h3>
+        <p>Oculta el valor del campo contraseña mientras se escribe</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="password" /&#62;
+&#60;/form&#62;
+        </code></pre>
 
-          <style>
-            input[type=checkbox]
-            {
-              /* Double-sized Checkboxes */
-              -ms-transform: scale(2); /* IE */
-              -moz-transform: scale(2); /* FF */
-              -webkit-transform: scale(2); /* Safari and Chrome */
-              -o-transform: scale(2); /* Opera */
-              padding: 10px;
-            }
-          </style>
+        <hr class="mb-l">
+        <form>
+            <label for="password">Introduce password:</label>
+            <input type="password" id="password" />
+        </form>
+    </section>
 
-          <small>Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</small>
+    <section>
+        <h3>&lt;input type="file"&gt;</h3>
+        <p>Permite especificar un tipo de archivo concreto para adjuntar en el envío del formulario.</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="file" name="imagen" accept="image/*"&#62;
+&#60;/form&#62;
+        </code></pre>
 
-        </section>
+        <hr class="mb-l">
+        <form>
+            <input type="file" name="imagen" accept="image/*" style="transform: scale(1.5);">
+        </form>
+    </section>
 
-        <section>
-          <h4>&lt;input type="radio"&gt;</h4>
-          <p>Este elemento permite 2 estados Marcado/desmarcado (true/false) pero limita al usuario a escoger entre un número limitado de opciones:</p>
-          <pre><code data-trim contenteditable>
-            <form>
-              <input type="radio" name="sistemaOperativo" value="macosx"/>
-              <input type="radio" name="sistemaOperativo" value="linux"/>
-              <input type="radio" name="sistemaOperativo" value="windows"/>
-            </form>
-          </code></pre>
-          <br />
+    <section>
+        <h3>&lt;input type="submit"&gt;</h3>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="submit" value="enviar"&#62;
+&#60;/form&#62;
+        </code></pre>
 
-          <div style="width: 20%; margin:0 auto 30px;">
-            <p style="font-size:.8em; text-align:left;"><input style="margin-right:10px;" type="radio" name="sistemaOperativo" value="macosx"/>MacOSX</p>
-            <p style="font-size:.8em; text-align:left;"><input style="margin-right:10px;" type="radio" name="sistemaOperativo" value="linux"/>GNU/Linux</p>
-            <p style="font-size:.8em; text-align:left;"><input style="margin-right:10px;" type="radio" name="sistemaOperativo" value="windows"/>Windows</p>
-          </div>
+        <hr class="mb-l">
+        <input type="submit" value="enviar" style="transform: scale(1.5);" />
+    </section>
 
-          <style>
-            input[type=radio]
-            {
-              /* Double-sized Checkboxes */
-              -ms-transform: scale(2); /* IE */
-              -moz-transform: scale(2); /* FF */
-              -webkit-transform: scale(2); /* Safari and Chrome */
-              -o-transform: scale(2); /* Opera */
-              padding: 10px;
-            }
-          </style>
+    <section>
+        <h3>&lt;input type="checkbox"&gt;</h3>
+        <p>Este elemento permite 2 estados: Marcado/desmarcado (true/false)</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;label&#62;
+        &#60;input type="checkbox" /&#62;
+        Opción 1
+    &#60;/label&#62;
+&#60;/form&#62;
+        </code></pre>
 
-          <small>Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</small>
-        </section>
+        <hr class="mb-l">
+        <form class="mb-l">
+            <div>
+                <label>
+                    <input type="checkbox"/>
+                    Opción 1
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox"/>
+                    Opción 2
+                </label>
+            </div>
+        </form>
+        <p class="fz-xs">Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</p>
+    </section>
 
+    <section>
+        <h3>&lt;input type="radio"&gt;</h3>
+        <p>Este elemento permite 2 estados Marcado/desmarcado (true/false) pero limita al usuario a escoger entre un número limitado de opciones:</p>
+        <pre class="mb-l"><code data-trim contenteditable>
+&#60;form&#62;
+    &#60;input type="radio" name="sistemaOperativo" value="macosx"/&#62;
+    &#60;input type="radio" name="sistemaOperativo" value="linux"/&#62;
+    &#60;input type="radio" name="sistemaOperativo" value="windows"/&#62;
+&#60;/form&#62;
+        </code></pre>
 
-        <section>
-          <h3>Nuevos elementos incluidos en</h3>
-          <h2><span class="marker">HTML5</span></h2>
-        </section>
+        <hr class="mb-l">
+        <form class="mb-l">
+            <div>
+                <label>
+                    <input type="radio" name="sistemaOperativo" value="macosx"/>
+                    MacOSX
+                </label>
+                </div>
+            <div>
+                <label>
+                    <input type="radio" name="sistemaOperativo" value="linux"/>
+                    GNU/Linux
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="radio" name="sistemaOperativo" value="windows"/>
+                    Windows
+                </label>
+            </div>
+        </form>
 
-        <section>
-          <h4>&lt;input type="color"&gt;</h4>
-          <p>Permite especificar un color.</p>
-          <pre><code data-trim contenteditable>
-            <form>
-              <p><input type="color" value="#c0ffee"></p>
-            </form>
-          </code></pre>
-          <p>Selecciona un color: <input id="background-color" type="color" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px;" onchange="javascript:document.getElementById('color-elegido').value = document.getElementById('background-color').value;"></p>
-          <p>El color seleccionado es: <input id="color-elegido" type="text" readonly="" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px; display:inline-block;"></p>
-        </section>
-
-        <section>
-          <h4>&lt;input type="date"&gt;</h4>
-          <p> Permite especificar una fecha con un calendario desplegable.<br />
-            Además podemos restringir valores máximos y mínimos para una fecha concreta.</p>
-            <pre><code data-trim contenteditable>
-              <form>
-                <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26"></p>
-              </form>
-            </code></pre>
-            <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26" style="transform: scale(1.5);"></p>
-          </section>
-
-
-          <section>
-            <h4>&lt;input type="email"&gt;</h4>
-            <p> Validación automática de formato e-mail.<br />
-              En dispositivos móviles el teclado muestra la @.</p>
-              <pre><code data-trim contenteditable>
-                <form>
-                  <p><input type="email" name="userEmail"></p>
-                </form>
-              </code></pre>
-              <form action="#">
-                <p><input type="email" name="userEmail" style="transform: scale(1.5);"></p>
-                <p><input type="submit" value="enviar" style="transform: scale(1.5);"></p>
-              </form>
-            </section>
-
-            <section>
-              <h4>&lt;input type="number"&gt;</h4>
-              <p> Especificamos campos para introducir exclusivamente valores numéricos.<br />
-                Podemos realizar operaciones aritméticas.</p>
-                <pre><code data-trim contenteditable>
-                  <form>
-                    <p><input type="number" name="dividendo"></p>
-                  </form>
-                </code></pre>
-                <p><a href="files/forms/numbers.html" target="_blank">Ejemplo de operaciones aritméticas con "number"</a></p>
-              </section>
-
-              <section>
-                <h4>&lt;input type="range"&gt;</h4>
-                <p> Permite al usuario seleccionar un valor numérico deslizando un control.<br />
-                  Podemos definir un valor mínimo, otro máximo y el valor de cada incremento.</p>
-                  <pre><code data-trim contenteditable>
-                    <form>
-                      <p><input id="slider" type="range" min="100" max="500" step="10" /></p>
-                    </form>
-                  </code></pre>
-                  <input id="slider1" type="range" min="100" max="500" step="10" style="transform: scale(2)">
-
-                </section>
-
-              </section>
+        <p class="fz-xs">Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</p>
+    </section>
+</section>
