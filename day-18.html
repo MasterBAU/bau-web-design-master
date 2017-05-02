@@ -13,11 +13,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css" id="theme">
-    
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600' rel='stylesheet' type='text/css'>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -58,7 +57,7 @@
     <section>
         <p style="margin-bottom: 2rem; text-align: center;">El usuario va navegando tan tranquilamente cuando...</p>
         <div>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/TEZQ2rg-Rlg" frameborder="0" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-Gz02QZSNPY" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
 
@@ -112,185 +111,12 @@
     <section>
         <h3>Performance 101</h3>
         <ul>
-            <li>Reducir el peso de los recursos</li>
             <li>Reducir las llamadas (requests) al servidor</li>
+            <li>Reducir el peso de los recursos</li>
             <li style="opacity: 0.5">Optimizar el cache</li>
         </ul>
     </section>
 </section>
-
-
-<section class="text-left">
-    <section>
-        <h2>Reducir el peso de los recursos</h2>
-        <p class="ta-c">
-            <img src="./img/slides/wpo/size.gif" alt="" width="500" style="border: none; box-shadow: none">
-        </p>
-    </section>
-
-    <section>
-        <h3>Compresión Gzip</h3>
-        <p>Los archivos de texto (.html, .css, .js, etc) pueden enviarse comprimidos desde el servidor para reducir su peso durante el viaje hasta el cliente. Esta reducción suele ser muy significativa.</p>
-        <p>Lo normal seria que nuestro servicio de host tenga activada la <em>compresión <span class="u-marked">gzip</span></em> pero nunca está de más comprobarlo, y en caso de que no sea así, ponernos en contacto con ellos para que la activen.</p>
-        <hr>
-        <p><a href="http://gzipwtf.com/">gzipWTF</a></p>
-        <p><a href="http://checkgzipcompression.com/">Check GZIP compression</a></p>
-    </section>
-
-    <section>
-        <h3>Minificar archivos CSS y Js</h3>
-        <p style="font-size: 2rem;">Solemos escribir nuestro CSS y nuestro Javascript optimizado para su lectura, es decir, con una indentación y espaciado claro, comentarios, etc. Los ordenadores no necesitan esto para interpretarlos y es por eso que a la hora de subir un fichero al servidor podemos reducir bastante su peso si nos deshacemos de todo lo que no sea imprescindible.</p>
-    </section>
-
-    <section>
-        <h3>Minificar archivos CSS y Js</h3>
-        <p style="font-size: 2rem;">Para ello existen varias herramientas. Por convención se suele diferenciar a los ficheros comprimidos con la extensión .min (Ej: styles.min.css)</p>
-        <p style="font-size: 2rem;"><a href="http://csscompressor.com/">CSS Compressor</a></p>
-        <hr style="margin: 0.75rem 0;">
-        <p>Tambien podemos compilar el css comprimido directamente desde Sass.</p>
-        <pre><code>
-sass style.scss:style.css --style compressed
-        </code></pre>
-    </section>
-</section>
-
-
-<section>
-  <section>
-    <h2>El coste de las imágenes</h2>
-    <p class="ta-c">
-      <img src="./img/slides/wpo/money.gif" alt="" width="400" style="border: none; box-shadow: none">
-    </p>
-  </section>
-
-  <section>
-    <blockquote style="width: 75%;">
-      <p style="font-size: 3rem;">“A picture is worth a thousand words, but its cost can be so much greater.”</p>
-      <footer>- <cite><a href="http://www.fivesimplesteps.com/products/practical-responsive-images">"Practical responsive images"</a>, Ben Seymour</cite></footer>
-    </blockquote>
-  </section>
-
-  <section>
-    <p>Las imágenes son el recurso que más añade al peso total de la página.</p>
-    <figure>
-      <img src="./img/slides/wpo/chart-content.png" alt="" style="height: 24rem;">
-      <figcaption><a href="http://mobile.httparchive.org/interesting.php#bytesperpage">Average Bytes per Page by Content Type</a></figcaption>
-    </figure>
-  </section>
-
-  <section>
-    <p>En móvil la proporción se mantiene.</p>
-    <figure>
-      <img src="./img/slides/wpo/chart-content-mobile.png" alt="" style="height: 24rem;">
-      <figcaption><a href="http://mobile.httparchive.org/interesting.php#bytesperpage">Average Bytes per Page by Content Type</a></figcaption>
-    </figure>
-  </section>
-
-  <section>
-    <p>En móvil, el alto peso de las imágenes descargadas no sólo afecta la experiencia de usuario sino que puede tener un alto coste para su bolsillo dependiendo las condiciones de su plan de datos.</p>
-    <p>Un ejemplo: <a href="https://mobiforge.com/research-analysis/performance-money-part-1-end-users-wallet">Performance is money, part 1: the end-user's wallet</a></p>
-  </section>
-
-  <section>
-    <h2>Enlaces relacionados:</h2>
-    <ul class="related-links">
-      <li>
-        <a href="http://www.webperformancetoday.com/2014/12/02/page-bloat-update-average-top-1000-web-page-1795-kb-size/">“Page bloat update: The average top 1000 web page is 1795 KB in size”</a> <i>&#8213; Tammy Everts</i>
-      </li>
-      <li>
-        <a href="https://vimeo.com/108328247">“Design decisions through the lens of a performance budget”</a> <i>&#8213; Yesenia Perez-Cruz</i>
-      </li>
-      <li>
-        <a href="http://danielmall.com/articles/how-to-make-a-performance-budget/">“How to make a performance budget”</a> <i>&#8213; Dan Mall</i>
-      </li>
-  </section>
-</section>
-
-
-
-<section>
-    <section>
-        <h2>Optimización de imágenes manual</h2>
-    </section>
-
-    <section>
-        <h3>Guardar para web en Photoshop</h3>
-        <p>
-            <img src="./img/slides/wpo/photoshop.png" alt="" style="height: 32rem;">
-        </p>
-    </section>
-
-    <section class="ta-l">
-        <ol>
-            <li>Elegir el formato adecuado</li>
-            <li>Recortar la imágen al tamaño de final</li>
-            <li>JPG: Elegir el nivel de compresion (75-70 óptimo)</li>
-            <li>PNG: Limitar la paleta de colores</li>
-            <li>Opcional: Activar la opción de descarga progresiva (JPG) / entrelazada (PNG)</li>
-            <li>Quitar la metadata (sino la necesitamos)</li>
-        </ol>
-    </section>
-
-    <section>
-        <h3 class="mb-l">Aplicaciones de optimización</h3>
-        <img src="./img/slides/wpo/ImageOptimIcon.png" alt="" style="box-shadow: none; float: left; margin-right: 5rem; width: 16rem;">
-        <ul class="ta-l" style="float: left;">
-            <li><a href="https://imageoptim.com/es.html">ImgOptim</a></li>
-            <li><a href="https://pngmini.com/">ImageAlpha</a></li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Guardar SVG desde Illustrator</h3>
-        <p class="ta-c">
-            <img src="./img/slides/wpo/svg-options-panel-01.png" alt="" style="height: 16rem;">
-        </p>
-
-        <ul class="fz-xs">
-            <li class="mb-m"><strong>SVG Profiles: SVG 1.1</strong> - Es una versión con <a href="http://caniuse.com/#feat=svg">buen soporte</a>. Versiones anteriores no soportan algunas características como la transparencia.</li>
-            <li class="mb-m"><strong>Fonts Type: SVG</strong> - También podemos trazar el texto a outlines.</li>
-            <li class="mb-m"><strong>Subsetting: None (Use System Fonts)</strong> - Esta opción utilizará las fuentes del sistema ya que las fuentes SVG tienen problemas en algunos navegadores (FF & IE).</li>
-            <li class="mb-m"><strong>Images: Link</strong> - De esta manera mantendremos control sobre la compresión de los bitmap, aunque tendremos que cambiar la ruta a mano ya que Illustrator la apuntará a nuestro disco.</li>
-        </ul>
-    </section>
-
-    <section>
-        <p class="ta-c">
-            <img src="./img/slides/wpo/svg-options-panel-02.png" alt="" style="height: 22rem;">
-        </p>
-
-        <ul class="fz-xs">
-            <li class="mb-m"><strong>Uncheck 'Preserve Illustrator Editing Capabilities'</strong>.</li>
-            <li class="mb-m"><strong>Decimal places: 1</strong> - Define los decimales que definen cada punto. Reducir el valor por defecto de 3 a 1 <a href="http://creativedroplets.com/samples/svg/decimal/_EdgeReflow%20napoleon%20decimal_preview.html">no produce ningun cambio visual</a> pero reduce el tamaño del archivo considerablemente.</li>
-            <li class="mb-m"><strong>CSS Properties: Style Elements</strong> - Esta opción colocará los estilos dentro de un tag <code>&#060;style&#062;</code> al comienzo del svg.</li>
-            <li class="mb-m">El resto de las opciones las dejaremos como vienen por defecto.</li>
-        </ul>
-    </section>
-
-     <section>
-        <h2>Optimización automática de imágenes</h2>
-    </section>
-
-    <section>
-        <h2>JPG / GIF / PNG</h2>
-        <ul class="ta-l">
-            <li>
-                <a href="http://jamiemason.github.io/ImageOptim-CLI/">ImageOptim-CLI</a>
-            </li>
-            <li>
-                <a href="https://github.com/imagemin/imagemin">Imagemin</a>
-            </li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>SVG</h2>
-        <ul class="ta-l">
-            <li><a href="https://github.com/svg/svgo">Svgo</a></li>
-        </ul>
-    </section>
-</section>
-
 
 
 <section class="text-left">
@@ -338,101 +164,86 @@ sass style.scss:style.css --style compressed
     </section>
 
     <section>
-        <p>La técnica de <i lang="en">sprites</i> proviene de la industria del videojuego y consiste en combinar diferentes imágenes en una sóla para luego acceder solo al fragmento de imágen que necesitamos en cada caso.</p>
+        <h3>Combinar imágenes (spriting)</h3>
+        <p>La técnica de sprites consiste en combinar varias imágenes en un sólo archivo y luego mediante Css mostrar únicamente la que necesitasmos.</p>
+        <p style="text-align: center;">
+            <img src="./img/slides/wpo/sprite-demo.png" alt="" width="300" style="border: 0; box-shadow: none;" >
+        </p>
 
-        <p>En web, esto nos permite tener una sola llamada al servidor en lugar de una por cada imágen.</p>
 
-        <p class="ta-c"><img src="./img/slides/wpo/sprite-megaman.png" alt="" style="box-shadow: none;"></p>
     </section>
 
     <section>
-        <h3>Sprites por imágen</h3>
-        <div style="display: flex;">
-            <div style="flex-grow: 1;">
-                <pre><code class="hljs css">
+        <div class="sprite"></div>
+        <hr>
+        <pre><code>
 .icon {
-    background-image: url('img/sprite.png');
-    background-repeat: no-repeat;
-    width: 24px;
-    height: 24px;
+    background-image: url(../img/sprite.png);
+    background-repeat: none;
+    width: 64px;
+    height: 64px;
 }
-
-.icon--alert    { background-position: 0px 0px; }
-.icon--favorite { background-position: 0px -24px; }
-.icon--share    { background-position: -48px -24x; }
-.icon--mail     { background-position: 0 -48px; }
-...
-                </code></pre>
-            </div>
-
-            <div style="flex-shrink: 0; order: -1; margin-right: 2rem;">
-                <img src="./img/slides/wpo/sprite.png" alt="" style=" border: 1px solid rgba(0,0,0,.2); box-shadow: none; padding: 1rem; height: 30rem;">
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h3>Sprites por css</h3>
-
-        <pre><code class="hljs css">
-[class^=icon-] {
-    background-repeat: no-repeat;
-}
-
-.icon-github {
-    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANS...');
-}
-
-.icon-twitter {
-    background-image: url('data:image/png;base64,OP444iVBORve=w0KG...');
-}
-
-.icon-facebook {
-    background-image: url('data:image/png;base64,AAff33VBORw0Kojij...');
-}
-        </code></pre>
-
-        <p class="fz-xxs" style="text-align: center;">Bad practice? (<a href="http://www.mobify.com/blog/data-uris-are-slow-on-mobile/">“On Mobile, Data URIs are 6x Slower than Source Linking”</a>)</p>
-    </section>
-
-    <section>
-        <h3>Sprites SVG mediante <code>&#060;symbol&#062;</code></h3>
-
-        <p class="fz-xs mb-s">Definición del SVG:</p>
-        <pre class="mb-l" style="margin: 0;"><code class="hljs html" style="padding: 0.75rem 1rem" data-trim>
-&#060;svg xmlns="http://www.w3.org/2000/svg" style="display: none;"&#062;
-    &#060;symbol id="icon-twitter" viewBox="214.7 0 182.6 792"&#062;
-        &#060;!-- contenido del svg --&#062;
-    &#060;/symbol&#062;
-    &#060;symbol id="icon-facebook" viewBox="0 26 100 48"&#062;
-        &#060;!-- contenido del svg --&#062;
-    &#060;/symbol&#062;
-&#060;/svg&#062;
-        </code></pre>
-
-        <p class="fz-xs mb-s">Uso con el svg inline en el HTML:</p>
-        <pre class="mb-l" style="margin: 0;"><code class="hljs html" style="padding: 0.75rem 1rem" data-trim>
-&#060;svg class="twitter-icon"&#062;
-  &#060;use xlink:href="#icon-twitter"&#062;&#060;/use&#062;
-&#060;svg&#062;
-        </code></pre>
-
-        <p class="fz-xs mb-s">Uso con el svg en un archivo externo:</p>
-        <pre class="mb-l" style="margin: 0;"><code class="hljs html" style="padding: 0.75rem 1rem" data-trim>
-&#060;svg class="twitter-icon"&#062;
-  &#060;use xlink:href="ruta/externa/icons.svg#icon-twitter"&#062;&#060;/use&#062;
-&#060;svg&#062;
+.icon-fb { background-position: 0 0; }
+.icon-tw { background-position: -64px 0; }
+.icon-ig { background-position: -128px 0; }
         </code></pre>
     </section>
 
     <section>
-        <h2>Herramientas de spriting</h2>
-        <ul class="ta-l">
-            <li><a href="https://github.com/jkphl/svg-sprite">svg-sprite</a></li>
-            <li><a href="https://github.com/domenic/svg2png">svg2png</a></li>
-            <li><a href="https://github.com/aslansky/css-sprite">css-sprite</a></li>
-            <li><a href="http://www.grumpicon.com/">Grumpicon</a></li>
-        </ul>
+        <p>Otra variante de spriting es la de incluir todas las imágenes en base 64 en una hoja de estilo asociadas a una class.</p>
+
+        <pre><code>
+.icon {
+    background-position: ceter center;
+    background-repeat: none;
+    width: 32px;
+    height: 32px;
+}
+.icon-fb { background-image: url(base64:); }
+.icon-tw { background-image: url(base64:); }
+.icon-ig { background-image: url(base64:); }
+        </code></pre>
+    </section>
+</section>
+
+
+<section class="text-left">
+    <section>
+        <h2 style="text-align: center;">Reducir el peso de los recursos</h2>
+        <p style="text-align: center;">
+            <img src="./img/slides/wpo/size.gif" alt="" width="500" style="border: none; box-shadow: none">
+        </p>
+    </section>
+
+    <section>
+        <h3>Compresión Gzip</h3>
+        <p>Los archivos de texto (.html, .css, .js, etc) pueden enviarse comprimidos desde el servidor para reducir su peso durante el viaje hasta el cliente. Esta reducción suele ser muy significativa.</p>
+        <p>Lo normal seria que nuestro servicio de host tenga activada la <em>compresión gzip</em> pero nunca está de más comprobarlo, y en caso de que no sea así, ponernos en contacto con ellos para que la activen.</p>
+        <hr>
+        <p><a href="http://gzipwtf.com/">gzipWTF</a></p>
+        <p><a href="http://checkgzipcompression.com/">Check GZIP compression</a></p>
+    </section>
+
+    <section>
+        <h3>Minificar archivos Css y Js</h3>
+        <p style="font-size: 2rem;">Solemos escribir nuestro Css y nuestro Javascript optimizado para su lectura, es decir, con una indentación y espaciado claro, comentarios, etc. Los ordenadores no necesitan esto para interpretarlos y es por eso que a la hora de subir un fichero al servidor podemos reducir bastante su peso si nos deshacemos de todo lo que no sea imprescindible.</p>
+    </section>
+
+    <section>
+        <h3>Minificar archivos Css y Js</h3>
+        <p style="font-size: 2rem;">Para ello existen varias herramientas. Por convención se suele diferenciar a los ficheros comprimidos con la extensión .min (Ej: styles.min.css)</p>
+        <p style="font-size: 2rem;"><a href="http://csscompressor.com/">CSS Compressor</a></p>
+        <hr style="margin: 0.75rem 0;">
+        <p>Tambien podemos compilar el css comprimido directamente desde Sass.</p>
+        <pre><code>
+sass style.scss:style.css --style compressed
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Comprimir imágenes</h3>
+        <p>Es recomendable comprimir lo máximo posible las imágenes antes de subirlas al servidor.</p>
+        <p>Desde Photoshop tendremos más control sobre la compresión final desde la ventana de Guardar para web (cmd + alt + shift + S) o podemos usar una herramienta externa como <a href="https://imageoptim.com/">ImageOptim</a> o <a href="http://pngmini.com/">ImageAlpha</a></p>
     </section>
 </section>
 
@@ -456,12 +267,6 @@ sass style.scss:style.css --style compressed
         </li>
 
         <li style="margin-bottom: .8em;">
-            <strong>A Designer’s Guide to Perceived Performance</strong> <i style="color: #999;"> &mdash; Luke Jones</i><br />
-            <a href="https://blog.marvelapp.com/a-designers-guide-to-perceived-performance/" style="font-size: .8em;">https://blog.marvelapp.com/a-designers-guide-to-perceived-performance/</a>
-        </li>
-
-
-        <li style="margin-bottom: .8em;">
             <strong>Web performance</strong> <i style="color: #999;"> &mdash; Andy Davies</i><br />
             <a href="http://www.fivesimplesteps.com/products/web-performance" style="font-size: .8em;">www.fivesimplesteps.com/products/web-performance</a>
         </li>
@@ -473,11 +278,12 @@ sass style.scss:style.css --style compressed
 
     </ul>
 </section>
+
         </div>
     </div>
 
     <script src="js/reveal/head.min.js"></script>
-<script src="js/reveal/reveal.js"></script>
+<script src="js/reveal/reveal.min.js"></script>
 
 <script>
     // Full list of configuration options available here:
@@ -501,5 +307,6 @@ sass style.scss:style.css --style compressed
         ]
     });
 </script>
+
 </body>
 </html>

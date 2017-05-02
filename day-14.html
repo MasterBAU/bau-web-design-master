@@ -13,11 +13,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css" id="theme">
-    
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600' rel='stylesheet' type='text/css'>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -47,96 +46,10 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Sass Intro</strong></h3>
+                <h3><strong>Introducción a SASS</strong></h3>
             </section>
 
-            <section class="text-left">
-    <section>
-        <h2>Unidades de medida en CSS</h2>
-    </section>
-
-    <section>
-        <p>Las unidades de medida en CSS pueden dividirse en <strong>dos grandes grupos</strong>: <em>unidades absolutas</em> y <em>unidades relativas</em></p>
-        <p>La sintaxis para declarar una medida siempre será igual: un número seguido de la unidad correspondiente. Algunas propiedades CSS aceptan <strong>valores negativos</strong>.</p>
-    </section>
-
-                <section>
-                    <h3>Unidades absolutas</h3>
-                    <p>Las unidades absolutas son las más directas, están relacionadas a una medida física. La más utilizada es el pixel pero hay varias más:</p>
-                    <ul class="font-list" style="font-size: 2.2rem;">
-                        <li>
-                            <p style="margin-bottom:0;"><code>px</code> <span style="font-size: 1.6rem;">(píxel)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>mm</code> <span style="font-size: 1.6rem;">(milimetro)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>cm</code> <span style="font-size: 1.6rem;">(centímetro, 10 millimeters)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>in</code> <span style="font-size: 1.6rem;">(pulgada, 2.54 centímetros)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>pt</code> <span style="font-size: 1.6rem;">(punto, 1/72 de pulgada)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>pc</code> <span style="font-size: 1.6rem;">(pica, 12 puntos)</span></li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Unidades relativas</h3>
-                    <p>Las unidades relativas son un poco más complicadas ya que su valor no es fijo sino que dependen de la medida de otro elemento. También pueden dividirse en tres grupos más pequeños: <em>unidades relativas al tamaño de fuente</em>, <em>unidades relativas al viewport</em> y <em>porcentajes</em>.</p>
-                </section>
-
-                <section>
-                    <h3>Relativas al tamaño de fuente</h3>
-                    <ul class="font-list" style="font-size: 2.2rem;">
-                        <li>
-                            <p style="margin-bottom:0;"><code>em</code></p>
-                            <p style="font-size: 1.5rem;">Es un número relativo al <code>font-size</code> del elemento. Si se aplica a la misma propiedad <code>font-size</code> se calculará en base al <code>font-size</code> heredado.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>rem</code></p>
-                            <p style="font-size: 1.5rem;">Hace referencia al <code>font-size</code> del elemento root (normalmente el <code>&#60;html&#62;</code>). Si se aplica sobre este usara de base su valor inicial.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>ex</code></p>
-                            <p style="font-size: 1.5rem;">Representa la <i>x-height</i> del elemento fuente, normalmente la altura del caracter "x" en minúsculas.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>ch</code></p>
-                            <p style="font-size: 1.5rem;">Representa el ancho del carácter "0".</p>
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3>Relativas al viewport</h3>
-                    <ul class="font-list" style="font-size: 2.2rem;">
-                        <li>
-                            <p style="margin-bottom:0;"><code>vh</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del alto del viewport.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>vw</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del ancho del viewport.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>vmin</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del valor más bajo entre el alto y ancho del viewport.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>vmax</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del valor más alto entre el alto y ancho del viewport.</p>
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                     <h3>Porcentajes</h3>
-                     <p>Podemos asignar una unidad de medida porcentual con un <em>valor seguido del signo "%"</em> (ej: 50%). El contexto que se utilizará para calcular el porcentaje variará dependiendo a que propiedad se aplique.</p>
-                     <p>Si se aplica al <code>font-size</code>, el porcentaje será relativo al <code>font-size</code> del elemento padre.</p>
-                     <p>Si se aplica al <code>width</code>, <code>margin</code> o <code>padding</code>, será relativo a las medidas de su contenedor.</p>
-                </section>
-            </section>
-
-
-
+            
 
 <section>
     <section>
@@ -161,45 +74,111 @@
             <li>Operaciones aritméticas</li>
         </ul>
     </section>
-<!--
+
     <section>
         <h3>Pero lo más importante: Si usas SASS...</h3>
         <img src="./img/slides/sass/cool-cat.gif" alt="" style="background:none; box-shadow:none; border: none; width: 550px; ">
         <p>...eres más cool :)</p>
-    </section>-->
+    </section>
 
 </section>
 
 
 
-<section>
+<section class="unix">
+
     <section>
         <img src="./img/slides/sass/sass.png" alt="" width="250">
-        <h4>(Primera parte)</h4>
+        <h4>Instalación de SASS</h4>
     </section>
+
+    <section>
+        <h3>Gema Ruby</h3>
+        <h4 class="marker">Instalaremos SASS utilizando la instrucción Ruby "Gem"</h4>
+        <pre><code data-trim contenteditable>
+
+$ sudo gem install sass
+
+        </code></pre>
+        <p>En MacOSX Ruby viene instalado. Desde Windows tenemos que instalarlo.</p>
+        <a href="http://rubyinstaller.org/" target="_blank"><img src="./img/slides/sass/ruby.png" alt="" width="100"></a>
+    </section>
+
+    <section>
+        <h3>Permisos de Usuario</h3>
+        <p class="marker">Debemos de autentificarnos como super-usuarios para poder realizar la instalación de la Gema Ruby SASS con la instrucción <code style="font-size: 1em">sudo</code></p>
+        <pre><code data-trim contenteditable style="font-size: 1em; line-height: 1.7">
+$ sudo gem install sass
+
+Password: *******
+Successfully installed sass-3.4.13
+Parsing documentation for sass-3.4.13
+1 gem installed
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Preprocesado SASS</h3>
+        <p>El único formato de estilos que entienden los navegadores web es el <span class="marker">CSS</span>. Mediante SASS traducimos su sintaxis y todas sus funcionalidades a CSS estandar.</p>
+        <p class="marker">Se llama pre-procesado de SASS a la acción de convertir la sintaxis SASS al CSS que posteriormente procesará el navegador web para renderizar la página.</p>
+    </section>
+
+    <section>
+        <h3>Tipos de archivo</h3>
+        <p>Para el preprocesado necesitaremos tener una carpeta con los archivos de nuestro proyecto web en SASS que hará de <span class="marker">origen</span> y otra carpeta de <span class="marker">destino</span> en la que generaremos de forma automática los archivos CSS estandar.</p>
+        <p>La extensión de archivo SASS es <span class="marker">.scss</span></p>
+        <img src="./img/slides/sass/folders.png" alt="" width="400">
+    </section>
+
+    <section>
+        <h3>SASS Watching</h3>
+        <p>Una vez creados los directorios origen/destino indicamos a SASS que "vigile" los cambios que se produzcan en la carpeta de origen</p>
+        <pre><code data-trim contenteditable>
+$ sass --watch src/sass:public/css
+        </code></pre>
+        <p class="marker">El preprocesador SASS generará en tiempo real el archivo CSS resultante de las modificaciones que hagamos en el archivo de origen en SASS.</p>
+    </section>
+
+    <section>
+        <h3>Sobre los archivos .scss</h3>
+        <p>Una vez finalizado el proyecto en SASS <span class="marker">solo subiremos la carpeta con los archivos CSS</span>. Los archivos SASS los guardaremos por si necesitamos editar o añadir nuevos cambios.</p>
+        <p>Los archivos SASS vienen a ser los PSD's de un diseño web.</p>
+    </section>
+
+
+
 </section>
 
-<section>
+
+
+<section class="unix">
+
     <section>
-        <h2>Variables</h2>
+        <img src="./img/slides/sass/sass.png" alt="" width="250">
+        <h4>Programación en SASS<br /> (Primera parte)</h4>
     </section>
-    
+
     <section>
         <h3>Declarando Variables</h3>
-        <p>Una variable es un registro donde guardamos un dato que necesitaremos aplicar en diferentes partes de nuestro código.</p>
-        <p>Para poder utilizar una variable primero hemos de crearla y asignarle un valor. A este proceso se le denomina <span class="u-marked">declaración de variables</span></p>
-        <hr>
-        <pre><code data-trim contenteditable class="hljs scss">
-$primaryColor: red;
-$secondaryColor: blue;
+        <p class="marker">Una variable es un registro donde guardamos un dato que necesitaremos aplicar en diferentes partes de nuestro código.</p>
+        <p>Para poder utilizar una variable primero hemos de crearla y asignarle un valor. <br />A este proceso se le denomina <span class="marker">declaración de variables</span></p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+Sintaxis
+
+// Color Variables
+$primaryColor: rgba(255,0,0,.5);
+$secondaryColor: rgba(255,100,100,.5);
+
         </code></pre>
+        <p>Podemos almacenar, colores, valores en píxeles o en %, tipografías, etc...</p>
     </section>
 
     <section>
         <h3>Utilizando Variables</h3>
         <p>Una vez declarada, podemos reutilizar las variables en tantos lugares de nuestro código como necesitemos.</p>
-        <hr>
-        <pre><code data-trim contenteditable class="hljs scss">
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Aplying color
 h1 {
     color: $primaryColor;
 }
@@ -207,173 +186,70 @@ h1 {
 h2 {
     color: $secondaryColor;
 }
+
         </code></pre>
     </section>
 
     <section>
-        <p><code>scss</code></p>
-        <pre><code data-trim contenteditable>
-$primaryColor: red;
+        <h3>CSS resultante</h3>
+        <p>Al aplicar las variables <code style="font-size: .9em;">$prymaryColor</code> y <code style="font-size: .9em;">$secondaryColor</code> a los h1 y h2 respectivamente SASS nos genera el siguiente CSS:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Preprocessed CSS result
+h1 {
+    color: rgba(255,0,0,.5);
+}
 
-h1 {
-    color: $primaryColor;
+h2 {
+    color: rgba(255,100,100,.5);
 }
-        </code></pre>
-        <hr>
-        <p><code>css</code></p>
-        <pre><code data-trim contenteditable>
-h1 {
-    color: red;
-}
+
         </code></pre>
     </section>
-</section>
 
-<section>
     <section>
-        <h2>Anidación (nesting)</h2>
-    </section>
+        <h3>Anidación</h3>
+        <p>SASS permite anidar un selector CSS dentro de otro para obtener una mayor versatilidad:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+.slider-container {
+    float:left;
+    max-width: $inner-width;
     
-    <section>
-        <p>SASS permite anidar uno o varios selectores CSS dentro de otro.</p>
-        <p>Esto nos permitirá tener nuestro código más organizado y realizar cambios con mayor facilidad.</p>
-        <p>Podemos utilizar <code class="u-marked">&amp;</code> para hacer referencia al elemento padre y de esa manera lograr selectores más complejos.</p>
+    img {
+            border: none;
+            display: block;
+            margin: $gutter;
+        }
+}
+        </code></pre>
     </section>
 
     <section>
-        <p><code>scss</code></p>
-        <pre><code data-trim contenteditable>
-.slider-container {
-    float: left;
-
-    img {
-        border: none;
-        display: block;
-    }
-}
-        </code></pre>
-        <hr>
-
-        <p><code>css</code></p>
-        <pre><code data-trim contenteditable>
-.slider-container {
-    float: left;
-}
+        <h3>Resultado de Anidación</h3>
+        <p>En la anidación anterior el CSS resultante será:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+.slider-container  {
+    float:left;
+    max-width: 768px;
+} 
+    
 .slider-container img {
     border: none;
     display: block;
+    margin: 20px;
 }
         </code></pre>
     </section>
 
     <section>
-        <p><code>scss</code></p>
-        <pre><code data-trim contenteditable>
-.logo {
-    color: red;
-
-    header & {
-        color: orange;
-    }
-}
-        </code></pre>
-        <hr>
-
-        <p><code>css</code></p>
-        <pre><code data-trim contenteditable>
-.logo { color: red; }
-
-header .logo { color: orange; }
-        </code></pre>
-    </section>
-
-    <section>
-        <p><code>scss</code></p>
-        <pre><code data-trim contenteditable>
-.tab {
-    color: red;
-
-    &.selected {
-        color: orange;
-    }
-}
-        </code></pre>
-        <hr>
-
-        <p><code>css</code></p>
-        <pre><code data-trim contenteditable>
-.tab { color: red; }
-
-.tab.selected { color: orange; }
-        </code></pre>
-    </section>
-
-    <section>
-        <p><code>scss</code></p>
-        <pre><code data-trim contenteditable>
-a {
-    color: red;
-
-    &:hover {
-        color: orange;
-    }
-}
-        </code></pre>
-        <hr>
-
-        <p><code>css</code></p>
-        <pre><code data-trim contenteditable>
-a { color: red; }
-
-a:hover { color: orange; }
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>BEM Nesting</h3>
-        <p>Una práctica habitual si trabajamos con un sistema de nomenclatura de componentes (como BEM), es hacer uso de la anidación de Sass para organizar los mismos.</p>
-    </section>
-
-    <section>
-        <p><code>scss</code></p>
-        <pre><code data-trim contenteditable>
-.block {
-    color: red;
-
-    &__element {
-        color: orange;
-
-        &--modifier {
-            color: lime;
-        }
-    }
-}
-        </code></pre>
-        <hr>
-
-        <p><code>css</code></p>
-        <pre><code data-trim contenteditable>
-.block { color: red; }
-.block__element { color: orange; }
-.block__element--modifier { color: lime; }
-        </code></pre>
-    </section>
-</section>
-    
-<section>
-    <section>
-        <h2>Importar archivos</h2>
-    </section>
-
-    <section>
+        <h3>Diversificar archivos SASS</h3>
         <p>Para agilizar el proceso de edición y depuración de errores evitaremos trabajar con un único archivo CSS. En lugar de eso crearemos diferentes archivos SASS que separarán en módulos nuestro código.</p>
-        <p>Finalmente, todos los archivos SASS los combinaremos en un sólo CSS para evitar realizar múltiples llamadas HTTP que ralentizen la carga de nuestro site.</p>
+        <p class="marker">Finalmente, todos los archivos SASS los combinaremos en un sólo CSS para evitar realizar múltiples llamadas HTTP que ralentizen la carga de nuestro site.</p>
     </section>
 
     <section>
-        <p>Para crear esa estructura modularizada utilizaremos <code class="u-marked">@import</code> en nuestro archivo style.scss.</p>
-        <p>El resultado será un style.css con <strong>todo el código importado.</strong></p>
-        <pre><code data-trim contenteditable>
+        <h3>Importando archivos SASS</h3>
+        <p>Para crear esa estructura modularizada utilizaremos <span class="marker">@import</span> en nuestro archivo style.scss. <span class="marker">El resultado será un style.css con <strong>todo el código importado.</strong></span></p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
 // Contenido de style.scss
 
 @import "base/header";
@@ -387,8 +263,21 @@ a:hover { color: orange; }
 
     <section>
         <h3>Nombres de archivos</h3>
-        <p>Para indicar en SASS que un archivo .scss concreto no debe generar un .css correspondiente, le añadimos un "_" delante del nombre.</p>
-        <p>De esta forma el contenido de este fichero solo se procesará cuando sea importado por otro.</p>
+        <p>Para indicar en SASS que un archivo concreto es un módulo le añadimos un "_" delante del nombre. De esta forma no crearemos un archivo CSS más sino que formará parte del @import</p>
+
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Nombres de los módulos SASS
+
+base/_header.scss
+base/_layout.scss
+base/_footer.scss
+tipography/_headings.scss
+components/_buttons.scss
+components/_boxes.scss
+
+// Archivo SASS
+style.scss
+        </code></pre>
     </section>
 
     <section>
@@ -423,15 +312,45 @@ a:hover { color: orange; }
     <p style="color: #444; text-shadow: none;">Deberás de modularizar la estructura CSS actual de tu proyecto en  módulos SASS separados según tipología.</p>
 
     <img src="./img/slides/sass/loading-cat.gif" alt="" width="500" style="border: none; box-shadow: none">
-    <!-- <small style="margin-top:-10px">meowww</small> -->
+    <small style="margin-top:-60px">meowww</small>
 </section>
 
+
+
+<section>
+    <h3>Links relacionados</h3>
+    <ul style="font-size: 1.8rem">
+         <li style="margin-bottom: .8em;">
+            <strong>Getting Started with Sass</strong> <i style="color: #999;"> &mdash; A list apart</i>
+            <br>
+            <a href="http://alistapart.com/article/getting-started-with-sass/" style="font-size: .8em;">http://alistapart.com/article/getting-started-with-sass/</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>SASS for webdesigners</strong> <i style="color: #999;"> &mdash; A book apart</i>
+            <br>
+            <a href="http://abookapart.com/products/sass-for-web-designers" style="font-size: .8em;">http://abookapart.com/products/sass-for-web-designers</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>The SASS way</strong>
+            <br>
+            <a href="http://thesassway.com/" style="font-size: .8em;">http://thesassway.com/</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Architecture for a Sass Project</strong> <i style="color: #999;"> &mdash; Hugo Giraudel</i>
+            <br>
+            <a href="http://www.sitepoint.com/architecture-sass-project/" style="font-size: .8em;">http://www.sitepoint.com/architecture-sass-project/</a>
+        </li>
+    </ul>
+</section>
 
         </div>
     </div>
 
     <script src="js/reveal/head.min.js"></script>
-<script src="js/reveal/reveal.js"></script>
+<script src="js/reveal/reveal.min.js"></script>
 
 <script>
     // Full list of configuration options available here:
@@ -455,5 +374,6 @@ a:hover { color: orange; }
         ]
     });
 </script>
+
 </body>
 </html>

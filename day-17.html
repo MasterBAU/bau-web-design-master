@@ -13,11 +13,10 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css" id="theme">
-    
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600' rel='stylesheet' type='text/css'>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -47,162 +46,217 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>SASS avanzado</strong></h3>
+                <h3><strong>Tables</strong></h3>
             </section>
 
             
 
 <section>
-  <section>
-    <h3>Mixins</h3>
-    <p>Llamamos mixins a bloques de código SASS reutilizable que ejecuta una tarea específica.</p>
-    <pre><code data-trim data-noescape contenteditable>
-@mixin <span style="color: aqua">header-title</span> {
-  border-bottom: 1px solid #ccc;
-  color: #333;
-  font-size: 2em;
-  font-family: 'Pacifico', sans-serif;
-}
-  </code></pre>
+    
+    <section>
+        <h3>Características del elemento <span class="marker">table</span></h3>
+    </section>
+    
+    <section>
+    <ul>
+        <li>Una tabla está formada por una sucesión de celdas dispuestas de forma ordenada en filas y columnas.</li>
+        <li>Su función principal es la de tabular datos de forma sencilla.</li>
+    </ul>
+        <pre><code data-trim>
+
+<table>
+    <tr>
+        <td>Celda 1</td>
+        <td>Celda 2</td>
+        <td>Celda 3</td>
+    </tr>        
+</table>
+
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Renderizado</h3>
+        <p class="marker">El código del ejemplo anterior tendría la siguiente estructura:</p>
+        <img src="./img/slides/html-tables/table.png" alt="">
+    </section>
+
+    <section>
+        <h3>Elementos de una tabla</h3>
+        <ul>
+            <li><span class="marker">TABLE</span> - Define las características genéricas de la tabla. (borde, ancho, etc)</li>
+            <li><span class="marker">THEAD</span> - Aportamos semántica al encabezado de la tabla.</li>
+            <li><span class="marker">TBODY</span> - Define el contenido principal de la tabla.</li>
+            <li><span class="marker">TFOOT</span> - Aportamos semántica al pie de la tabla.</li></li>
+            <li><span class="marker">TR</span> - Contenedor de celdas que definen una fila.</li>
+            <li><span class="marker">TH</span> - Celdas contenidas dentro de un THEAD.</li>
+            <li><span class="marker">TD</span> - Celdas contenidas dentro de un TBODY.</li>
+            <li><span class="marker">CAPTION</span> - Elemento designado para aportar una descripción semántica a la tabla.</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Estructura HTML</h3>
+        <p>En el siguiente ejemplo se pueden ver los diferentes elementos que componen una tabla:</p>
+
+        <p><a href="files/tables/index.html" target="_blank">ejemplo table</a></p>
+    </section>
+
+    <section>
+        <h3>Elementos Col & Colgroup</h3>
+        <p>Se trata de elementos "no contenedores" que permiten designar un conjunto de atributos comunes a todas las celdas que pertenezcan a una columna.</p>
+
+        <pre><code data-trim>
+
+<table>
+    <colgroup>
+        <col class="monday">
+        <col class="tuesday">
+        <col class="wednesday">
+    </colgroup>        
+</table>
+
+        </code></pre>
+        
+    </section>
+
 </section>
 
 <section>
-  <h3>@include</h3>
-  <p>Para reutilizar un mixin lo incluimos en nuestra declaración mediante:</p>
-  <pre><code data-trim data-noescape>
-.heading h1 {
-  @include <span style="color: aqua">header-title</span>;
-  [...]
-}
-</code></pre>
+	<section>
+		<h3>Combinando celdas y columnas</h3>
+	</section>
+	<section>
+        <h3>Atributo <span class="marker">colspan</span></h3>
+        <p>Una celda puede ser "extendida" en columnas mediante el atributo <span class="marker">colspan</span>. De esta forma podemos combinarlas según nos interese.</p>
+            <pre><code data-trim>
+
+<table>
+    <caption>Celda 1 extendida en 2 columnas</caption>
+    <tr>
+        <td colspan="2">Celda 1</td>
+        <td>Celda 3</td>
+    </tr>        
+</table>
+
+        </code></pre>
+        <p><a href="files/tables/colspan.html" target="_blank">ejemplo colspan</a></p>
+    </section>
+
+    <section>
+        <h3>Atributo <span class="marker">rowspan</span></h3>
+        <p>De la misma manera, una celda también puede ser "extendida" en filas mediante <span class="marker">rowspan</span>.</p>
+            <pre><code data-trim>
+
+<table>
+    <caption>Celda 1 extendida en 2 filas</caption>
+    <tr>
+        <td rowspan="2">Celda 1</td>
+        <td>Celda 2</td>
+    </tr> 
+    <tr>
+        <td>Celda 4</td>
+    </tr> 
+</table>
+
+        </code></pre>
+        <p><a href="files/tables/rowspan.html" target="_blank">ejemplo rowspan</a></p>
+    </section>
+	
+	<section>
+        <h3>Anidación de tablas</h3>
+        <p>Las tablas pueden ser anidadas las unas dentro de las otras para representar estructuras de datos más complejas.</p>
+        
+        <p><a href="files/tables/anidacion.html" target="_blank">ejemplo anidación</a></p>
+    </section>
 </section>
 
 <section>
-  <h3>Mixins con argumentos</h3>
-  <p>La versatilidad de un mixin se ve incrementada con la posibilidad de pasarle un argumento externo que podemos computar dentro de él:</p>
-  <pre><code data-trim data-noescape contenteditable>
-@mixin <span style="color: aqua">header-title</span>(<span style="color: orange">$color</span>) {
-  border-bottom: 1px solid #ccc;
-  color: <span style="color: orange">$color</span>;
-  font-size: 2em;
-  font-family: 'Pacifico', sans-serif;
-}
-</code></pre>
+    <section>
+        <h3>Formateado CSS</h3>
+        <ul>
+            <li>Por defecto una tabla ocupa sólo el espacio mínimo de los elementos que contiene</li>
+            <li>Tiene su propio tipo de <span class="marker">display:table</span></li>
+            <li>Las celdas permiten <span class="marker">alineación vertical</span></li>
+            <li>Esta característica permitió utilizar tablas como layout cuendo la especificación CSS no estaba ampliamente extendida entre los diferentes navegadores.</li>
+        </ul>
+    </section>
+
+    <section>
+    	<h3>Display: <span class="marker">table</span></h3>
+    	<ul>
+    		<li>Podemos asignar esta propiedad a un elemento de bloque para que se comporte como una tabla.</li>
+    		<li>El comportamiento de una tabla es similar a un elemento de bloque pero solo ocupa el ancho que necesita.</li>
+    	</ul>
+        <p><a href="files/tables/display-table.html" target="_blank">ejemplo display:table</a></p>
+    </section>
+
+    <section>
+    	<h3>Vertical align</h3>
+		<p>Fijando una altura a una celda podemos utilizar la propiedad<br />
+        <span class="marker">vertical-align</span> para alinear verticalmente el contenido</p>
+
+        <p><a href="files/tables/vertical-align.html" target="_blank">ejemplo vertical align</a></p>
+    </section>
 </section>
 
 <section>
-  <h3>Pasando argumentos a mixins</h3>
-  <p>Podemos usar el mismo mixin en declaraciones diferentes pasando diferentes argumentos cada vez:</p>
-  <pre><code data-trim data-noescape class="hljs css">
-.heading h1 {
-  @include <span style="color: aqua">header-title</span>(<span style="color: orange">#fe0</span>);
-}
+	<section>
+		<h3>Tables en layouts</h3>
+	</section>
 
-.post-article h2 {
-  @include <span style="color: aqua">header-title</span>(<span style="color: orange">#bada55</span>);
-}
-</code></pre>
+	<section>
+		<p>A pesar de que las tablas son consistentes e intuitivas no se recomienda utilizarlas como elementos de layout ya que trata a cualquier tipo de contenido como <span class="marker">tabular data</span></p>
+		<br />
+		<p>Si necesitamos alguna característica exclusiva de tablas podemos crear la siguiente estructura que aporta el comportamiento de la tabla más la semántica del HTML:</p>
+
+		<pre><code data-trim>
+<article style="display: table;">
+  	<div style="display: table-row;">
+	    	<div style="display: table-cell;"></div>
+	    	<div style="display: table-cell;"></div>
+	    	<div style="display: table-cell;"></div>
+  	</div>
+</article>
+
+        </code></pre>
+        <p><a href="http://codepen.io/Wakkos/full/KyAEa" target="_blank">ejemplo</a> que muestra una de las ventajas de usar display:table</p>
+	</section>
+
+	<section>
+		<h3>Tablas en email marketing</h3>
+		<p>El único lugar en el que todavía se utilizan las tablas para crear layout es en e-mail marketing. El hecho de que los clientes de correo no hayan evolucionado al mismo ritmo que los navegadores web ha provocado que el único formato consistente entre los diferentes clientes de correo sea el formato tabla.</p>
+	</section>
+
+
 </section>
 
 <section>
-  <h3>Mixins con múltiples argumentos</h3>
-  <p>Podemos pasar más de un argumento separándolos por comas:</p>
-  <pre><code data-trim data-noescape>
-@mixin <span style="color: aqua">header-title</span> <span style="color: orange">($color, $background)</span> {
-  border-bottom: 1px solid #ccc;
-  color: <span style="color: orange">$color</span>;
-  background: <span style="color: orange">$background</span>;
-  font-size: 2em;
-  font-family: 'Pacifico', sans-serif;
-}
-</code></pre>
+    <h3>Tables &amp; Email marketing tools</h3>
+    <ul style="font-size: 1.8rem">
+         <li style="margin-bottom: .8em;">
+            <strong>A complete guide to Table element</strong> <i style="color: #999;"> &mdash; CSS Tricks</i><br />
+            <a href="https://css-tricks.com/complete-guide-table-element/" style="font-size: .8em;">https://css-tricks.com/complete-guide-table-element/</a>
+        </li>
+
+        <li style="margin-bottom: .8em;">
+            <strong>Ink - Email marketing templates</strong> <i style="color: #999;"> &mdash; Zurb Foundation</i><br />
+            <a href="http://zurb.com/ink/" style="font-size: .8em;">http://zurb.com/ink/</a>
+        </li>
+
+         <li style="margin-bottom: .8em;">
+            <strong>Litmus</strong> <i style="color: #999;"> &mdash; Premium e-mail marketing testing tool</i><br />
+            <a href="http://litmus.com/" style="font-size: .8em;">http://litmus.com/</a>
+        </li>
+
+    </ul>
 </section>
-
-<section>
-  <h3>Pasando múltiples argumentos</h3>
-  <p>Debemos de respetar el orden, el número de argumentos y han de estar separados por comas:</p>
-  <pre><code data-trim data-noescape>
-.heading h1 {
-  @include <span style="color: aqua">header-title</span>(<span style="color: orange">#fe0, #bada55</span>);
-}
-</code></pre>
-</section>
-
-<section>
-  <h3>Argumentos por defecto</h3>
-  <p>En ocasiones es conveniente disponer de la posibilidad de no indicar ningún argumento y que nuestro mixin aplique valores por defecto:</p>
-  <pre><code data-trim data-noescape>
-@mixin <span style="color: aqua">header-title</span>(<span style="color: orange">$color: #222222, $background: #fafafa</span>) {
-  border-bottom: 1px solid #ccc;
-  color: <span style="color: orange">$color</span>;
-  background: <span style="color: orange">$background</span>;
-  font-size: 2em;
-  font-family: 'Pacifico', sans-serif;
-}
-</code></pre>
-<small>Definimos valores por defecto para <span style="color: orange">$color</span> y <span style="color: orange">$background</span></small>
-</section>
-
-<section>
-  <h3>Sobreescribiendo valores por defecto</h3>
-  <p>Si no pasamos como argumento alguno de los valores el mixin aplica el valor definido por defecto. En caso contrario el valor del argumento prevalece soble el valor por defecto:</p>
-  <pre><code data-trim data-noescape>
-.heading h1 {
-  @include <span style="color: aqua">header-title</span>(<span style="color: orange">#fe0</span>);
-  <span style="color: lightgreen">// Background será el valor por defecto #fafafa</span>
-}
-</code></pre>
-</section>
-
-<section>
-  <h3>Downsides</h3>
-  <p>A pesar de que los mixins nos ayudan enormemente a crear bloques de código reutilizables y personalizables, hemos de tener en cuenta que cada llamada a un mixin es una nueva inserción en nuestro CSS final. De modo que si llamamos 10 veces al mismo mixin estaremos repitiendo el mismo bloque de código cada vez.</p>
-</section>
-</section>
-
-
-
-<section>
-  <section>
-    <h3>Operaciones aritméticas</h3>
-    <p>SASS permite realizar operaciones aritméticas que utilizaremos para computar valores de declaraciones directamente como en el siguiente ejemplo:</p>
-    <pre><code data-noescape data-trim contenteditable>
-article[role="main"] {
-  float: left;
-  width: 600px / 960px * 100%;
-}
-
-aside[role="complimentary"] {
-  float: right;
-  width: 300px / 960px * 100%;
-}
-</code></pre>
-</section>
-
-<section>
-  <h3>Resultado</h3>
-  <p>SASS permite realizar operaciones aritméticas que utilizaremos para computar valores de declaraciones directamente como en el siguiente ejemplo:</p>
-  <pre><code data-noescape data-trim contenteditable>
-article[role="main"] {
-  float: left;
-  width: 62.5%;
-}
-
-aside[role="complimentary"] {
-  float: right;
-  width: 31.25%;
-}
-</code></pre>
-<small>Operaciones: + - * / %</small>
-</section>
-</section>
-
 
         </div>
     </div>
 
     <script src="js/reveal/head.min.js"></script>
-<script src="js/reveal/reveal.js"></script>
+<script src="js/reveal/reveal.min.js"></script>
 
 <script>
     // Full list of configuration options available here:
@@ -226,5 +280,6 @@ aside[role="complimentary"] {
         ]
     });
 </script>
+
 </body>
 </html>
