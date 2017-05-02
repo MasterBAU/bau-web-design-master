@@ -13,10 +13,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css" id="theme">
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -46,283 +47,297 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Unidades de medida y Terminal UNIX</strong></h3>
+                <h3><strong>Componentes</strong></h3>
             </section>
 
             
 
-<section class="text-left">
-    <section>
-        <h2>Sublime Text Tip</h2>
-    </section>
+<section>
+  <section>
+    <h1>Componentes modulares</h1>
+  </section>
 
-    <section>
-        <h3>Ultra fast files finder</h3>
-        <table style="font-size: 1.8rem;">
-            <tr>
-                <td><code>Cmd + p +</code></td>
-                <td>nombre del archivo a buscar</td>
-            </tr>
-        </table>
-        <img src="./img/slides/sublime-tip-selection/finding-files.gif" alt="">
-    </section>
+  <section>
+    <blockquote>
+      <p>“It's a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS and possibly JavaScript.”</p>
+      <footer>- <cite><a href="https://vimeo.com/72759139">Nicole Sullivan</a></cite></footer>
+    </blockquote>
 
+    <div>
+      <img src="./img/slides/good-practices/bem02.png" alt="" style="height: 350px;">
+    </div>
+  </section>
+
+  <section>
+    <h2>Características de un componente:</h2>
+    <ul>
+      <li>Son un fragmento de la interfaz que cumple una única función.</li>
+      <li>Son independientes, tanto de su contexto como del resto de componentes.</li>
+      <li>Son reutilizables.</li>
+      <li>Son autocontenidos, no filtran estilos a otros componentes.</li>
+    </ul>
+
+    <aside class="notes">
+      <p>Separados del layout. Su relación con el contexto se gestiona por separado.</p>
+      <p>El CSS de un componente tiene que tener una logica interna, que debe apreciarse leyendo el código.</p>
+    </aside>
+  </section>
+
+  <section>
+    <h2>Enlaces relacionados:</h2>
+    <ul>
+      <li>
+        <a href="http://bradfrost.com/blog/post/atomic-web-design/">“Atomic Design”</a> - <i>Brad Frost</i>
+      </li>
+
+      <li>
+        <a href="http://blog.millermedeiros.com/solid-css/">“Solid Css”</a> - <i> Miller H. Borges Medeiros</i>
+      </li>
+
+      <li>
+        <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">“The single responsibility principle applied to CSS”</a> - <i>Harry Roberts</i>
+      </li>
+    </ul>
+  </section>
 </section>
 
 
-<section class="text-left">
+<section id="specificity">
     <section>
-        <h2>Unidades de medida en CSS</h2>
-    </section>
-
-    <section>
-        <p>Las unidades de medida en CSS pueden dividirse en <strong>dos grandes grupos</strong>: <em>unidades absolutas</em> y <em>unidades relativas</em></p>
-        <p>La sintaxis para declarar una medida siempre será igual: un número seguido de la unidad correspondiente. Algunas propiedades CSS aceptan <strong>valores negativos</strong>.</p>
-    </section>
-
-                <section>
-                    <h3>Unidades absolutas</h3>
-                    <p>Las unidades absolutas son las más directas, están relacionadas a una medida física. La más utilizada es el pixel pero hay varias más:</p>
-                    <ul class="font-list" style="font-size: 2.2rem;">
-                        <li>
-                            <p style="margin-bottom:0;"><code>px</code> <span style="font-size: 1.6rem;">(píxel)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>mm</code> <span style="font-size: 1.6rem;">(milimetro)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>cm</code> <span style="font-size: 1.6rem;">(centímetro, 10 millimeters)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>in</code> <span style="font-size: 1.6rem;">(pulgada, 2.54 centímetros)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>pt</code> <span style="font-size: 1.6rem;">(punto, 1/72 de pulgada)</span></li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>pc</code> <span style="font-size: 1.6rem;">(pica, 12 puntos)</span></li>
-                    </ul>
-                </section>
-                <section>
-                    <h3>Unidades relativas</h3>
-                    <p>Las unidades relativas son un poco más complicadas ya que su valor no es fijo sino que dependen de la medida de otro elemento. También pueden dividirse en tres grupos más pequeños: <em>unidades relativas al tamaño de fuente</em>, <em>unidades relativas al viewport</em> y <em>porcentajes</em>.</p>
-                </section>
-
-                <section>
-                    <h3>Relativas al tamaño de fuente</h3>
-                    <ul class="font-list" style="font-size: 2.2rem;">
-                        <li>
-                            <p style="margin-bottom:0;"><code>em</code></p>
-                            <p style="font-size: 1.5rem;">Es un número relativo al <code>font-size</code> del elemento. Si se aplica a la misma propiedad <code>font-size</code> se calculará en base al <code>font-size</code> heredado.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>rem</code></p>
-                            <p style="font-size: 1.5rem;">Hace referencia al <code>font-size</code> del elemento root (normalmente el <code>&#60;html&#62;</code>). Si se aplica sobre este usara de base su valor inicial.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>ex</code></p>
-                            <p style="font-size: 1.5rem;">Representa la <i>x-height</i> del elemento fuente, normalmente la altura del caracter "x" en minúsculas.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>ch</code></p>
-                            <p style="font-size: 1.5rem;">Representa el ancho del carácter "0".</p>
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h3>Relativas al viewport</h3>
-                    <ul class="font-list" style="font-size: 2.2rem;">
-                        <li>
-                            <p style="margin-bottom:0;"><code>vh</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del alto del viewport.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>vw</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del ancho del viewport.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>vmin</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del valor más bajo entre el alto y ancho del viewport.</p>
-                        </li>
-                        <li>
-                            <p style="margin-bottom:0;"><code>vmax</code></p>
-                            <p style="font-size: 1.5rem;">1/100 del valor más alto entre el alto y ancho del viewport.</p>
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                     <h3>Porcentajes</h3>
-                     <p>Podemos asignar una unidad de medida porcentual con un <em>valor seguido del signo "%"</em> (ej: 50%). El contexto que se utilizará para calcular el porcentaje variará dependiendo a que propiedad se aplique.</p>
-                     <p>Si se aplica al <code>font-size</code>, el porcentaje será relativo al <code>font-size</code> del elemento padre.</p>
-                     <p>Si se aplica al <code>width</code>, <code>margin</code> o <code>padding</code>, será relativo a las medidas de su contenedor.</p>
-                </section>
-            </section>
-
-
-
-
-<section class="text-left">
-    <section class="unix">
-        <h2>Terminal Unix</h2>
-        <img src="./img/slides/terminal/iTerm.png" alt="">
+        <h2>Especificidad (specificity)</h2>
     </section>
 
     <section>
-        <p style="text-align: center">Mediante la <span class="marker">Terminal Unix</span> podemos acceder a programas de control de versiones de código, editores de texto, comparar archivos, etc...</p>
-        <p style="text-align: center">A continuación vamos a ver un conjunto de instrucciones básicas.</p>
+        <p>En CSS, la <span class="u-marked">especificidad</span>, es lo que determina que estilo será el que acabará aplicandose a un elemento determinado.</p>
+        <p>Cuando a un elemento se le aplica <span class="u-marked">más de un selector con reglas que actúan sobre la misma propiedad</span>, es la especificidad la encargada de resolver este conflicto.</p>
     </section>
 
     <section>
-        <h3>Tipos de Terminal Unix para Mac</h3>
-        <p>MacOSX incorpora su propia consola llamada Terminal. Si lo preferimos, podemos instalar otras consolas que permiten más funcionalidades.</p>
-        <ul class="font-list" style="font-size: 2.2rem;">
-            <li>
-                <p style="margin-bottom:0;"><code>Terminal</code> <span style="font-size: 1.6rem;">/Aplicaciones/Utilidades/Terminal.app</span></li>
-            <li>
-                <p style="margin-bottom:0;"><code>iTerm2</code> <span style="font-size: 1.6rem;"><a href="http://iterm2.com/" target="_blank">http://iterm2.com/</a></span></li>
-            <li>
-                <p style="margin-bottom:0;"><code>Cathode</code> <span style="font-size: 1.6rem;"><a href="http://www.secretgeometry.com/apps/cathode" target="_blank">http://www.secretgeometry.com/apps/cathode</a></span></li>
-
-        </ul>
+        <p>A grandes rasgos podemos ordenar los diferentes tipos de selectores de menor a mayor peso específico de la siguiente manera:</p>
+        <ol>
+            <li>Selectores de elemento</li>
+            <li>Clases</li>
+            <li>IDs</li>
+            <li>Estilos inline</li>
+        </ol>
     </section>
 
     <section>
-        <h3>Tipos de Terminal Unix para Windows</h3>
-        <p>La consola que trae Windows por defecto no está basada en UNIX sino que se trata de un intérprete de MS-DOS. El archivo ejecutable se llama cmd.exe. De modo que para poder ejecutar comandos UNIX deberemos de instalar algunas de las siguientes terminales:</p>
-        <ul class="font-list" style="font-size: 2.2rem;">
-            <li>
-                <p style="margin-bottom:0;"><code>Git BASH</code> <span style="font-size: 1.6rem;"><a href="http://git-scm.com/download/win" target="_blank">http://git-scm.com/download/win</a></span></li>
-            <li>
-                <p style="margin-bottom:0;"><code>Cygwin</code> <span style="font-size: 1.6rem;"><a href="http://cygwin.com/install.html" target="_blank">http://cygwin.com</a></span></li>
-            <li>
-                <p style="margin-bottom:0;"><code>Badun</code> <span style="font-size: 1.6rem;"><a href="http://babun.github.io/" target="_blank">http://babun.github.io/</a></span></li>
-
-        </ul>
+        <h3>Calcular especificidad</h3>
     </section>
 
-    <section class="term">
-        <h3>Directorios</h3>
-        <ul class="font-list" style="font-size: 2.2rem;">
-            <li>
-                <p style="margin-bottom:0;"><code>cd</code></p>
-                <p style="font-size: 1.5rem;">Entramos dentro de un directorio mediante:<br />
-                <code class="marker">$ cd [nombre de directorio]</code></p>
-                <p style="font-size: 1.5rem;">Salimos de un directorio mediante:<br /> 
-                <code class="marker">$ cd .. </code></p>
-            </li>
-            <li>
-                <p style="margin-bottom:0;"><code>mkdir</code></p>
-                <p style="font-size: 1.5rem;">Creamos un directorio:<br />
-                <code class="marker">$ mkdir [nombre de directorio a crear]</code></p>
-            </li>
-            <li>
-                <p style="margin-bottom:0;"><code>pwd</code></p>
-                <p style="font-size: 1.5rem;">Print working directory. Muestra el directorio en el que nos encontramos:<br />
-                <code class="marker">$ pwd</code></p>
-                <p style="font-size: 1.5rem;"><code class="marker">/users/david.garcia/www/bau</code></p>
-            </li>
-        </ul>
+    <section>
+        <p class="specificity">
+            <span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">0</span>
+        </p>
     </section>
 
-    <section class="term">
-        <h3>Visualizar archivos</h3>
-        <ul class="font-list" style="font-size: 2.2rem;">
-            <li>
-                <p style="margin-bottom:0;"><code>ls</code></p>
-                <p style="font-size: 1.5rem;">Lista todos los archivos y carpetas contenidos en un directorio:<br />
-                <code class="marker">$ ls</code></p>
-                <p style="font-size: 1.5rem;">Muestra la información completa de cada archivo y directorio:<br />
-                <code class="marker">$ ls -l</code></p>
-            </li>
-            <li>
-                <p style="margin-bottom:0;"><code>more</code></p>
-                <p style="font-size: 1.5rem;">Mostramos el contenido de un archivo. Podemos usar [spacebar] para continuar o <code>q</code> para salir:<br />
-                <code class="marker">$ more [nombre del archivo]</code></p>
-                <p style="font-size: 1.5rem;">Salimos de un directorio mediante:<br /> 
-                <code class="marker">$ cd .. </code></p>
-            </li>
-            <li>
-                <p style="margin-bottom:0;"><code>nano</code></p>
-                <p style="font-size: 1.5rem;">Editor de archivos de texto en terminal:<br />
-                <code class="marker">$ nano [nombre de archivo existente]</code></p>
-            </li>
-        </ul>
+    <section>
+        <pre class="specificity-example">
+<span class="c-blue">p</span> {
+    color: red;
+}</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">1</span></p>
     </section>
 
-    <section class="term">
-        <h3>Modificar archivos</h3>
-        <ul class="font-list" style="font-size: 2.2rem;">
-            <li>
-                <p style="margin-bottom:0;"><code>cp</code></p>
-                <p style="font-size: 1.5rem;">Copia un archivo:<br />
-                <code class="marker">$ cp [nombre de archivo original] [nombre de archivo copiado]</code></p>
-            </li>
-            <li>
-                <p style="margin-bottom:0;"><code>mv</code></p>
-                <p style="font-size: 1.5rem;">Movemos un archivo o directorio<br />
-                <code class="marker">$ mv [nombre del archivo][ruta a carpeta/nombre de archivo]</code></p>
-                <p style="font-size: 1.5rem;">Mediante <code>mv</code> también podemos renombrar un archivo:<br /> 
-                <code class="marker">$ mv Gulpfile.js Gulpfile--BACKUP.js </code></p>
-            </li>
-            <li>
-                <p style="margin-bottom:0;"><code>diff</code></p>
-                <p style="font-size: 1.5rem;">Comparamos 2 archivos y nos muestra sólo en qué se diferencian:<br />
-                <code class="marker">$ diff [archivo original][archivo a comparar]</code></p>
-            </li>
-        </ul>
+    <section>
+        <pre class="specificity-example">
+<span class="c-green">.text</span> {
+    color: red;
+}</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">1</span>,<span class="specificity-item specificity-item--element">0</span></p>
     </section>
 
-    <section class="term">
-        <h3>FTP vía Terminal</h3>
-        <ul class="font-list" style="font-size: 2.2rem;">
-            <li>
-                <p style="margin-bottom:0;"><code>ftp</code></p>
-                <p style="font-size: 1.5rem;">Nos conectamos a un servidor FTP remoto:<br />
-                <code class="marker">$ ftp ftp.davecarter.me</code></p>
-                <p style="font-size: 1.5rem;">Una vez conectados con nombre de usuario y contraseña podemos obtener archivos mediante:</p>
-                <p style="font-size: 1.5rem;"><code class="marker">$ ftp > get</code></p>
-                <p style="font-size: 1.5rem;">Transferir archivos:</p>
-                <p style="font-size: 1.5rem;"><code class="marker">$ ftp > put</code></p>
-                <p style="font-size: 1.5rem;">Cambiar a modo Transferencia de archivos Binarios:</p>
-                <p style="font-size: 1.5rem;"><code class="marker">$ ftp > bin</code></p>
-                <p style="font-size: 1.5rem;">Cambiar a modo Transferencia de archivos de Texto:</p>
-                <p style="font-size: 1.5rem;"><code class="marker">$ ftp > ascii</code></p>
-                <p style="font-size: 1.5rem;">Salimos del modo FTP:</p>
-                <p style="font-size: 1.5rem;"><code class="marker">$ ftp > exit</code></p>
-                <p style="font-size: 1.5rem;">Además podemos usar algunos de los comandos UNIX vistos hasta ahora como <code>cd, ls y more</code></p>
-
-            </li>  
-        </ul>
+    <section>
+        <pre class="specificity-example">
+<span class="c-purple">#main</span> <span class="c-blue">strong</span> {
+    color: red;
+}</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">1</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">1</span></p>
     </section>
 
-    <section class="term">
-        <h3>Utilidades</h3>
-        <ul class="font-list" style="font-size: 2.2rem;">
-            <li>
-                <p style="margin-bottom:0;"><code>whoami</code></p>
-                <p style="font-size: 1.5rem;">Muestra el nombre del usuario:<br />
-                <code class="marker">$ whoami</code><br />
-                <code class="marker">$ david.garcia</code></p>
-            </li>
-            <li>
-                <p style="margin-bottom:0;"><code>date</code></p>
-                <p style="font-size: 1.5rem;">Muestra la fecha actual:<br />
-                <code class="marker">$ date</code><br />
-                <code class="marker">$ lunes, 16 de febrero de 2015, 20:30:00 CET</code></p>
-            </li>
-            <li>
-                <p style="margin-bottom:0;"><code>touch</code></p>
-                <p style="font-size: 1.5rem;">Crea un archivo nuevo vacío o actualiza la fecha de modificación de uno existente:<br />
-                <code class="marker">$ touch [opciones][nombre de archivo/os]</code><br />
-            </li>
-        </ul>
+    <section>
+        <pre class="specificity-example" style="font-size: 1.9rem;">
+<span class="c-blue">header</span> <span class="c-blue">ul</span><span class=c-purple>#main-nav</span> <span class="c-green">.sub-menu</span> <span class="c-blue">li</span><span class="c-green">.child</span> <span class="c-blue">a</span><span class="c-green">:hover</span> {
+    color: red;
+}</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">1</span>,<span class="specificity-item specificity-item--class">3</span>,<span class="specificity-item specificity-item--element">4</span></p>
+    </section>
+
+    <section>
+        <pre class="specificity-example" style="font-size: 2rem;">
+&#60;p <span class="c-red">style="color: red"</span>&#62;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&#60;/p&#62;</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">1</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">0</span></p>
+    </section>
+
+    <section>
+        <pre class="specificity-example">
+<span class="c-blue">p</span> {
+    color: red <span style="color: red";>!important</span>;
+}</pre>
+        <hr>
+        <p class="specificity specificity-important fragment">
+            <span class="specificity-importantWrap">
+                <span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">1</span>
+            </span>
+
+            <span class="specificity-importantWrap">
+                <span class="specificity-item c-red">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">0</span>
+            </span>
+        </p>
     </section>
 </section>
 
+
+
+
+<section>
+  <section>
+    <h1>Selectores</h1>
+  </section>
+
+  <section>
+    <h3>Carcterísticas de un buen selector</h3>
+    <ul>
+      <li>Tiene baja especificidad</li>
+      <li>Es sólido (no depende del contexto)</li>
+      <li>Es autodocumentado (su función se entiende solo con leerlo)</li>
+    </ul>
+  </section>
+
+  <section>
+    <p>El gráfico de especificidad es una representación de cómo se distribuye la misma a lo largo de una hoja de estilo.</p>
+    <p>Es recomendable que la especificidad vaya <strong>aumentando gradualmente</strong>, empezando con estilos más genéricos (selectores de elemento) y acabando con casos más específicos.</p>
+  </section>
+
+  <section>
+    <h2>Gráfico de especificidad</h2>
+    <div>
+      <img src="./img/slides/good-practices/specificity-graph-02.png" alt="" style="height: 350px;">
+      <p style="text-align: center;"><cite><a href="http://csswizardry.com/2014/10/the-specificity-graph/">The Specificity Graph</a> - <em>Harry Roberts</em></cite></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Especificidad plana</h2>
+    <p>Intentar mantener los selectores lo más cortos posibles (evitar nesting) nos ayudará a que nuestros componentes no estén atados a un contexto determinado y sean <strong>independientes</strong> del HTML.</p>
+
+    <pre><code class="hljs css">
+  /* Cuidado! */
+  #main-header nav ul > li .nav-link:first-child { ... }  /* 0, 1, 2, 3 */
+
+  /* Mejor */
+  .MainNav-link--first { ... }  /* 0, 0, 1, 0 */
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Nomenclaturas</h2>
+    <blockquote>
+      "What we want is to be able to write code that is as transparent and self-documenting as possible. Transparency means that it is clear and obvious (to others) in its intent; self-documenting means that we don’t have to lose time to writing and reading lengthy, supplementary documentation."
+      <footer><cite>- Harry Roberts</cite></footer>
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>Enlaces relacionados:</h2>
+    <ul>
+      <li>
+        <a href="https://vimeo.com/140641366">“CSS For Software Engineers For CSS Developers”</a> - <i>Harry Roberts</i>
+      </li>
+
+      <li>
+        <a href="http://csswizardry.com/2015/04/cyclomatic-complexity-logic-in-css/">“Cyclomatic Complexity: Logic in CSS”</a> - <i>Harry Roberts</i>
+      </li>
+  </section>
+</section>
+
+
+
+
+<section>
+  <section>
+    <h1>Sistemas de Nomenclatura</h1>
+  </section>
+
+
+  <section>
+    <h2 style="line-height: .75; margin-bottom: 3rem;">
+      BEM<br>
+      <span style="font-size: .7em;">(block / element / modifier)</span>
+    </h2>
+    <div>
+      <img src="./img/slides/good-practices/bem.jpg" alt="" style="height: 350px;">
+      <p style="text-align: center;"><cite><a href="https://en.bem.info/method/">BEM Methodology</a></cite></p>
+    </div>
+  </section>
+
+  <section>
+    <pre class="fz-s"><code class="hljs css">
+  .nombre-del-bloque { ... }
+
+  .nombre-del-bloque__elemento { ... }
+
+  .nombre-del-bloque--modificador { ... }
+    </code></pre>
+  </section>
+
+  <section>
+    <p>Refactorizando:</p>
+    <pre contenteditable><code class="hljs css">
+  .tab-group { ... } /* 0, 0, 1, 0 */
+
+  .tab-group > li { ... } /* 0, 0, 1, 1 */
+
+  .tab-group a { ... } /* 0, 0, 1, 1 */
+
+  .tab-group a.selected { ... } /* 0, 0, 2, 1 */
+    </code></pre>
+
+    <pre contenteditable class="fragment"><code class="hljs css">
+  .tab-group { ... } /* 0, 0, 1, 0 */
+
+  .tab-group__tab { ... } /* 0, 0, 1, 0 */
+
+  .tab-group__link { ... } /* 0, 0, 1, 0 */
+
+  .tab-group__link--selected { ... } /* 0, 0, 1, 0 */
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Otros sistemas nomenclaturas</h2>
+    <ul>
+      <li>
+        <a href="http://seesparkbox.com/foundry/naming_css_stuff_is_really_hard">“Naming CSS Stuff Is Really Hard”</a> - <i>Ethan Muller</i>
+      </li>
+
+      <li>
+        <a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">“More Transparent UI Code with Namespaces”</a> - <i>Harry Roberts</i>
+
+      </li>
+      <li>
+        <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">SUIT</a>
+      </li>
+
+      <li>
+        <a href="https://smacss.com/">“SMACSS”</a> - <i>Jonathan Snook</i>
+      </li>
+    </ul>
+  </section>
+</section>
 
 
         </div>
     </div>
 
     <script src="js/reveal/head.min.js"></script>
-<script src="js/reveal/reveal.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
 
 <script>
     // Full list of configuration options available here:
@@ -346,6 +361,5 @@
         ]
     });
 </script>
-
 </body>
 </html>

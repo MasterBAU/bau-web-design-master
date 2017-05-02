@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
+    <title>Fundamentos CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
 
     <meta name="description" content="Máster en Diseño Web | Módulo III">
     <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
@@ -13,10 +13,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css" id="theme">
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -46,469 +47,512 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>CSS: Box Model</strong></h3>
+                <h3><strong>Terminal UNIX + Git Basic</strong></h3>
             </section>
 
-            <section class="text-left">
+            
+
+<section class="text-left">
     <section>
         <h2>Sublime Text Tip</h2>
     </section>
 
     <section>
-        <h3>Sublime Text Tip</h3>
-        <p>Si queremos editar las preferencias tenemos que ir a:</p>
-        <hr>
-        <p style="text-align: center;"><code>Sublime Text > Preferences > Setting - User</code></p>
+        <h3>Ultra fast files finder</h3>
+        <table>
+            <tr>
+                <td><code>Cmd + p +</code></td>
+                <td>nombre del archivo a buscar</td>
+            </tr>
+        </table>
+        <img src="./img/slides/sublime-tip-selection/finding-files.gif" alt="" style="height: 55vh">
     </section>
 
-    <section>
-        <p>Algunas de las configuraciones más útiles:</p>
-        <pre><code data-trim contenteditable>{
-    "bold_folder_labels": true,
-    "caret_extra_width": 1,
-    "caret_style": "phase",
-    "fade_fold_buttons": false,
-    "highlight_line": true,
-    "highlight_modified_tabs": true,
-    "indent_guide_options": [ "draw_active" ],
-    "line_padding_bottom": 1.5,
-    "line_padding_top": 1.5,
-    "scroll_past_end": true,
-    "shift_tab_unindent": true,
-    "show_full_path": false,
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true,
-    "trim_trailing_white_space_on_save": true,
-    }</code></pre>
-
-    </section>
-</section>
-
-<section class="text-left">
-    <section>
-        <h2>Box model</h2>
-    </section>
-
-    <section>
-        <p>Todos los elementos en una página web son cajas rectangulares.</p>
-        <p>Las características de estas cajas podemos describirlas a través del <em>box-model</em>.</p>
-    </section>
-
-    <section>
-        <p>Hay varias propiedades CSS que controlan las dimensiones de cada elemento:</p>
-        <ul>
-            <li><em><code>width</code></em> y <em><code>height</code></em>, que definen las dimensiones del elemento (aunque, como se aplican exactamente, dependerá de la propiedad <code>display</code>)</li>
-            <li><em><code>padding</code></em>, que determina el espacio entre el contenido y el borde exterior.</li>
-            <li>El mismo <em><code>border</code></em> de la caja.</li>
-            <li><em><code>margin</code></em>, el espacio que separa el elemento del resto de elementos.</li>
-        </ul>
-    </section>
-
-    <section style="text-align: center;">
-        <div class="box-model__margin">
-            <div class="box-model">
-                <span style="height: 50px" contenteditable>contenido</span>
-            </div>
-        </div>
-        <p style="font-size: 1.2rem; font-weight: bold; margin-top: 1rem; text-align: center;"><span style=" margin: 0 1em; color: #37cbd7;">Area de contenido</span> | <span style=" margin: 0 1em; color: #27ae60;">Padding</span> | <span style=" margin: 0 1em; color: #d8cd00;">Border</span> | <span style=" margin: 0 1em; color: rgb(213, 126, 0);">Margin</span></p>
-        <hr>
-        <pre><code data-trim contenteditable>.box {
-    width: 300px;
-    height: 50px;
-    border: 5px solid #d8cd00;
-    margin: 50px;
-    padding: 50px;
-}</code></pre>
-    </section>
-
-    <section>
-        <p>Por defecto <strong>el navegador añade los paddings y los bordes a las dimensiones del elemento</strong></p>
-        <div class="box-model" style="display: inline-block; margin: 1rem 0;">
-            <span style="height: 50px" contenteditable>contenido</span>
-        </div>
-        <p style="font-size: 1.2rem; font-weight: bold; margin-top: 1rem; text-align: center;"><span style=" margin: 0 1em; color: #37cbd7;">300px</span> + <span style=" margin: 0 1em; color: #27ae60;">50px * 2</span> + <span style=" margin: 0 1em; color: #d8cd00;">5px * 2</span> = <span style=" margin: 0 1em; font-size: 1.5rem;">410px</span></p>
-        <hr>
-        <pre><code data-trim contenteditable>.box {
-    width: 300px;
-    height: 50px;
-    border: 5px solid #d8cd00;
-    margin: 50px;
-    padding: 50px;
-}</code></pre>
-    </section>
-
-    <section>
-        <h3>Box-sizing</h3>
-        <p><code>box-sizing</code> tiene 3 valores posibles:</p>
-        <ul>
-            <li><em><code>content-box</code></em>: el que se aplica por defecto y calcula el <code>width</code> y <code>height</code> teniendo en cuenta únicamente el contenido.</li>
-            <li><em><code>padding-box</code></em>: Incluye el <code>padding</code> dentro de las dimensiones del elemento.</li>
-            <li><em><code>border-box</code></em>: Incluye <code>padding</code> y <code>border</code> dentro de las dimensiones.</li>
-        </ul>
-
-    </section>
-    <section>
-        <p>Es una buena idea, sobre todo si trabajamos con una layout flexible (en porcentajes) declarar <em><code>box-sizing: border-box</code></em> para todos los elementos usando el selector universal (<code>*</code>).</p>
-        <pre><code data-trim contenteditable>*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}</code></pre>
-    </section>
-</section>
-
-<section class="text-left">
-    <section>
-        <h2>Width y height</h2>
-    </section>
-
-    <section>
-        <p><em><code>width</code></em> y <em><code>height</code></em> son las propiedades que determinan el <em>ancho</em> y <em>alto</em>, respectivamente, del area de contenido de un elemento html.</p>
-    </section>
-
-    <section>
-        <p><strong>Por defecto su valor es <code>auto</code></strong>, es decir que se asignaran automaticamente dependiendo de si el elemento es inline o block.</p>
-        <ul>
-            <li>Si es <code>inline</code>, el <code>width</code> será tan largo como el contenido.</li>
-            <li>Si es <code>block</code>, ocupará el 100% de su contenedor.</li>
-        </ul>
-
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 4rem auto 0; width: 80%;">
-            <h4 style="background: hsla(200, 70%, 60%, .3); text-align:left; text-transform: none;">Lorem ipsum dolor sit</h4>
-            <p style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3);" >consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <a href="#" style="background: hsla(100, 70%, 60%, .3); color: blue; text-decoration: underline;" >libero iure expedita</a> minima labore magnam.</p>
-        </div>
-    </section>
-
-    <section>
-        <p>El <code>height</code> por su parte, dependerá del alto del contenido, por lo que, si se trata de texto <strong>estará ligado al <code>line-height</code></strong> del mismo.</p>
-
-        <div style="margin: 4rem auto 0; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); font-size: .7em; margin: 0; line-height: 30px;">Lorem ipsum dolor sit amet,consectetur adipisicing elit.</p>
-        </div>
-
-        <div style="margin: 4rem auto 0; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); font-size: .7em; margin: 0; line-height: 30px;">Lorem ipsum dolor sit amet,consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-        </div>
-    </section>
-                </section>
-
-<section class="text-left">
-    <section>
-        <h2>Display</h2>
-    </section>
-
-    <section>
-        <p>La propiedad <em><code>display</code></em> es la encargada de controlar si un elemento se comportará como un elemento <code>block</code> o uno <code>inline</code> (entre otras opciones).</p>
-    </section>
-
-    <section>
-        <h3>Display: block</h3>
-        <p>Los elementos <em><code>block</code></em> ocupan el 100% de su contenedor desplazando al siguiente elemento a una nueva línea.</p>
-        <p>Aplican las propiedades del box-model de manera normal.</p>
-    </section>
-
-    <section>
-        <h3>Display: inline</h3>
-        <p>Los elementos <em><code>inline</code></em> mantienen el flow normal de texto.</p>
-        <p>Tienen algunas particularidades a la hora de interpretar el box-model.</p>
-        <ul>
-            <li>Ignoran el <code>width</code> y el <code>height</code></li>
-            <li>Si se le aplican <code>paddings</code> verticales no afectaran la posición de los elementos que les rodean.</li>
-            <li>El background no cubrirá la altura total del alto de línea, sino que se ajustará al contenido.</li>
-        </ul>
-
-        <div style="margin: 4rem auto 0; width: 80%;">
-            <p class="box-model__inline" style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3);">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong style="background: hsla(100, 70%, 60%, .3);">libero iure expedita</strong> minima labore magnam.</p>
-        </div>
-    </section>
-
-    <section>
-        <h3>Display: inline-block</h3>
-        <p>El valor <em><code>inline-block</code></em> es una combinación de los dos anteriores.</p>
-        <p>Los elementos <code>inline-block</code> mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></p>
-
-        <div style="margin: 4rem auto 0; width: 80%;">
-            <p class="box-model__inline" style="background: hsla(200, 70%, 60%, .3); font-size: .7em;">Lorem ipsum dolor sit amet, <strong style="background: hsla(100, 70%, 60%, .3); display: inline-block;">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong style="background: hsla(100, 70%, 60%, .3);" >libero iure expedita</strong> minima labore magnam.</p>
-        </div>
-    </section>
-
-    <section>
-        <h3>Display: none</h3>
-        <p>El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
-        <p>Un lector de voz ignorará nuestro contenido con <code>display: none</code>, lo cual tenemos que tener en cuenta si no queremos afectar la accesibilidad a la hora de ocultar algo.</p>
-    </section>
-</section>
-
-<section class="text-left">
-    <section>
-        <h2>Visibilty y opacity</h2>
-    </section>
-
-    <section>
-        <h3>Visibility</h3>
-        <p style="font-size:.8em;">La propiedad <em><code>visibility</code></em> nos permite hacer invisible un objeto pero que este <strong>siga ocupando su lugar en el flow del documento</strong>, por lo que el resto de los elementos seguirán comportándose como si estuviera allí.</p>
-        <hr>
-        <p style="font-size:.8em;">Los posibles valores para <code>visibiliy</code> son:<br>
-        <code>visible</code> | <code>hidden</code> | <code>collapse</code></p>
-    </section>
-
-    <section>
-        <h3>Opacity</h3>
-        <p style="font-size:.8em;">Podemos controlar la opacidad de un elemento con la propiedad <em><code>opacity</code></em>, cuyo valor va de 0 (transparente) a 1 (opaco).</p>
-        <p style="font-size:.8em;">Hay que tener en cuenta que los elementos contenidos por el elemento al que apliquemos opacity también se verán afectados y su opacidad máxima siempre será la del elemento padre.</p>
-        <hr>
-        <pre><code data-trim contenteditable>&#060;p&#062;El parrafo tiene una opacidad del 50% por eso, aunque el strong tenga
-el 100%, &#060;strong&#062;sigue siendo semitransparente.&#060;/strong&#062;&#060;/p&#062;</code></pre>
-        <pre><code data-trim contenteditable>p { opacity: .5; }
-strong { opacity: 1; }</code></pre>
-        <p style="font-size: 1.8rem; opacity: .5;">El parrafo tiene una opacidad del 50% por eso, aunque el strong tenga el 100%, <strong style="opacity: 1;">sigue siendo semitransparente.</strong></p>
-    </section>
 </section>
 
 
-<section class="text-left">
-    <section>
-        <h2>Overflow</h2>
-    </section>
 
-    <section>
-        <p>Cuando forzamos las dimensiones del elemento con <em><code>width</code></em> y <em><code>height</code></em> pueden darse dos casos:</p>
-        <ul>
-            <li>Si el contenido ocupa menos que las dimensiones del elemento, el resto de espacio quedará vacio.</li>
-            <li>Si el contenido no cabe dentro de las dimensiones asignadas, se saldrá del elemento. Podemos controlar exactamente de que manera con la propiedad <em><code>overflow</code></em>.</li>
-        </ul>
-    </section>
-
-    <section>
-        <pre><code data-trim contenteditable>p { height: 220px; }</code></pre>
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 220px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-        </div>
-        <hr>
-        <pre><code data-trim contenteditable>p { height: 80px; }</code></pre>
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
-
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 80px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-        </div>
-    </section>
-
-    <section>
-        <p>La propiedad <em><code>overflow</code></em> controla lo que sucede con el contenido cuando excede el tamaño del elemento contenedor. Sus posibles valores son:</p>
-        <ul>
-            <li><code>visible</code></li>
-            <li><code>hidden</code></li>
-            <li><code>scroll</code></li>
-            <li><code>auto</code></li>
-        </ul>
-    </section>
-
-    <section>
-        <h3>Overflow: visible</h3>
-        <pre><code data-trim contenteditable>p {
-height: 80px;
-overflow: visible;
-}</code></pre>
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 80px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-        </div>
-    </section>
-
-    <section>
-        <h3>Overflow: hidden</h3>
-        <pre><code data-trim contenteditable>p {
-    height: 80px;
-    overflow: hidden;
-}</code></pre>
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 80%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 80px; overflow: hidden">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
-        </div>
-    </section>
-
-    <section>
-        <h3>Overflow: scroll</h3>
-        <pre><code data-trim contenteditable>p {
-    height: 150px;
-    overflow: scroll;
-}</code></pre>
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 60%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 150px; overflow: scroll">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsam quae quibusdam temporibus laboriosam dolorem explicabo modi, esse corrupti error sapiente nemo et odit ea natus consequuntur beatae, voluptate expedita!.</p>
-        </div>
-    </section>
-
-    <section>
-        <h3>Overflow: auto</h3>
-        <pre><code data-trim contenteditable>p {
-    height: 150px;
-    overflow: auto;
-}</code></pre>
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto 1em; width: 60%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 150px; overflow: auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis ipsam quae quibusdam temporibus laboriosam dolorem explicabo modi, esse corrupti error sapiente nemo et odit ea natus consequuntur beatae, voluptate expedita!.</p>
-        </div>
-
-        <div style="border: 2px dotted hsla(0,0%,60%,.6); margin: 0 auto; width: 60%;">
-            <p style="background: hsla(200, 70%, 60%, .3); border: 1px solid hsla(200, 70%, 60%, .6); font-size: .7em; height: 150px; overflow: auto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum.</p>
-        </div>
-    </section>
-</section>
-
-
-<section class="text-left">
-    <section>
-        <h2>Padding y margin</h2>
-    </section>
-
-    <section>
-        <h3>Padding</h3>
-        <p>El <code>padding</code> es el espacio interior que separa el contenido del borde de la caja.</p>
-        <hr>
-        <div class="box-model__margin" style="background-color: #666;">
-            <div class="box-model" style="background-color: #e74c3c;">
-                <span style="background-color: #666;" contenteditable>contenido</span>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <h3>Margin</h3>
-        <p>El <code>margin</code> es el espacio exterior que separa el al elemento del resto de los elementos.</p>
-        <hr>
-        <div class="box-model__margin" style="background-color: #e74c3c;">
-            <div class="box-model" style="background-color: #777;">
-                <span style="background-color: #666;" contenteditable>contenido</span>
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <p>Tanto el <code>padding</code> como el <code>margin</code> nos permiten controlar cada uno de sus lados individualmente con las siguientes propiedades:</p>
-        <ul>
-            <li style="font-size: 1.8rem;"><code>padding-top</code> | <code>padding-right</code> | <code>padding-bottom</code> | <code>padding-left</code></li>
-            <li style="font-size: 1.8rem;"><code>margin-top</code> | <code>margin-right</code> | <code>margin-bottom</code> | <code>margin-left</code></li>
-        </ul>
-        <pre><code data-trim contenteditable>.box {
-    padding-top: 10px;
-    padding-bottom: 30px;
-    padding-left: 10%;
-    padding-right: 4em;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    margin-left: 20px;
-    margin-right: 20px;
-
-}</code></pre>
-</section>
 
 <section>
-    <p style="font-size: 1.8rem">También pueden declararse <em>todos los lados en una sola propiedad</em> (<code>padding</code> y <code>margin</code> respectivamente) separando los valores con un espacio y siguiendo el <strong>sentido de las agujas del reloj</strong>.</p>
-    <p style="font-size: 1.8rem">Si utilizamos esta abreviación, cuando el valor derecho es igual al izquierdo podemos omitir este último. Si además el valor superior e inferior también son iguales podemos omitir el inferior.</p>
-    <pre><code data-trim contenteditable>.box {
-    padding-top:    10px;
-    padding-right:  20px;
-    padding-bottom: 10px;
-    padding-left:   20px;
+  <section class="unix">
+    <h2>Terminal Unix</h2>
+    <img src="./img/slides/terminal/iTerm.png" alt="">
+  </section>
 
-    /* es igual a: */
-    padding: 10px 20px 10px 20px;
+  <section>
+    <p>Mediante la <span class="marker">Terminal Unix</span> podemos acceder a programas de control de versiones de código, editores de texto, comparar archivos, etc...</p>
+    <p>A continuación vamos a ver un conjunto de instrucciones básicas.</p>
+  </section>
 
-    /* e igual a: */
-    padding: 10px 20px 10px;
+  <section>
+    <h3>Tipos de Terminal Unix para Mac</h3>
+    <p>MacOSX incorpora su propia consola llamada Terminal. Si lo preferimos, podemos instalar otras consolas que permiten más funcionalidades.</p>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>Terminal</code> <span style="font-size: 1.6rem;">/Aplicaciones/Utilidades/Terminal.app</span></p>
+      </li>
 
-    /* e igual a: */
-    padding: 10px 20px;
-}</code></pre>
-    </section>
-</section>
+      <li>
+        <p style="margin-bottom:0;"><code>iTerm2</code> <span style="font-size: 1.6rem;"><a href="http://iterm2.com/" target="_blank">http://iterm2.com/</a></span></p>
+      </li>
 
-<section class="text-left">
-    <section>
-        <h2>Borders</h2>
-    </section>
-
-    <section>
-        <p style="font-size: 1.8rem"><code>border</code> es la propiedad usada para controlar el borde que delimita un elemento y requiere tres valores: <code>width</code>, <code>style</code> y <code>color</code> separados por un espacio.</p>
-        <pre style="float:left; width: 70%;"><code data-trim contenteditable>.box {
-    border: 1px solid red;
-}</code></pre>
-        <div style="border: 1px solid red; float:right; margin: 40px 10% 0 0; width: 80px; height: 80px;"></div>
-        <p style="clear: both; font-size: 1.8rem">Si queremos afectar estos valores de manera individual utilizaremos las propiedades: <em><code>border-width</code></em>, <em><code>border-style</code></em> y <em><code>border-color</code></em>, que pueden a su vez contener 4 valores, uno por lado, al igual que el padding o el margin.</p>
-        <pre style="float:left; width: 70%;"><code data-trim contenteditable>.box {
-    border-width: 1px 8px 6px 4px;
-    border-style: solid;
-    border-color: red blue;
-}</code></pre>
-        <div style="border-width: 1px 8px 6px 4px; border-style: solid; border-color: red blue; float:right; margin: 60px 10% 0 0; width: 80px; height: 80px;"></div>
-    </section>
-
-    <section>
-        <p>Tambien podemos combinar las propiedades anteriores con los diferentes valores <code>top</code>, <code>right</code>, <code>bottom</code>, <code>left</code> para cambios muy precisos.</p>
-        <pre><code data-trim contenteditable>.box {
-    border-right-style: solid;
-    border-top-width: 4px;
-    border-bottom-color: red;
-}</code></pre>
-    </section>
-
-    <section>
-        <p>Los posibles estilos de borde que nos ofrece CSS para la propiedad <em><code>border-style</code></em> son:</p>
-        <p style="font-size: .7em;">
-            <code>none</code> | <code>hidden</code> | <code>dotted</code> | <code>dashed</code> |<code>solid</code> |<code>double</code> | <code>groove</code> | <code>ridge</code> | <code>inset</code> | <code>outset</code>
-        </p>
-        <hr>
-        <div class="borders-example">
-            <code class="border-solid">2px <br> solid</code>
-            <code class="border-double">6px <br> double</code>
-            <code class="border-dashed">8px <br> dashed</code>
-            <code class="border-dotted">4px <br> dotted</code>
-        </div>
-    </section>
-
-    <section>
-        <h3>border-radius</h3>
-        <p>La propiedad <em><code>border-radius</code></em> nos permite redondear las esquinas de nuestras cajas.</p>
-        <p>En su forma más simple funciona similar al propiedad a otras propiedades, aceptando 4 valores separados por espacio que indicarán el <strong>radio de la circunferencia</strong> que aplicaremos a las esquinas, empezando el primer valor en la esquina superior izquierda y desplazandose en sentido horario.</p>
-        <pre><code data-trim contenteditable>.box { border-radius: 10px 40px 40px 10px}</code></pre>
-        <div style="background: #eaeaed; border: 4px solid #666; border-radius: 10px 40px 40px 10px; margin: 1em auto 0; width: 100px; height: 100px;">
-        </div>
-    </section>
-</section>
-
-<section>
-    <h3>Links relacionados</h3>
-    <ul>
-        <li style="margin-bottom: .8em;">
-            <strong>Box Model</strong> <i style="color: #999;"> &mdash; Guy Routledge</i>
-            <br>
-            <a href="http://www.atozcss.com/the-css-box-model/" style="font-size: .8em;">http://www.atozcss.com/the-css-box-model/</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>* { Box-sizing: Border-box } FTW</strong> <i style="color: #999;"> &mdash; Paul Irish</i>
-            <br>
-            <a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/" style="font-size: .8em;">http://www.paulirish.com/2012/box-sizing-border-box-ftw/</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>Hiding content for accessibility</strong> <i style="color: #999;"> &mdash; Jonathan Snook</i><br>
-            <a href="http://snook.ca/archives/html_and_css/hiding-content-for-accessibility" style="font-size: .8em;">http://snook.ca/archives/html_and_css/hiding-content-for-accessibility</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>Single-direction margin declarations</strong> <i style="color: #999;"> &mdash; Harry Roberts</i>
-            <br>
-            <a href="http://csswizardry.com/2012/06/single-direction-margin-declarations/" style="font-size: .8em;">http://csswizardry.com/2012/06/single-direction-margin-declarations/</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>The Shapes of CSS</strong> <i style="color: #999;"> &mdash; CSS Tricks</i><br>
-            <a href="http://css-tricks.com/examples/ShapesOfCSS/" style="font-size: .8em;">http://css-tricks.com/examples/ShapesOfCSS/</a>
-        </li>
+      <li>
+        <p style="margin-bottom:0;"><code>Cathode</code> <span style="font-size: 1.6rem;"><a href="http://www.secretgeometry.com/apps/cathode" target="_blank">http://www.secretgeometry.com/apps/cathode</a></span></p>
+      </li>
     </ul>
+  </section>
+
+  <section>
+    <h3>Tipos de Terminal Unix para Windows</h3>
+    <p>La consola que trae Windows por defecto no está basada en UNIX sino que se trata de un intérprete de MS-DOS. El archivo ejecutable se llama cmd.exe. De modo que para poder ejecutar comandos UNIX deberemos de instalar algunas de las siguientes terminales:</p>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>Git BASH</code> <span style="font-size: 1.6rem;"><a href="http://git-scm.com/download/win" target="_blank">http://git-scm.com/download/win</a></span></p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>Cygwin</code> <span style="font-size: 1.6rem;"><a href="http://cygwin.com/install.html" target="_blank">http://cygwin.com</a></span></p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>Babun</code> <span style="font-size: 1.6rem;"><a href="http://babun.github.io/" target="_blank">http://babun.github.io/</a></span></p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Navegar Directorios</h3>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom: 0;"><code>cd</code></p>
+        <p style="font-size: 1.5rem;">
+          Entramos dentro de un directorio mediante:<br />
+          <code class="marker">$ cd [nombre de directorio]</code>
+        </p>
+
+        <p style="font-size: 1.5rem;">
+          Salimos de un directorio mediante:<br />
+          <code class="marker">$ cd .. </code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>pwd</code></p>
+        <p style="font-size: 1.5rem;">
+          Print working directory. Muestra el directorio en el que nos encontramos:<br />
+          <code class="marker">$ pwd</code>
+        </p>
+
+        <p style="font-size: 1.5rem;"><code class="marker">/users/david.garcia/www/bau</code></p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Crear carpetas y ficheros</h3>
+
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>mkdir</code></p>
+        <p style="font-size: 1.5rem;">
+          Creamos un directorio:<br />
+          <code class="marker">$ mkdir [nombre de directorio a crear]</code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>touch</code></p>
+        <p style="font-size: 1.5rem;">Crea un archivo nuevo vacío o actualiza la fecha de modificación de uno existente:<br />
+          <code class="marker">$ touch [opciones][nombre de archivo/os]</code><br />
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Visualizar archivos</h3>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>ls</code></p>
+        <p style="font-size: 1.5rem;">
+          Lista todos los archivos y carpetas contenidos en un directorio:<br />
+          <code class="marker">$ ls</code>
+        </p>
+        <p style="font-size: 1.5rem;">
+          Muestra la información completa de cada archivo y directorio:<br />
+          <code class="marker">$ ls -l</code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>more</code></p>
+        <p style="font-size: 1.5rem;">
+          Mostramos el contenido de un archivo. Podemos usar [spacebar] para continuar o <code>q</code> para salir:<br />
+          <code class="marker">$ more [nombre del archivo]</code>
+        </p>
+
+        <p style="font-size: 1.5rem;">
+          Salimos de un directorio mediante:<br />
+          <code class="marker">$ cd .. </code>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Editores archivos</h3>
+    <ul>
+      <li>
+        <p style="margin-bottom:0;"><code>nano</code></p>
+        <p style="font-size: 1.5rem;">
+          Editor de archivos de texto en terminal:<br />
+          <code class="marker">$ nano [nombre de archivo existente]</code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>Vim</code></p>
+        <p style="font-size: 1.5rem;">
+          Otro Editor de archivos de texto en terminal:<br />
+          <code class="marker">$ vi [nombre de archivo existente]</code>
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Modificar archivos</h3>
+    <ul class="font-list" style="font-size: 2.2rem;">
+      <li>
+        <p style="margin-bottom:0;"><code>cp</code></p>
+        <p style="font-size: 1.5rem;">
+          Copia un archivo:<br />
+          <code class="marker">$ cp [nombre de archivo original] [nombre de archivo copiado]</code>
+        </p>
+      </li>
+
+      <li>
+        <p style="margin-bottom:0;"><code>mv</code></p>
+        <p style="font-size: 1.5rem;">
+          Movemos un archivo o directorio<br />
+          <code class="marker">$ mv [nombre del archivo][ruta a carpeta/nombre de archivo]</code>
+        </p>
+        <p style="font-size: 1.5rem;">
+          Mediante <code>mv</code> también podemos renombrar un archivo:<br />
+          <code class="marker">$ mv Gulpfile.js Gulpfile--BACKUP.js </code>
+        </p>
+      </li>
+
+    </ul>
+  </section>
+
+  <section class="term">
+    <h3>Modificar archivos</h3>
+
+    <ul>
+      <li>
+        <p style="margin-bottom:0;"><code>diff</code></p>
+        <p style="font-size: 1.5rem;">
+          Comparamos 2 archivos y nos muestra sólo en qué se diferencian:<br />
+          <code class="marker">$ diff [archivo original][archivo a comparar]</code>
+        </p>
+      </li>
+    </ul>
+  </section>
 </section>
+
+
+
+
+
+
+<section>
+  <section>
+    <img src="./img/slides/git/git-logo.png" alt="" width="150">
+    <h2>Software de <br />Control de versiones</h2>
+  </section>
+
+  <section>
+    <h3>¿Qué es Git?</h3>
+    <h4>Git es un Software de control de versiones <span class="marker">distribuido</span> y <span class="marker">descentralizado</span> que permite a un equipo de desarrolladores trabajar sobre el mismo código.</h4>
+  </section>
+
+  <section>
+    <h3>Control de versiones <span class="marker">distribuido</span></h3>
+    <p>Se denomina "distribuido" porque cada miembro del equipo dispone de <span class="marker">una copia completa del código</span>.</p>
+
+    <img src="./img/slides/git/distributed.png" alt="" width="300">
+  </section>
+
+  <section>
+    <h3>Control de versiones <span class="marker">descentralizado</span></h3>
+    <p>Los miembros del equipo pueden enviarse código, recibirlo y desarrollar funcionalidades de forma conjunta y <span class="marker">separada del servidor central</span>.</p>
+    <img src="./img/slides/git/git-centr-decentr.png" alt="" width="500">
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-ok.png" alt="" width="100">
+    <h3>Vetajas de usar Git</h3>
+    <ul>
+      <li>Versionado distribuido de código</li>
+      <li>Código colaborativo</li>
+      <li>Recuperación de archivos</li>
+      <li>Estándar actual</li>
+    </ul>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-super.png" alt="">
+    <h3>Git en Terminal</h3>
+    <ul>
+      <li>Mayor control</li>
+      <li>Shorcuts / Plugins</li>
+      <li>Mejora tu productividad</li>
+      <li style="color: grey"><strike>Ligarás más</strike></li>
+    </ul>
+  </section>
+</section>
+
+
+
+
+<section>
+  <section>
+    <img src="./img/slides/git/git-logo.png" alt="" width="150">
+    <h2>Instalación</h2>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-commandline.png" alt="" width="100">
+    <h3>Command Line Tools</h3>
+    <pre><code contenteditable>
+  $ xcode-select --install
+    </code></pre>
+    <small>Es probable que necesitemos descargar las Command Line Tools for Xcode</small>
+  </section>
+
+  <section>
+    <h3>Descarga Git</h3>
+    <h4 class="marker">Selecciona la versión adecuada a tu Sistema Operativo:</h4>
+    <p>Git está disponible para Windows, Mac, Linux y Solaris.</p>
+    <a href="http://git-scm.com/downloads" target="_blank"><img src="./img/slides/git/download-folder.png" alt="" width="150"></a>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-settings.png" alt="" width="100">
+    <h3>Configuración</h3>
+    <p>Indicamos a Git nuestra info de usuario</p>
+    <pre><code>
+  $ git config --global user.name "David G."
+  $ git config --global user.email dave74@gmail.com
+  $ git config --global core.editor nano
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">init</span></h3>
+    <h4 class="marker">Creamos un repositorio local</h4>
+    <p>En un directorio vacío ejecutamos el siguiente comando:</p>
+    <pre><code contenteditable>
+  $ mkdir git-test
+  $ cd git-test
+  $ git init
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Directorio <span class="marker">Git</span></h3>
+    <p>Git init crea un directorio oculto <span class="marker">.git</span> con el siguiente contenido:</p>
+    <ul>
+      <li><span class="marker">COMMIT_EDITMSG:</span> Comentarios de mensajes de commit</li>
+      <li><span class="marker">HEAD:</span> Puntero hacia la rama activa</li>
+      <li><span class="marker">config:</span> URLs de origin e info de ramas</li>
+      <li>...</li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Crear un nuevo archivo:</h3>
+    <p class="marker">Git llevará un control exhaustivo sobre todos los cambios que vayamos haciendo.</p>
+    <pre><code contenteditable>
+  $ touch README.md
+    </code></pre>
+    <small>El comando UNIX <span class="marker">touch</span> nos crea un nuevo archivo. <br />Edítalo y guarda los cambios.</small>
+  </section>
+
+  <section>
+    <h3>.gitignore</h3>
+    <p class="marker">Incluimos TODO lo que NO queramos incluir en nuestro repositorio.</p>
+    <pre><code contenteditable>
+  $ touch .gitignore
+    </code></pre>
+    <small>Podemos crear uno ad-hoc en: <a href="https://www.gitignore.io/">gitignore.io</a></small>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">Status</span>:</h3>
+    <p class="marker">Listado de archivos nuevos (untracked), borrados o editados</p>
+    <pre><code contenteditable>
+  $ git status
+    </code></pre>
+    <p><img src="./img/slides/git/git-status.png" alt="" width="800"></p>
+    <small>Rutas relativas a la raíz del repositorio.</small>
+  </section>
+</section>
+
+
+
+
+<section>
+  <section>
+    <img src="./img/slides/git/git-logo.png" alt="" width="150">
+    <h2>Flujo de trabajo con Git</h2>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-laptop.png" alt="" width="300">
+    <h3>Local &amp; Remote</h3>
+    <p>El flujo de Git se distribuye en 3 estados locales y uno remoto</p>
+  </section>
+
+  <section>
+    <h3>Estados <span class="marker">Locales</span></h3>
+    <h4 class="marker" style="text-align: center; text-transform: none; font-size: 1.2em">A nivel local disponemos de:</h4><br />
+    <ul>
+      <li><span class="marker">Working Dir</span> > El directorio donde almacenamos los archivos</li>
+      <li><span class="marker">Staging</span> > El estado en el que avisamos a Git de que hemos realizado cambios</li>
+      <li><span class="marker">HEAD</span> > El puntero hacia el último bloque de código <code style="font-size: .8em">(commit)</code></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Working dir</h3>
+    <p>El primer nivel es nuestra <span class="marker">carpeta de trabajo</span>. Podemos añadir, quitar, editar archivos y Git sólo se encargará de controlar los archivos que han sido modificados:</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-wd.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">add</span></h3>
+    <p>Una vez creados, modificados, añadidos o borrados los archivos al <span class="marker">working dir</span> los pasamos al <span>staging</span> mediante:</p>
+    <pre><code contenteditable>
+  $ git add nombre de archivo/os
+    </code></pre>
+    <p> o bien:</p>
+    <pre><code contenteditable>
+  $ git add --all
+    </code></pre>
+    <p>todos los archivos</p>
+  </section>
+
+  <section>
+    <h3>Staging</h3>
+    <p>En el segundo nivel nuestros archivos están preparados para ser <span class="marker">empaquetados</span>. Podemos seguir trabajando y repetir el proceso tantas veces como necesitemos.</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-staging.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">commit</span></h3>
+    <p>Cuando hemos completado un conjunto de cambios, los "empaquetamos" mediante la instrucción <span>commit</span> y los colocamos en el <span class="marker">HEAD</span> mediante:</p>
+    <pre><code contenteditable>
+      $ git commit -m 'mensaje descriptivo'
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>HEAD</h3>
+    <p>Nuestro conjunto de cambios está listo para enviar al repositorio remoto. El HEAD es nuestra "bandeja de salida". Podemos seguir trabajando y crear más "commits".</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-head.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/github-octocat.png" alt="">
+    <h3>ORIGIN remoto</h3>
+    <p>Ahora vincularemos nuestro repo local con uno remoto en <span>Github</span> para poder trabajar en equipo:</p>
+
+    <a href="http://github.com" target="_blank">Créate una cuenta en Github.com</a>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">remote add origin</span></h3>
+    <p>Una vez creado el repositorio remoto en Github lo "vinculamos" a nuestro repositorio local mediante:</p>
+    <pre><code contenteditable>
+  $ git remote add origin https://github.com/user/repo.git
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">push</span></h3>
+    <p>Una vez indicado a Git que tenemos un repositorio remoto podemos enviar el conjunto de cambios contenidos en nuestro HEAD mediante:</p>
+    <pre><code contenteditable>
+  $ git push -u origin master
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Origin</h3>
+    <p>Por defecto Git denomina <span class="marker">origin</span> a nuestro repositorio remoto y crea una rama llamada <span class="marker">master</span>. Enviamos el contenido de HEAD mediante:</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-origin.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">clone</span></h3>
+    <p>Un software de control de versiones adquiere mayor relevancia cuando colaboran diferentes miembros de un equipo sobre el mismo código.</p>
+    <p>Una vez creado el repositorio remoto, el resto de miembros del equipo pueden bajarse una copia a sus equipos mediante:</p>
+
+    <pre><code contenteditable>
+  $ git clone https://github.com/user/repo.git
+    </code></pre>
+  </section>
+
+  <section>
+    <h3>Git <span class="marker">pull</span></h3>
+    <p>Sincronizar nuestro local con origin</p>
+    <p>Antes de enviar nuestros cambios tenemos que bajarnos la última versión de <span class="marker">repositorio remoto</span></p>
+
+    <pre><code contenteditable>
+  $ git pull origin master
+    </code></pre>
+    <small>obtenemos los últimos cambios de origin y los combinamos con la rama master</small>
+  </section>
+
+  <section>
+    <h3>Sincronizando versiones</h3>
+    <p>Cuando obtenemos archivos del repositorio remoto a nuestra copia local Git obtiene todos los archivos nuevos que se hayan añadido y elimina los que se hayan quitado.</p>
+
+    <div style="background-color: #333;">
+      <img src="./img/slides/git/git-level-pull.png" alt="">
+    </div>
+  </section>
+
+  <section>
+    <img src="./img/slides/git/git-log.png" alt="" width="100">
+    <h3>Git <span class="marker">log</span></h3>
+    <p>Consulta el historial de "commits" realizados por los diferentes miembros del equipo mediante:</p>
+    <pre><code contenteditable>
+  $ git log
+    </code></pre>
+  </section>
+</section>
+
 
 
         </div>
     </div>
 
     <script src="js/reveal/head.min.js"></script>
-<script src="js/reveal/reveal.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
 
 <script>
     // Full list of configuration options available here:
@@ -532,6 +576,5 @@ overflow: visible;
         ]
     });
 </script>
-
 </body>
 </html>

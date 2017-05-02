@@ -13,10 +13,11 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme.css" id="theme">
-    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600' rel='stylesheet' type='text/css'>
+    
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,600|Roboto:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
 
     <!-- If the query includes 'print-pdf', include the PDF print sheet -->
     <script>
@@ -46,301 +47,292 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Control de versiones con Git</strong></h3>
+                <h3><strong>Sass Intro</strong></h3>
             </section>
 
-            
-
-<section class="text-left">
+            <section class="text-left">
     <section>
-        <h2>Sublime Text Tip</h2>
+        <h2>Unidades de medida en CSS</h2>
     </section>
 
     <section>
-        <h3>Installing themes</h3>
-        <table style="font-size: 1.8rem;">
-            <tr>
-                <td>Abrimos la consola mediante:</td>
-                <td><code>Cmd + Shift + p</code></td>
-            </tr>
-            <tr>
-                <td>Escribimos:</td>
-                <td><code>Install package + Enter</code></td>
-            </tr>
-            <tr>
-                <td>En la ventana que nos aparece escribimos:</td>
-                <td><code>Theme - [nombre]</code></td>
-            </tr>
-            <tr>
-                <td>Seleccionamos un tema:</td>
-                <td><code>Prefs - Color Scheme - Theme [nombre]</code></td>
-            </tr>
-        </table>
-<!--         <img src="./img/slides/sublime-tip-add-theme/finding-files.gif" alt="">
- -->    </section>
+        <p>Las unidades de medida en CSS pueden dividirse en <strong>dos grandes grupos</strong>: <em>unidades absolutas</em> y <em>unidades relativas</em></p>
+        <p>La sintaxis para declarar una medida siempre será igual: un número seguido de la unidad correspondiente. Algunas propiedades CSS aceptan <strong>valores negativos</strong>.</p>
+    </section>
 
-        <section>
-            <h3>Tema Flatland</h3>
-            <p style="text-align: center;">Así quedaría la interfaz de Sublime con este tema:</p>
-            <img src="./img/slides/sublime-tip-add-theme/flatland.png" alt="" width="600"><br />
-            <a style="font-size:.8em" href="http://www.dinvaders.com/26-themes-gratis-para-sublime-text-y-textmate/" target="_blank">Descargar más temas</a>
-        </section>
+                <section>
+                    <h3>Unidades absolutas</h3>
+                    <p>Las unidades absolutas son las más directas, están relacionadas a una medida física. La más utilizada es el pixel pero hay varias más:</p>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>px</code> <span style="font-size: 1.6rem;">(píxel)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>mm</code> <span style="font-size: 1.6rem;">(milimetro)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>cm</code> <span style="font-size: 1.6rem;">(centímetro, 10 millimeters)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>in</code> <span style="font-size: 1.6rem;">(pulgada, 2.54 centímetros)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>pt</code> <span style="font-size: 1.6rem;">(punto, 1/72 de pulgada)</span></li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>pc</code> <span style="font-size: 1.6rem;">(pica, 12 puntos)</span></li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Unidades relativas</h3>
+                    <p>Las unidades relativas son un poco más complicadas ya que su valor no es fijo sino que dependen de la medida de otro elemento. También pueden dividirse en tres grupos más pequeños: <em>unidades relativas al tamaño de fuente</em>, <em>unidades relativas al viewport</em> y <em>porcentajes</em>.</p>
+                </section>
 
-</section>
+                <section>
+                    <h3>Relativas al tamaño de fuente</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>em</code></p>
+                            <p style="font-size: 1.5rem;">Es un número relativo al <code>font-size</code> del elemento. Si se aplica a la misma propiedad <code>font-size</code> se calculará en base al <code>font-size</code> heredado.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>rem</code></p>
+                            <p style="font-size: 1.5rem;">Hace referencia al <code>font-size</code> del elemento root (normalmente el <code>&#60;html&#62;</code>). Si se aplica sobre este usara de base su valor inicial.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>ex</code></p>
+                            <p style="font-size: 1.5rem;">Representa la <i>x-height</i> del elemento fuente, normalmente la altura del caracter "x" en minúsculas.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>ch</code></p>
+                            <p style="font-size: 1.5rem;">Representa el ancho del carácter "0".</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h3>Relativas al viewport</h3>
+                    <ul class="font-list" style="font-size: 2.2rem;">
+                        <li>
+                            <p style="margin-bottom:0;"><code>vh</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del alto del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vw</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del ancho del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vmin</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del valor más bajo entre el alto y ancho del viewport.</p>
+                        </li>
+                        <li>
+                            <p style="margin-bottom:0;"><code>vmax</code></p>
+                            <p style="font-size: 1.5rem;">1/100 del valor más alto entre el alto y ancho del viewport.</p>
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                     <h3>Porcentajes</h3>
+                     <p>Podemos asignar una unidad de medida porcentual con un <em>valor seguido del signo "%"</em> (ej: 50%). El contexto que se utilizará para calcular el porcentaje variará dependiendo a que propiedad se aplique.</p>
+                     <p>Si se aplica al <code>font-size</code>, el porcentaje será relativo al <code>font-size</code> del elemento padre.</p>
+                     <p>Si se aplica al <code>width</code>, <code>margin</code> o <code>padding</code>, será relativo a las medidas de su contenedor.</p>
+                </section>
+            </section>
 
 
 
 
 <section>
-    
-    <section class="unix">
-        <img src="./img/slides/git/git-logo.png" alt="" width="150">
-        <h4>Software de <br />Control de versiones</h4>
-    </section>
-    
     <section>
-        <h3>¿Qué es Git?</h3>
-        <h4 class="marker" style="text-transform: none; font-size: 1.2em">Git es un Software de control de versiones distribuido que permite a un equipo de desarrolladores trabajar sobre el mismo código.</h4>
-        <p>Nos permite trabajar en un entorno seguro que minimiza el riesgo de pérdida de datos.</p>
-        <p>Además, nos indica en todo momento el estado actual del proyecto indicando qué archivos han sido modificados y por quien.</p>
-    </section>
-    
-    <section>
-        <h3>Control de versiones <span class="marker">distribuido</span></h3>
-        <p style="float: left; width: 50%; margin-top: 120px;">Se denomina "distribuido" porque cada miembro del equipo que trabaja en el proyecto dispone de <span class="marker">una copia completa del repositorio de código remoto en su carpeta local</span>.</p>
-        
-        <img src="./img/slides/git/distributed.png" alt="" width="400">
-
+        <img src="./img/slides/sass/sass.png" alt="" style="background:none; box-shadow:none; border: none; width: 250px; ">
+        <h3 style="text-transform: capitalize;">
+            <span class="marker">S</span>yntactically <span class="marker">A</span>wesome <span class="marker">S</span>tyle<span class="marker">S</span>heets</h3>
     </section>
 
     <section>
-        <h3>¿Para qué necesito Git?</h3>
-        <p>Imagina que estás trabajando en el archivo <span class="marker">index.html</span> de tu proyecto web y le pides a un compañero que te ayude a implementar un slider en la cabecera. Con Git podrás:</p><br />
+        <h3>¿Por qué he de utilizar SASS?</h3>
+        <p>SASS nos permite añadir funcionalidades que no existen en CSS y que amplian enormemente sus posibilidades.</p>
+    </section>
+
+    <section>
+        <h3>Algunas de las mejoras de SASS son:</h3>
         <ul>
-            <li>Seguir trabajando en el mismo archivo index.html</li>
-            <li>Al finalizar podréis combinar los cambios realizados por ambos</li>
-            <li>Podrás crear diferentes versiones para A/B testing</li>
-            <li>Se evita que sobreescriban tu código o que tú hagas lo mismo</li>
-            <li>Los dos dispondréis de una copia completa del código</li>
+            <li>Variables</li>
+            <li>Anidación de clases y selectores</li>
+            <li>Imports</li>
+            <li>Extensiones de clases</li>
+            <li>Funciones - (Mixins)</li>
+            <li>Operaciones aritméticas</li>
         </ul>
-        
     </section>
+
+    <section>
+        <h3>Pero lo más importante: Si usas SASS...</h3>
+        <img src="./img/slides/sass/cool-cat.gif" alt="" style="background:none; box-shadow:none; border: none; width: 550px; ">
+        <p>...eres más cool :)</p>
+    </section>
+
 </section>
 
 
 
 <section class="unix">
-    
-    <section>
-        <img src="./img/slides/git/git-logo.png" alt="" width="150">
-        <h4>Instalación</h4>
-    </section>
-    
-    <section>
-        <h3>Descarga Git</h3>
-        <h4 class="marker" style="text-align: center; text-transform: none; font-size: 1.2em">Selecciona la versión adecuada a tu Sistema Operativo:</h4>
-        <p>Git está disponible para Windows, Mac, Linux y Solaris.</p>
-        <a href="http://git-scm.com/downloads" target="_blank"><img src="./img/slides/git/download-folder.png" alt="" width="150"></a>
-    </section>
-    
-    <section>
-        <h3>Inicializar repositorio:</h3>
-        <h4 class="marker">Creamos un repositorio local</h4>
-        <p>En un directorio vacío ejecutamos el siguiente comando:</p>
-        <pre><code data-trim contenteditable>
 
-$ git init
+    <section>
+        <img src="./img/slides/sass/sass.png" alt="" width="250">
+        <h4>Programación en SASS<br /> (Primera parte)</h4>
+    </section>
+
+    <section>
+        <h3>Declarando Variables</h3>
+        <p class="marker">Una variable es un registro donde guardamos un dato que necesitaremos aplicar en diferentes partes de nuestro código.</p>
+        <p>Para poder utilizar una variable primero hemos de crearla y asignarle un valor. <br />A este proceso se le denomina <span class="marker">declaración de variables</span></p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+Sintaxis
+
+// Color Variables
+$primaryColor: rgba(255,0,0,.5);
+$secondaryColor: rgba(255,100,100,.5);
+
+        </code></pre>
+        <p>Podemos almacenar, colores, valores en píxeles o en %, tipografías, etc...</p>
+    </section>
+
+    <section>
+        <h3>Utilizando Variables</h3>
+        <p>Una vez declarada, podemos reutilizar las variables en tantos lugares de nuestro código como necesitemos.</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Aplying color
+h1 {
+    color: $primaryColor;
+}
+
+h2 {
+    color: $secondaryColor;
+}
 
         </code></pre>
     </section>
 
     <section>
-        <h3>Añadir archivos:</h3>
-        <p class="marker">Si añadimos archivos a esta carpeta, los modificamos o borramos Git llevará un control exahustivo sobre todos los cambios que vayamos haciendo.</p>
-        <p>Para ver los cambios:</p>
-        <pre><code data-trim contenteditable>
+        <h3>CSS resultante</h3>
+        <p>Al aplicar las variables <code style="font-size: .9em;">$prymaryColor</code> y <code style="font-size: .9em;">$secondaryColor</code> a los h1 y h2 respectivamente SASS nos genera el siguiente CSS:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Preprocessed CSS result
+h1 {
+    color: rgba(255,0,0,.5);
+}
 
-$ git status
+h2 {
+    color: rgba(255,100,100,.5);
+}
 
         </code></pre>
     </section>
-</section>
 
-
-
-<section class="unix">
-    
     <section>
-        <img src="./img/slides/git/git-logo.png" alt="" width="150">
-        <h4>Flujo de trabajo con Git</h4>
+        <h3>Anidación</h3>
+        <p>SASS permite anidar un selector CSS dentro de otro para obtener una mayor versatilidad:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+.slider-container {
+    float:left;
+    max-width: $inner-width;
+    
+    img {
+            border: none;
+            display: block;
+            margin: $gutter;
+        }
+}
+        </code></pre>
     </section>
-    
+
     <section>
-        <h3>Repositorio Local</h3>
-        <h4 class="marker" style="text-align: center; text-transform: none; font-size: 1.2em">A nivel local disponemos de 3 estados diferenciados:</h4><br />
+        <h3>Resultado de Anidación</h3>
+        <p>En la anidación anterior el CSS resultante será:</p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+.slider-container  {
+    float:left;
+    max-width: 768px;
+} 
+    
+.slider-container img {
+    border: none;
+    display: block;
+    margin: 20px;
+}
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Diversificar archivos SASS</h3>
+        <p>Para agilizar el proceso de edición y depuración de errores evitaremos trabajar con un único archivo CSS. En lugar de eso crearemos diferentes archivos SASS que separarán en módulos nuestro código.</p>
+        <p class="marker">Finalmente, todos los archivos SASS los combinaremos en un sólo CSS para evitar realizar múltiples llamadas HTTP que ralentizen la carga de nuestro site.</p>
+    </section>
+
+    <section>
+        <h3>Importando archivos SASS</h3>
+        <p>Para crear esa estructura modularizada utilizaremos <span class="marker">@import</span> en nuestro archivo style.scss. <span class="marker">El resultado será un style.css con <strong>todo el código importado.</strong></span></p>
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Contenido de style.scss
+
+@import "base/header";
+@import "base/layout";
+@import "base/footer";
+@import "tipography/headings";
+@import "components/buttons";
+@import "components/boxes";
+        </code></pre>
+    </section>
+
+    <section>
+        <h3>Nombres de archivos</h3>
+        <p>Para indicar en SASS que un archivo concreto es un módulo le añadimos un "_" delante del nombre. De esta forma no crearemos un archivo CSS más sino que formará parte del @import</p>
+
+        <pre><code data-trim contenteditable style="line-height: 1.5em; font-size: 1.2em;">
+// Nombres de los módulos SASS
+
+base/_header.scss
+base/_layout.scss
+base/_footer.scss
+tipography/_headings.scss
+components/_buttons.scss
+components/_boxes.scss
+
+// Archivo SASS
+style.scss
+        </code></pre>
+    </section>
+
+    <section>
+        <p>La estructura de archivos quedaría así:</p>
+        <img src="./img/slides/sass/estructura-sass.png" alt="" style="margin: -20px 0 0 0;">
+    </section>
+
+    <section>
+        <p>La importancia de modularizar con @import</p>
+        <p>Un proyecto web se compone de múltiples elementos. Creando un archivo SASS para cada uno facilitamos el mantenimiento y el debug de errores.</p>
+        <p class="marker"><strong>Una propuesta de estructura sería:</strong></p>
         <ul>
-            <li><span class="marker">Working Dir</span> > El directorio donde almacenamos los archivos</li>
-            <li><span class="marker">Staging</span> > El estado en el que avisamos a Git de que hemos realizado cambios</li>
-            <li><span class="marker">HEAD</span> > El puntero hacia el último bloque de código <code style="font-size: .8em">(commit)</code></li>
+            <li><span class="marker">styles.scss</span>=> Relizamos todos los imports</li>
+            <li><span class="marker">settings.scss</span>=> Declaramos las variables de entorno</li>
+            <li><span class="marker">/helpers</span>=> Carpeta donde incluimos: normalize, clearfix, etc...</li>
+            <li><span class="marker">/grid</span>=> Carpeta donde incluimos el framework o grid</li>
+            <li><span class="marker">/layout</span>=> Carpeta de archivos que dan estructura al site</li>
+            <li><span class="marker">/components</span>=> Carpeta de elementos reutilizables</li>
+            <li><span class="marker">/theme</span>=> Carpeta en la que definimos la presentación</li>
         </ul>
     </section>
 
-    <section>
-        <h3>Working dir</h3>
-        <p>El primer nivel es nuestra <span class="marker">carpeta de trabajo</span>. Podemos añadir, quitar, editar archivos y Git sólo se encargará de controlar los archivos que han sido modificados:</p>
-
-        <img src="./img/slides/git/git-level-wd.png" alt="">
-    </section>
-    
-    <section>
-        <h3>Añadir archivos al Staging:</h3>
-        <p>Una vez creados, modificados, añadidos o borrados los archivos al <span class="marker">working dir</span> los pasamos al <span>staging</span> mediante:</p>
-        <pre><code data-trim contenteditable>
-
-$ git add [nombre de archivo/os]
-        </code></pre>
-        <p> o bien:</p>
-        <pre><code data-trim contenteditable>
-$ git add &#45;all [todos los archivos]
-
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>Staging</h3>
-        <p>En el segundo nivel nuestros archivos están bajo el control de Git. Podemos seguir trabajando y repetir el proceso tantas veces como necesitemos.</p>
-
-        <img src="./img/slides/git/git-level-staging.png" alt="">
-    </section>
-
-    <section>
-        <h3>Añadir archivos al HEAD:</h3>
-        <p>Cuando hemos completado un conjunto de cambios, los "empaquetamos" mediante la instrucción <span>commit</span> y los colocamos en el <span class="marker">HEAD</span> mediante:</p>
-        <pre><code data-trim contenteditable style="font-size: 1.2em">
-$ git commit -m ['mensaje descriptivo de los cambios']
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>HEAD</h3>
-        <p>Nuestro conjunto de cambios está listo para enviar al repositorio remoto. El HEAD es nuestra "bandeja de salida". Podemos seguir trabajando y crear más "commits".</p>
-
-        <img src="./img/slides/git/git-level-head.png" alt="">
-    </section>
-
-    <section>
-        <h3>Trabajando con repositorios remotos</h3>
-        <p>Hasta ahora hemos usado Git para controlar conjuntos de cambios en local. <br />Vamos a crear un repositorio remoto y lo vincularemos a nuestro local para poder trabajar en equipo:</p>
-
-        <a href="http://github.com" target="_blank">Créate una cuenta en Github.com</a>
-    </section>
-
-    <section>
-        <h3>Añadir repositorio remoto</h3>
-        <p>Una vez creado el repositorio remoto en Github lo "vinculamos" a nuestro repositorio local mediante:</p>
-        <pre><code data-trim contenteditable style="font-size: 1.2em">
-$ git remote add origin https://github.com/user/repo.git
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>Enviando cambios a remoto</h3>
-        <p>Una vez indicado a Git que tenemos un repositorio remoto podemos enviar el conjunto de cambios contenidos en nuestro HEAD mediante:</p>
-        <pre><code data-trim contenteditable style="font-size: 1.2em">
-$ git push -u origin master
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>Origin</h3>
-        <p>Por defecto Git denomina <span class="marker">origin</span> a nuestro repositorio remoto y crea una rama llamada <span class="marker">master</span>. Enviamos el contenido de HEAD mediante:</p>
-
-        <img src="./img/slides/git/git-level-origin.png" alt="">
-    </section>
-
-    <section>
-        <h3>Trabajando en equipo</h3>
-        <p>Un software de control de versiones adquiere mayor relevancia cuando colaboran diferentes miembros de un equipo sobre el mismo código.</p>
-        <p>Una vez creado el repositorio remoto, el resto de miembros del equipo pueden bajarse una copia a sus equipos mediante:</p>
-        <pre><code data-trim contenteditable style="font-size: 1.2em">
-$ git clone https://github.com/user/repo.git
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>Obteniendo archivos remotos</h3>
-        <p>Una vez clonado el repositorio ya podemos empezar a añadir código<br /> a nuestro <span class="marker">working dir, stage y HEAD</span></p>
-        <p>Antes de enviar nuestros cambios tenemos que bajarnos la última versión de <span class="marker">origin</span></p>
-        <pre><code data-trim contenteditable style="font-size: 1.2em">
-$ git pull origin master
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>Sincronizando versiones</h3>
-        <p>Cuando obtenemos archivos del repositorio remoto a nuestra copia local Git obtiene todos los archivos nuevos que se hayan añadido y elimina los que se hayan quitado.</p>
-
-        <img src="./img/slides/git/git-level-pull.png" alt="">
-    </section>
-
-    <section>
-        <h3>Combinando archivos</h3>
-        <p>Cuando dos miembros del equipo han modificado el mismo archivo Git procura combinarlos automáticamente. </p>
-        <p>Puede darse el caso de que surja un conflicto si Git no reconoce qué parte del código ha de quedarse y cual eliminar. En este caso hemos de editarlo manualmente.</p>
-    </section>
-
-    <section>
-        <h3>Estado de Git</h3>
-        <p>Podemos consultar en cualquier momento cual es el estado de nuestros archivos mediante:</p>
-        <pre><code data-trim contenteditable style="font-size: 1.2em">
-$ git status
-        </code></pre>
-    </section>
-
-    <section>
-        <h3>Consultar historial</h3>
-        <p>Además, podemos consultar el historial de "commits" realizados por los diferentes miembros del equipo mediante:</p>
-        <pre><code data-trim contenteditable style="font-size: 1.2em">
-$ git log
-        </code></pre>
-    </section>
 
 </section>
 
-<section>
-    <h3>Ejercicio</h3>
-    <p>Añade un dropdown en la landing page DecoMAG</p>
 
-    <a href="files/exercises/integrity-wp.zip"><img src="img/slides/exercises/integrity-wp.jpg" alt=""></a>
-</section>
 
-<section>
-    
-    <section>
-    <h2>Links relacionados</h2>
-    <ul style="font-size: 1.8rem">
-        <li style="margin-bottom: .4em;">
-            <strong>Free online Git Book</strong><i style="color: #999;"> &mdash; Scott Chacon and Ben Straub</i><br>
-            <a href="http://git-scm.com/book/en/v2" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://git-scm.com/book/en/v2</a>
-        </li>
-        <li style="margin-bottom: .4em;">
-            <strong>git - the simple guide</strong><i style="color: #999;"> &mdash; Roger Dudler</i><br>
-            <a href="http://rogerdudler.github.io/git-guide/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://rogerdudler.github.io/git-guide/</a>
-        </li>
-        <li style="margin-bottom: .4em;">
-            <strong>Try Github - Interactive git console</strong> <i style="color: #999;"> &mdash; Github & Code Academy</i><br>
-            <a href="https://try.github.io" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">https://try.github.io</a>
-        </li>
-        <li style="margin-bottom: .4em;">
-            <strong>Bitbucket - Unlimited private code repositories</strong><br>
-            <a href="https://bitbucket.org/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">https://bitbucket.org/</a>
-        </li>
-        <li style="margin-bottom: .4em;">
-            <strong>Sourcetree - Opensource Git client</strong><br>
-            <a href="http://www.sourcetreeapp.com/" style="font-size: .8em; margin-top: -.5rem; display:block;" target="_blank">http://www.sourcetreeapp.com/</a>
-        </li>
-    </ul>
-</section>
+<section data-background="#66CEFF">
+
+    <h3 style="color: #444; text-shadow: none; font-weight: bold">Ejercicio</h3>
+    <p style="color: #444; text-shadow: none;">Refactoriza tu proyecto en SASS y sube los cambios a Git</p>
+    <p style="color: #444; text-shadow: none;">Deberás de modularizar la estructura CSS actual de tu proyecto en  módulos SASS separados según tipología.</p>
+
+    <img src="./img/slides/sass/loading-cat.gif" alt="" width="500" style="border: none; box-shadow: none">
+    <!-- <small style="margin-top:-10px">meowww</small> -->
 </section>
 
 
@@ -348,7 +340,7 @@ $ git log
     </div>
 
     <script src="js/reveal/head.min.js"></script>
-<script src="js/reveal/reveal.min.js"></script>
+<script src="js/reveal/reveal.js"></script>
 
 <script>
     // Full list of configuration options available here:
@@ -372,6 +364,5 @@ $ git log
         ]
     });
 </script>
-
 </body>
 </html>

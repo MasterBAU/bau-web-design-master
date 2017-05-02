@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML Form - Example</title>
+  <!-- <link rel="stylesheet" href="form.css"> -->
+</head>
+
+<body>
+  <form action="http://www.cs.tut.fi/cgi-bin/run/~jkorpela/echo.cgi" method="post">
+    <fieldset>
+      <legend>Datos personales</legend>
+
+      <div>
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" name="user_name" required>
+      </div>
+
+      <div>
+        <label for="mail">E-mail:</label>
+        <input type="email" id="mail" name="user_email" required>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Datos Personales:</legend>
+
+      <div>
+        <label for="birthday">Fecha de Nacimiento:</label>
+        <input type="date" id="birthday" name="user_birthday">
+      </div>
+
+      <div>
+        <p>Sexo:</p>
+        <label class="check">
+          <input type="radio" id="nif" name="sex" value="male">
+          Hombre
+        </label>
+        <label class="check">
+          <input type="radio" name="sex" value="female">
+          Mujer
+        </label>
+      </div>
+    </fieldset>
+
+    <fieldset>
+      <legend>Déjanos tu opinion</legend>
+      <div>
+        <label for="msg">Mensaje:</label>
+        <textarea id="msg" name="user_message"></textarea>
+      </div>
+
+      <div>
+        <label for="accept" class="check">
+          <input type="checkbox" id="accept" name="accept_conditions" required >
+          Acepto las condiciones
+        </label>
+      </div>
+    </fieldset>
+
+    <div class="button">
+      <button type="submit">Enviar</button>
+    </div>
+  </form>
+</body>
+</html>
