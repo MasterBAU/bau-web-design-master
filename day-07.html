@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
 
-    <title>Fundamentos CSS | Máster en Diseño Web | Módulo III Programación Frontend</title>
+    <title>Layout I | Máster en Diseño Web | Módulo III Programación Frontend</title>
 
     <meta name="description" content="Máster en Diseño Web | Módulo III">
     <meta name="author" content="Dave Carter, Mike San Roman &amp; Nahuel Sotelo">
@@ -47,35 +47,82 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Fundamentos CSS</strong></h3>
+                <h3><strong>Layout I</strong></h3>
             </section>
 
-            <section class="text-left">
+            <section  id="box-model">
     <section>
-        <h2>Sublime Text Tip</h2>
+        <h2>Box-model &amp; display (repaso)</h2>
     </section>
 
     <section>
-        <h3>Package Control</h3>
-        <p>El Package Control de Sublime Text es un gestor de paquetes que nos permite instalar muy facilmente cientos de plugins reailzados por diferentes desarrolladores.</p>
-        <p>Para instalarlo, debemos dirigirnos a la siguiente dirección:</p>
-        <p style="text-align: center;"><a href="https://sublime.wbond.net/installation">https://sublime.wbond.net/installation</a></p>
-        <p>Una vez allí copiamos el código correspondiente a nuestra versión y lo ejecutamos en la consola de nuestro programa.</p>
+        <h3>Box-model</h3>
+        <div class="BoxModelGraphic-margin mb-m">
+            <div class="BoxModelGraphic-padding">
+                <span class="BoxModelGraphic-content" contenteditable>contenido</span>
+            </div>
+        </div>
+        <p class="BoxModelGraphic-legend ta-c fz-xxs"><span class="c-purple">Area de contenido</span> | <span class="c-yellow">Padding</span> | <span class="c-red">Border</span> | <span class="c-cyan">Margin</span></p>
         <hr>
-        <p style="text-align: center;"><code>Sublime Text > View > Show Console</code></p>
+        <pre><code data-trim contenteditable>
+.box {
+    width: 300px;
+    height: 50px;
+    border: 5px solid #d8cd00;
+    margin: 50px;
+    padding: 50px;
+}
+        </code></pre>
+    </section>
+
+    <section class="fz-s">
+        <h3>Display: inline</h3>
+        <ul class="fz-xs">
+            <li>Ignoran el <code>width</code> y el <code>height</code></li>
+            <li>Si se le aplican <code>paddings</code> verticales no afectaran la posición de los elementos que les rodean.</li>
+            <li>El background no cubrirá la altura total del alto de línea, sino que se ajustará al contenido.</li>
+        </ul>
+
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted">consectetur adipisicing</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, <strong class="u-highlighted">libero iure expedita</strong> minima labore magnam.</p>
+        </div>
     </section>
 
     <section>
-        <p>Luego de ejecutado el código, reiniciaremos Sublime Text y ya podremos acceder al Package Control.</p>
-        <p>Para instalar un nuevo plugin, lo haremos a través de la Paleta de Comandos, donde escribiremos "Install Package" y luego el nombre del plugin a instalar.
-        <p>Accederemos a la paleta con:</p>
-        <p style="text-align: center;"><em><code>Cmd + Shift + P</code></em></p>
+        <h3>Display: block</h3>
+        <ul class="fz-s">
+            <li>Ocupan 100% del contenedor.</li>
+        </ul>
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed, libero iure expedita minima labore magnam.</p>
+        </div>
+    </section>
+
+
+    <section>
+        <h3>Display: inline-block</h3>
+        <ul class="fz-s">
+            <li>Mantienen el flujo del texto como los elementos <code>inline</code> pero interpretan el box-model como un elemento <code>block</code></li>
+        </ul>
+        <div style="margin: 3rem auto 0; width: 80%;">
+            <p class="u-highlighted fz-xs">Lorem ipsum dolor sit amet, <strong class="u-highlighted" style="display: inline; padding: 20px 10px;">display: inline; padding: 20px 10px;</strong> elit. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium sed. Alias, esse ut voluptates cumque dolore vitae similique harum, ratione est voluptas reiciendis perspiciatis accusantium <strong class="u-highlighted" style="display: inline-block; padding: 20px 10px;">display: inline-block; padding: 20px 10px;</strong> minima labore magnam.</p>
+        </div>
+    </section>
+
+    <section>
+        <h3>Display: none</h3>
+        <p>El valor <em><code>none</code></em> en la propiedad <code>display</code> removerá por completo el elemento de nuestra página web. Los elementos que le sigan en el HTML ocuparán su lugar en el flow del documento.</p>
     </section>
 </section>
 
+<section>
+    <h2>Práctica</h2>
+    <a href="https://codepen.io/nahuelsotelo/pen/GNXJoE">https://codepen.io/nahuelsotelo/pen/GNXJoE</a>
+</section>
 
 
-<section class="text-left">
+<section id="float" class="text-left">
     <section>
         <h2>Posicionamiento mediante<br/>
             <span class="marker">float</span>
@@ -83,13 +130,18 @@
     </section>
 
     <section>
-        <p>La propiedad <code>float</code> modifica el flujo natural del elemento y lo "flota" situándolo a la izquierda o derecha de su contenedor permitiendo al resto de elementos <span class="marker">inline</span> ocupar el espacio colindante.</p>
+        <p>La porpiedad <code class="u-marked">float</code> nos permitie remover a un elemento de su posición natural en el flow de la página y <strong>posicionarlo contra uno de los lados de su elemento contenedor</strong>. Los elementos que están a continuación suyo se limitarán a rodearlo.
+        </p>
     </section>
 
     <section>
-        <p>Inicialmente se creó para posicionar imágenes dentro de un bloque de texto pero con el tiempo acabo por ser una de las herramientas CSS más usadas para generar layouts.</p>
-        <hr>
-        <span><a href="exercise01.html">exercise01.html</a></span>
+        <p class="mb-l">Inicialmente se creó para posicionar imágenes dentro de un bloque de texto pero con el tiempo acabo por ser una de las herramientas CSS más usadas para generar layouts.</p>
+        <hr class="mb-l">
+        <div class="fz-xxs" style="width: 70%; margin: 0 auto;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="https://4.bp.blogspot.com/-B70oaS-ZUiU/UXu4f5gG-xI/AAAAAAAALeM/JDAWfEAm1Hw/s1600/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
+        </div>
     </section>
 
     <section>
@@ -102,132 +154,148 @@
         </p>
     </section>
 
-    <section class="float-example">
+    <section>
         <h2>Float NONE</h2>
         <pre><code data-trim contenteditable>div { float: none; }</code></pre>
-        <div class="float-wrap">
-            <div class="float-box">1</div>
-            <div class="float-box">2</div>
-            <div class="float-box">3</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box">1</div>
+            <div class="FloatGraphic-box">2</div>
+            <div class="FloatGraphic-box">3</div>
         </div>
     </section>
 
     <section>
         <h2>Float LEFT</h2>
         <pre><code data-trim contenteditable>div { float: left; }</code></pre>
-        <div class="float-wrap">
-            <div class="float-box float-left">1</div>
-            <div class="float-box float-left">2</div>
-            <div class="float-box float-left">3</div>
-            <div class="float-box float-left">4</div>
-            <div class="float-box float-left">5</div>
-            <div class="float-box float-left">6</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box FloatGraphic-box--left">1</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">2</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">3</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">4</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">5</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">6</div>
         </div>
     </section>
 
     <section>
         <h2>Float Right</h2>
         <pre><code data-trim contenteditable>div { float: right; }</code></pre>
-        <div class="float-wrap">
-            <div class="float-box float-right">1</div>
-            <div class="float-box float-right">2</div>
-            <div class="float-box float-right">3</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box FloatGraphic-box--right">1</div>
+            <div class="FloatGraphic-box FloatGraphic-box--right">2</div>
+            <div class="FloatGraphic-box FloatGraphic-box--right">3</div>
         </div>
     </section>
 
     <section>
         <h2>La propiedad clear</h2>
-        <p>Omite el <span class="marker">float</span> del elemento anterior.</p>
-        <p><code class="marker">clear</code> soporta 4 valores:</p>
+        <p>Omite el <code>float</code> del elemento anterior.</p>
+        <p><code class="u-marked">clear</code> soporta 4 valores:</p>
         <ul>
-            <li><em><code>none</code></em>: el elemento se verá afectado normalmente por un float.</li>
-            <li><em><code>left</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: left</code>.</li>
-            <li><em><code>right</code></em>: el elemento se desplazará abajo cuando se encuentre con un <code>float: right</code>.</li>
-            <li><em><code>both</code></em>: el elemento se desplazará abajo ante cualquier <code>float</code>.</li>
+            <li><code class="u-marked">none</code>: el elemento se verá afectado normalmente por un float.</li>
+            <li><code class="u-marked">left</code>: el elemento se desplazará abajo cuando se encuentre con un <code>float: left</code>.</li>
+            <li><code class="u-marked">right</code>: el elemento se desplazará abajo cuando se encuentre con un <code>float: right</code>.</li>
+            <li><code class="u-marked">both</code>: el elemento se desplazará abajo ante cualquier <code>float</code>.</li>
         </ul>
     </section>
 
     <section>
-        <div style="font-size: 1.5rem; width: 70%; margin: 0 auto; border: 1px dotted #666; padding: 1em;">
+        <div class="ClearExample-wrap fz-xxs">
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, delectus aperiam quas temporibus nisi, qui dicta officia at blanditiis, suscipit repudiandae tempora impedit, quibusdam! Tempora ducimus, maiores inventore voluptas est? <img src="./img/slides/css-float/floating-hedgehog.gif" alt="" style="float: left; width: 250px; margin-right:1em;"></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta.</p>
-            <p style="clear: both; background: hsla(18, 97%, 49%, 0.8)">cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph cleared paragraph</p>
+            <p class="ClearExample-clear u-highlighted">cleared paragraph</p>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque sed natus ut, quas ullam dicta qui optio magnam nulla illum nesciunt itaque voluptatem, quia. Quos culpa libero, deleniti ad adipisci!</p>
         </div>
     </section>
 </section>
 
 
-<section class="text-left">
+<section id="clearfix">
     <section>
         <h2>clearfix</h2>
     </section>
 
-    <section class="float-example-02">
-        <p style="font-size: 1.8rem;">Cuando los elementos block de la página no utilizan <code>float</code> para crear layouts se visualizan así:</p>
-        <hr>
+    <section>
+        <p class="mb-l">Cuando los elementos block de la página no utilizan <code>float</code> para crear layouts se visualizan así:</p>
+        <hr class="mb-l">
         <pre><code data-trim contenteditable>div { float: none; }</code></pre>
-        <div class="float-wrap">
-            <div class="float-box">1</div>
-            <div class="float-box">2</div>
-            <div class="float-box">3</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box">1</div>
+            <div class="FloatGraphic-box">2</div>
+            <div class="FloatGraphic-box">3</div>
         </div>
     </section>
 
     <section>
-        <p>Pero si usamos <code>float</code> en todos los elementos de un mismo contenedor <br>su altura <span class="marker">se colapsa.</span></p>
-        <p>Para evitar que suceda usamos la técnica <span class="marker">Clearfix</span></p>
+        <p class="mb-l">Un problema que suele presentarse cuando utilizamos float para crear layouts es que al remover todos los elementos en un contenedor del flow natural el contenedor se queda vacío y <strong>su altura pasa a ser 0</strong>.</p>
+        <hr class="mb-l">        
         <pre><code data-trim contenteditable>div { float: left; }</code></pre>
-            <div class="float-wrap">
-                <div class="float-box float-left">1</div>
-                <div class="float-box float-left">2</div>
-                <div class="float-box float-left">3</div>
+            <div class="FloatGraphic-wrap FloatGraphic-wrap--collapse">
+                <div class="FloatGraphic-box FloatGraphic-box--left">1</div>
+                <div class="FloatGraphic-box FloatGraphic-box--left">2</div>
+                <div class="FloatGraphic-box FloatGraphic-box--left">3</div>
             </div>
-        <small>Contenedor con Clearfix</small>
     </section>
 
     <section>
-        <p>En este ejemplo el primer contenedor tiene todos sus elementos con <span class="marker">float</span> y no se ha utilizado clearfix de modo que su altura pasa a ser 0.</p>
-        <hr>
-        <div class="float-example-03">
-            <div class="float-wrap">
-                <div class="float-box float-left">1</div>
-                <div class="float-box float-left">2</div>
-                <div class="float-box float-left">3</div>
-            </div>
-            <div class="float-wrap">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis repudiandae odio, expedita itaque earum pariatur tempore, placeat eaque minus illum inventore quas tenetur praesentium laudantium unde modi atque tempora voluptates.</p>
-            </div>
+        <p>Este problema puede pasar desapercibido si el contenedor no tiene <code>background</code> ni <code>border</code>, pero puede afectar a los elementos que estén ubicados a continuación.</p>
+    </section>
+
+    <section data-transition="fade">
+        <div class="FloatGraphic-wrap mb-m">
+            <div class="FloatGraphic-box">1</div>
+            <div class="FloatGraphic-box">2</div>
+            <div class="FloatGraphic-box">3</div>
+        </div>
+        <div class="FloatGraphic-wrap fz-xs">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis repudiandae odio, expedita itaque earum pariatur tempore, placeat eaque minus illum inventore quas tenetur praesentium laudantium unde modi atque tempora voluptates.</p>
+        </div>
+    </section>
+    
+    <section data-transition="fade">
+        <div class="FloatGraphic-wrap FloatGraphic-wrap--collapse mb-m">
+            <div class="FloatGraphic-box FloatGraphic-box--left">1</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">2</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">3</div>
+        </div>
+        <div class="FloatGraphic-wrap fz-xs">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis repudiandae odio, expedita itaque earum pariatur tempore, placeat eaque minus illum inventore quas tenetur praesentium laudantium unde modi atque tempora voluptates.</p>
         </div>
     </section>
 
-    <section class="float-example-02">
+    <section>
+        <p>Hay varios técnicas para solucionar este problema. Este conjunto de técnicas se suelen conocer con el nombre de <span class="u-marked">clearfix</span>, y aunque todas se agrupen bajo el mismo nombre sulen diferir mucho unas de otras.</p>
+        <p>Hay que tener en cuenta que la propiedad <code>float</code> nunca fue diseñada para ser usada como una herramienta de layout por lo que tanto el echo de utilizarla para componer páginas,  como las distintas técnicas para solucionar los problemas asociados, no dejan de ser hacks y cada uno acarrea un serie de ventajas e inconvenientes que hay que considerar a la hora de utilizarlos.</p>
+    </section>
+
+    <section>
         <h3>Clear: both;</h3>
-        <p>Una técnica sencilla para solucionar el problema es colocar dentro del contenedor, a continuación de los elementos flotados, un elemento con la propiedad <br><code class="marker">clear: both</code></p>
-        <hr>
-        <div class="float-wrap">
-            <div class="float-box float-left">1</div>
-            <div class="float-box float-left">2</div>
-            <div class="float-box float-left">3</div>
-            <div class="float-clear">clear: both;</div>
+        <p class="mb-l">Una técnica sencilla para solucionar el problema es colocar dentro del contenedor, a continuación de los elementos flotados, un elemento con la propiedad <code class="u-marked">clear: both</code></p>
+        <hr class="mb-l">
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box FloatGraphic-box--left">1</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">2</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left mb-xs">3</div>
+            <div class="ClearExample-clear fz-xs u-highlighted mb-xs"><code> clear: both</code>;</div>
         </div>
     </section>
 
-    <section class="float-example-02">
+    <section>
         <h3>Overflow: auto;</h3>
-        <p>Otra posible solución, es recurrir a la propiedad <code>overflow</code>. <br>Cualquier valor diferente a <code>visible</code> nos corregirá el problema </p>
-        <hr>
+        <p class="mb-xs">Otra posible solución, es recurrir a la propiedad <code class="u-marked">overflow</code>.</p>
+        <p class="mb-l">Cualquier valor diferente a <code>visible</code> nos corregirá el problema </p>
+        <hr class="mb-l">
         <pre><code data-trim contenteditable>div { overflow: auto; }</code></pre>
-        <div class="float-wrap float-cleared">
-            <div class="float-box float-left">1</div>
-            <div class="float-box float-left">2</div>
-            <div class="float-box float-left">3</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box FloatGraphic-box--left">1</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">2</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">3</div>
         </div>
     </section>
 
     <section>
         <h3>Clase .Clearfix</h3>
-        <p>Una buena práctica es aplicar la clase <span class="marker">.clearfix</span> al contenedor con elementos flotados:</p>
+        <p>Hay otras técnicas más avanzadas y estables de clearfix que combinan varias propiedades. Es una buena idea contar en el css con una class <code class="u-marked">.clearfix</code> de ayuda para poder utilizar cuando tengamos que lidiar con el problema.</p>
         <pre><code data-trim contenteditable>.clearfix:before,
 .clearfix:after {
     content: " ";
@@ -242,38 +310,45 @@
         <small><a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank">Micro Clearfix</a> de Nicolas Gallaguer</small>
     </section>
 
-    <section class="float-example-02">
+    <section>
         <h3>Contenedor con clase .clearfix</h3>
-        <div class="float-wrap float-cleared">
-            <div class="float-box float-left">1</div>
-            <div class="float-box float-left">2</div>
-            <div class="float-box float-left">3</div>
+        <div class="FloatGraphic-wrap">
+            <div class="FloatGraphic-box FloatGraphic-box--left">1</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">2</div>
+            <div class="FloatGraphic-box FloatGraphic-box--left">3</div>
         </div>
-        <pre><code data-trim contenteditable>&#60;div class="clearfix"&#62;
+        <pre><code data-trim contenteditable class="hljs html">
+&#60;div class="clearfix"&#62;
     &#60;div class="float-box"&#62;1&#60;/div&#62;
     &#60;div class="float-box"&#62;2&#60;/div&#62;
     &#60;div class="float-box"&#62;3&#60;/div&#62;
-    &#60;/div&#62;</code></pre>
+&#60;/div&#62;
+        </code></pre>
     </section>
+</section>
+
+<section>
+    <h2>Práctica</h2>
+    <a href="https://codepen.io/nahuelsotelo/pen/xRaGdZ">https://codepen.io/nahuelsotelo/pen/xRaGdZ</a>
 </section>
 
 
 
-<section class="text-left">
+<section id="position">
     <section>
         <h2>Position</h2>
     </section>
 
     <section>
         <p>Además de los <i>floats</i>, los márgenes y otras propiedades de layout, CSS proporciona la posibilidad de posicionar elementos de manera precisa mediante coordenadas.</p>
-        <p>Posicionaremos un elemento a partir de su esquina superior izquierda, utilizando las propiedades <em><code>top</code></em>, <em><code>right</code></em>, <em><code>bottom</code></em> y <em><code>left</code></em> (TRBL).</p>
-        <p>La dificultad consiste en determinar cual será el punto de orígen (0,0) de esas cordenadas y allí es donde entra la propiedad <em><code>position</code></em>.</p>
+        <p>Posicionaremos un elemento a partir de su esquina superior izquierda, utilizando las propiedades <code class="u-marked">top</code>, <code class="u-marked">right</code>, <code class="u-marked">bottom</code> y <code class="u-marked">left</code> (TRBL).</p>
+        <p>La dificultad consiste en determinar cual será el punto de orígen (0,0) de esas cordenadas y allí es donde entra la propiedad <code class="u-marked">position</code>.</p>
     </section>
 
     <section>
         <h3>Position static</h3>
-        <p>La propiedad position admite cuatro valores: <em><code>static</code></em>, <em><code>relative</code></em>, <em><code>absolute</code></em> y <em><code>fixed</code></em>.</p>
-        <p><em><code>static</code></em> es el valor por defecto y simplemente ignora cualquier valor de las propiedades TRBL, haciendo que el elemento se comporte de acuerdo a su flow natural o al indicado por la propiedad <code>display</code>.</p>
+        <p>La propiedad position admite cuatro valores: <code class="u-marked">static</code>, <code class="u-marked">relative</code>, <code class="u-marked">absolute</code> y <code class="u-marked">fixed</code>.</p>
+        <p><code>static</code> es el valor por defecto y simplemente ignora cualquier valor de las propiedades TRBL, haciendo que el elemento se comporte de acuerdo a su flow natural o al indicado por la propiedad <code>display</code>.</p>
     </section>
 
     <section>
@@ -285,16 +360,16 @@
     position: static;
 }
         </code></pre>
-        <div class="pos__container no--tooltip">
-            <div class="pos__box pos__box-1">.box-1</div>
-            <div class="pos__box pos__box-2">.box-2</div>
-            <div class="pos__box pos__box-3">.box-3</div>
+        <div class="PositionGraphic-wrap PositionGraphic-wrap--tooltipless">
+            <div class="PositionGraphic-box PositionGraphic-box--1">.box-1</div>
+            <div class="PositionGraphic-box PositionGraphic-box--2">.box-2</div>
+            <div class="PositionGraphic-box PositionGraphic-box--3">.box-3</div>
         </div>
     </section>
 
     <section>
         <h3>Position relative</h3>
-        <p><code>postion:<em>relative</em></code> nos permitirá desplazar el elemento de su sitio utilizando como punto 0,0 su esquina superior izquierda natural.</p>
+        <p><code class="u-marked">postion: relative</code> nos permitirá desplazar el elemento de su sitio utilizando como punto 0,0 su esquina superior izquierda natural.</p>
         <p>El resto de los elementos de la página <strong>no se verán afectados</strong> y se comportarán como si el elemento desplazado permaneciera en su sitio.</p>
     </section>
 
@@ -303,54 +378,54 @@
         <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
 .box-2 {
     position: relative;
-        top: 20px;
-        left: 40px;
+    top: 20px;
+    left: 40px;
 }
         </code></pre>
-        <div class="pos__container no--tooltip">
-            <div class="pos__box pos__box-1">.box-1</div>
-            <div class="pos__box pos__box-2" style="position: relative; top: 20px; left: 40px;">.box-2</div>
-            <div class="pos__box pos__box-3">.box-3</div>
+        <div class="PositionGraphic-wrap PositionGraphic-wrap--tooltipless">
+            <div class="PositionGraphic-box PositionGraphic-box--1">.box-1</div>
+            <div class="PositionGraphic-box PositionGraphic-box--2" style="position: relative; top: 20px; left: 40px;">.box-2</div>
+            <div class="PositionGraphic-box PositionGraphic-box--3">.box-3</div>
         </div>
     </section>
 
     <section>
         <h3>Position relative</h3>
         <p>También podremos usar valores negativos</p>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+        <pre><code data-trim contenteditable>
 .box-2 {
     position: relative;
-        top: -20px; /* = bottom: 20px */
-        left: -40px; /* = right: 40px */
+    top: -20px; /* = bottom: 20px */
+    left: -40px; /* = right: 40px */
 }
         </code></pre>
-        <div class="pos__container no--tooltip">
-            <div class="pos__box pos__box-1">.box-1</div>
-            <div class="pos__box pos__box-2" style="position: relative; top: -20px; left: -40px;">.box-2</div>
-            <div class="pos__box pos__box-3">.box-3</div>
+        <div class="PositionGraphic-wrap PositionGraphic-wrap--tooltipless">            
+            <div class="PositionGraphic-box PositionGraphic-box--1">.box-1</div>
+            <div class="PositionGraphic-box PositionGraphic-box--2" style="position: relative; top: -20px; left: -40px;">.box-2</div>
+            <div class="PositionGraphic-box PositionGraphic-box--3">.box-3</div>
         </div>
     </section>
 
     <section>
         <h3>Position absolute</h3>
-        <p><code>position:<em>absolute</em></code> posicionará al elemento tomando como coordenadas 0,0 a la esquina superior izquierda del elemento contenedor, pero siempre y cuando este elemento tenga <strong>una propiedad <code>position</code> diferente a <code>static</code></strong></p>
+        <p><code class="u-marked">position: absolute</code> posicionará al elemento tomando como coordenadas 0,0 a la esquina superior izquierda del elemento contenedor, pero siempre y cuando este elemento tenga <strong>una propiedad <code>position</code> diferente a <code>static</code></strong></p>
         <p>Además <code>position: absolute</code> <strong>quitará al elemento de su flow natural</strong> por lo que el resto de los elementos actuarán como si no existiese.</p>
     </section>
 
     <section>
         <h3>Position absolute</h3>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+        <pre><code data-trim contenteditable>
 .container { position: relative; }
 .box-2 {
     position: absolute;
-        bottom: 0;
-        right: 0;
+    bottom: 0;
+    right: 0;
 }
         </code></pre>
-        <div class="pos__container pos__container">
-            <div class="pos__box pos__box-1">.box-1</div>
-            <div class="pos__box pos__box-2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
-            <div class="pos__box pos__box-3">.box-3</div>
+        <div class="PositionGraphic-wrap">
+            <div class="PositionGraphic-box PositionGraphic-box--1">.box-1</div>
+            <div class="PositionGraphic-box PositionGraphic-box--2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
+            <div class="PositionGraphic-box PositionGraphic-box--3">.box-3</div>
         </div>
     </section>
 
@@ -361,20 +436,20 @@
 
     <section>
         <h3>Position absolute</h3>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
-.container-1 { position: relative; }
-.container-2 { position: static; }
+        <pre><code data-trim contenteditable>
+.container-1 { position: static; }
+.container-2 { position: relative; }
 .box-2 {
     position: absolute;
-        bottom: 0;
-        right: 0;
+    bottom: 0;
+    right: 0;
 }
         </code></pre>
-        <div class="pos__container pos__container-2">
-            <div class="pos__container pos__container-1" style="position: static;">
-                <div class="pos__box pos__box-1">.box-1</div>
-                <div class="pos__box pos__box-2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
-                <div class="pos__box pos__box-3">.box-3</div>
+        <div class="PositionGraphic-wrap PositionGraphic-wrap--2">
+            <div class="PositionGraphic-wrap PositionGraphic-wrap--1" style="position: static;">
+                <div class="PositionGraphic-box PositionGraphic-box--1">.box-1</div>
+                <div class="PositionGraphic-box PositionGraphic-box--2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
+                <div class="PositionGraphic-box PositionGraphic-box--3">.box-3</div>
             </div>
         </div>
     </section>
@@ -386,57 +461,57 @@
 
     <section>
         <h3>Position absolute</h3>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+        <pre><code data-trim contenteditable>
 .container-1 { position: relative; }
 .box-1 { position: absolute; bottom: 0; left: 0; }
 .box-2 { position: absolute; bottom: 0; right: 0; }
 .box-3 { position: absolute; top: 0; right: 0; }
         </code></pre>
-        <div class="pos__container is--collapsed" style="margin-top: 150px;">
-            <div class="pos__box pos__box-1" style="position: absolute; bottom: 0; left: 0;">.box-1</div>
-            <div class="pos__box pos__box-2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
-            <div class="pos__box pos__box-3" style="position: absolute; top: 0; right: 0;">.box-3</div>
+        <div class="PositionGraphic-wrap PositionGraphic-wrap--collapsed">
+            <div class="PositionGraphic-box PositionGraphic-box--1" style="position: absolute; bottom: 0; left: 0;">.box-1</div>
+            <div class="PositionGraphic-box PositionGraphic-box--2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
+            <div class="PositionGraphic-box PositionGraphic-box--3" style="position: absolute; top: 0; right: 0;">.box-3</div>
         </div>
     </section>
 
     <section>
         <h3>Position absolute</h3>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+        <pre><code data-trim contenteditable>
 .container-1 { position: relative; overflow: hidden; }
 .box-1 { position: absolute; bottom: 0; left: 0; }
 .box-2 { position: absolute; bottom: 0; right: 0; }
 .box-3 { position: absolute; top: 0; right: 0; }
         </code></pre>
-        <div class="pos__container is--collapsed" style="margin-top: 150px;">
+        <div class="PositionGraphic-wrap PositionGraphic-wrap--collapsed">
             <div style="overflow:hidden; position: relative;">
-                <div class="pos__box pos__box-1" style="position: absolute; bottom: 0; left: 0;">.box-1</div>
-                <div class="pos__box pos__box-2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
-                <div class="pos__box pos__box-3" style="position: absolute; top: 0; right: 0;">.box-3</div>
+                <div class="PositionGraphic-box PositionGraphic-box--1" style="position: absolute; bottom: 0; left: 0;">.box-1</div>
+                <div class="PositionGraphic-box PositionGraphic-box--2" style="position: absolute; bottom: 0; right: 0;">.box-2</div>
+                <div class="PositionGraphic-box PositionGraphic-box--3" style="position: absolute; top: 0; right: 0;">.box-3</div>
             </div>
         </div>
     </section>
 
     <section>
         <h3>Position fixed</h3>
-        <p><em><code>position:fixed</code></em> funcionará de manera similar a <code>position:absolute</code> pero utilizará como referencia para sus coordenadas la ventana del navegador, manteniendo la posición independientemente del scroll de la página.</p>
+        <p>Funcionará de manera similar a <code>position:absolute</code> pero utilizará como referencia para sus coordenadas la ventana del navegador, manteniendo la posición independientemente del scroll de la página.</p>
         <hr>
         <p style="text-align: center;"><a href="./files/css-position/fixed.html">Ver ejemplo &raquo;</a></p>
     </section>
 </section>
 
-<section class="text-left">
+<section id="z-index">
     <section>
         <h2>z-index</h2>
     </section>
 
     <section>
-        <p><em><code>z-index</code></em> es la propiedad CSS que se encarga de definir la posición de los elementos en el eje z.</p>
+        <p><code class="u-marked">z-index</code> es la propiedad CSS que se encarga de definir la posición de los elementos en el eje z.</p>
         <p>Por defecto, si dos elementos se superponen el que esté primero en el DOM quedará oculto debajo por los vengan a continuación.</p>
         <p>La propiedad <code>position</code> también entra en juego, ya que <strong>los elementos con <code>position: static</code> no se ven afectados por <code>z-index</code></strong> y siempre quedan por debajo de los elementos con otro valor en <code>position</code>.</p>
     </section>
 
     <section>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+        <pre><code data-trim contenteditable>
 .box-2 {
     position: relative;
         top: -20px;
@@ -448,25 +523,25 @@
         left: 40px;
 }
         </code></pre>
-        <div class="pos__container no--tooltip">
-            <div class="pos__box pos__box-1" style="position: relative;">.box-1</div>
-            <div class="pos__box pos__box-2" style="position: relative; top: -20px; left: 20px;">.box-2</div>
-            <div class="pos__box pos__box-3" style="position: relative; top: -40px; left: 40px;">.box-3</div>
+        <div class="PositionGraphic-wrap PositionGraphic-wrap--tooltipless">
+            <div class="PositionGraphic-box PositionGraphic-box--1" style="position: relative;">.box-1</div>
+            <div class="PositionGraphic-box PositionGraphic-box--2" style="position: relative; top: -20px; left: 20px;">.box-2</div>
+            <div class="PositionGraphic-box PositionGraphic-box--3" style="position: relative; top: -40px; left: 40px;">.box-3</div>
         </div>
     </section>
 
     <section>
         <p><code>z-index</code> nos permite alterar este orden.</p>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+        <pre><code data-trim contenteditable>
 .box-1, .box-2, .box-3 { position: relative; }
 .box-1 { z-index: 3; }
 .box-2 { z-index: 2; }
 .box-3 { z-index: 1; }
         </code></pre>
-        <div class="pos__container no--tooltip">
-            <div class="pos__box pos__box-1" style="position: relative; z-index: 3;">.box-1</div>
-            <div class="pos__box pos__box-2" style="position: relative; top: -20px; left: 20px; z-index: 2;">.box-2</div>
-            <div class="pos__box pos__box-3" style="position: relative; top: -40px; left: 40px; z-index: 1;">.box-3</div>
+        <div class="PositionGraphic-wrap PositionGraphic-wrap--tooltipless">
+            <div class="PositionGraphic-box PositionGraphic-box--1" style="position: relative; z-index: 3;">.box-1</div>
+            <div class="PositionGraphic-box PositionGraphic-box--2" style="position: relative; top: -20px; left: 20px; z-index: 2;">.box-2</div>
+            <div class="PositionGraphic-box PositionGraphic-box--3" style="position: relative; top: -40px; left: 40px; z-index: 1;">.box-3</div>
         </div>
     </section>
 
@@ -476,22 +551,22 @@
     </section>
 
     <section>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+        <pre><code data-trim contenteditable>
 &#60;div class="box-1"&#62;&#60;/div&#62;
 &#60;div class="box-2"&#62;
     &#60;div class="box-3"&#62;&#60;/div&#62;
 &#60;/div&#62;
         </code></pre>
-        <pre><code data-trim contenteditable style="font-size: 1.2rem; line-height: 1.2;">
+        <pre><code data-trim contenteditable>
 
 .box-1 { z-index: 2; }
 .box-2 { z-index: 1; }
 .box-3 { z-index: 3; }  /* z-index: 1.3 */
 
         </code></pre>
-            <div class="pos__container no--tooltip" style="border: 0;">
+            <div class="PositionGraphic-wrap PositionGraphic-wrap--tooltipless" style="border: 0;">
                 <div
-                    class="pos__box pos__box-1"
+                    class="PositionGraphic-box PositionGraphic-box--1"
                     style="
                         background-color: rgba(39, 174, 96, .7);
                         border: 2px solid rgb(39, 174, 96);
@@ -502,7 +577,7 @@
                     .box-1
                 </div>
                 <div
-                    class="pos__box pos__box-2"
+                    class="PositionGraphic-box PositionGraphic-box--2"
                     style="
                         background-color: rgba(142, 68, 173, .7);
                         border: 2px solid rgb(142, 68, 173);
@@ -516,7 +591,7 @@
                 >
                     .box-2
                         <div
-                            class="pos__box pos__box-3"
+                            class="PositionGraphic-box PositionGraphic-box--3"
                             style="
                                 background-color: rgba(211, 84, 0, .7);
                                 border: 2px solid rgb(211, 84, 0);
@@ -533,28 +608,6 @@
     </section>
 </section>
 
-
-
-<section>
-    <h3>Links relacionados</h3>
-    <ul>
-        <li style="margin-bottom: .8em;">
-            <strong>CSS Tricks</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
-            <br>
-            <a href="http://css-tricks.com/all-about-floats/">All about Floats</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>MDN Float</strong> <i style="color: #999;"> &mdash; Mozilla Developer Network</i>
-            <br>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/float/">CSS Reference</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>Micro Clearfix</strong> <i style="color: #999;"> &mdash; Nicolas Gallagher</i>
-            <br>
-            <a href="http://nicolasgallagher.com/micro-clearfix-hack/">A new micro clearfix hack</a>
-        </li>
-    </ul>
-</section>
 
         </div>
     </div>

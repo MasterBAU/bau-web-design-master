@@ -47,736 +47,291 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Background &amp; Gradients</strong></h3>
+                <h3><strong>Componentes</strong></h3>
             </section>
 
             
 
 <section>
   <section>
-    <h2>Imágenes de fondo</h2>
+    <h1>Componentes modulares</h1>
   </section>
 
   <section>
-    <p>CSS nos permite hacer mucho más con el background de un elemento que simplemente asignarle un color plano.</p>
-    <p>Gracias a la propiedad <em><code>background-image</code></em> podremos asignar imágenes de fondo, pero eso es solo el comienzo.</p>
-  </section>
+    <blockquote>
+      <p>“It's a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS and possibly JavaScript.”</p>
+      <footer>- <cite><a href="https://vimeo.com/72759139">Nicole Sullivan</a></cite></footer>
+    </blockquote>
 
-  <section>
-    <ul class="font-list mb-m">
-      <li>
-        <strong>background-color</strong> - <i>&#060;color value&#062;</i>
-      </li>
-      <li>
-        <strong>background-image</strong> - <i>&#060;url (location of image)&#062;</i> | none
-      </li>
-      <li>
-        <strong>background-repeat</strong> - repeat | repeat-x | repeat-y | no-repeat
-      </li>
-      <li>
-        <strong>background-position</strong> - <i>&#060;length measurement&#062;</i> | <i>&#060;percentage&#062;</i> | left | center | right | top | bottom
-      </li>
-      <li>
-        <strong>background-attachment</strong> - scroll | fixed | <span class="u-marked">local</span>
-      </li>
-      <li>
-        <strong><span class="u-marked">background-clip</span></strong> - border-box | padding-box | content-box
-      </li>
-      <li>
-        <strong><span class="u-marked">background-origin</span></strong> - border-box | padding-box | content-box
-      </li>
-      <li>
-        <strong><span class="u-marked">background-size</span></strong> - <i>&#060;length&#062;</i> | <i>&#060;percentage&#062;</i> | auto | cover | contain
-      </li>
-    </ul>
-    <p class="u-marked fz-xxs"><i>* Nuevos en CSS3</i></p>
-  </section>
-</section>
-
-
-
-
-<section id="bg-image">
-  <section data-background="./img/slides/css-background/background-image.gif" data-background-repeat="no-repeat">
-    <h3 class="u-overBg">background-image</h3>
-  </section>
-
-  <section class="bg-image">
-    <pre><code data-trim contenteditable>
-      div { background-image: url(img/dalek.png); }
-    </code></pre>
-    <div class="fz-xxs image-wrap is--dalek">
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-      <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-    </div>
-  </section>
-</section>
-
-
-
-
-<section id="bg-repeat">
-    <section data-background="./img/slides/css-background/background-repeat.gif" data-background-repeat="repeat" data-background-size="100px">
-        <h3 style="color: #fff; text-shadow: 2px 2px 1px rgba(0,0,0,1);">background-repeat</h3>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-repeat: repeat; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-repeat: repeat-x; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: repeat-x">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-repeat: repeat-y; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: repeat-y">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-repeat: no-repeat; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-</section>
-
-
-
-
-<section id="bg-position">
-    <section data-background="./img/slides/css-background/background-position.gif" data-background-repeat="no-repeat" data-background-position="center 5%" data-background-size="230px">
-        <h3>background-position</h3>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-position: 15% 200px; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: 5% 200px;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-position: center; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: center;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-position: left top; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: left top;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-position: right bottom; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: right bottom;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-position: right 100px bottom 20px; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: right 100px bottom 20px;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-</section>
-
-
-
-
-
-<section id="bg-attachment">
-    <section data-background="./img/slides/css-background/background-attachment.gif" data-background-repeat="no-repeat">
-        <h3 class="u-overBg">background-attachment </h3>
-    </section>
-
-     <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-attachment: scroll; }
-        </code></pre>
-        <hr>
-        <p class="ta-c"><a href="./files/css-background/bg-scroll.html">Ver ejemplo &raquo;</a></p>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-attachment: fixed; }
-        </code></pre>
-        <hr>
-        <p class="ta-c"><a href="./files/css-background/bg-fixed.html">Ver ejemplo &raquo;</a></p>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-attachment: local; }
-        </code></pre>
-        <hr>
-        <p class="ta-c"><a href="./files/css-background/bg-local.html">Ver ejemplo &raquo;</a></p>
-    </section>
-</section>
-
-
-
-
-<section id="bg-clip">
-  <section data-background="./img/slides/css-background/background-clip.gif" data-background-repeat="no-repeat">
-    <h3 class="u-overBg">background-clip</h3>
-  </section>
-
-  <section class="bg-image">
-    <pre><code data-trim contenteditable>
-      div { background-clip: border-box; }
-    </code></pre>
-    <div class="fz-xxs image-wrap is--tripi" style="background-clip: border-box;">
-      <p class="c-cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+    <div>
+      <img src="./img/slides/good-practices/bem02.png" alt="" style="height: 350px;">
     </div>
   </section>
 
-  <section class="bg-image">
-    <pre><code data-trim contenteditable>
-      div { background-clip: padding-box; }
-    </code></pre>
-    <div class="fz-xxs image-wrap is--tripi" style="background-clip: padding-box;">
-      <p class="c-cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-    </div>
-  </section>
-
-  <section class="bg-image">
-    <pre><code data-trim contenteditable>
-      div { background-clip: content-box; }
-    </code></pre>
-    <div class="fz-xxs image-wrap is--tripi" style="background-clip: content-box;">
-      <p class="c-cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-    </div>
-  </section>
-</section>
-
-
-
-
-<section id="bg-origin">
-    <section data-background="./img/slides/css-background/background-origin.gif" data-background-repeat="no-repeat">
-        <h3 class="u-overBg">background-origin</h3>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-origin: border-box; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--tripi" style="background-image: url(./img/slides/css-background/megaman.png); background-repeat: no-repeat; background-position: left top; background-origin: border-box; color: #000;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-origin: padding-box; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--tripi"  style="background-image: url(./img/slides/css-background/megaman.png); background-repeat: no-repeat; background-position: left top; background-origin: padding-box; color: #000;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-origin: content-box; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--tripi" style="background-image: url(./img/slides/css-background/megaman.png); background-repeat: no-repeat; background-position: left top; background-origin: content-box; color: #000;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-        </div>
-    </section>
-</section>
-
-
-
-
-<section id="bg-size">
-    <section data-background="./img/slides/css-background/background-size.gif" data-background-repeat="no-repeat">
-        <h3>background-size</h3>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-size: 50px 200px; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: 50px 200px;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-size: 100% 50%; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: 100% 50%;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-size: auto 100%; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: auto 100%;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-size: 100% auto; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: 100% auto;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-size: cover; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: cover;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-
-    <section class="bg-image">
-        <pre><code data-trim contenteditable>
-div { background-size: contain; }
-        </code></pre>
-        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: contain;">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-        </div>
-    </section>
-</section>
-
-
-
-
-<section>
   <section>
-    <h2>Propiedad background</h2>
-  </section>
-
-  <section>
-    <p>Como sucede con otras propiedades, podemos utilizar la propiedad <em><code>background</code></em> para agrupar varias propiedades de las antes mencionadas.</p>
-    <p>Todas las propiedades son opcionales y pueden ir en cualquier orden, excepto los valores de <code>background-position</code>, primero siempre va el horizontal seguido inmediatamente del vertical.</p>
-    <p>hay que tener en cuenta que si omitimos un valor este se asignará su valor por defecto.</p>
-  </section>
-
-  <section class="bg-image">
-    <pre><code data-trim contenteditable>
-div {
-  background: #ccc url(megaman.png) no-repeat center top content-box;
-}
-  </code></pre>
-
-  <div class="fz-xs image-wrap is--megaman"  style="background: #ccc url( ./img/slides/css-background/megaman.png) no-repeat center top content-box;">
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-    <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
-  </div>
-</section>
-</section>
-
-
-
-
-<section>
-  <section>
-    <h2>Multiples imágenes de fondo</h2>
-  </section>
-
-  <section>
-    <p>Podemos utilizar más de una imágen de fondo simplemente <em>separando los valores con una coma</em>.</p>
-    <p>Si asignamos más de una propiedad relativa al <code>backgrouns</code> tenemos que cuidar que el orden sea el mismo para todas las propiedades.</p>
-    <p>Si algunas de las imágenes se superponen será la primera de la lista la que quede al frente y el resto le seguirán en orden.</p>
-  </section>
-
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background:
-    url(day-06/dalek.png) 140px top,
-    url(day-06/megaman.png) 90px 100px;
-
-  background-repeat: no-repeat;
-}
-    </code></pre>
-    <div style="background-color: rgba(255,255,255, .6); width: 60%; margin: 0 auto;">
-      <div class="fz-xxs image-wrap is--dalek" style="width: 100%; box-sizing: border-box; background: url(./img/slides/css-background/dalek.png) 140px top, url(./img/slides/css-background/megaman.png)  90px 100px; background-repeat: no-repeat;">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
-        <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-        <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
-      </div>
-    </div>
-  </section>
-</section>
-
-
-<section>
-    <h3>Ejercicios</h3>
+    <h2>Características de un componente:</h2>
     <ul>
-        <li><a href="http://lea.verou.me/css-workshop/#slide7">Ejercicio 01</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide8">Ejercicio 02</a></li>
+      <li>Son un fragmento de la interfaz que cumple una única función.</li>
+      <li>Son independientes, tanto de su contexto como del resto de componentes.</li>
+      <li>Son reutilizables.</li>
+      <li>Son autocontenidos, no filtran estilos a otros componentes.</li>
     </ul>
-</section>
 
-<section id="gradient-linear">
-  <section>
-    <h2>Degradado linear</h2>
+    <aside class="notes">
+      <p>Separados del layout. Su relación con el contexto se gestiona por separado.</p>
+      <p>El CSS de un componente tiene que tener una logica interna, que debe apreciarse leyendo el código.</p>
+    </aside>
   </section>
 
   <section>
-    <p>CSS nos facilita varias opciones para poder crear todo tipo de degradados utilizando la propiedad <em><code>background-image</code></em> </p>
-    <p>Un ejemplo de la sintáxis para crear un degrado linear simple sería:</p>
-    <p><code>background-image: linear-gradient(180deg, HotPink, SkyBlue)</code></p>
-  </section>
-
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(45deg, HotPink, SkyBlue);
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: linear-gradient(45deg, HotPink, SkyBlue)">
-  </div>
-</section>
-
-<section>
-  <p>Ademas de la unidad <code>deg</code> para controlar la rotación de nuestro degradado, CSS nos permite utilizar otras <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/angle">unidades de medida</a> además de palabras clave.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to bottom right, HotPink, SkyBlue);
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to bottom right, HotPink, SkyBlue)"></div>
-</section>
-
-<section>
-  <p>También podemos variar el punto en que los colores comienzan a fundirse especificando un <i>color stop</i> con un valor (normalmente un porcentaje) detrás del color que queramos afectar.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink 80%, SkyBlue);
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink 70%, SkyBlue)"></div>
-</section>
-
-<section>
-  <div>
-    <p>Si hacemos coincidir los cambios de color podemos simular transiciones entre dos colores planos.</p>
-
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink 50%, SkyBlue 50%);
-}
-    </code></pre>
-  </div>
-  <div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink 50%, SkyBlue 50%)"></div>
-</section>
-
-<section>
-  <p>Por supuesto podemos hacer degradados con múltiples colores simplemente agregando más al final de la lista.</p>
-  <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, HotPink, SkyBlue, lime);
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: linear-gradient(to top, HotPink, SkyBlue, lime)"></div>
-</section>
-
-
-<section>
-  <div>
-    <p>Para conseguir el efecto de bordes planos con más de dos colores es necesario repetir los colores intermedios, o sea, que delimitan con más de un color.</p>
-
-    <pre><code data-trim contenteditable>
-div {
-  background-image: linear-gradient(to top, LightSkyBlue 30%,
-  white 30%, white 70%, LightSkyBlue 70%);
-}
-  </code></pre></div>
-  <div class="gradient-wrap" style="background-image: linear-gradient(to top, LightSkyBlue 33%, white 33%, white 66%, LightSkyBlue 66%)"></div>
-</section>
-
-</section>
-
-
-<section id="gradient-radial">
-  <section>
-    <h2>Degradado radial</h2>
-  </section>
-
-  <section>
-    <p>La sintáxis básica para conseguir un degradado radial es muy similar a la del degradado linear pero,  en lugar de <code>linear-gradient</code>, utilizaremos: <em><code>radial-gradient</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient(HotPink, RoyalBlue);
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section>
-    <p>Podemos forzar que el degradado sea un círculo en lugar de que adopte las proporciones del contenedor con el keyword <em><code>circle</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient(circle, HotPink, RoyalBlue);
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle, HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section class="fz-s">
-    <p>Si quisieramos que el cículo quedase contenido en su totalidad dentro del elemento usaríamos <em><code>circle closest-side</code></em>.</p>
-    <p>Otros posibles valores son <em><code>closest-corner</code></em>, <em><code>farthest-corner</code></em>, <em><code>farthest-side</code></em>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image: radial-gradient( circle closest-side, HotPink,
-  RoyalBlue);
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle closest-side, HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section>
-    <p>Podemos posicionar el gradiente a partir de las <strong>coordenadas de su centro</strong>, tanto usando unidades como palabras clave.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle at top right,
-      HotPink,
-      RoyalBlue
-    );
-}
-    </code></pre>
-    <div class="gradient-wrap" style="background-image: radial-gradient(circle at top right, HotPink, RoyalBlue)"></div>
-  </section>
-
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle at 20% 60%,
-      HotPink,
-      RoyalBlue
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: radial-gradient(circle at 20% 60%, HotPink, RoyalBlue)"></div>
-  </section>
-</section>
-
-
-<section id="gradient-repeat">
-  <section>
-    <h2>Repeating background</h2>
-  </section>
-
-  <section>
-    <p class="fz-xs">Las propiedades <em><code>repeating-linear-gradient</code></em> y <em><code>repeating-radial-gradient</code></em> nos permiten repetir el degadado como si de un patrón se tratara. El tamaño del degradado lo definirá el último <i>color-stop</i>.</p>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    repeating-linear-gradient(
-      HotPink,
-      SkyBlue 30px
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: repeating-linear-gradient(HotPink, SkyBlue 30px);"></div>
-</section>
-
-<section>
- <pre><code data-trim contenteditable>
-div {
-  background-image:
-    repeating-radial-gradient(
-      circle,
-      HotPink,
-      HotPink 20px,
-      SkyBlue 20px,
-      SkyBlue 50px
-    );
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: repeating-radial-gradient(circle, HotPink, HotPink 20px, SkyBlue 20px, SkyBlue 50px);"></div>
-</section>
-</section>
-
-
-<section id="gradient-multiple">
-  <section>
-    <h2>Combinando degradados</h2>
-  </section>
-
-  <section>
-    <p>Podemos utilizar múltiples degradados de la misma manera que utilizábamos múltiples imágenes, separándolos con una coma dentro de la propiedad <code>background-image</code>.</p>
-    <p>Para que los degradados de debajo se vean tendremos que utilizar colores con transparencia.</p>
-  </section>
-
-  <section>
-    <pre><code data-trim contenteditable>
-div {
-  background-image:
-    radial-gradient(
-      circle closest-side, HotPink, rgba(65, 105, 225, .2)
-    ),
-    linear-gradient(
-      orange,olive
-    );
-}
-  </code></pre>
-  <div class="gradient-wrap" style="background-image: radial-gradient(circle closest-side, HotPink, rgba(65, 105, 225, .2)), linear-gradient(orange, olive)"></div>
-</section>
-
-<section>
-  <pre><code data-trim contenteditable style="font-size: 1.1rem; line-height: 1.2;">
-div {
-  background-image:
-    radial-gradient(
-    circle,
-    gold, gold 35px,
-    rgba(0,0,0,0) 35px, rgba(0,0,0,0)
-  ),
-  linear-gradient(
-    to top,
-    LightSkyBlue 33%,
-    white 33%, white 66%,
-    LightSkyBlue 66%
-  );
-}
-</code></pre>
-<div class="gradient-wrap" style="background-image: radial-gradient(circle, gold, gold 35px, rgba(0,0,0,0) 35px, rgba(0,0,0,0)), linear-gradient(to top, LightSkyBlue 33%, white 33%, white 66%, LightSkyBlue 66%)"></div>
-</section>
-
-<section>
-  <p>Las posibilidades son muchísimas y seguirán aumentando cuando los <i>blend-modes</i> propuestos por Adobe tengan soporte completo en todos los navegadores.</p>
-  <ul>
-    <li><a href="http://lea.verou.me/css3patterns/">CSS3 Patterns Gallery</a></li>
-    <li><a href="http://bennettfeely.com/gradients/">New CSS gradient possibilities with the background-blend-mode property</a></li>
-  </ul>
-</section>
-</section>
-
-
-<section>
-    <h3>Ejercicios</h3>
+    <h2>Enlaces relacionados:</h2>
     <ul>
-        <li><a href="http://lea.verou.me/css-workshop/#slide22">Ejercicio 03</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide23">Ejercicio 04</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide24">Ejercicio 05</a></li>
-        <li><a href="http://lea.verou.me/css-workshop/#slide26">Ejercicio 06</a></li>
+      <li>
+        <a href="http://bradfrost.com/blog/post/atomic-web-design/">“Atomic Design”</a> - <i>Brad Frost</i>
+      </li>
+
+      <li>
+        <a href="http://blog.millermedeiros.com/solid-css/">“Solid Css”</a> - <i> Miller H. Borges Medeiros</i>
+      </li>
+
+      <li>
+        <a href="http://csswizardry.com/2012/04/the-single-responsibility-principle-applied-to-css/">“The single responsibility principle applied to CSS”</a> - <i>Harry Roberts</i>
+      </li>
     </ul>
+  </section>
 </section>
+
+
+<section id="specificity">
+    <section>
+        <h2>Especificidad (specificity)</h2>
+    </section>
+
+    <section>
+        <p>En CSS, la <span class="u-marked">especificidad</span>, es lo que determina que estilo será el que acabará aplicandose a un elemento determinado.</p>
+        <p>Cuando a un elemento se le aplica <span class="u-marked">más de un selector con reglas que actúan sobre la misma propiedad</span>, es la especificidad la encargada de resolver este conflicto.</p>
+    </section>
+
+    <section>
+        <p>A grandes rasgos podemos ordenar los diferentes tipos de selectores de menor a mayor peso específico de la siguiente manera:</p>
+        <ol>
+            <li>Selectores de elemento</li>
+            <li>Clases</li>
+            <li>IDs</li>
+            <li>Estilos inline</li>
+        </ol>
+    </section>
+
+    <section>
+        <h3>Calcular especificidad</h3>
+    </section>
+
+    <section>
+        <p class="specificity">
+            <span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">0</span>
+        </p>
+    </section>
+
+    <section>
+        <pre class="specificity-example">
+<span class="c-blue">p</span> {
+    color: red;
+}</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">1</span></p>
+    </section>
+
+    <section>
+        <pre class="specificity-example">
+<span class="c-green">.text</span> {
+    color: red;
+}</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">1</span>,<span class="specificity-item specificity-item--element">0</span></p>
+    </section>
+
+    <section>
+        <pre class="specificity-example">
+<span class="c-purple">#main</span> <span class="c-blue">strong</span> {
+    color: red;
+}</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">1</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">1</span></p>
+    </section>
+
+    <section>
+        <pre class="specificity-example" style="font-size: 1.9rem;">
+<span class="c-blue">header</span> <span class="c-blue">ul</span><span class=c-purple>#main-nav</span> <span class="c-green">.sub-menu</span> <span class="c-blue">li</span><span class="c-green">.child</span> <span class="c-blue">a</span><span class="c-green">:hover</span> {
+    color: red;
+}</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">1</span>,<span class="specificity-item specificity-item--class">3</span>,<span class="specificity-item specificity-item--element">4</span></p>
+    </section>
+
+    <section>
+        <pre class="specificity-example" style="font-size: 2rem;">
+&#60;p <span class="c-red">style="color: red"</span>&#62;Lorem ipsum dolor sit amet, consectetur adipisicing elit.&#60;/p&#62;</pre>
+        <hr>
+        <p class="specificity"><span class="specificity-item specificity-item--inline">1</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">0</span></p>
+    </section>
+
+    <section>
+        <pre class="specificity-example">
+<span class="c-blue">p</span> {
+    color: red <span style="color: red";>!important</span>;
+}</pre>
+        <hr>
+        <p class="specificity specificity-important fragment">
+            <span class="specificity-importantWrap">
+                <span class="specificity-item specificity-item--inline">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">1</span>
+            </span>
+
+            <span class="specificity-importantWrap">
+                <span class="specificity-item c-red">0</span>,<span class="specificity-item specificity-item--id">0</span>,<span class="specificity-item specificity-item--class">0</span>,<span class="specificity-item specificity-item--element">0</span>
+            </span>
+        </p>
+    </section>
+</section>
+
+
 
 
 <section>
-    <h2>Links relacionados</h2>
+  <section>
+    <h1>Selectores</h1>
+  </section>
+
+  <section>
+    <h3>Carcterísticas de un buen selector</h3>
     <ul>
-        <li style="margin-bottom: .8em;">
-            <strong>CSS Gradients</strong> <i style="color: #999;"> &mdash; Chris Coyier</i><br>
-            <a href="http://css-tricks.com/css3-gradients/">http://css-tricks.com/css3-gradients/</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>Ultimate CSS Gradient Generator</strong>
-            <br>
-            <a href="http://www.colorzilla.com/gradient-editor/">http://www.colorzilla.com/gradient-editor/</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>What are the Vendor Prefixes?</strong> <i style="color: #999;"> &mdash; David Walsh</i>
-            <br>
-            <a href="http://davidwalsh.name/vendor-prefixes">http://davidwalsh.name/vendor-prefixes</a>
-        </li>
-        <li style="margin-bottom: .8em;">
-            <strong>How To Deal With Vendor Prefixes</strong> <i style="color: #999;"> &mdash; Chris Coyier</i>
-            <br>
-            <a href="http://css-tricks.com/how-to-deal-with-vendor-prefixes/">http://css-tricks.com/how-to-deal-with-vendor-prefixes/</a>
-        </li>
+      <li>Tiene baja especificidad</li>
+      <li>Es sólido (no depende del contexto)</li>
+      <li>Es autodocumentado (su función se entiende solo con leerlo)</li>
     </ul>
+  </section>
+
+  <section>
+    <p>El gráfico de especificidad es una representación de cómo se distribuye la misma a lo largo de una hoja de estilo.</p>
+    <p>Es recomendable que la especificidad vaya <strong>aumentando gradualmente</strong>, empezando con estilos más genéricos (selectores de elemento) y acabando con casos más específicos.</p>
+  </section>
+
+  <section>
+    <h2>Gráfico de especificidad</h2>
+    <div>
+      <img src="./img/slides/good-practices/specificity-graph-02.png" alt="" style="height: 350px;">
+      <p style="text-align: center;"><cite><a href="http://csswizardry.com/2014/10/the-specificity-graph/">The Specificity Graph</a> - <em>Harry Roberts</em></cite></p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Especificidad plana</h2>
+    <p>Intentar mantener los selectores lo más cortos posibles (evitar nesting) nos ayudará a que nuestros componentes no estén atados a un contexto determinado y sean <strong>independientes</strong> del HTML.</p>
+
+    <pre><code class="hljs css">
+  /* Cuidado! */
+  #main-header nav ul > li .nav-link:first-child { ... }  /* 0, 1, 2, 3 */
+
+  /* Mejor */
+  .MainNav-link--first { ... }  /* 0, 0, 1, 0 */
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Nomenclaturas</h2>
+    <blockquote>
+      "What we want is to be able to write code that is as transparent and self-documenting as possible. Transparency means that it is clear and obvious (to others) in its intent; self-documenting means that we don’t have to lose time to writing and reading lengthy, supplementary documentation."
+      <footer><cite>- Harry Roberts</cite></footer>
+    </blockquote>
+  </section>
+
+  <section>
+    <h2>Enlaces relacionados:</h2>
+    <ul>
+      <li>
+        <a href="https://vimeo.com/140641366">“CSS For Software Engineers For CSS Developers”</a> - <i>Harry Roberts</i>
+      </li>
+
+      <li>
+        <a href="http://csswizardry.com/2015/04/cyclomatic-complexity-logic-in-css/">“Cyclomatic Complexity: Logic in CSS”</a> - <i>Harry Roberts</i>
+      </li>
+  </section>
 </section>
+
+
+
+
+<section>
+  <section>
+    <h1>Sistemas de Nomenclatura</h1>
+  </section>
+
+
+  <section>
+    <h2 style="line-height: .75; margin-bottom: 3rem;">
+      BEM<br>
+      <span style="font-size: .7em;">(block / element / modifier)</span>
+    </h2>
+    <div>
+      <img src="./img/slides/good-practices/bem.jpg" alt="" style="height: 350px;">
+      <p style="text-align: center;"><cite><a href="https://en.bem.info/method/">BEM Methodology</a></cite></p>
+    </div>
+  </section>
+
+  <section>
+    <pre class="fz-s"><code class="hljs css">
+  .nombre-del-bloque { ... }
+
+  .nombre-del-bloque__elemento { ... }
+
+  .nombre-del-bloque--modificador { ... }
+    </code></pre>
+  </section>
+
+  <section>
+    <p>Refactorizando:</p>
+    <pre contenteditable><code class="hljs css">
+  .tab-group { ... } /* 0, 0, 1, 0 */
+
+  .tab-group > li { ... } /* 0, 0, 1, 1 */
+
+  .tab-group a { ... } /* 0, 0, 1, 1 */
+
+  .tab-group a.selected { ... } /* 0, 0, 2, 1 */
+    </code></pre>
+
+    <pre contenteditable class="fragment"><code class="hljs css">
+  .tab-group { ... } /* 0, 0, 1, 0 */
+
+  .tab-group__tab { ... } /* 0, 0, 1, 0 */
+
+  .tab-group__link { ... } /* 0, 0, 1, 0 */
+
+  .tab-group__link--selected { ... } /* 0, 0, 1, 0 */
+    </code></pre>
+  </section>
+
+  <section>
+    <h2>Otros sistemas nomenclaturas</h2>
+    <ul>
+      <li>
+        <a href="http://seesparkbox.com/foundry/naming_css_stuff_is_really_hard">“Naming CSS Stuff Is Really Hard”</a> - <i>Ethan Muller</i>
+      </li>
+
+      <li>
+        <a href="http://csswizardry.com/2015/03/more-transparent-ui-code-with-namespaces/">“More Transparent UI Code with Namespaces”</a> - <i>Harry Roberts</i>
+
+      </li>
+      <li>
+        <a href="https://github.com/suitcss/suit/blob/master/doc/naming-conventions.md">SUIT</a>
+      </li>
+
+      <li>
+        <a href="https://smacss.com/">“SMACSS”</a> - <i>Jonathan Snook</i>
+      </li>
+    </ul>
+  </section>
+</section>
+
 
         </div>
     </div>

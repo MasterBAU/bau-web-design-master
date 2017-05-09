@@ -47,330 +47,488 @@
                 <h3>Módulo III <br />
                     <span class="marker">Programación Frontend</span>
                 </h3>
-                <h3><strong>Formularios y tablas</strong></h3>
+                <h3><strong>Background &amp; Gradients</strong></h3>
             </section>
 
-            <section class="ta-l">
-  <section class="ta-c">
-    <h2>Elementos de formulario</h2>
-    <p class="ta-c"><a href="files/html-forms/form.zip">Ejemplo</a></p>
+            
+
+<section>
+  <section>
+    <h2>Imágenes de fondo</h2>
   </section>
 
-  <section class="ta-l">
-    <p>Los formularios nos permiten obtener información del usuario. <br />El resultado puede ser una búsqueda en una base de datos o el envío del contenido por e-mail.</p>
-    <img src="img/slides/html-forms/forms-example01.jpg" alt="">
+  <section>
+    <p>CSS nos permite hacer mucho más con el background de un elemento que simplemente asignarle un color plano.</p>
+    <p>Gracias a la propiedad <em><code>background-image</code></em> podremos asignar imágenes de fondo, pero eso es solo el comienzo.</p>
   </section>
 
-  <section class="ta-l">
-    <h3>Estructura básica</h3>
-    <pre><code data-trim contenteditable>
-<form>
-  <input type="text" placeholder="Municipio, barrio, CP...">
-  <input type="submit">Buscar</input>
-</form>
-    </code></pre>
-  </section>
-
-  <section class="ta-l">
-    <h3>&lt;form&gt;</h3>
-    <p>La etiqueta Form se utiliza para crear un formulario.<br />
-      Puede contener los siguientes atributos que nos van a permitir definir su comportamiento:</p>
-      <ul>
-        <li><code class="u-marked">action="send.php"</code> > Permite indicar la URL a la que se enviarán los datos.</li>
-        <li><code class="u-marked">name="MiForm"</code> > Especificamos el nombre del formulario.</li>
-        <li><code class="u-marked">autocomplete="on/off"</code> > Autocompletar campos de forma automática</li>
-        <li><code class="u-marked">method="get/post"</code> > Define como enviará los datos.</li>
-      </ul>
+  <section>
+    <ul class="font-list mb-m">
+      <li>
+        <strong>background-color</strong> - <i>&#060;color value&#062;</i>
+      </li>
+      <li>
+        <strong>background-image</strong> - <i>&#060;url (location of image)&#062;</i> | none
+      </li>
+      <li>
+        <strong>background-repeat</strong> - repeat | repeat-x | repeat-y | no-repeat
+      </li>
+      <li>
+        <strong>background-position</strong> - <i>&#060;length measurement&#062;</i> | <i>&#060;percentage&#062;</i> | left | center | right | top | bottom
+      </li>
+      <li>
+        <strong>background-attachment</strong> - scroll | fixed | <span class="u-marked">local</span>
+      </li>
+      <li>
+        <strong><span class="u-marked">background-clip</span></strong> - border-box | padding-box | content-box
+      </li>
+      <li>
+        <strong><span class="u-marked">background-origin</span></strong> - border-box | padding-box | content-box
+      </li>
+      <li>
+        <strong><span class="u-marked">background-size</span></strong> - <i>&#060;length&#062;</i> | <i>&#060;percentage&#062;</i> | auto | cover | contain
+      </li>
+    </ul>
+    <p class="u-marked fz-xxs"><i>* Nuevos en CSS3</i></p>
   </section>
 </section>
 
-<section class="ta-l">
-  <section class="ta-l">
-    <h3>&lt;input&gt;</h3>
-    <p> Es el elemento básico de un formulario.<br />
-      Su funcionalidad varía dependiendo del valor de su atributo "type".<br />
-      Si omitimos el valor de "type" por defecto es "text".</p>
-      <pre><code data-trim contenteditable>
-<form>
-  <input type="text" value="nombre"/>
-</form>
-      </code></pre>
-      <br />
-      <p>
-        <input type="text" style="width: 550px; font-size: 1.5rem; margin:0 30px; padding: .25rem .5rem; display: inline-block"/>
-      </p>
+
+
+
+<section id="bg-image">
+  <section data-background="./img/slides/css-background/background-image.gif" data-background-repeat="no-repeat">
+    <h3 class="u-overBg">background-image</h3>
+  </section>
+
+  <section class="bg-image">
+    <pre><code data-trim contenteditable>
+      div { background-image: url(img/dalek.png); }
+    </code></pre>
+    <div class="fz-xxs image-wrap is--dalek">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+      <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+    </div>
+  </section>
+</section>
+
+
+
+
+<section id="bg-repeat">
+    <section data-background="./img/slides/css-background/background-clip2.gif" data-background-repeat="repeat" data-background-size="100px">
+        <h3 style="color: #fff; text-shadow: 2px 2px 1px rgba(0,0,0,1);">background-repeat</h3>
     </section>
 
-    <section class="ta-l">
-      <h4>Atributo placeholder</h4>
-      <p>El elemento <code>&#060;input type="text"&#062;</code> puede disponer de otros atributos como por ejemplo <span class="marker">placeholder</span>. En este caso nos permite añadir un contenido predefinido.<br />
-        Este atributo sólo puede contener texto.</p>
+    <section class="bg-image">
         <pre><code data-trim contenteditable>
-<form>
-  <input type="text" placeholder="Introduce tu nombre" />
-</form>
+div { background-repeat: repeat; }
         </code></pre>
+        <div class="fz-xxs image-wrap is--megaman">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
 
-        <p class="fz-xs">Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</p>
-        <p><input type="text" name="nombre" placeholder="Introduce tu nombre"  style="width: 550px; font-size: 1.5rem; margin:0 30px; padding: .25rem .5rem; display: inline-block:" /></p>
-      </section>
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-repeat: repeat-x; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: repeat-x">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
 
-        <section class="ta-l">
-          <h4>Atributo autofocus</h4>
-          <p>Mediante <span class="marker">autofocus</span> el cursor se situa de forma automática en el elemento INPUT al cargar la página.</p>
-          <pre><code data-trim contenteditable>
-<form>
-  <input type="text" autofocus/>
-</form>
-          </code></pre>
-          <br />
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-repeat: repeat-y; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: repeat-y">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
 
-          <p><small><a href="http://diveintohtml5.info/examples/input-autofocus-with-fallback.html" target="_blank">Ejemplo</a> de autofocus con jQuery fallBack.</small></p>
-          <p><input type="text" name="nombre" style="width: 550px; font-size: 1.5rem; margin:0 30px; padding: .25rem .5rem; display: inline-block:"/></p>
-        </section>
-
-        <section class="ta-l">
-          <h4>Atributo required</h4>
-          <p>Con <span class="marker">required</span> obligamos al usuario a introducir un valor en este campo.</p>
-          <pre><code data-trim contenteditable>
-<form>
-  <input type="text" placeholder="Introduce tu nombre" required/>
-</form>
-          </code></pre>
-          <br />
-
-          <form action="#">
-            <p><small>Podemos cambiar el estilo de placeholder mediante los <a href="http://css-tricks.com/snippets/css/style-placeholder-text/" target="_blank">siguientes selectores</a> css.</small></p>
-            <p><input type="text" required name="nombre" placeholder="* campo obligatorio" style="width: 550px; font-size: 1.5rem; margin:0 30px; padding: .25rem .5rem; display: inline-block:" /></p>
-            <input type="submit" value="enviar" style="transform: scale(1.5);" />
-          </form>
-
-        </section>
-
-        <section class="ta-l">
-          <h4>&lt;input type="password"&gt;</h4>
-          <p>Oculta el valor del campo contraseña mientras se escribe</p>
-          <pre><code data-trim contenteditable>
-<form>
-  <input type="password" />
-</form>
-          </code></pre>
-          <br />
-
-          <p>Introduce password: <input type="password" style="width: 550px; font-size: 1.5rem; margin:0 30px; padding: .25rem .5rem; display: inline-block:" /></p>
-
-        </section>
-
-        <section class="ta-l">
-          <h4>&lt;input type="file"&gt;</h4>
-          <p>Permite especificar un tipo de archivo concreto para adjuntar en el envío del formulario.</p>
-          <pre><code data-trim contenteditable>
-<form>
-  <p><input type="file" name="imagen" accept="image/*"></p>
-</form>
-          </code></pre>
-          <p><input type="file" name="imagen" accept="image/*" style="transform: scale(1.5);"></p>
-        </section>
-
-        <section class="ta-l">
-
-          <h4>&lt;input type="submit"&gt;</h4>
-          <pre><code data-trim contenteditable>
-<form>
-  <input type="submit" value="enviar">
-</form>
-          </code></pre>
-          <p><input type="submit" value="enviar" style="transform: scale(1.5);" /></p>
-
-        </section>
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-repeat: no-repeat; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+</section>
 
 
-  <section class="ta-l">
-    <h4>&lt;input type="checkbox"&gt;</h4>
-    <p>Este elemento permite 2 estados: Marcado/desmarcado (true/false)</p>
+
+
+<section id="bg-position">
+    <section data-background="./img/slides/css-background/background-position.gif" data-background-repeat="no-repeat" data-background-position="center 5%" data-background-size="230px">
+        <h3>background-position</h3>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-position: 15% 200px; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: 5% 200px;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-position: center; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: center;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-position: left top; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: left top;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-position: right bottom; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: right bottom;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-position: right 100px bottom 20px; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman"  style="background-repeat: no-repeat; background-position: right 100px bottom 20px;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+</section>
+
+
+
+
+
+<section id="bg-attachment">
+    <section data-background="./img/slides/css-background/background-attachment.gif" data-background-repeat="no-repeat">
+        <h3 class="u-overBg">background-attachment </h3>
+    </section>
+
+     <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-attachment: scroll; }
+        </code></pre>
+        <hr>
+        <p class="ta-c"><a href="./files/css-background/bg-scroll.html">Ver ejemplo &raquo;</a></p>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-attachment: fixed; }
+        </code></pre>
+        <hr>
+        <p class="ta-c"><a href="./files/css-background/bg-fixed.html">Ver ejemplo &raquo;</a></p>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-attachment: local; }
+        </code></pre>
+        <hr>
+        <p class="ta-c"><a href="./files/css-background/bg-local.html">Ver ejemplo &raquo;</a></p>
+    </section>
+</section>
+
+
+
+
+<section id="bg-clip">
+  <section data-background="./img/slides/css-background/background-clip.gif" data-background-repeat="no-repeat">
+    <h3 class="u-overBg">background-clip</h3>
+  </section>
+
+  <section class="bg-image">
     <pre><code data-trim contenteditable>
-<form>
-  <input type="checkbox" />
-</form>
+      div { background-clip: border-box; }
     </code></pre>
-    <br />
-
-    <p>
-      <label style="font-size: 1.5rem;">
-        <input type="checkbox" style=" transform: scale(1.5); margin-right: .5rem;" />
-        Opción 1
-      </label>
-    </p>
-    <p>
-      <label style="font-size: 1.5rem;">
-        <input type="checkbox" style=" transform: scale(1.5); margin-right: .5rem;" />
-        Opción 2
-      </label>
-    </p>
-
-    <p class="ta-c">
-      <small>Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</small>
-    </p>
+    <div class="fz-xxs image-wrap is--tripi" style="background-clip: border-box;">
+      <p class="c-cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+    </div>
   </section>
 
-  <section class="ta-l">
-    <h4>&lt;input type="radio"&gt;</h4>
-    <p>Este elemento permite 2 estados Marcado/desmarcado (true/false) pero limita al usuario a escoger entre un número limitado de opciones:</p>
+  <section class="bg-image">
     <pre><code data-trim contenteditable>
-<form>
-  <input type="radio" name="sistemaOperativo" value="macosx"/>
-  <input type="radio" name="sistemaOperativo" value="linux"/>
-  <input type="radio" name="sistemaOperativo" value="windows"/>
-</form>
+      div { background-clip: padding-box; }
     </code></pre>
-    <br />
-
-      <p class="mb-xs">
-        <label style="font-size: 1.5rem;">
-          <input style=" transform: scale(1.5); margin-right: .5rem;" type="radio" name="sistemaOperativo" value="macosx"/>
-          MacOSX
-        </label>
-      </p>
-      <p class="mb-xs">
-        <label style="font-size: 1.5rem;">
-          <input style=" transform: scale(1.5); margin-right: .5rem;" type="radio" name="sistemaOperativo" value="linux"/>
-          GNU/Linux
-        </label>
-      </p>
-      <p class="mb-xs">
-        <label style="font-size: 1.5rem;">
-          <input style=" transform: scale(1.5); margin-right: .5rem;" type="radio" name="sistemaOperativo" value="windows"/>
-          Windows
-      </p>
-      <p class="ta-c">
-        <small>Opciones de <a href="http://cssdeck.com/labs/css-checkbox-styles" target="_blank">styling</a> para checkbox</small>
-      </p>
+    <div class="fz-xxs image-wrap is--tripi" style="background-clip: padding-box;">
+      <p class="c-cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+    </div>
   </section>
 
-  <section class="ta-l">
-    <h3>Nuevos elementos incluidos en</h3>
-    <h2><span class="marker">HTML5</span></h2>
-  </section>
-
-        <section class="ta-l">
-          <h4>&lt;input type="color"&gt;</h4>
-          <p>Permite especificar un color.</p>
-          <pre><code data-trim contenteditable>
-<form>
-  <p><input type="color" value="#c0ffee"></p>
-</form>
-          </code></pre>
-          <p>Selecciona un color: <input id="background-color" type="color" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px;" onchange="javascript:document.getElementById('color-elegido').value = document.getElementById('background-color').value;"></p>
-          <p>El color seleccionado es: <input id="color-elegido" type="text" readonly="" value="#c0ffee" style="transform: scale(1.5); margin-left: 30px; display:inline-block;"></p>
-        </section>
-
-        <section class="ta-l">
-          <h4>&lt;input type="date"&gt;</h4>
-          <p> Permite especificar una fecha con un calendario desplegable.<br />
-            Además podemos restringir valores máximos y mínimos para una fecha concreta.</p>
-            <pre><code data-trim contenteditable>
-<form>
-  <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26"></p>
-</form>
-            </code></pre>
-            <p><input type="date" name="fechaSalida" step="1" min="2015-01-26" max="2015-12-31" value="2015-01-26" style="transform: scale(1.5);"></p>
-          </section>
-
-
-          <section class="ta-l">
-            <h4>&lt;input type="email"&gt;</h4>
-            <p> Validación automática de formato e-mail.<br />
-              En dispositivos móviles el teclado muestra la @.</p>
-              <pre><code data-trim contenteditable>
-<form>
-  <p><input type="email" name="userEmail"></p>
-</form>
-              </code></pre>
-              <form action="#">
-                <p><input type="email" name="userEmail" style="transform: scale(1.5);"></p>
-                <p><input type="submit" value="enviar" style="transform: scale(1.5);"></p>
-              </form>
-            </section>
-
-            <section class="ta-l">
-              <h4>&lt;input type="number"&gt;</h4>
-              <p> Especificamos campos para introducir exclusivamente valores numéricos.<br />
-                Podemos realizar operaciones aritméticas.</p>
-                <pre><code data-trim contenteditable>
-<form>
-  <p><input type="number" name="dividendo"></p>
-</form>
-                </code></pre>
-                <p><a href="files/forms/numbers.html" target="_blank">Ejemplo de operaciones aritméticas con "number"</a></p>
-              </section>
-
-              <section class="ta-l">
-                <h4>&lt;input type="range"&gt;</h4>
-                <p> Permite al usuario seleccionar un valor numérico deslizando un control.<br />
-                  Podemos definir un valor mínimo, otro máximo y el valor de cada incremento.</p>
-                  <pre><code data-trim contenteditable>
-<form>
-  <p><input id="slider" type="range" min="100" max="500" step="10" /></p>
-</form>
-                  </code></pre>
-                  <input id="slider1" type="range" min="100" max="500" step="10" style="transform: scale(2)">
-                </section>
-              </section>
-
-  <section class="ta-l">
-    <h3>&lt;select&gt;</h3>
-    <p> Especificamos el valor inicial del elemento.<br />
-      Normalmente asignamos un valor con este atributo para elementos que no son editables por el usuario:</p>
-
-      <pre><code data-trim contenteditable>
-<form>
-  <select name="text">
-    <option value="MacOSX">Sistema opetarivo Mac</option>
-    <option value="Linux">Sistema opetarivo Linux</option>
-    <option value="Windows">Sistema opetarivo Windows</option>
-  </select>
-</form>
-    </code></pre>
-    <p>
-      <select name="text" class="fz-l">
-        <option value="MacOSX">Sistema opetarivo Mac</option>
-        <option value="Linux">Sistema opetarivo Linux</option>
-        <option value="Windows">Sistema opetarivo Windows</option>
-      </select>
-    </p>
-
-  </section>
-
-  <section class="ta-l">
-    <h3>&lt;textarea&gt;</h3>
-    <p> Definimos un area con una anchura y altura determinada para que el usuario pueda introducir sus comentarios.</p>
-
+  <section class="bg-image">
     <pre><code data-trim contenteditable>
-<textarea name="message" rows="10" cols="30">
-...para que me invitan si ya saben como me pongo
-</textarea>
+      div { background-clip: content-box; }
     </code></pre>
-
-    <p>Introduce tu comentario:</p>
-    <textarea name="message" rows="3" cols="50" style="font-size:.7em;">
-      ...para que me invitan si ya saben como me pongo
-    </textarea>
-  </section>
-
-  <section class="ta-l">
-    <h3>&lt;button&gt;</h3>
-    <p> Elemento diseñado específicamente para enviar los datos del formulario de la misma forma que hacía anteriormente INPUT type="submit".</br />
-    La ventaja principal es que permite contener elementos HTML.</p>
-
-    <pre><code data-trim contenteditable>
-<button type="button"> No lo hagas..</button>
-    </code></pre>
-
-    <p>No clicar!!!</p>
-    <button type="button" onclick="window.location.href ='http://www.nyan.cat/'" class="fz-s">No lo hagas..</button>
+    <div class="fz-xxs image-wrap is--tripi" style="background-clip: content-box;">
+      <p class="c-cyan">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+    </div>
   </section>
 </section>
 
+
+
+
+<section id="bg-origin">
+    <section data-background="./img/slides/css-background/background-origin.gif" data-background-repeat="no-repeat">
+        <h3 class="u-overBg">background-origin</h3>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-origin: border-box; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--tripi" style="background-origin: border-box;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-origin: padding-box; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--tripi"  style="background-origin: padding-box;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-origin: content-box; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--tripi" style="background-origin: content-box;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+        </div>
+    </section>
+</section>
+
+
+
+
+<section id="bg-size">
+    <section data-background="./img/slides/css-background/background-size.gif" data-background-repeat="no-repeat">
+        <h3>background-size</h3>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-size: 50px 200px; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: 50px 200px;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-size: 100% 50%; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: 100% 50%;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-size: auto 100%; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: auto 100%;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-size: 100% auto; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: 100% auto;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-size: cover; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: cover;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+
+    <section class="bg-image">
+        <pre><code data-trim contenteditable>
+div { background-size: contain; }
+        </code></pre>
+        <div class="fz-xxs image-wrap is--megaman" style="background-repeat: no-repeat; background-size: contain;">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+            <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+        </div>
+    </section>
+</section>
+
+
+
+
+<section>
+  <section>
+    <h2>Propiedad background</h2>
+  </section>
+
+  <section>
+    <p>Como sucede con otras propiedades, podemos utilizar la propiedad <em><code>background</code></em> para agrupar varias propiedades de las antes mencionadas.</p>
+    <p>Todas las propiedades son opcionales y pueden ir en cualquier orden, excepto los valores de <code>background-position</code>, primero siempre va el horizontal seguido inmediatamente del vertical.</p>
+    <p>Hay que tener en cuenta que si omitimos un valor se asignará el valor por defecto de esa propiedad.</p>
+  </section>
+
+<section class="bg-image">
+    <pre><code data-trim contenteditable>
+div {
+  background-color: #ccc;
+  background-image: url(megaman.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+}
+    </code></pre>
+
+    <div class="fz-xs image-wrap is--megaman"  style="background: #ccc url( ./img/slides/css-background/megaman.png) no-repeat center top content-box; padding: 1rem; border: 1px solid;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+      <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+    </div>
+</section>
+
+  <section class="bg-image">
+    <pre><code data-trim contenteditable>
+div {
+  background: #ccc url(megaman.png) no-repeat center top;
+}
+    </code></pre>
+
+    <div class="fz-xs image-wrap is--megaman"  style="background: #ccc url( ./img/slides/css-background/megaman.png) no-repeat center top content-box; padding: 1rem; border: 1px solid;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+      <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, maxime sunt deserunt illum architecto! Consequatur ut debitis nesciunt adipisci, ad maxime eligendi itaque fugiat ea repellat odit voluptatum corporis blanditiis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus quod, id dolore ad asperiores!</p>
+    </div>
+  </section>
+</section>
+
+
+
+
+<section>
+  <section>
+    <h2>Multiples imágenes de fondo</h2>
+  </section>
+
+  <section>
+    <p>Podemos utilizar más de una imágen de fondo simplemente <em>separando los valores con una coma</em>.</p>
+    <p>Si asignamos más de una propiedad relativa al <code>background</code> tenemos que cuidar que el orden sea el mismo para todas las propiedades.</p>
+    <p>Si algunas de las imágenes se superponen será la primera de la lista la que quede al frente y el resto le seguirán en orden.</p>
+  </section>
+
+  <section>
+    <pre><code data-trim contenteditable>
+div {
+  background:
+    url(day-06/dalek.png) 140px top,
+    url(day-06/megaman.png) 120px 100px;
+
+  background-repeat: no-repeat;
+}
+    </code></pre>
+    <div style="background-color: rgba(255,255,255, .6); width: 60%; margin: 0 auto;">
+      <div class="fz-xxs image-wrap is--dalek" style="width: 100%; box-sizing: border-box; background: url(./img/slides/css-background/dalek.png) 140px top, url(./img/slides/css-background/megaman.png)  120px 100px; background-repeat: no-repeat;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At, unde! Eum debitis quaerat voluptas itaque laborum alias ut animi. Harum necessitatibus similique id ullam distinctio cumque accusantium nostrum nisi. Accusamus!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero ipsum.</p>
+        <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+        <p>cum praesentium temporibus debitis odit ipsam est, libero eaque hic magnam! Adipisci, repudiandae, quisquam!</p>
+      </div>
+    </div>
+  </section>
+</section>
+
+
+<section>
+    <h3>Práctica</h3>
+    <ul>
+        <li><a href="http://lea.verou.me/css-workshop/#slide7">Ejercicio 01</a></li>
+        <li><a href="http://lea.verou.me/css-workshop/#slide8">Ejercicio 02</a></li>
+        <li><a href="./files/exercises/background.png">Ejercicio 03</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>Links relacionados</h2>
+    <ul>
+        <li style="margin-bottom: .8em;">
+            <strong>background-attachment</strong> <i style="color: #999;"> &mdash; Chris Coyier</i><br>
+            <a href="https://css-tricks.com/almanac/properties/b/background-attachment/">http://css-tricks.com/css3-gradients/</a>
+        </li>
+    </ul>
+</section>
 
         </div>
     </div>
